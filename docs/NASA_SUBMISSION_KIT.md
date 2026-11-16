@@ -14,8 +14,9 @@ Team Owner's local time (MST)**; only the last saved version is judged.
   `scripts/demo-v2/render.mjs`. Nothing is mocked and no video is AI-generated.
 - **The narration voice is synthetic**: the Windows built-in text-to-speech voice ("Microsoft Zira").
   The narration text was written by the AI assistant because no narration text was supplied. If the
-  submission form asks about SI-generated audio, say so. A silent version is one ffmpeg flag away
-  (`-an`) if you prefer captions only.
+  submission form asks about SI-generated audio, say so.
+- **Silent, captions-only copy** (same footage, title card and captions, no audio track, 29.30 s):
+  https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v2-silent.mp4
 - The earlier video (`terrapulse-next-demo-30s.mp4`, 29.4 s, no audio) is unchanged and remains
   available as a fallback at its original URL.
 
