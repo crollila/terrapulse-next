@@ -106,7 +106,33 @@ A hand-calculated two-holding case, weight normalisation, duplicate merging, fun
 (classified, never quantified) and the bound index ≤ directly exposed weight. It measures physical
 exposure of U.S. refining assets only. It is not a return model.
 
-## 5. Not modelled
+## 5. Regional drought index and what-if (`src/sim/drought.ts`): EXPERIMENTAL
 
-Drought, wildfire, earthquake, flood and other hazards have no exposure model yet. The simulator
-lists them as not built.
+A non-parametric standardised precipitation index on the MERRA-2 regional series: k-month mean
+precipitation ranked within its calendar month, Gringorten plotting position, standard normal
+quantile. Classes follow McKee et al. (1993). The what-if holds rainfall at a chosen share of normal
+and is placed in the record by counting years; a what-if drier than every year is reported as
+beyond the record with no index and no return period.
+
+Tested (`src/sim/drought.test.ts`, 17 tests): hand-calculated trailing means, plotting positions,
+tie handling and class boundaries; a five-year case with a hand-checked quantile (-1.2299);
+monotonicity; comparison within calendar months only; episode detection; the what-if by counting;
+z-scores; and on the committed NASA series, a zero median, bounds consistent with a 45-year record
+and lower soil wetness in dry months.
+
+Not established:
+- **No comparison with an operational drought monitor** or with gauge-based SPI.
+- It is not the gamma-fitted SPI and cannot express anything rarer than the record.
+- Input is a reanalysis. In the south-western Amazon box the documented 2005 rainfall shift biases
+  the index dry after 2005; the app warns about this in place.
+- Precipitation only; no evaporative demand.
+- **No economic exposure**: no crop, water or production dataset is linked (task T25).
+
+For the southern Murray-Darling box the longest episodes it finds are 2017-09 to 2020-03, 2002-06
+to 2003-07, 2006-09 to 2007-10 and 1982-07 to 1983-06. These were not checked against a published
+drought chronology in this build.
+
+## 6. Not modelled
+
+Wildfire, earthquake, flood and other hazards have no model yet. The simulator lists them as not
+built. Drought has an index and what-if but no economic exposure.

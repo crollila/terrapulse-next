@@ -285,6 +285,41 @@ test("scenario parameters and the evidence report export as files with the compu
   expect(report.text).toContain("cannot be estimated");
 });
 
+test("drought what-if: index from NASA regional series, record episodes, honest limits", async ({ page }) => {
+  await open(page);
+  await page.getByTestId("tab-sim").click();
+  await page.getByTestId("hazard-type").selectOption("drought");
+  await expect(page.getByTestId("drought-panel")).toBeVisible();
+  await expect(page.getByTestId("drought-panel")).toContainText("HYPOTHETICAL");
+  await expect(page.getByTestId("timeline")).toBeHidden();
+  // default: Murray-Darling, 12 months at 60% of normal
+  await expect(page.getByTestId("drought-index")).toContainText(/[+−]\d\.\d\d|below/);
+  const first = await page.getByTestId("drought-result").innerText();
+  expect(first).toMatch(/of 4[45] years|None of the 4[45] years/);
+  expect(await page.getByTestId("drought-episodes").locator("tbody tr").count()).toBeGreaterThan(0);
+  await expect(page.getByTestId("drought-analysis")).toContainText("MODIS NDVI");
+  await expect(page.getByTestId("drought-analysis")).toContainText("no production dataset is linked yet");
+  // severity changes the result: normal rainfall is not a drought, 10% is beyond the record
+  await page.evaluate(() => window.__tpStore.getState().setDrought({ fraction: 1 }));
+  await expect(page.getByTestId("drought-class")).toHaveText("not in drought");
+  await page.evaluate(() => window.__tpStore.getState().setDrought({ fraction: 0.1 }));
+  await expect(page.getByTestId("drought-class")).toHaveText("drier than any year in the record");
+  await expect(page.getByTestId("drought-result")).toContainText("Insufficient validated data");
+  // duration control recalculates
+  await page.evaluate(() => window.__tpStore.getState().setDrought({ fraction: 0.6 }));
+  const k12 = await page.getByTestId("drought-result").innerText();
+  await page.getByTestId("dk-3").click();
+  await expect.poll(async () => await page.getByTestId("drought-result").innerText()).not.toBe(k12);
+  // the Amazon box carries the documented data warning
+  await page.getByTestId("drought-region").selectOption("rondonia");
+  await expect(page.getByTestId("drought-known-issue")).toContainText("2005");
+  // back to the hurricane scenario
+  await page.getByTestId("hazard-type").selectOption("hurricane");
+  await expect(page.getByTestId("sim-panel")).toBeVisible();
+  await expect(page.getByTestId("timeline")).toBeVisible();
+  expect(errors.get(page)).toEqual([]);
+});
+
 test("falls back to labelled snapshots when the live feeds are unreachable", async ({ page }) => {
   await page.route(/earthquake\.usgs\.gov|eonet\.gsfc\.nasa\.gov/, (r) => r.abort());
   await open(page);

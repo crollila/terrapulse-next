@@ -43,6 +43,9 @@ emergency use and is not investment advice.
 - Markets: the recorded effect of Hurricane Harvey (2017) from DOE, EIA and NHC, with real EIA
   price and refinery series. The hypothetical scenario's price impact is stated as "cannot be
   estimated".
+- Drought what-if: a standardised precipitation index for the eight NASA regions, the dry episodes
+  in the record, a rainfall what-if placed in that record by counting years, and what soil wetness
+  and MODIS vegetation greenness did in comparably dry months. Economic exposure is not estimated.
 - Portfolio exposure screen: enter tickers and weights; get the share of the portfolio in companies
   that own refineries inside the footprint, computed from EIA ownership and capacity.
 - Exports: scenario parameters (JSON, re-importable) and an evidence report (Markdown) listing every

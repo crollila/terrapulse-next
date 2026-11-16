@@ -1,6 +1,6 @@
 # Progress
 
-Last updated: 2026-11-15 21:00 MST. Check this file against `git log`, `npm run status` and the
+Last updated: 2026-11-15 21:10 MST. Check this file against `git log`, `npm run status` and the
 live URL before trusting it.
 
 ## Deployment
@@ -39,24 +39,25 @@ live URL before trusting it.
 | Markets: withheld forecast plus Hurricane Harvey record with EIA series | browser test 6 |
 | Portfolio exposure screen, local storage, JSON export | browser test 6; unit tests |
 | Scenario JSON export and Markdown evidence report | browser test 9; unit tests |
+| Drought what-if on the NASA regional series (index, episodes, soil and NDVI response) | 17 unit tests; browser test 10 |
 | Methods dialog, model card, AI disclosure | browser test 8 |
 | CI: type-check, unit tests, snapshot refresh, build, deploy | GitHub Actions runs succeeded |
 | Demo video (29.4 s) and screenshots from the real app | `public/media/`, `docs/screenshots/` |
 | Status script, resume script, local dashboard, local research script | run and checked by hand |
 
-Test counts at the last run: 330 unit tests passed; 13 browser tests passed in each of Chromium,
-Firefox and WebKit locally; 13 passed in Chromium against the live URL.
+Test counts at the last run: 347 unit tests passed; 14 browser tests passed in each of Chromium,
+Firefox and WebKit locally. The live-site result for the newest commit is in DEPLOYMENT.md.
 
 ## In progress
 
-- T07 drought model on the existing NASA regional series.
+- Nothing. Next: T08 (wildfire footprint model) or T23 (rainfall and flood exposure for hurricanes).
 
 ## Not done
 
 See `TASK_QUEUE.json` and `BLOCKERS.md`. The largest gaps against the full specification:
 
 - A hurricane model that passes a hindcast: rainfall or flood exposure (T23), wind asymmetry (T24).
-- Wildfire model; models for other hazards.
+- Wildfire model; models for other hazards; economic exposure for drought (T25).
 - Infrastructure outside the United States; energy infrastructure other than refineries and ports.
 - Verification of the inland decay constants against Kaplan and DeMaria (1995).
 - Equity or commodity price history beyond the Harvey window.
@@ -82,4 +83,4 @@ None at the last run.
 
 ## Next executable task
 
-`npm run resume` prints it. Currently T07 (drought model).
+`npm run resume` prints it.

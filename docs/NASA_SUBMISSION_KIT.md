@@ -49,7 +49,9 @@ Each item was exercised in a real browser by the automated suite (`tests/e2e/app
 | Economic network with sourced, modelled and hypothesis links; globe ↔ network selection | Works |
 | Hurricane Harvey historical record with real EIA series | Works |
 | Portfolio exposure screen with local save, JSON import and export | Works; physical exposure only |
-| Drought, wildfire and other hazard models | **Not built** |
+| Drought what-if: precipitation index, record episodes, soil and NDVI response (8 NASA regions) | Works; experimental; no economic exposure |
+| Hindcast of the hurricane screen against Harvey and Ike | Done; the model **failed** on Harvey and is inconclusive on Ike, and the app says so |
+| Wildfire and other hazard models | **Not built** |
 | Infrastructure outside the United States | **Not included** |
 | Price or return forecasts | **Deliberately withheld** ("cannot be estimated") |
 

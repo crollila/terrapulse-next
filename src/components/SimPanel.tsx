@@ -127,9 +127,9 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
           <h4>Hazard</h4>
           <div className="field">
             <label htmlFor="haz">Disaster type</label>
-            <select id="haz" value="hurricane" onChange={() => undefined} data-testid="hazard-type">
+            <select id="haz" value="hurricane" onChange={(e) => st.setHazard(e.target.value as "hurricane" | "drought")} data-testid="hazard-type">
               <option value="hurricane">Hurricane · wind-exposure model v0.1</option>
-              <option disabled>Drought · not built yet</option>
+              <option value="drought">Drought · regional index v0.1</option>
               <option disabled>Wildfire · not built yet</option>
               <option disabled>Earthquake, flood, other · not built yet</option>
             </select>

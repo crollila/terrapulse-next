@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T21:00:00-07:00",
+  "updated": "2026-11-15T21:10:00-07:00",
   "note": "Ordered by priority. Status values: done, todo, blocked. Verify against the code before acting.",
   "tasks": [
     {
@@ -45,8 +45,9 @@
       "id": "T07",
       "phase": 4,
       "title": "Drought model: standardized precipitation anomaly and NDVI anomaly from the existing regional series; link to documented agricultural exposure (USDA NASS or FAO) with sources",
-      "status": "todo",
-      "owner": "disaster-modeling"
+      "status": "done",
+      "owner": "disaster-modeling",
+      "note": "Index, record episodes, what-if and co-occurring soil and NDVI response are built and tested. Economic exposure is NOT linked: see T25"
     },
     {
       "id": "T08",
@@ -169,6 +170,13 @@
       "title": "Wind asymmetry and observed wind radii option (the Ike hindcast shows the symmetric profile misses Lake Charles); transcribe the DOE refinery tables for Harvey and Ike to score membership",
       "status": "todo",
       "owner": "disaster-modeling"
+    },
+    {
+      "id": "T25",
+      "phase": 4,
+      "title": "Drought: link agricultural production exposure from a verified public dataset (USDA NASS, FAO or ABARES) with sources; compare the index with an operational drought monitor",
+      "status": "todo",
+      "owner": "economics"
     }
   ]
 }

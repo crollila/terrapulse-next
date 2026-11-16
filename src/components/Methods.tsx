@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { MODEL_CARD } from "../sim/hurricane";
+import { DROUGHT_CARD } from "../sim/drought";
 import { TREND_METHOD } from "../science/stats";
 import { Badge, Icon } from "./ui";
 
@@ -64,6 +65,16 @@ export function Methods({ onClose }: { onClose: () => void }) {
           <p><strong>Economic network:</strong> each link is labelled as documented, modelled or a research hypothesis and carries its source. The one geographic arc (Houston to New York Harbor) stands for the Colonial Pipeline, which EIA describes as carrying up to 2.5 million b/d from Houston as far north as New York Harbor; the arc is a schematic great circle, not the pipeline route, and implies no modelled flow.</p>
           <p><strong>Portfolio screen:</strong> exposure share = a company's refining capacity inside the footprint ÷ its total U.S. refining capacity (EIA). Portfolio index = Σ weight × exposure share. It measures physical exposure only.</p>
           <ul>{MODEL_CARD.references.map((x) => <li key={x}>{x}</li>)}</ul>
+
+          <h3>{DROUGHT_CARD.name}</h3>
+          <p><strong>Status:</strong> {DROUGHT_CARD.status}.</p>
+          <p style={{ marginTop: 6 }}><strong>Inputs</strong></p>
+          <ul>{DROUGHT_CARD.inputs.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p><strong>Formulas</strong></p>
+          <pre className="formula">{DROUGHT_CARD.formula.join("\n")}</pre>
+          <p><strong>Limitations</strong></p>
+          <ul>{DROUGHT_CARD.limitations.map((x) => <li key={x}>{x}</li>)}</ul>
+          <ul>{DROUGHT_CARD.references.map((x) => <li key={x}>{x}</li>)}</ul>
 
           <h3>Trend statistics</h3>
           <p>{TREND_METHOD.name}</p>

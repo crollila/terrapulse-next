@@ -206,6 +206,10 @@ export function Globe() {
       }
       const id = String(f.properties?.id);
       const type: Selection["type"] = f.layer.id === "hazards" ? "hazard" : f.layer.id === "refineries" ? "refinery" : f.layer.id === "ports" ? "port" : "region";
+      if (type === "region" && st.tab === "sim") {
+        if (st.hazard === "drought") st.setDrought({ regionId: id });
+        return;
+      }
       st.select({ type, id });
       if (type === "region") {
         st.setTrend({ regionId: id });
@@ -265,6 +269,8 @@ export function Globe() {
   const simStarted = useStore((s) => s.simStarted);
   const camera = useStore((s) => s.camera);
   const picking = useStore((s) => s.pickingLandfall);
+  const hazard = useStore((s) => s.hazard);
+  const droughtRegion = useStore((s) => s.drought.regionId);
 
   const setData = (id: string, data: FC) => (mapRef.current?.getSource(id) as GeoJSONSource | undefined)?.setData(data);
 
@@ -305,6 +311,20 @@ export function Globe() {
   useEffect(() => {
     if (!mapReady) return;
     const cat = regionsRef.current.catalog;
+    const droughtView = tab === "sim" && hazard === "drought";
+    if (droughtView && cat) {
+      setData(
+        "regions",
+        fc(
+          cat.regions.map((r) => {
+            const [w, s, e, n] = r.bbox;
+            const on = r.id === droughtRegion;
+            return { type: "Feature", properties: { id: r.id, label: r.short_name, color: on ? "#d9541e" : "#8b97a8", selected: on }, geometry: { type: "Polygon", coordinates: [[[w, s], [e, s], [e, n], [w, n], [w, s]]] } };
+          }),
+        ),
+      );
+      return;
+    }
     if (!cat || !layers.trendRegions || tab !== "world") {
       setData("regions", fc());
       return;
@@ -330,12 +350,12 @@ export function Globe() {
     return () => {
       live = false;
     };
-  }, [mapReady, layers.trendRegions, trend.variableId, selection, tab, feeds]);
+  }, [mapReady, layers.trendRegions, trend.variableId, selection, tab, feeds, hazard, droughtRegion]);
 
   // ---- infrastructure + simulation ----
   useEffect(() => {
     if (!mapReady) return;
-    const simOn = tab === "sim";
+    const simOn = tab === "sim" && hazard === "hurricane";
     const sc = simOn && refineries.length ? getScenario(sim, refineries, ports) : null;
     const tl = sc ? timelineState(simPos, sc.result) : null;
     const t = tl ? tl.drawTH : T_START_H;
@@ -423,7 +443,7 @@ export function Globe() {
       ),
     );
     void windAtKt;
-  }, [mapReady, tab, layers.refineries, layers.ports, layers.listedOnly, refineries, ports, sim, simPos, simStarted]);
+  }, [mapReady, tab, hazard, layers.refineries, layers.ports, layers.listedOnly, refineries, ports, sim, simPos, simStarted]);
 
   // ---- selection highlight (globe <- graph and panels) ----
   useEffect(() => {
@@ -456,10 +476,11 @@ export function Globe() {
     const wide = window.innerWidth >= 1000;
     const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     const padding = tab === "sim" && wide ? { left: 340, right: 470, top: 20, bottom: 110 } : wide ? { left: 300, right: 0, top: 0, bottom: 0 } : { left: 0, right: 0, top: 0, bottom: 0 };
-    if (tab === "sim") map.flyTo({ center: [sim.landfallLon + 0.4, sim.landfallLat + 0.6], zoom: wide ? 5.4 : 4.6, pitch: 0, bearing: 0, padding, duration: reduce ? 0 : 2600, essential: true });
+    if (tab === "sim" && hazard === "drought") map.easeTo({ padding, duration: 0 });
+    else if (tab === "sim") map.flyTo({ center: [sim.landfallLon + 0.4, sim.landfallLat + 0.6], zoom: wide ? 5.4 : 4.6, pitch: 0, bearing: 0, padding, duration: reduce ? 0 : 2600, essential: true });
     else map.flyTo({ center: [-52, 24], zoom: wide ? 1.75 : 0.9, pitch: 0, bearing: 0, padding, duration: reduce ? 0 : 2200, essential: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mapReady, tab]);
+  }, [mapReady, tab, hazard]);
 
   useEffect(() => {
     const map = mapRef.current;

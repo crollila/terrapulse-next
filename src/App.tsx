@@ -6,6 +6,7 @@ import { TrendExplorer } from "./components/TrendExplorer";
 import { SimPanel } from "./components/SimPanel";
 import { Timeline } from "./components/Timeline";
 import { SimWorkspace } from "./components/SimWorkspace";
+import { DroughtLab } from "./components/DroughtLab";
 import { Methods } from "./components/Methods";
 import { Icon } from "./components/ui";
 import { useStore } from "./state/store";
@@ -80,6 +81,7 @@ export function App() {
   const selection = useStore((s) => s.selection);
   const pinned = useStore((s) => s.pinned);
   const trendOpen = useStore((s) => s.trendOpen);
+  const hazard = useStore((s) => s.hazard);
   const [methods, setMethods] = useState(false);
   const [mobilePane, setMobilePane] = useState<"controls" | "analysis">("controls");
 
@@ -177,9 +179,15 @@ export function App() {
                 Impact analysis
               </button>
             </div>
-            <Timeline />
-            <SimPanel hiddenOnMobile={mobilePane !== "controls"} onMethods={() => setMethods(true)} />
-            <SimWorkspace hiddenOnMobile={mobilePane !== "analysis"} />
+            {hazard === "drought" ? (
+              <DroughtLab onMethods={() => setMethods(true)} pane={mobilePane} />
+            ) : (
+              <>
+                <Timeline />
+                <SimPanel hiddenOnMobile={mobilePane !== "controls"} onMethods={() => setMethods(true)} />
+                <SimWorkspace hiddenOnMobile={mobilePane !== "analysis"} />
+              </>
+            )}
           </>
         )}
       </main>

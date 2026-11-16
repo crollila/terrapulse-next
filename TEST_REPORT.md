@@ -12,11 +12,12 @@ Run on 15 November 2026 (MST), Windows 11, Node 26.4. Re-run with `npm run test:
 | Datasets, scenario on real data, network, portfolio, parser, freshness, adapters, layers, hindcast statements | Vitest | 45 passed |
 | Hindcast (best-track parsing, quadrant logic, regression values) | Vitest | 25 passed |
 | Evidence report | Vitest | 6 passed |
-| **Unit and integration total** | Vitest | **330 passed, 0 failed, 0 skipped** locally (41 statistics tests that read the original repository's CSVs skip in CI, where that folder is absent) |
-| Browser, production build, Chromium | Playwright, headless, software WebGL | **13 passed** |
-| Browser, production build, Firefox | Playwright | **13 passed** |
-| Browser, production build, WebKit | Playwright | **13 passed** |
-| Browser, live site, Chromium | `TP_BASE_URL` set | **13 passed** (see DEPLOYMENT.md for the commit and time) |
+| Drought index and what-if | Vitest | 17 passed |
+| **Unit and integration total** | Vitest | **347 passed, 0 failed, 0 skipped** locally (41 statistics tests that read the original repository's CSVs skip in CI, where that folder is absent) |
+| Browser, production build, Chromium | Playwright, headless, software WebGL | **14 passed** |
+| Browser, production build, Firefox | Playwright | **14 passed** |
+| Browser, production build, WebKit | Playwright | **14 passed** |
+| Browser, live site, Chromium | `TP_BASE_URL` set | all passed at each deploy (see DEPLOYMENT.md for commits, counts and times) |
 | Type-check | `tsc --noEmit` (TypeScript 7, strict) | clean |
 | Build | Vite 8 | succeeds; one bundle 1.55 MB (450 kB gzip) |
 
@@ -39,8 +40,11 @@ Run on 15 November 2026 (MST), Windows 11, Node 26.4. Re-run with `npm run test:
    temperature +0.51 °C per decade.
 8. Command bar builds a custom scenario; methods dialog opens and closes.
 9. Scenario JSON and the Markdown evidence report download with the computed figures.
-10. With USGS and EONET blocked, layers show CACHED with the snapshot age and never "LIVE FEED".
-11–13. Laptop (1280×720), tablet (768×1024) and mobile (390×844): no horizontal overflow; panels,
+10. Drought what-if: index and class from the NASA regional series; severity and duration change
+   the result; beyond-the-record case withholds a return period; the Amazon box shows the 2005 data
+   warning; switching back restores the hurricane scenario.
+11. With USGS and EONET blocked, layers show CACHED with the snapshot age and never "LIVE FEED".
+12–14. Laptop (1280×720), tablet (768×1024) and mobile (390×844): no horizontal overflow; panels,
    timeline and results visible.
 
 ## Model validation tests

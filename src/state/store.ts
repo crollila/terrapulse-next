@@ -4,6 +4,17 @@ import type { InfrastructureMeta, Port, Refinery } from "../data/types";
 import { SCENARIO_001, type HurricaneParams } from "../sim/hurricane";
 
 export type Tab = "world" | "sim";
+export type HazardType = "hurricane" | "drought";
+export interface DroughtInputs {
+  regionId: string;
+  /** Accumulation period in months. */
+  k: number;
+  /** Rainfall as a fraction of the monthly normal. */
+  fraction: number;
+  /** Calendar month (1-12) in which the period ends. */
+  endMonth: number;
+}
+export const DEFAULT_DROUGHT: DroughtInputs = { regionId: "murray-darling", k: 12, fraction: 0.6, endMonth: 12 };
 
 export type LayerId =
   | "earthquakes"
@@ -72,6 +83,10 @@ interface State {
   mapError: string | null;
   pickingLandfall: boolean;
   setPickingLandfall: (p: boolean) => void;
+  hazard: HazardType;
+  setHazard: (h: HazardType) => void;
+  drought: DroughtInputs;
+  setDrought: (d: Partial<DroughtInputs>) => void;
   setTab: (t: Tab) => void;
   toggleLayer: (id: LayerId) => void;
   setLayer: (id: LayerId, on: boolean) => void;
@@ -140,6 +155,10 @@ export const useStore = create<State>((set, get) => ({
   mapError: null,
   pickingLandfall: false,
   setPickingLandfall: (pickingLandfall) => set({ pickingLandfall }),
+  hazard: "hurricane",
+  setHazard: (hazard) => set({ hazard, selection: null, simPlaying: false }),
+  drought: { ...DEFAULT_DROUGHT },
+  setDrought: (d) => set((s) => ({ drought: { ...s.drought, ...d } })),
   setTab: (tab) => {
     const layers = { ...get().layers };
     if (tab === "sim") {
@@ -163,7 +182,7 @@ export const useStore = create<State>((set, get) => ({
   setSimPos: (x) => set({ simPos: Math.min(1, Math.max(0, x)) }),
   setSimPlaying: (simPlaying) => set({ simPlaying }),
   startSim: () => set({ simStarted: true, simPlaying: true, simPos: get().simPos >= 0.999 ? 0 : get().simPos }),
-  resetSim: () => set({ sim: { ...SCENARIO_001 }, simPos: 0, simPlaying: false, simStarted: false, selection: null, graphFilter: {} }),
+  resetSim: () => set({ sim: { ...SCENARIO_001 }, simPos: 0, simPlaying: false, simStarted: false, selection: null, graphFilter: {}, hazard: "hurricane", drought: { ...DEFAULT_DROUGHT } }),
   toggleGraphFilter: (k) => set((s) => ({ graphFilter: { ...s.graphFilter, [k]: !s.graphFilter[k] } })),
   setMapReady: (mapReady) => set({ mapReady }),
   setMapError: (mapError) => set({ mapError }),
