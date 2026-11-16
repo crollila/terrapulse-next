@@ -7,8 +7,8 @@ live URL before trusting it.
 
 - Live: https://crollila.github.io/terrapulse-next/
 - Repository: https://github.com/crollila/terrapulse-next
-- Last verified: 2026-11-15 20:57 MST, commit `10abb08`: 13 of 13 browser tests passed against the
-  live URL (`npm run check:live`), and the live bundle contains the hindcast statement.
+- Last verified: 2026-11-15 21:05 MST, commit `de15eb5`: 14 of 14 browser tests passed against the
+  live URL (`npm run check:live`).
 - Demo video: https://crollila.github.io/terrapulse-next/media/terrapulse-next-demo-30s.mp4
   (29.4 s, verified reachable 20:38 MST).
 - Original project untouched: `crollila/terrapulse` last push 2026-11-15T20:59:38Z, before this
@@ -67,6 +67,8 @@ See `TASK_QUEUE.json` and `BLOCKERS.md`. The largest gaps against the full speci
 ## Recent commits
 
 ```
+de15eb5 Drought what-if on the NASA regional series; records
+82a486d Progress checkpoint and deployment verification log
 10abb08 Hindcast against Harvey and Ike; findings in the model card; records
 38f8178 Cross-browser projects for the browser suite (Firefox, WebKit); docs
 ce70ac8 Trend explorer: every-window map from the published pipeline output

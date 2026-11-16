@@ -30,6 +30,7 @@ URL) counts.
 | 2026-11-15 20:38 | `3dff26e` | Demo video URL returns 200, `video/mp4`, 2,579,983 bytes | OK |
 | 2026-11-15 20:50 | `ce70ac8` | 13 browser tests against the live URL (Chromium) | 13 passed |
 | 2026-11-15 20:57 | `10abb08` | 13 browser tests against the live URL; live bundle contains the hindcast statement | 13 passed |
+| 2026-11-15 21:05 | `de15eb5` | 14 browser tests against the live URL (includes the drought what-if) | 14 passed |
 
 What the live browser tests cover: page and assets load; globe renders; layers toggle; a hazard
 opens its details; the Houston scenario runs with play, pause, rewind and scrub; parameters change
