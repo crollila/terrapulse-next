@@ -1,14 +1,17 @@
 # Progress
 
-Last updated: 2026-11-15 22:02 MST. Check this file against `git log`, `npm run status` and the
+Last updated: 2026-11-15 23:37 MST. Check this file against `git log`, `npm run status` and the
 live URL before trusting it.
 
 ## Deployment
 
 - Live: https://crollila.github.io/terrapulse-next/
 - Repository: https://github.com/crollila/terrapulse-next
-- Last verified: 2026-11-15 21:57 MST, commit `44220c1`: 18 of 18 browser tests passed against the
-  live URL. Commit `d8f34f0` added only the revised video and documentation.
+- Last verified: 2026-11-15 23:36 MST, commit `bdf762f`: 22 of 22 browser tests passed against the
+  live URL, including the showcase.
+- Showcase: https://crollila.github.io/terrapulse-next/#about
+- **Final demo video (team lead's narration):** https://crollila.github.io/terrapulse-next/media/terrapulse-demo-final.mp4
+  (29.31 s, verified 23:19 MST).
 - Demo videos: **V3 (final cut, silent, captions match the narration script)**:
   https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v3.mp4 (verified 22:35 MST); cue sheet in
   `docs/DEMO_V3_CUES.md`. V2, science first, 29.30 s with synthetic narration:
@@ -26,6 +29,7 @@ live URL before trusting it.
 
 | Feature | Evidence |
 |---|---|
+| Showcase (About): hero, four questions, Amazon and Alaska, Live World, simulator, team, transparency, calls to action | 4 browser tests; screenshots `docs/screenshots/showcase-*` |
 | Opens on Earth-System Trends: the four NASA questions for any variable, region and window | 4 browser tests (NASA challenge group) |
 | The Amazon Rainfall Mystery and Northern Alaska warming investigations, with the team's GPCP and GISTEMP series charted | 10 unit tests against the published results; browser tests |
 | Guided tour and a marked path from trends to the simulator | browser test |

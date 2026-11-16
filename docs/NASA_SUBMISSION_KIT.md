@@ -4,6 +4,16 @@ Prepared 15 November 2026 (MST). **Nothing has been submitted by this repository
 assistant.** The Team Owner submits. The window closes **Sunday 15 November 2026 at 23:59 in the
 Team Owner's local time (MST)**; only the last saved version is judged.
 
+## Final demo video with the team lead's narration, 15 November 2026, 23:19 MST
+
+**https://crollila.github.io/terrapulse-next/media/terrapulse-demo-final.mp4**
+
+- 29.31 s, 1920×1080, H.264 video with the team lead's own recorded voice (AAC). No synthetic voice.
+- Published from the team lead's finished file. The video was re-encoded from HEVC to H.264 so it
+  plays in every browser; the audio stream was copied without change. The untouched original is at
+  `…/media/terrapulse-demo-final-original-hevc.mp4`.
+- Project showcase: https://crollila.github.io/terrapulse-next/#about
+
 ## V3 demo video (final cut), 15 November 2026, 22:35 MST
 
 **https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v3.mp4**
