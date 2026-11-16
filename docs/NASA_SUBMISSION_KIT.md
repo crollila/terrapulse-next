@@ -8,7 +8,7 @@ Team Owner's local time (MST)**; only the last saved version is judged.
 
 **https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v3.mp4**
 
-- **29.30 s**, 879 frames at 30 fps, 1920×1080, H.264. **Silent on purpose**: no audio track, so
+- **29.30 s**, 879 frames at 30 fps, 1920×1080 (picture 1920×900 above a caption band), H.264. **Silent on purpose**: no audio track, so
   there is no synthetic voice to disclose. Captions are burned in and match the narration script
   word for word.
 - Recorded from the deployed application with the computer's graphics card

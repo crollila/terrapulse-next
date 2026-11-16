@@ -11,7 +11,7 @@ mkdirSync(D, { recursive: true });
 const BOLD = "C\\:/Windows/Fonts/segoeuib.ttf";
 const SEMI = "C\\:/Windows/Fonts/seguisb.ttf";
 const W = 1920;
-const PH = 960; // picture height; the caption band is the 120 px below it
+const PH = 900; // picture height; the 180 px band below keeps the caption line above the bottom 10% that player controls cover
 const H = 1080;
 
 // ---- piecewise smooth zoom expressions for zoompan (time = on / FPS) ----
@@ -40,8 +40,8 @@ const file = (name, text) => {
   return `${D}/${name}`;
 };
 
-const labels = LABELS.map((l, i) => `drawtext=fontfile='${SEMI}':textfile=${file(`label${i}.txt`, l.text)}:fontsize=25:fontcolor=${l.color}:x=(w-text_w)/2:y=${PH + 80}:alpha=${alpha(l.start, l.end)}`);
-const captions = CUES.map((c, i) => `drawtext=fontfile='${BOLD}':textfile=${file(`cue${i}.txt`, c.text)}:fontsize=41:fontcolor=0x0b1f3f:x=(w-text_w)/2:y=${PH + 22}:alpha=${alpha(c.start, c.end, 0.12)}`);
+const labels = LABELS.map((l, i) => `drawtext=fontfile='${SEMI}':textfile=${file(`label${i}.txt`, l.text)}:fontsize=27:fontcolor=${l.color}:x=(w-text_w)/2:y=${PH + 100}:alpha=${alpha(l.start, l.end)}`);
+const captions = CUES.map((c, i) => `drawtext=fontfile='${BOLD}':textfile=${file(`cue${i}.txt`, c.text)}:fontsize=45:fontcolor=0x0b1f3f:x=(w-text_w)/2:y=${PH + 22}:alpha=${alpha(c.start, i === CUES.length - 1 ? TOTAL + 5 : c.end, 0.12)}`);
 const closing = [
   `drawtext=fontfile='${BOLD}':textfile=${file("close1.txt", CLOSING.title)}:fontsize=104:fontcolor=0x0b1f3f:box=1:boxcolor=white@0.9:boxborderw=130:x=(w-text_w)/2:y=${PH / 2 - 100}:alpha=${alpha(CLOSING.start, TOTAL + 5, 0.3)}`,
   `drawtext=fontfile='${SEMI}':textfile=${file("close2.txt", CLOSING.tagline)}:fontsize=44:fontcolor=0x1d6bff:x=(w-text_w)/2:y=${PH / 2 + 44}:alpha=${alpha(CLOSING.start + 0.15, TOTAL + 5, 0.3)}`,
@@ -52,7 +52,7 @@ const filter = [
   `color=c=0xffffff:s=${W}x${H}:r=${FPS}:d=${TOTAL},format=yuv420p[bg]`,
   `[bg][pic]overlay=0:0:shortest=1[v0]`,
   `[v0]drawbox=x=0:y=${PH}:w=${W}:h=2:color=0x0d2a5b@0.14:t=fill,` +
-    `drawtext=fontfile='${BOLD}':textfile=${file("brand.txt", "TerraPulse")}:fontsize=27:fontcolor=0x1d6bff:x=40:y=${PH + 46},` +
+    `drawtext=fontfile='${BOLD}':textfile=${file("brand.txt", "TerraPulse")}:fontsize=30:fontcolor=0x1d6bff:x=44:y=${PH + 32},` +
     [...labels, ...closing, ...captions].join(",") +
     `,trim=duration=${TOTAL},setpts=PTS-STARTPTS[v]`,
 ].join(";\n");

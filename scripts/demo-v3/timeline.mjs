@@ -2,7 +2,7 @@
 // zooms and on-screen labels. Used by the recorder and the renderer.
 export const TOTAL = 29.3;
 export const FPS = 30;
-export const VIEW = { width: 1800, height: 900 }; // CSS pixels of the app while recording (2:1)
+export const VIEW = { width: 1800, height: 844 }; // CSS pixels of the app while recording (same shape as the 1920x900 picture area)
 
 /** Narration, word for word as supplied by the team lead, split into caption cues (seconds). */
 export const CUES = [
@@ -35,18 +35,18 @@ export const ZOOM = [
   [3.4, 1.0, 0.5, 0.5],
   [4.1, 1.75, 0.286, 0.714],
   [7.1, 1.75, 0.286, 0.714],
-  [7.9, 1.7, 0.706, 0.36],
-  [12.3, 1.7, 0.706, 0.36],
-  [12.9, 1.7, 0.706, 0.43],
-  [15.1, 1.7, 0.706, 0.43],
-  [15.5, 1.7, 0.706, 0.36],
-  [16.6, 1.7, 0.706, 0.36],
+  [7.9, 1.7, 0.706, 0.384],
+  [12.3, 1.7, 0.706, 0.384],
+  [12.9, 1.7, 0.706, 0.459],
+  [15.1, 1.7, 0.706, 0.459],
+  [15.5, 1.7, 0.706, 0.384],
+  [16.6, 1.7, 0.706, 0.384],
   [17.3, 1.0, 0.5, 0.5],
   [19.3, 1.0, 0.5, 0.5],
-  [20.0, 1.6, 0.3125, 0.38],
-  [21.8, 1.6, 0.3125, 0.38],
-  [22.6, 1.45, 0.655, 0.455],
-  [27.4, 1.45, 0.655, 0.455],
+  [20.0, 1.6, 0.3125, 0.405],
+  [21.8, 1.6, 0.3125, 0.405],
+  [22.6, 1.45, 0.655, 0.485],
+  [27.4, 1.45, 0.655, 0.485],
   [28.0, 1.0, 0.5, 0.5],
   [TOTAL + 1, 1.0, 0.5, 0.5],
 ];
