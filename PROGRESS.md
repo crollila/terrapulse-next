@@ -1,16 +1,17 @@
 # Progress
 
-Last updated: 2026-11-15 21:10 MST. Check this file against `git log`, `npm run status` and the
+Last updated: 2026-11-15 22:02 MST. Check this file against `git log`, `npm run status` and the
 live URL before trusting it.
 
 ## Deployment
 
 - Live: https://crollila.github.io/terrapulse-next/
 - Repository: https://github.com/crollila/terrapulse-next
-- Last verified: 2026-11-15 21:05 MST, commit `de15eb5`: 14 of 14 browser tests passed against the
-  live URL (`npm run check:live`).
-- Demo video: https://crollila.github.io/terrapulse-next/media/terrapulse-next-demo-30s.mp4
-  (29.4 s, verified reachable 20:38 MST).
+- Last verified: 2026-11-15 21:57 MST, commit `44220c1`: 18 of 18 browser tests passed against the
+  live URL. Commit `d8f34f0` added only the revised video and documentation.
+- Demo videos: revised, science first, 29.30 s with narration:
+  https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v2.mp4 (verified 22:00 MST);
+  earlier fallback, 29.4 s silent: https://crollila.github.io/terrapulse-next/media/terrapulse-next-demo-30s.mp4
 - Original project untouched: `crollila/terrapulse` last push 2026-11-15T20:59:38Z, before this
   work began; its live demo returns 200; the reference clone has its push URL disabled.
 
@@ -23,6 +24,9 @@ live URL before trusting it.
 
 | Feature | Evidence |
 |---|---|
+| Opens on Earth-System Trends: the four NASA questions for any variable, region and window | 4 browser tests (NASA challenge group) |
+| The Amazon Rainfall Mystery and Northern Alaska warming investigations, with the team's GPCP and GISTEMP series charted | 10 unit tests against the published results; browser tests |
+| Guided tour and a marked path from trends to the simulator | browser test |
 | App shell, design system, responsive layout | browser tests at 1440, 1280, 768, 390 px; screenshots in `docs/screenshots/` |
 | 3D globe, camera, place and coordinate search | browser tests 1, 8 |
 | Live hazard layers with freshness labels and offline fallback | browser tests 1, 2, 3, 10; unit tests |
@@ -45,8 +49,9 @@ live URL before trusting it.
 | Demo video (29.4 s) and screenshots from the real app | `public/media/`, `docs/screenshots/` |
 | Status script, resume script, local dashboard, local research script | run and checked by hand |
 
-Test counts at the last run: 347 unit tests passed; 14 browser tests passed in each of Chromium,
-Firefox and WebKit locally. The live-site result for the newest commit is in DEPLOYMENT.md.
+Test counts at the last run: 357 unit tests passed; 18 browser tests passed in Chromium locally and
+against the live URL. The four new NASA-flow tests have not been run in Firefox or WebKit yet (the
+other 14 passed there earlier).
 
 ## In progress
 

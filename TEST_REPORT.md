@@ -13,10 +13,10 @@ Run on 15 November 2026 (MST), Windows 11, Node 26.4. Re-run with `npm run test:
 | Hindcast (best-track parsing, quadrant logic, regression values) | Vitest | 25 passed |
 | Evidence report | Vitest | 6 passed |
 | Drought index and what-if | Vitest | 17 passed |
-| **Unit and integration total** | Vitest | **347 passed, 0 failed, 0 skipped** locally (41 statistics tests that read the original repository's CSVs skip in CI, where that folder is absent) |
-| Browser, production build, Chromium | Playwright, headless, software WebGL | **14 passed** |
-| Browser, production build, Firefox | Playwright | **14 passed** |
-| Browser, production build, WebKit | Playwright | **14 passed** |
+| **Unit and integration total** | Vitest | **357 passed, 0 failed, 0 skipped** locally (10 added for the two investigations) (41 statistics tests that read the original repository's CSVs skip in CI, where that folder is absent) |
+| Browser, production build, Chromium | Playwright, headless, software WebGL | **18 passed** (4 added for the NASA trends flow) |
+| Browser, production build, Firefox | Playwright | 14 passed earlier; the 4 new tests not yet run |
+| Browser, production build, WebKit | Playwright | 14 passed earlier; the 4 new tests not yet run |
 | Browser, live site, Chromium | `TP_BASE_URL` set | all passed at each deploy (see DEPLOYMENT.md for commits, counts and times) |
 | Type-check | `tsc --noEmit` (TypeScript 7, strict) | clean |
 | Build | Vite 8 | succeeds; one bundle 1.55 MB (450 kB gzip) |
