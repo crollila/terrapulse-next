@@ -40,7 +40,7 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
     try {
       const j = JSON.parse(await file.text());
       const p = { ...SCENARIO_001, ...(j.params ?? j) } as HurricaneParams;
-      const clean = Object.fromEntries((Object.keys(SCENARIO_001) as (keyof HurricaneParams)[]).map((k) => [k, Number(p[k])])) as unknown as HurricaneParams;
+      const clean = Object.fromEntries((Object.keys(SCENARIO_001) as (keyof HurricaneParams)[]).map((k) => [k, k === "inlandDecay" ? p[k] !== false : Number(p[k])])) as unknown as HurricaneParams;
       const errs = validateParams(clean);
       if (errs.length) throw new Error(errs.join("; "));
       setSim(clean);
@@ -171,6 +171,14 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
           </div>
           <Slider label="Heading (direction of travel)" unit="°" value={sim.headingDeg} {...PARAM_BOUNDS.headingDeg} onChange={(v) => setSim({ headingDeg: v })} hint="0° north, 90° east, 270° west." />
           <Slider label="Forward speed" unit="km/h" value={sim.forwardSpeedKmh} {...PARAM_BOUNDS.forwardSpeedKmh} onChange={(v) => setSim({ forwardSpeedKmh: v })} hint="Sets how long each site stays inside the wind field." />
+          <div className="field">
+            <div className="row">
+              <span className="small" style={{ fontWeight: 600, color: "var(--navy)", flex: 1 }}>Weaken after landfall</span>
+              <button type="button" role="switch" aria-checked={sim.inlandDecay} aria-label="Weaken after landfall" className="switch" data-testid="decay-toggle" onClick={() => setSim({ inlandDecay: !sim.inlandDecay })} />
+            </div>
+            <div className="tiny muted">Kaplan–DeMaria (1995) inland wind decay, starting at the landfall point. Off means no weakening: an upper bound.</div>
+          </div>
+          {sim.inlandDecay && <Slider label="Decay rate over land (assumption)" unit="per h" value={sim.decayRatePerH} {...PARAM_BOUNDS.decayRatePerH} format={(v) => v.toFixed(3)} onChange={(v) => setSim({ decayRatePerH: v })} hint="Default 0.095 per hour, the value commonly quoted for U.S. landfalls south of 37°N; not re-verified in this build." />}
         </div>
 
         <div className="section stack">

@@ -11,6 +11,8 @@ import {
   timelineState,
   validateParams,
   windRadiusKm,
+  vmaxAtKt,
+  DECAY_DEFAULTS,
   PHYSICAL_FRACTION,
   T_END_H,
   T_START_H,
@@ -108,10 +110,10 @@ describe("track and exposure", () => {
     expect(e.tOnset34H).toBeNull();
   });
   it("peak wind equals the profile evaluated at the closest approach (to sampling tolerance)", () => {
-    const e = assetExposure(P, 30.0, -93.9);
-    if (e.closestApproachKm >= P.rmaxKm) {
-      expect(e.peakWindKt).toBeCloseTo(hollandWindKt(e.closestApproachKm, P), 6);
-    }
+    const noDecay = { ...P, inlandDecay: false };
+    const e = assetExposure(noDecay, 30.0, -93.9);
+    expect(e.closestApproachKm).toBeGreaterThan(P.rmaxKm);
+    expect(e.peakWindKt).toBeCloseTo(hollandWindKt(e.closestApproachKm, noDecay), 6);
   });
 });
 
@@ -187,15 +189,55 @@ describe("timeline", () => {
   });
 });
 
+describe("inland decay (Kaplan and DeMaria 1995 form, R = 0.9)", () => {
+  it("is constant before landfall and drops by the reduction factor just after it", () => {
+    expect(vmaxAtKt(P, -10)).toBe(P.vmaxKt);
+    expect(vmaxAtKt(P, 0)).toBe(P.vmaxKt);
+    expect(vmaxAtKt(P, 1e-9)).toBeCloseTo(DECAY_DEFAULTS.reductionFactor * P.vmaxKt, 6);
+  });
+  it("hand calculation at 12 h: 26.7 + (0.9 * 140 - 26.7) * exp(-0.095 * 12) = 58.46 kt", () => {
+    // exp(-1.14) = 0.319819; 99.3 * 0.319819 = 31.758; + 26.7 = 58.458
+    expect(vmaxAtKt({ vmaxKt: 140, inlandDecay: true, decayRatePerH: 0.095 }, 12)).toBeCloseTo(58.458, 2);
+  });
+  it("tends to the background wind and never increases with time", () => {
+    expect(vmaxAtKt(P, 500)).toBeCloseTo(DECAY_DEFAULTS.backgroundWindKt, 6);
+    let prev = Infinity;
+    for (let h = 0.01; h < 60; h += 0.5) {
+      const v = vmaxAtKt(P, h);
+      expect(v).toBeLessThanOrEqual(prev);
+      prev = v;
+    }
+  });
+  it("a weak storm below the background wind is only reduced, never raised", () => {
+    expect(vmaxAtKt({ vmaxKt: 28, inlandDecay: true, decayRatePerH: 0.095 }, 20)).toBeCloseTo(25.2, 6);
+  });
+  it("switching decay off gives an upper bound on every asset's peak wind", () => {
+    for (const [lat, lon] of [[30.5, -95.6], [32.3, -96.5], [29.7, -95.0], [35.0, -97.5]]) {
+      const on = assetExposure(P, lat, lon).peakWindKt;
+      const off = assetExposure({ ...P, inlandDecay: false }, lat, lon).peakWindKt;
+      expect(on).toBeLessThanOrEqual(off + 1e-9);
+    }
+  });
+  it("a point 600 km inland along the track is not at hurricane force with decay on", () => {
+    const c = stormCenter(P, 30);
+    expect(assetExposure(P, c.lat, c.lon).peakWindKt).toBeLessThan(64);
+    expect(assetExposure({ ...P, inlandDecay: false }, c.lat, c.lon).peakWindKt).toBeGreaterThan(130);
+  });
+});
+
 describe("swath polygon", () => {
+  it("ends where the weakened wind field no longer reaches the threshold", () => {
+    expect(swathPolygon(P, 96, 20, 30)).toBeNull();
+    expect(swathPolygon({ ...P, inlandDecay: false }, 96, 20, 30)).not.toBeNull();
+  });
   it("is closed and contains points near the track", () => {
-    const ring = swathPolygon(P, 100, -10, 0);
+    const ring = swathPolygon(P, 64, -10, 0)!;
     expect(ring[0]).toEqual(ring.at(-1));
     expect(ring.length).toBeGreaterThan(20);
     for (const [lon, lat] of ring) {
       const dA = haversineKm(lat, lon, stormCenter(P, -10).lat, stormCenter(P, -10).lon);
       const dB = haversineKm(lat, lon, P.landfallLat, P.landfallLon);
-      expect(Math.min(dA, dB)).toBeLessThan(100 + 200 + 1);
+      expect(Math.min(dA, dB)).toBeLessThan(windRadiusKm(64, P)! + 200 + 1);
     }
   });
 });

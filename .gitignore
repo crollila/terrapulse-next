@@ -10,3 +10,5 @@ research/venv
 research/__pycache__
 __pycache__
 *.pyc
+test-results
+playwright-report

@@ -7,7 +7,15 @@
  * Monthly Weather Review, 108, 1212-1218.
  *
  * Track: constant heading and forward speed along a great circle through the landfall point (t = 0).
- * Intensity is held constant. See MODEL_CARD.limitations: this is an exposure screen, not a forecast.
+ *
+ * Intensity: constant before landfall. After landfall (t > 0 h) the maximum wind can decay with the
+ * empirical inland wind decay model of Kaplan and DeMaria (1995):
+ *   V(t) = Vb + (R * V0 - Vb) * exp(-alpha * t),  R = 0.9
+ * Equation and R = 0.9 as stated in Kaplan, Dunion, Carrasco and DeMaria (2007), Joint Hurricane
+ * Testbed final report (https://www.nhc.noaa.gov/jht/05-07reports/final_Kaplan_JHT07.pdf), which
+ * applies it "to every point in the initial vortex wind field", as done here.
+ * The decay rate alpha and background wind Vb are user-visible ASSUMPTIONS (see DECAY_DEFAULTS).
+ * See MODEL_CARD.limitations: this is an exposure screen, not a forecast.
  */
 import { destination, haversineKm, circleRing } from "./geo";
 import type { Port, Refinery } from "../data/types";
@@ -26,7 +34,19 @@ export interface HurricaneParams {
   hollandB: number;
   /** Wind speed (kt) at or above which an asset counts as "inside the footprint". An assumption, chosen by the user. */
   exposureThresholdKt: number;
+  /** Apply Kaplan-DeMaria weakening after the landfall point (t > 0). */
+  inlandDecay: boolean;
+  /** Exponential decay rate alpha, per hour. An assumption. */
+  decayRatePerH: number;
 }
+
+/**
+ * Inland decay constants. R = 0.9 is verified from the NOAA report cited above. The default decay
+ * rate (0.095 per hour) and background wind (26.7 kt) are the values commonly quoted for Kaplan and
+ * DeMaria (1995) for U.S. landfalls south of 37 N; they have NOT been re-verified against the paper
+ * in this build, so they are presented in the app as adjustable assumptions.
+ */
+export const DECAY_DEFAULTS = { reductionFactor: 0.9, decayRatePerH: 0.095, backgroundWindKt: 26.7 } as const;
 
 /** Saffir-Simpson Hurricane Wind Scale, 1-minute sustained wind in knots (NHC: https://www.nhc.noaa.gov/aboutsshws.php). */
 export const SAFFIR_SIMPSON = [
@@ -52,6 +72,7 @@ export const PARAM_BOUNDS = {
   hollandB: { min: 1.0, max: 2.5, step: 0.05 },
   forwardSpeedKmh: { min: 5, max: 50, step: 1 },
   headingDeg: { min: 0, max: 359, step: 1 },
+  decayRatePerH: { min: 0.03, max: 0.25, step: 0.005 },
 } as const;
 
 /** Scenario 001: a HYPOTHETICAL Category 5 landfall on the upper Texas coast. These are chosen inputs, not a forecast. */
@@ -64,6 +85,8 @@ export const SCENARIO_001: HurricaneParams = {
   rmaxKm: 35,
   hollandB: 1.5,
   exposureThresholdKt: HURRICANE_FORCE_KT,
+  inlandDecay: true,
+  decayRatePerH: DECAY_DEFAULTS.decayRatePerH,
 };
 
 export function validateParams(p: HurricaneParams): string[] {
@@ -77,6 +100,7 @@ export function validateParams(p: HurricaneParams): string[] {
   if (!Number.isFinite(p.landfallLat) || Math.abs(p.landfallLat) > 60) errs.push("landfallLat must be between -60 and 60");
   if (!Number.isFinite(p.landfallLon) || Math.abs(p.landfallLon) > 180) errs.push("landfallLon must be between -180 and 180");
   if (![34, 50, 64, 96].includes(p.exposureThresholdKt)) errs.push("exposureThresholdKt must be 34, 50, 64 or 96");
+  if (typeof p.inlandDecay !== "boolean") errs.push("inlandDecay must be true or false");
   return errs;
 }
 
@@ -101,6 +125,24 @@ export function windRadiusKm(thresholdKt: number, p: Pick<HurricaneParams, "vmax
   return (lo + hi) / 2;
 }
 
+/**
+ * Maximum sustained wind (kt) at tHours relative to landfall. Constant before landfall; after it,
+ * Kaplan-DeMaria decay when enabled. The model does not know where land is: decay starts at the
+ * landfall point the user sets.
+ */
+export function vmaxAtKt(p: Pick<HurricaneParams, "vmaxKt" | "inlandDecay" | "decayRatePerH">, tHours: number): number {
+  if (!p.inlandDecay || tHours <= 0) return p.vmaxKt;
+  const { reductionFactor: R, backgroundWindKt: Vb } = DECAY_DEFAULTS;
+  const v0 = R * p.vmaxKt;
+  if (v0 <= Vb) return v0;
+  return Vb + (v0 - Vb) * Math.exp(-p.decayRatePerH * tHours);
+}
+
+/** Wind-field parameters in force at tHours. */
+export function fieldAt(p: HurricaneParams, tHours: number): Pick<HurricaneParams, "vmaxKt" | "rmaxKm" | "hollandB"> {
+  return { vmaxKt: vmaxAtKt(p, tHours), rmaxKm: p.rmaxKm, hollandB: p.hollandB };
+}
+
 /** Storm centre at tHours relative to landfall (negative = before landfall). */
 export function stormCenter(p: HurricaneParams, tHours: number): { lat: number; lon: number } {
   return destination(p.landfallLat, p.landfallLon, p.headingDeg, p.forwardSpeedKmh * tHours);
@@ -108,7 +150,7 @@ export function stormCenter(p: HurricaneParams, tHours: number): { lat: number; 
 
 export function windAtKt(p: HurricaneParams, lat: number, lon: number, tHours: number): number {
   const c = stormCenter(p, tHours);
-  return hollandWindKt(haversineKm(lat, lon, c.lat, c.lon), p);
+  return hollandWindKt(haversineKm(lat, lon, c.lat, c.lon), fieldAt(p, tHours));
 }
 
 /** Physical simulation window, hours relative to landfall. */
@@ -148,7 +190,7 @@ export function assetExposure(p: HurricaneParams, lat: number, lon: number): Ass
     const c = stormCenter(p, t);
     const d = haversineKm(lat, lon, c.lat, c.lon);
     if (d < closest) closest = d;
-    const v = hollandWindKt(d, p);
+    const v = hollandWindKt(d, fieldAt(p, t));
     if (v > peak) {
       peak = v;
       tPeak = t;
@@ -288,38 +330,53 @@ export function posForHour(tH: number): number {
 export function windRings(p: HurricaneParams, tH: number): { thresholdKt: number; ring: [number, number][] }[] {
   const c = stormCenter(p, tH);
   const out: { thresholdKt: number; ring: [number, number][] }[] = [];
+  const f = fieldAt(p, tH);
   for (const thr of [34, 64, 96]) {
-    const r = windRadiusKm(thr, p);
+    const r = windRadiusKm(thr, f);
     if (r) out.push({ thresholdKt: thr, ring: circleRing(c.lat, c.lon, r) });
   }
   return out;
 }
 
-/** Swath polygon: every point that has been within radiusKm of the track between tFrom and tTo. */
-export function swathPolygon(p: HurricaneParams, radiusKm: number, tFrom: number, tTo: number): [number, number][] {
-  if (tTo <= tFrom) return circleRing(stormCenter(p, tFrom).lat, stormCenter(p, tFrom).lon, radiusKm);
-  const a = stormCenter(p, tFrom);
-  const b = stormCenter(p, tTo);
+/**
+ * Swath polygon: every point that has had wind of at least thresholdKt between tFrom and tTo.
+ * The radius is re-evaluated along the track, so the swath narrows as the storm weakens over land
+ * and ends where the wind field no longer reaches the threshold.
+ */
+export function swathPolygon(p: HurricaneParams, thresholdKt: number, tFrom: number, tTo: number): [number, number][] | null {
+  const radius = (t: number) => windRadiusKm(thresholdKt, fieldAt(p, t));
   const left: [number, number][] = [];
   const right: [number, number][] = [];
-  const n = Math.max(2, Math.ceil((tTo - tFrom) / 2));
+  const n = Math.max(2, Math.ceil(tTo - tFrom));
+  let first: { t: number; r: number } | null = null;
+  let last: { t: number; r: number } | null = null;
   for (let i = 0; i <= n; i++) {
-    const c = stormCenter(p, tFrom + ((tTo - tFrom) * i) / n);
-    const l = destination(c.lat, c.lon, p.headingDeg - 90, radiusKm);
-    const r = destination(c.lat, c.lon, p.headingDeg + 90, radiusKm);
+    const t = tFrom + ((tTo - tFrom) * i) / n;
+    const r = radius(t);
+    if (r === null) {
+      if (first) break;
+      continue;
+    }
+    const c = stormCenter(p, t);
+    const l = destination(c.lat, c.lon, p.headingDeg - 90, r);
+    const rt = destination(c.lat, c.lon, p.headingDeg + 90, r);
     left.push([l.lon, l.lat]);
-    right.push([r.lon, r.lat]);
+    right.push([rt.lon, rt.lat]);
+    first ??= { t, r };
+    last = { t, r };
   }
-  const cap = (c: { lat: number; lon: number }, from: number) => {
+  if (!first || !last) return null;
+  const cap = (t: number, r: number, from: number) => {
+    const c = stormCenter(p, t);
     const pts: [number, number][] = [];
     for (let i = 1; i < 18; i++) {
-      const q = destination(c.lat, c.lon, from + (i / 18) * 180, radiusKm);
+      const q = destination(c.lat, c.lon, from + (i / 18) * 180, r);
       pts.push([q.lon, q.lat]);
     }
     return pts;
   };
-  // left side forward, front cap (left -> right, clockwise through heading), right side back, rear cap
-  const ring = [...left, ...cap(b, p.headingDeg - 90), ...right.reverse(), ...cap(a, p.headingDeg + 90)];
+  // left side forward, front cap (through the heading), right side back, rear cap
+  const ring = [...left, ...cap(last.t, last.r, p.headingDeg - 90), ...right.reverse(), ...cap(first.t, first.r, p.headingDeg + 90)];
   ring.push(ring[0]);
   return ring;
 }
@@ -333,18 +390,22 @@ export const MODEL_CARD = {
     "Rmax: radius of maximum wind (km), user-chosen",
     "Holland B shape parameter (1.0 to 2.5), user-chosen",
     "Exposure threshold (34, 50, 64 or 96 kt): an assumption, user-chosen",
+    "Inland decay rate alpha (default 0.095 per hour) and background wind Vb (26.7 kt): assumptions, values commonly quoted for Kaplan & DeMaria (1995), not re-verified here",
     "Refinery locations and atmospheric crude distillation capacity: U.S. EIA",
     "Port locations and annual tonnage: U.S. Army Corps of Engineers / BTS",
   ],
   formula: [
     "V(r) = Vmax * sqrt((Rmax/r)^B * exp(1 - (Rmax/r)^B))   [Holland 1980, cyclostrophic form]",
     "centre(t) = great-circle point at distance speed * t from the landfall point along the heading",
-    "peak_i = max over t in [-48 h, +30 h] of V(distance(asset_i, centre(t)))",
+    "Vmax(t) = Vmax for t <= 0;  Vb + (0.9 * Vmax - Vb) * exp(-alpha * t) for t > 0   [Kaplan & DeMaria 1995 inland decay]",
+    "peak_i = max over t in [-48 h, +30 h] of V(distance(asset_i, centre(t)); Vmax(t))",
     "capacity_in_footprint = sum_i capacity_i * 1[peak_i >= threshold]",
   ],
   assumptions: [
     "Symmetric wind field; no forward-motion asymmetry",
-    "Constant intensity and size; no weakening over land, so inland winds are overestimated",
+    "Constant intensity before the landfall point; after it, exponential weakening (alpha and Vb are assumptions; R = 0.9). Turning weakening off gives an upper bound.",
+    "The model has no land mask: weakening starts at the landfall point you set, wherever that is",
+    "Constant storm size (Rmax and B) through landfall",
     "Straight track at constant speed",
     "Winds are open-water 1-minute sustained values; no terrain or surface roughness",
   ],
@@ -357,6 +418,8 @@ export const MODEL_CARD = {
   uncertainty: "Not quantified. Use the sliders for sensitivity: outputs change deterministically with Vmax, Rmax, B, track and threshold.",
   references: [
     "Holland, G. J. (1980). An analytic model of the wind and pressure profiles in hurricanes. Mon. Wea. Rev., 108, 1212-1218.",
+    "Kaplan, J., & DeMaria, M. (1995). A simple empirical model for predicting the decay of tropical cyclone winds after landfall. J. Appl. Meteor., 34, 2499-2512.",
+    "Kaplan, J., Dunion, J., Carrasco, N., & DeMaria, M. (2007). Estimating tropical cyclone wind radii utilizing an empirical inland wind decay model. Joint Hurricane Testbed final report. https://www.nhc.noaa.gov/jht/05-07reports/final_Kaplan_JHT07.pdf",
     "NHC, Saffir-Simpson Hurricane Wind Scale. https://www.nhc.noaa.gov/aboutsshws.php",
   ],
 } as const;

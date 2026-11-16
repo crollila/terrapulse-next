@@ -405,8 +405,10 @@ export function Globe() {
     if (active && t > T_START_H) {
       const r34 = sc.result.radiiKm.r34;
       const rThr = sc.result.radiiKm.threshold;
-      if (r34) swaths.push({ type: "Feature", properties: { color: "#f5a524", opacity: 0.1 }, geometry: { type: "Polygon", coordinates: [swathPolygon(p, r34, T_START_H, t)] } });
-      if (rThr && p.exposureThresholdKt > TS_FORCE_KT) swaths.push({ type: "Feature", properties: { color: "#e5484d", opacity: 0.16 }, geometry: { type: "Polygon", coordinates: [swathPolygon(p, rThr, T_START_H, t)] } });
+      const s34 = r34 ? swathPolygon(p, TS_FORCE_KT, T_START_H, t) : null;
+      const sThr = rThr && p.exposureThresholdKt > TS_FORCE_KT ? swathPolygon(p, p.exposureThresholdKt, T_START_H, t) : null;
+      if (s34) swaths.push({ type: "Feature", properties: { color: "#f5a524", opacity: 0.1 }, geometry: { type: "Polygon", coordinates: [s34] } });
+      if (sThr) swaths.push({ type: "Feature", properties: { color: "#e5484d", opacity: 0.16 }, geometry: { type: "Polygon", coordinates: [sThr] } });
     }
     setData("sim-swath", fc(swaths));
 
