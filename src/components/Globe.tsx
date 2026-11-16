@@ -234,7 +234,7 @@ export function Globe() {
       const dt = Math.min(0.1, (now - last) / 1000);
       last = now;
       const st = useStore.getState();
-      if (!reduce && readyRef.current && st.tab === "world" && !st.selection && !st.trendOpen && map.getZoom() < 2.6 && now - idleSince > 4000 && !map.isMoving() && !document.hidden) {
+      if (!reduce && readyRef.current && (st.tab === "world" || st.tab === "about") && !st.selection && !st.trendOpen && map.getZoom() < 2.6 && now - idleSince > (st.tab === "about" ? 2600 : 4000) && !map.isMoving() && !document.hidden) {
         const c = map.getCenter();
         map.jumpTo({ center: [c.lng + dt * 3, c.lat] });
       }
@@ -303,7 +303,7 @@ export function Globe() {
   useEffect(() => {
     if (!mapReady) return;
     // The trends view shows only the study regions, so the science is not competing with live events.
-    const evs = tab === "trends" ? [] : [...(feeds.usgs?.events ?? []), ...(feeds.eonet?.events ?? [])].filter((e) => layers[hazardLayer(e.kind)]);
+    const evs = tab === "trends" || tab === "about" ? [] : [...(feeds.usgs?.events ?? []), ...(feeds.eonet?.events ?? [])].filter((e) => layers[hazardLayer(e.kind)]);
     setData(
       "hazards",
       fc(
@@ -382,7 +382,7 @@ export function Globe() {
     setData(
       "refineries",
       fc(
-        (layers.refineries && tab !== "trends" ? refineries : [])
+        (layers.refineries && tab !== "trends" && tab !== "about" ? refineries : [])
           .filter((r) => !layers.listedOnly || listingFor(r.corporation)?.ticker)
           .map((r) => {
             const l = listingFor(r.corporation);
@@ -402,7 +402,7 @@ export function Globe() {
     setData(
       "ports",
       fc(
-        (layers.ports && tab !== "trends" ? ports : []).map((p) => ({
+        (layers.ports && tab !== "trends" && tab !== "about" ? ports : []).map((p) => ({
           type: "Feature",
           properties: { id: p.id, r: 2.5 + Math.sqrt((p.totalTons ?? 0) / 310e6) * 8, color: stateColor(expP.get(p.id), "#0091a7") },
           geometry: { type: "Point", coordinates: [p.lon, p.lat] },
@@ -486,6 +486,12 @@ export function Globe() {
     const wide = window.innerWidth >= 1000;
     const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     if (tab === "trends") return; // handled by the trends camera effect below
+    if (tab === "about") {
+      // the showcase hero: the globe sits to the right of the headline and turns slowly
+      const w = window.innerWidth;
+      map.flyTo({ center: [-38, 14], zoom: w >= 1000 ? 2.25 : 1.15, pitch: 0, bearing: 0, padding: w >= 1000 ? { left: Math.round(w * 0.44), right: 0, top: 0, bottom: 0 } : { left: 0, right: 0, top: 0, bottom: 0 }, duration: window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ? 0 : 2200, essential: true });
+      return;
+    }
     const padding = tab === "sim" && wide ? { left: 340, right: 470, top: 20, bottom: 110 } : wide ? { left: 300, right: 0, top: 0, bottom: 0 } : { left: 0, right: 0, top: 0, bottom: 0 };
     if (tab === "sim" && (hazard === "drought" || hazard === "wildfire")) map.easeTo({ padding: hazard === "wildfire" ? { left: 0, right: 0, top: 0, bottom: 0 } : padding, duration: 0 });
     else if (tab === "sim" && hazard === "rainfall") map.flyTo({ center: [-95.25, 29.55], zoom: wide ? 6.3 : 5.2, pitch: 0, bearing: 0, padding, duration: reduce ? 0 : 2400, essential: true });

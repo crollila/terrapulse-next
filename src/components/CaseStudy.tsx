@@ -74,7 +74,7 @@ export function buildCaseSeries(mainPts: MonthlyPoint[], secondPts: MonthlyPoint
   };
 }
 
-function PairCharts({ s, units, mainName, secondName, breakYear, gaps, hover, setHover }: { s: CaseSeries; units: string; mainName: string; secondName: string; breakYear: number | null; gaps: { before: number; after: number } | null; hover: number | null; setHover: (y: number | null) => void }) {
+export function PairCharts({ s, units, mainName, secondName, breakYear, gaps, hover, setHover }: { s: CaseSeries; units: string; mainName: string; secondName: string; breakYear: number | null; gaps: { before: number; after: number } | null; hover: number | null; setHover: (y: number | null) => void }) {
   const W = 520;
   const m = { l: 44, r: 10, t: 14, b: 20 };
   const t0 = s.main[0].year;

@@ -7,7 +7,7 @@ import { WILDFIRE_CARD } from "../sim/wildfire";
 import { TREND_METHOD } from "../science/stats";
 import { Badge, Icon } from "./ui";
 
-const SOURCES: { name: string; use: string; terms: string; url: string }[] = [
+export const SOURCES: { name: string; use: string; terms: string; url: string }[] = [
   { name: "NASA MERRA-2 (GMAO) via NASA POWER API", use: "Monthly temperature, precipitation, humidity, wind and soil wetness, 1981–2025, eight regions", terms: "NASA open data; cite", url: "https://power.larc.nasa.gov/" },
   { name: "NASA MODIS/Terra MOD13C2 v6.1 (LP DAAC)", use: "Monthly vegetation greenness (NDVI), 2000–2026", terms: "NASA open data; cite", url: "https://doi.org/10.5067/MODIS/MOD13C2.061" },
   { name: "NASA GISTEMP v4 and GPCP v2.3 (via NOAA PSL)", use: "Independent second opinions on temperature and rainfall trends", terms: "Open; cite", url: "https://psl.noaa.gov/" },
