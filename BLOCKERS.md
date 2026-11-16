@@ -36,9 +36,8 @@ Updated 2026-11-15 21:00 MST.
 
 Needs the Team Owner:
 
-4. **Approval to publish.** Branch `research/hazard-sim` is built, tested and merged with `main`
-   locally. It has not been pushed or deployed. Review `docs/HAZARD_SIM_BRANCH.md`, then merge to
-   `main` to publish, or leave it isolated.
+4. ~~Approval to publish.~~ **Resolved 16 November 2026:** the Team Owner approved; merged to `main`
+   as `c716b17` and deployed. See `DEPLOYMENT.md`.
 5. **Utilities in the ticker table.** Wildfire company and portfolio exposure is withheld because
    utilities have no verified listing mapping. A person should supply or confirm one.
 6. **Two pages that refuse automated requests** (CAL FIRE's Camp Fire incident page; the Butte County

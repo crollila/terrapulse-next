@@ -3,8 +3,14 @@
 Branch `research/hazard-sim`, worktree `../terrapulse-sim`. Started 15 November 2026 from `cc5b89a`;
 `main` (showcase page and final demo video, `db5c4b6`) was merged in on 16 November with no conflicts.
 
-**Not deployed and not pushed.** The public site, the NASA submission video and the original
-`crollila/terrapulse` repository are untouched. The deploy workflow runs only on pushes to `main`.
+**Published on 16 November 2026.** The Team Owner approved it; the branch was merged into `main`
+as `c716b17` and deployed to https://crollila.github.io/terrapulse-next/. The 36 browser tests
+passed against the live URL afterwards (see `DEPLOYMENT.md`). The NASA submission video files were
+not changed by the merge, and the original `crollila/terrapulse` repository is untouched. Tag
+`pre-hazard-merge-2026-11-16` marks `main` as it was before (`db5c4b6`).
+
+Publishing does not change any status below: the rainfall screen and the wildfire proximity screen
+remain experimental and are labelled so in the app.
 
 ## What was added
 
@@ -42,7 +48,8 @@ Branch `research/hazard-sim`, worktree `../terrapulse-sim`. Started 15 November 
 | Browser, production build, Chromium (Playwright) | **36 passed**, 0 failed: 22 in `app.spec.ts` (including the showcase's) + 8 in `hazards.spec.ts` + 6 in `wildfire.spec.ts` |
 | Build | succeeds; bundle 1.78 MB (515 kB gzip); new data 2.7 MB uncompressed |
 
-Not run: Firefox and WebKit for the new specs; real phones; the live site (nothing was deployed).
+After publishing, the same 36 browser tests passed against the live URL (Chromium).
+Not run: Firefox and WebKit for the new specs; real phones.
 
 Browser tests ran against `vite preview --port 4183` with `TP_BASE_URL=http://localhost:4183/`, so
 they could not pick up another workstream's server on the default port.
@@ -79,8 +86,9 @@ view states), `src/components/Globe.tsx` (two hook calls, one camera branch, one
 (optional graph prop), `src/sim/graph.ts` (generalised builder), `src/styles.css` (one appended block).
 New browser tests live in their own spec files. Everything else is new files.
 
-To publish: review, then merge `research/hazard-sim` into `main` and push. Until then the public
-application does not change.
+Merged into `main` on 16 November 2026 (`c716b17`, a merge commit, so one revert undoes it:
+`git revert -m 1 c716b17 && git push origin main`). Further hazard work should again happen on this
+branch and be merged only after review.
 
 ## Remaining data gaps and research needs
 

@@ -36,6 +36,7 @@ URL) counts.
 | 2026-11-15 22:35 | `dcd525d` | V3 video URL: HTTP 200, `video/mp4`, 17,799,243 bytes, 29.300 s, 879 frames, 1920×1080, video only; SHA-256 identical to the local render; plays in a browser without sign-in. V2 files unchanged (same SHA-256) | OK |
 | 2026-11-15 23:19 | `2130053` | Final narrated demo: `media/terrapulse-demo-final.mp4` HTTP 200, `video/mp4`, 15,349,928 bytes, 29.312 s, 1920×1080 H.264 + AAC; audio stream bit-identical to the team lead's file; plays in a browser without sign-in. Original HEVC copy also published. Earlier videos unchanged | OK |
 | 2026-11-15 23:36 | `bdf762f` | Showcase (About, `#about`) merged from branch `showcase` after 357 unit and 22 browser tests passed there; 22 browser tests against the live URL | 22 passed |
+| 2026-11-16 14:37 | `c716b17` | Hazard extensions (observed hurricane rainfall, wildfire record, shared economic network) merged from branch `research/hazard-sim` with the Team Owner's approval, after 450 unit and 36 browser tests passed on the merged `main`. Actions run 43961458396 succeeded. 36 browser tests against the live URL (Chromium); new data files return 200; `media/terrapulse-demo-final.mp4` unchanged (42,600,472 bytes, same as the repository file) | 36 passed |
 
 What the live browser tests cover: page and assets load; globe renders; layers toggle; a hazard
 opens its details; the Houston scenario runs with play, pause, rewind and scrub; parameters change

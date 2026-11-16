@@ -98,10 +98,11 @@ None at the last run.
 
 `npm run resume` prints it.
 
-## Hazard simulation research branch (16 November 2026): built and tested, NOT deployed
+## Hazard simulation extensions (16 November 2026): merged to `main` and deployed
 
-Branch `research/hazard-sim` (worktree `../terrapulse-sim`). `main` is merged in; nothing was pushed
-and the live site is unchanged. Full record: `docs/HAZARD_SIM_BRANCH.md`.
+Built on branch `research/hazard-sim` (worktree `../terrapulse-sim`), approved by the Team Owner,
+merged as `c716b17` and deployed. 36 browser tests passed against the live URL afterwards.
+Full record: `docs/HAZARD_SIM_BRANCH.md`; deploy check: `DEPLOYMENT.md`.
 
 | Feature | Evidence |
 |---|---|
@@ -111,5 +112,5 @@ and the live site is unchanged. Full record: `docs/HAZARD_SIM_BRANCH.md`.
 | Wildfire observed record: Camp (2018), Marshall (2021), Smokehouse Creek (2024) | 16 unit tests; 6 browser tests; `research/WILDFIRE.md` |
 | One economic network builder for every hazard; wind network unchanged | 8 unit tests with SHA-256 fingerprints |
 
-Test counts on the branch: 450 unit tests and 36 browser tests passed, 0 failed.
+Test counts on merged `main`: 450 unit tests and 36 browser tests passed, 0 failed.
 Still not built: flood depth, wildfire spread, any price or loss estimate. See the branch record.

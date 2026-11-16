@@ -103,4 +103,5 @@ Still imperfect:
 One real defect was found by these tests and fixed: the new timeline's clock label overflowed a
 390 px screen by 35 px.
 
-Not run on the branch: Firefox and WebKit for the two new spec files; real phones; the live site.
+After the merge to `main` (`c716b17`, 16 November 2026) the same 36 browser tests passed against the
+live URL. Not run: Firefox and WebKit for the two new spec files; real phones.
