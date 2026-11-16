@@ -168,6 +168,12 @@ export interface ExposureSet {
   capacityNote: string;
   /** Why no outage is estimated for this hazard. */
   outageNote: string;
+  /**
+   * Nodes and links for infrastructure the refinery and port network does not cover (for example
+   * power plants and transmission lines near a wildfire). Added as given; every link still needs
+   * its meaning, basis and source.
+   */
+  extra?: { nodes: Omit<GNode, "tier">[]; edges: GEdge[] };
 }
 
 export function buildExposureGraph(x: ExposureSet): ImpactGraph {
@@ -344,6 +350,10 @@ export function buildExposureGraph(x: ExposureSet): ImpactGraph {
       ],
     });
     link(industryNode, `fund:${f.ticker}`, "tracked by", "SOURCED", `${f.ticker} tracks the ${f.tracks}.`, { label: f.sourceLabel, url: f.sourceUrl });
+  }
+  if (x.extra) {
+    for (const n of x.extra.nodes) if (!nodes.some((m) => m.id === n.id)) add(n);
+    for (const e of x.extra.edges) if (!edges.some((m) => m.id === e.id)) edges.push(e);
   }
   return { nodes, edges };
 }

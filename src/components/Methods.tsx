@@ -3,6 +3,7 @@ import { MODEL_CARD } from "../sim/hurricane";
 import { DROUGHT_CARD } from "../sim/drought";
 import { RAINFALL_CARD } from "../sim/rainfall";
 import { RCLIPER_CARD } from "../sim/rcliper";
+import { WILDFIRE_CARD } from "../sim/wildfire";
 import { TREND_METHOD } from "../science/stats";
 import { Badge, Icon } from "./ui";
 
@@ -25,6 +26,10 @@ const SOURCES: { name: string; use: string; terms: string; url: string }[] = [
   { name: "FEMA National Flood Hazard Layer", use: "Regulatory flood zone at each refinery and port point", terms: "U.S. Government, public domain", url: "https://www.fema.gov/flood-maps/national-flood-hazard-layer" },
   { name: "NOAA NCEI GHCN-Daily", use: "Rain-gauge totals used to check the Stage IV analysis", terms: "U.S. Government, public domain", url: "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily" },
   { name: "U.S. EIA Refinery Capacity Report, 1 January 2017", use: "The refinery fleet and capacities at the time of Harvey, for the hindcast", terms: "U.S. Government, public domain", url: "https://www.eia.gov/petroleum/refinerycapacity/archive/2017/refcap2017.php" },
+  { name: "NIFC Open Data (WFIGS, perimeter history, GeoMAC archive)", use: "Observed wildfire perimeters, including the Camp Fire's dated perimeters", terms: "U.S. Government interagency data; no warranty", url: "https://data-nifc.opendata.arcgis.com/" },
+  { name: "NASA FIRMS, VIIRS 375 m active fire archive", use: "Satellite fire detections for three historical fires", terms: "NASA open data; cite FIRMS", url: "https://firms.modaps.eosdis.nasa.gov/" },
+  { name: "gridMET (Abatzoglou 2013) and U.S. Drought Monitor", use: "Fire-danger indices, wind and humidity at each fire's origin; county drought class", terms: "gridMET: copyright waived; USDM: use with attribution", url: "https://www.climatologylab.org/gridmet.html" },
+  { name: "U.S. EIA power plant and natural gas pipeline map layers; HIFLD transmission lines (archived)", use: "Energy infrastructure inside or near fire perimeters", terms: "EIA: public domain; HIFLD copy: derived lengths only", url: "https://www.eia.gov/maps/layer_info-m.php" },
   { name: "OpenFreeMap / OpenStreetMap contributors", use: "Vector base map: coastlines, borders, roads, place names", terms: "ODbL; attribution shown on the map", url: "https://openfreemap.org/" },
   { name: "Natural Earth (world-atlas)", use: "Offline fallback land outlines", terms: "Public domain", url: "https://www.naturalearthdata.com/" },
 ];
@@ -95,6 +100,19 @@ export function Methods({ onClose }: { onClose: () => void }) {
           <pre className="formula">{RCLIPER_CARD.formula.join("\n")}</pre>
           <ul>{RCLIPER_CARD.limitations.map((x) => <li key={x}>{x}</li>)}</ul>
           <ul>{RCLIPER_CARD.references.map((x) => <li key={x}>{x}</li>)}</ul>
+
+          <h3>{WILDFIRE_CARD.name}</h3>
+          <p><strong>Status:</strong> {WILDFIRE_CARD.status}</p>
+          <p style={{ marginTop: 6 }}><strong>Inputs</strong></p>
+          <ul>{WILDFIRE_CARD.inputs.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p><strong>What is computed</strong></p>
+          <pre className="formula">{WILDFIRE_CARD.formula.join("\n")}</pre>
+          <p><strong>Limitations</strong></p>
+          <ul>{WILDFIRE_CARD.limitations.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p><strong>Consistency of the record</strong></p>
+          <ul data-testid="fire-validation-card">{WILDFIRE_CARD.validation.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p className="small">Method, tables and data gaps: <a href="https://github.com/crollila/terrapulse-next/blob/main/research/WILDFIRE.md" target="_blank" rel="noopener noreferrer">research/WILDFIRE.md</a>.</p>
+          <ul>{WILDFIRE_CARD.references.map((x) => <li key={x}>{x}</li>)}</ul>
 
           <h3>{DROUGHT_CARD.name}</h3>
           <p><strong>Status:</strong> {DROUGHT_CARD.status}.</p>

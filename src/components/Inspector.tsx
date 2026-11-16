@@ -35,6 +35,8 @@ export function selectionTitle(sel: Selection, ctx: { hazards: ReturnType<typeof
     }
     case "layer":
       return LAYER_BY_ID.get(sel.id as any)?.label ?? "Layer";
+    case "plant":
+      return "Power plant";
   }
 }
 

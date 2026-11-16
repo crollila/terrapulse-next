@@ -1,0 +1,565 @@
+{
+ "generatedAt": "2026-11-16T07:20:57.772Z",
+ "generatedBy": "research/scripts/run_wildfire_checks.mjs",
+ "fires": [
+  {
+   "id": "camp-2018",
+   "name": "Camp Fire",
+   "start": "2018-11-08T14:33:00Z",
+   "windowHours": 416,
+   "reportedAcres": 153335.6,
+   "displayedShapeAcres": 152442,
+   "displayedOverReported": 0.994,
+   "detections": 8636,
+   "overpasses": 72,
+   "insideDisplayedFinalPerimeter": 8088,
+   "withinOnePixelOfFinalPerimeter": 8602,
+   "shareWithinOnePixel": 0.996,
+   "moreThan2kmOutside": 0,
+   "datedPerimeters": [
+    {
+     "time": "2018-11-08T17:54:00Z",
+     "acres": 54586.4,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 54566,
+     "detectionsSoFar": 0,
+     "insidePerimeter": 0,
+     "share": null
+    },
+    {
+     "time": "2018-11-09T00:00:00Z",
+     "acres": 70454.1,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 70082,
+     "detectionsSoFar": 1142,
+     "insidePerimeter": 1095,
+     "share": 0.959
+    },
+    {
+     "time": "2018-11-09T19:02:00Z",
+     "acres": 109502.9,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 108806,
+     "detectionsSoFar": 2973,
+     "insidePerimeter": 2812,
+     "share": 0.946
+    },
+    {
+     "time": "2018-11-09T23:13:00Z",
+     "acres": 108838.2,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 108254,
+     "detectionsSoFar": 3541,
+     "insidePerimeter": 3254,
+     "share": 0.919
+    },
+    {
+     "time": "2018-11-10T01:04:00Z",
+     "acres": 111552.4,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 110955,
+     "detectionsSoFar": 3541,
+     "insidePerimeter": 3312,
+     "share": 0.935
+    },
+    {
+     "time": "2018-11-10T21:10:00Z",
+     "acres": 114866.2,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 114183,
+     "detectionsSoFar": 4230,
+     "insidePerimeter": 3970,
+     "share": 0.939
+    },
+    {
+     "time": "2018-11-11T18:48:00Z",
+     "acres": 128799.1,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 127965,
+     "detectionsSoFar": 4985,
+     "insidePerimeter": 4744,
+     "share": 0.952
+    },
+    {
+     "time": "2018-11-12T00:31:00Z",
+     "acres": 130394.4,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 129586,
+     "detectionsSoFar": 5296,
+     "insidePerimeter": 5034,
+     "share": 0.951
+    },
+    {
+     "time": "2018-11-12T22:05:00Z",
+     "acres": 138127,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 137267,
+     "detectionsSoFar": 6362,
+     "insidePerimeter": 6029,
+     "share": 0.948
+    },
+    {
+     "time": "2018-11-13T02:53:00Z",
+     "acres": 128816.4,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 128007,
+     "detectionsSoFar": 6362,
+     "insidePerimeter": 5540,
+     "share": 0.871
+    },
+    {
+     "time": "2018-11-13T17:50:00Z",
+     "acres": 145254.2,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 144256,
+     "detectionsSoFar": 6761,
+     "insidePerimeter": 6426,
+     "share": 0.95
+    },
+    {
+     "time": "2018-11-14T02:58:00Z",
+     "acres": 136635.5,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 135737,
+     "detectionsSoFar": 6761,
+     "insidePerimeter": 6234,
+     "share": 0.922
+    },
+    {
+     "time": "2018-11-14T21:39:00Z",
+     "acres": 149511.8,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 148873,
+     "detectionsSoFar": 7386,
+     "insidePerimeter": 6984,
+     "share": 0.946
+    },
+    {
+     "time": "2018-11-15T03:13:00Z",
+     "acres": 142806.8,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 141883,
+     "detectionsSoFar": 7396,
+     "insidePerimeter": 6823,
+     "share": 0.923
+    },
+    {
+     "time": "2018-11-15T17:43:00Z",
+     "acres": 151575.2,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 150798,
+     "detectionsSoFar": 7486,
+     "insidePerimeter": 7088,
+     "share": 0.947
+    },
+    {
+     "time": "2018-11-16T12:51:00Z",
+     "acres": 145134.8,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 144103,
+     "detectionsSoFar": 7896,
+     "insidePerimeter": 7079,
+     "share": 0.897
+    },
+    {
+     "time": "2018-11-16T20:12:00Z",
+     "acres": 149688.7,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 149090,
+     "detectionsSoFar": 7912,
+     "insidePerimeter": 7437,
+     "share": 0.94
+    },
+    {
+     "time": "2018-11-17T01:37:00Z",
+     "acres": 148238.3,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 147316,
+     "detectionsSoFar": 8003,
+     "insidePerimeter": 7402,
+     "share": 0.925
+    },
+    {
+     "time": "2018-11-17T18:40:00Z",
+     "acres": 150690.4,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 149659,
+     "detectionsSoFar": 8190,
+     "insidePerimeter": 7677,
+     "share": 0.937
+    },
+    {
+     "time": "2018-11-17T23:53:00Z",
+     "acres": 150628.5,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 149589,
+     "detectionsSoFar": 8254,
+     "insidePerimeter": 7724,
+     "share": 0.936
+    },
+    {
+     "time": "2018-11-18T17:45:00Z",
+     "acres": 151428.8,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 150424,
+     "detectionsSoFar": 8353,
+     "insidePerimeter": 7827,
+     "share": 0.937
+    },
+    {
+     "time": "2018-11-18T22:20:00Z",
+     "acres": 151472.4,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 150437,
+     "detectionsSoFar": 8384,
+     "insidePerimeter": 7854,
+     "share": 0.937
+    },
+    {
+     "time": "2018-11-19T18:44:00Z",
+     "acres": 152761.3,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 151752,
+     "detectionsSoFar": 8506,
+     "insidePerimeter": 7974,
+     "share": 0.937
+    },
+    {
+     "time": "2018-11-19T22:48:00Z",
+     "acres": 151515,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 150520,
+     "detectionsSoFar": 8527,
+     "insidePerimeter": 7912,
+     "share": 0.928
+    },
+    {
+     "time": "2018-11-20T18:08:00Z",
+     "acres": 153438.3,
+     "method": "Infrared Image",
+     "areaOfDisplayedShapeAcres": 152442,
+     "detectionsSoFar": 8603,
+     "insidePerimeter": 8057,
+     "share": 0.937
+    },
+    {
+     "time": "2018-11-20T20:05:00Z",
+     "acres": 152687.8,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 151652,
+     "detectionsSoFar": 8603,
+     "insidePerimeter": 8017,
+     "share": 0.932
+    },
+    {
+     "time": "2018-11-21T21:05:00Z",
+     "acres": 153335.6,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 152302,
+     "detectionsSoFar": 8636,
+     "insidePerimeter": 8077,
+     "share": 0.935
+    },
+    {
+     "time": "2018-11-25T18:22:00Z",
+     "acres": 153335.6,
+     "method": "Mixed Methods",
+     "areaOfDisplayedShapeAcres": 152302,
+     "detectionsSoFar": 8636,
+     "insidePerimeter": 8077,
+     "share": 0.935
+    }
+   ],
+   "screens": [
+    {
+     "bufferKm": 0,
+     "plants": 4,
+     "plantMw": 194,
+     "refineries": [],
+     "ports": 0
+    },
+    {
+     "bufferKm": 2,
+     "plants": 6,
+     "plantMw": 204,
+     "refineries": [],
+     "ports": 0
+    },
+    {
+     "bufferKm": 10,
+     "plants": 16,
+     "plantMw": 1319,
+     "refineries": [],
+     "ports": 0
+    },
+    {
+     "bufferKm": 25,
+     "plants": 22,
+     "plantMw": 1553.3,
+     "refineries": [],
+     "ports": 0
+    },
+    {
+     "bufferKm": 50,
+     "plants": 37,
+     "plantMw": 2260.4,
+     "refineries": [],
+     "ports": 0
+    }
+   ],
+   "transmission": {
+    "linesInBoundingBox": 40,
+    "linesCrossingPerimeter": 22,
+    "kmInsidePerimeter": 237.8,
+    "kmInsideByVoltageClass": {
+     "500": 26.1,
+     "220-287": 100.3,
+     "100-161": 85.3,
+     "UNDER 100": 26.2
+    },
+    "kmInsideByOwner": {
+     "PACIFIC GAS & ELECTRIC COMPANY": 224.9,
+     "NOT AVAILABLE": 13
+    },
+    "truncated": false
+   },
+   "gasPipelineKmInside": 52.6,
+   "conditionsOnStartDay": {
+    "erc": 89,
+    "bi": 143,
+    "fm100": 4.4,
+    "vs": 11.3,
+    "rmin": 3.9,
+    "vpd": 1.36,
+    "pr": 0
+   },
+   "drought": {
+    "county": "Butte County, CA",
+    "mapDate": "2018-11-06",
+    "validStart": "2018-11-06",
+    "validEnd": "2018-11-12",
+    "percentOfCountyAtOrAbove": {
+     "D0": 100,
+     "D1": 0,
+     "D2": 0,
+     "D3": 0,
+     "D4": 0
+    },
+    "percentNone": 0
+   },
+   "facts": 2,
+   "gaps": [
+    "CAL FIRE's incident page (cause and fatalities) and the Butte County District Attorney's report refuse automated requests, so no saved copy exists to check quotes against; the cause of the Camp Fire is therefore not stated here."
+   ]
+  },
+  {
+   "id": "marshall-2021",
+   "name": "Marshall Fire",
+   "start": "2021-12-30T22:38:00Z",
+   "windowHours": 18,
+   "reportedAcres": 6079.9,
+   "displayedShapeAcres": 6046,
+   "displayedOverReported": 0.994,
+   "detections": 186,
+   "overpasses": 6,
+   "insideDisplayedFinalPerimeter": 152,
+   "withinOnePixelOfFinalPerimeter": 183,
+   "shareWithinOnePixel": 0.984,
+   "moreThan2kmOutside": 2,
+   "datedPerimeters": [],
+   "screens": [
+    {
+     "bufferKm": 0,
+     "plants": 0,
+     "plantMw": 0,
+     "refineries": [],
+     "ports": 0
+    },
+    {
+     "bufferKm": 2,
+     "plants": 0,
+     "plantMw": 0,
+     "refineries": [],
+     "ports": 0
+    },
+    {
+     "bufferKm": 10,
+     "plants": 9,
+     "plantMw": 395.8,
+     "refineries": [],
+     "ports": 0
+    },
+    {
+     "bufferKm": 25,
+     "plants": 23,
+     "plantMw": 1369.9,
+     "refineries": [
+      "COMMERCE CITY WEST (22.2 km)",
+      "COMMERCE CITY EAST (22.4 km)"
+     ],
+     "ports": 0
+    },
+    {
+     "bufferKm": 50,
+     "plants": 57,
+     "plantMw": 4290.3,
+     "refineries": [
+      "COMMERCE CITY WEST (22.2 km)",
+      "COMMERCE CITY EAST (22.4 km)"
+     ],
+     "ports": 0
+    }
+   ],
+   "transmission": {
+    "linesInBoundingBox": 53,
+    "linesCrossingPerimeter": 6,
+    "kmInsidePerimeter": 22.8,
+    "kmInsideByVoltageClass": {
+     "100-161": 14,
+     "220-287": 8.8
+    },
+    "kmInsideByOwner": {
+     "PUBLIC SERVICE CO OF COLORADO": 22.8
+    },
+    "truncated": false
+   },
+   "gasPipelineKmInside": 0,
+   "conditionsOnStartDay": {
+    "erc": 70,
+    "bi": 86,
+    "fm100": 9.2,
+    "vs": 7.3,
+    "rmin": 15.1,
+    "vpd": 0.67,
+    "pr": 0
+   },
+   "drought": {
+    "county": "Boulder County, CO",
+    "mapDate": "2021-12-28",
+    "validStart": "2021-12-28",
+    "validEnd": "2022-01-03",
+    "percentOfCountyAtOrAbove": {
+     "D0": 100,
+     "D1": 100,
+     "D2": 89.3,
+     "D3": 60.47,
+     "D4": 0
+    },
+    "percentNone": 0
+   },
+   "facts": 5,
+   "gaps": [
+    "No dated perimeters are published for this fire: the timeline uses satellite detections only.",
+    "Satellite detections begin 3.2 hours before the discovery time on the administrative record (2021-12-30T22:38:00Z); the record's time is kept as printed.",
+    "2 of 186 detections lie more than 2 km outside this fire's final perimeter: other fires were burning in the same area. They are kept and marked, not removed."
+   ]
+  },
+  {
+   "id": "smokehouse-creek-2024",
+   "name": "Smokehouse Creek Fire",
+   "start": "2024-02-26T20:16:05Z",
+   "windowHours": 185,
+   "reportedAcres": 1054153.3,
+   "displayedShapeAcres": 1050061,
+   "displayedOverReported": 0.996,
+   "detections": 5701,
+   "overpasses": 32,
+   "insideDisplayedFinalPerimeter": 4886,
+   "withinOnePixelOfFinalPerimeter": 5042,
+   "shareWithinOnePixel": 0.884,
+   "moreThan2kmOutside": 656,
+   "datedPerimeters": [],
+   "screens": [
+    {
+     "bufferKm": 0,
+     "plants": 1,
+     "plantMw": 3,
+     "refineries": [],
+     "ports": 0
+    },
+    {
+     "bufferKm": 2,
+     "plants": 1,
+     "plantMw": 3,
+     "refineries": [],
+     "ports": 0
+    },
+    {
+     "bufferKm": 10,
+     "plants": 6,
+     "plantMw": 642.4,
+     "refineries": [
+      "BORGER (7.8 km)"
+     ],
+     "ports": 0
+    },
+    {
+     "bufferKm": 25,
+     "plants": 11,
+     "plantMw": 1260.2,
+     "refineries": [
+      "BORGER (7.8 km)"
+     ],
+     "ports": 0
+    },
+    {
+     "bufferKm": 50,
+     "plants": 28,
+     "plantMw": 3023,
+     "refineries": [
+      "BORGER (7.8 km)",
+      "SUNRAY (36.6 km)"
+     ],
+     "ports": 0
+    }
+   ],
+   "transmission": {
+    "linesInBoundingBox": 89,
+    "linesCrossingPerimeter": 19,
+    "kmInsidePerimeter": 156.1,
+    "kmInsideByVoltageClass": {
+     "UNDER 100": 134.5,
+     "100-161": 16.8,
+     "220-287": 4.9
+    },
+    "kmInsideByOwner": {
+     "NOT AVAILABLE": 67.6,
+     "SOUTHWESTERN PUBLIC SERVICE CO.": 66.9,
+     "NORTH PLAINS ELECTRIC COOP INC": 16.8,
+     "SOUTHWESTERN PUBLIC SERVICE CO": 4.9
+    },
+    "truncated": false
+   },
+   "gasPipelineKmInside": 876.1,
+   "conditionsOnStartDay": {
+    "erc": 55,
+    "bi": 68,
+    "fm100": 8.5,
+    "vs": 7.5,
+    "rmin": 22.4,
+    "vpd": 0.71,
+    "pr": 0
+   },
+   "drought": {
+    "county": "Hutchinson County, TX",
+    "mapDate": "2024-02-20",
+    "validStart": "2024-02-20",
+    "validEnd": "2024-02-26",
+    "percentOfCountyAtOrAbove": {
+     "D0": 0,
+     "D1": 0,
+     "D2": 0,
+     "D3": 0,
+     "D4": 0
+    },
+    "percentNone": 100
+   },
+   "facts": 6,
+   "gaps": [
+    "No dated perimeters are published for this fire: the timeline uses satellite detections only.",
+    "Satellite detections begin 0.5 hours before the discovery time on the administrative record (2024-02-26T20:16:05Z); the record's time is kept as printed.",
+    "656 of 5701 detections lie more than 2 km outside this fire's final perimeter: other fires were burning in the same area. They are kept and marked, not removed."
+   ]
+  }
+ ]
+}

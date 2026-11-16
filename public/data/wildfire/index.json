@@ -1,0 +1,66 @@
+{
+ "meta": {
+  "builtAt": "2026-11-16T07:14:26Z",
+  "builtBy": "research/scripts/build_wildfires.py",
+  "note": "Historical fires with observed perimeters and satellite detections. No fire spread is simulated and nothing here forecasts a fire."
+ },
+ "events": [
+  {
+   "id": "camp-2018",
+   "name": "Camp Fire",
+   "place": "Butte County, California",
+   "year": 2018,
+   "start": "2018-11-08T14:33:00Z",
+   "contained": "2018-11-25T16:00:00Z",
+   "reportedAcres": 153335.6,
+   "bbox": [
+    -121.7778,
+    39.5986,
+    -121.3527,
+    39.8976
+   ],
+   "detections": 8636,
+   "datedPerimeters": 28,
+   "file": "camp-2018.json",
+   "bytes": 691215
+  },
+  {
+   "id": "marshall-2021",
+   "name": "Marshall Fire",
+   "place": "Boulder County, Colorado",
+   "year": 2021,
+   "start": "2021-12-30T22:38:00Z",
+   "contained": "2022-01-03T23:45:00Z",
+   "reportedAcres": 6079.9,
+   "bbox": [
+    -105.2333,
+    39.9292,
+    -105.1314,
+    39.9864
+   ],
+   "detections": 186,
+   "datedPerimeters": 0,
+   "file": "marshall-2021.json",
+   "bytes": 44390
+  },
+  {
+   "id": "smokehouse-creek-2024",
+   "name": "Smokehouse Creek Fire",
+   "place": "Texas Panhandle and western Oklahoma",
+   "year": 2024,
+   "start": "2024-02-26T20:16:05Z",
+   "contained": "2024-03-17T02:35:26Z",
+   "reportedAcres": 1054153.3,
+   "bbox": [
+    -101.5412,
+    35.5319,
+    -99.8911,
+    36.0594
+   ],
+   "detections": 5701,
+   "datedPerimeters": 0,
+   "file": "smokehouse-creek-2024.json",
+   "bytes": 394387
+  }
+ ]
+}

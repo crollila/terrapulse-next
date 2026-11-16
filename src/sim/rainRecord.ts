@@ -119,5 +119,11 @@ export function fmtUtc(ms: number, withTime = true): string {
   return withTime ? `${day}, ${String(d.getUTCHours()).padStart(2, "0")}:00 UTC` : day;
 }
 
+/** "8 Nov 2018, 14:33 UTC": like fmtUtc but keeps the minutes, for times that are not on the hour. */
+export function fmtUtcMinutes(ms: number): string {
+  const d = new Date(ms);
+  return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}, ${String(d.getUTCHours()).padStart(2, "0")}:${String(d.getUTCMinutes()).padStart(2, "0")} UTC`;
+}
+
 const STATUS: Record<string, string> = { HU: "Hurricane", TS: "Tropical storm", TD: "Tropical depression", EX: "Extratropical low", LO: "Low", SD: "Subtropical depression", SS: "Subtropical storm", WV: "Tropical wave", DB: "Disturbance" };
 export const statusLabel = (code: string): string => STATUS[code] ?? code;

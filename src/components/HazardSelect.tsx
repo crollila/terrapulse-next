@@ -4,6 +4,7 @@ import { useStore, type HazardType } from "../state/store";
 export const HAZARD_OPTIONS: { value: HazardType; label: string }[] = [
   { value: "hurricane", label: "Hurricane · wind-exposure model v0.1" },
   { value: "rainfall", label: "Hurricane rainfall · Harvey 2017, observed record" },
+  { value: "wildfire", label: "Wildfire · observed record, three U.S. fires" },
   { value: "drought", label: "Drought · regional index v0.1" },
 ];
 
@@ -19,7 +20,7 @@ export function HazardSelect({ id }: { id: string }) {
             {o.label}
           </option>
         ))}
-        <option disabled>Wildfire · not built yet</option>
+        <option disabled>Wildfire spread simulation · not offered (no validated model)</option>
         <option disabled>Earthquake, flood depth, other · not built yet</option>
       </select>
     </div>

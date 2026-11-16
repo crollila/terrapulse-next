@@ -16,7 +16,7 @@ const SAMPLE = "XOM 25\nMPC 15\nVLO 10\nXLE 20\nDAL 10\nAAPL 20";
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 
 /** Facts of the selected node or the meaning of the selected link, for a graph that is not the wind scenario's. */
-function GraphDetail({ graph }: { graph: Graph }) {
+export function GraphDetail({ graph }: { graph: Graph }) {
   const selection = useStore((s) => s.selection);
   const st = useStore.getState();
   if (!selection || (selection.type !== "node" && selection.type !== "edge")) return <p className="muted small">Click a node to follow its chain, or a line to see what the link means and where it comes from.</p>;
@@ -32,7 +32,7 @@ function GraphDetail({ graph }: { graph: Graph }) {
         ))}
         {node.assetId && (
           <button className="btn sm" style={{ justifySelf: "start" }} onClick={() => st.select({ type: node.assetId!.startsWith("usace") ? "port" : "refinery", id: node.assetId! })}>
-            Open this site's rainfall and flood evidence
+            Open this site's evidence
           </button>
         )}
       </div>

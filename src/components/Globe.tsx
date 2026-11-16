@@ -12,6 +12,7 @@ import { T_END_H, T_START_H, stormCenter, swathPolygon, timelineState, windAtKt,
 import { EARTH_RADIUS_KM, destination, greatCircle, haversineKm } from "../sim/geo";
 import type { HazardEvent } from "../data/types";
 import { useRainfallLayers } from "./globe/rainfallLayers";
+import { useWildfireLayers } from "./globe/wildfireLayers";
 
 // The worker is served untouched from public/vendor (copied by scripts/copy-map-worker.mjs).
 setWorkerUrl(new URL(`${import.meta.env.BASE_URL}vendor/maplibre-gl-worker.mjs`, document.baseURI).href);
@@ -278,6 +279,8 @@ export function Globe() {
 
   // ---- observed rainfall record (its own sources and layers) ----
   useRainfallLayers(mapRef, mapReady);
+  // ---- wildfire record (its own sources and layers; it frames the fire itself) ----
+  useWildfireLayers(mapRef, mapReady);
 
   // ---- NASA GIBS raster overlays ----
   useEffect(() => {
@@ -484,7 +487,7 @@ export function Globe() {
     const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     if (tab === "trends") return; // handled by the trends camera effect below
     const padding = tab === "sim" && wide ? { left: 340, right: 470, top: 20, bottom: 110 } : wide ? { left: 300, right: 0, top: 0, bottom: 0 } : { left: 0, right: 0, top: 0, bottom: 0 };
-    if (tab === "sim" && hazard === "drought") map.easeTo({ padding, duration: 0 });
+    if (tab === "sim" && (hazard === "drought" || hazard === "wildfire")) map.easeTo({ padding: hazard === "wildfire" ? { left: 0, right: 0, top: 0, bottom: 0 } : padding, duration: 0 });
     else if (tab === "sim" && hazard === "rainfall") map.flyTo({ center: [-95.25, 29.55], zoom: wide ? 6.3 : 5.2, pitch: 0, bearing: 0, padding, duration: reduce ? 0 : 2400, essential: true });
     else if (tab === "sim") map.flyTo({ center: [sim.landfallLon + 0.4, sim.landfallLat + 0.6], zoom: wide ? 5.4 : 4.6, pitch: 0, bearing: 0, padding, duration: reduce ? 0 : 2600, essential: true });
     else map.flyTo({ center: [-52, 24], zoom: wide ? 1.75 : 0.9, pitch: 0, bearing: 0, padding, duration: reduce ? 0 : 2200, essential: true });
