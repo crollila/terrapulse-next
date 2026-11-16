@@ -9,9 +9,9 @@ Phases follow the master specification (`PROJECT_SPEC.md`). Status as of 15 Nove
 | 1 | Public foundation: shell, design tokens, globe, layers, trend information, metadata | **Done, verified in a browser** |
 | 2 | Houston flagship: inputs, footprint, exposure, timeline, synced network, context panel, reset | **Done, verified in a browser** |
 | 3 | NASA deliverables: live URL, feature inventory, science explanation, references, AI disclosure, description, storyboard, video, slide outline | **Done**; the submission itself is the Team Owner's |
-| 4 | Global functionality: more event sources, layers, hazard models, infrastructure, source inspection, trend comparisons | **Partly done.** Missing: drought and wildfire models, non-U.S. infrastructure, window heat map |
+| 4 | Global functionality: more event sources, layers, hazard models, infrastructure, source inspection, trend comparisons | **Partly done.** Window map added. Missing: drought and wildfire models, non-U.S. infrastructure |
 | 5 | Financial intelligence: commodities, securities, analogues, sensitivity ranges, portfolio, export and import | **Partly done.** Harvey analogue, portfolio screen, export and import exist. Missing: longer price history, Ike panel, any validated sensitivity range |
-| 6 | Developer-only Claude research workflow | **Not started** (`npm run resume` only prints the next task) |
+| 6 | Developer-only Claude research workflow | **Minimal.** Evidence report export plus `npm run research` (local `claude` CLI, output labelled unverified). No import of notes into the app |
 | 7 | Final completion: validation, regression suite, cross-browser, mobile, accessibility, dashboard, recovery docs | **Partly done.** Regression suites, dashboard and recovery docs exist. Missing: hindcast validation, Firefox and WebKit, accessibility audit |
 
 ## Order of work from here

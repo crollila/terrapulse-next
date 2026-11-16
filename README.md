@@ -24,8 +24,8 @@ emergency use and is not investment advice.
 - U.S. refineries (EIA) and principal ports (USACE/BTS), sized by capacity and tonnage.
 - **Trend explorer**: pick a variable, a region and a period; see the deseasonalised series, the
   rate of change per decade with a 95% range, two significance tests corrected for persistence,
-  a second opinion from an independent dataset, and the documented 2005 MERRA-2 rainfall break in
-  the south-western Amazon. The statistics run in the browser and reproduce the original Python
+  a map of the trend for every start and end year, a second opinion from an independent dataset,
+  and the documented 2005 MERRA-2 rainfall break in the south-western Amazon. The statistics run in the browser and reproduce the original Python
   pipeline (tested on all 48 region and variable combinations).
 
 **Disaster Simulator**
@@ -45,6 +45,8 @@ emergency use and is not investment advice.
   estimated".
 - Portfolio exposure screen: enter tickers and weights; get the share of the portfolio in companies
   that own refineries inside the footprint, computed from EIA ownership and capacity.
+- Exports: scenario parameters (JSON, re-importable) and an evidence report (Markdown) listing every
+  computed figure with its evidence class and source.
 
 Every figure carries one of five labels: `OBSERVED`, `HISTORICAL`, `MODELED`, `HYPOTHETICAL`,
 `RESEARCH HYPOTHESIS`. Where data are missing the app says "Insufficient validated data".
@@ -61,6 +63,9 @@ npm run typecheck
 npm run build      # static site in dist/
 npm run preview    # serve dist/
 npm run snapshot   # refresh the fallback snapshots of the live feeds
+npm run test:e2e   # browser tests (Playwright) against the production preview
+npm run status     # measured status: git, tests, build, live URL
+npm run dashboard  # local engineering dashboard, http://localhost:4600
 ```
 
 No accounts, API keys or paid services are needed. The site is static and is deployed to GitHub
