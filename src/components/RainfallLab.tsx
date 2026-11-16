@@ -114,7 +114,7 @@ function SiteEvidence({ rec, id, doe, fleet }: { rec: RainRecord; id: string; do
           <span>Largest totals against NOAA Atlas 14 at this point</span>
           <Badge kind="MODELED" />
         </div>
-        <table className="tbl" style={{ marginTop: 4 }} data-testid="rain-site-table">
+        <table className="tbl spaced" style={{ marginTop: 4 }} data-testid="rain-site-table">
           <thead>
             <tr>
               <th>Over</th>
@@ -241,7 +241,7 @@ function Overview({ rec, doe, fleet }: { rec: RainRecord; doe: DoeRecord | null;
             <p className="small" style={{ margin: "6px 0" }}>
               DOE Update #{peak.report} (as of {peak.sectionAsOf}) counted <strong>{peak.shut.count}</strong> refineries shut or shutting down, {(peak.shut.capacityBpd ?? 0).toLocaleString("en-US")} b/d. DOE names none of them; they are reconstructed from its regional counts and the EIA capacities of January 2017 (one set fits). <strong>{hc.recorded.length}</strong> have a position and rainfall data{noPosition.length ? `; ${noPosition.map((r) => r.doeName).join(", ")} ${noPosition.length === 1 ? "does" : "do"} not` : ""}.
             </p>
-            <table className="tbl" data-testid="rain-hindcast-table">
+            <table className="tbl spaced" data-testid="rain-hindcast-table">
               <thead>
                 <tr>
                   <th>Screen, data up to the report</th>

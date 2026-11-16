@@ -456,7 +456,7 @@ export const WILDFIRE_CARD = {
     "agreement = share of the detections so far that lie inside the perimeter mapped at that time",
   ],
   limitations: [
-    "No fire-spread simulation. The standard surface-fire model (Rothermel 1972) needs a fuel model, dead and live fuel moistures, midflame wind and slope for every cell, and by its own documentation 'is not applicable to crown fire' and excludes spotting; the three fires here were wind-driven events dominated by exactly those processes. A spread model would need validation that has not been done, so none is offered.",
+    "No fire-spread simulation. The standard surface-fire model (Rothermel 1972) needs a fuel model, dead and live fuel moistures, midflame wind and slope for every cell. Its documentation says it 'is for fire burning upslope with the wind through uniform fuel', 'is not applicable to crown fire' and leaves out firebrands. The fires here burned in extreme wind (Boulder County reports gusts of 70 to 100 mph for the Marshall Fire). Several inputs could not be obtained from a verified source and no validation has been done, so no spread model is offered.",
     "A satellite detection is the centre of a 375 m pixel flagged as containing fire, not the fire's edge or size. Smoke, cloud and the hours between overpasses hide fire.",
     "Perimeters are mapped by different methods at different times and are simplified here for display; small differences between the reported size and the displayed shape are expected.",
     "Proximity is not damage. A plant or line inside a perimeter may be unharmed, and sites far outside can lose power or access.",

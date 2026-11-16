@@ -199,7 +199,7 @@ function Evidence({ ev, hours }: { ev: FireEvent; hours: number }) {
           <strong>{ev.detections.withinOnePixelOfFinalPerimeter.toLocaleString("en-US")}</strong> of {ev.detections.count.toLocaleString("en-US")} satellite detections ({((ev.detections.withinOnePixelOfFinalPerimeter / Math.max(1, ev.detections.count)) * 100).toFixed(1)}%) lie within one pixel ({VIIRS_PIXEL_KM * 1000} m) of the final perimeter, which was mapped separately on the ground and from aircraft.
         </p>
         {agreement.length > 0 && (
-          <table className="tbl">
+          <table className="tbl spaced">
             <thead>
               <tr>
                 <th>Perimeter mapped</th>
