@@ -3,6 +3,7 @@ import { useStore } from "../state/store";
 import { useAnalysis, useCatalog, type Analysis } from "../data/trends";
 import { DROUGHT_CARD, DROUGHT_THRESHOLDS, coOccurringResponse, droughtClass, episodes, hypotheticalDeficit, monthlyZ, standardisedIndex, type MonthlyValue } from "../sim/drought";
 import { Badge, FactRow, Slider, Src } from "./ui";
+import { HazardSelect } from "./HazardSelect";
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const toSeries = (a: Analysis | null): MonthlyValue[] => (a ? a.series.year.map((year, i) => ({ year, month: a.series.month[i], value: a.series.value[i] })) : []);
@@ -110,15 +111,7 @@ export function DroughtLab({ onMethods, pane }: { onMethods: () => void; pane: "
         </div>
         <div className="panel-body">
           <div className="section stack">
-            <div className="field">
-              <label htmlFor="dhaz">Disaster type</label>
-              <select id="dhaz" value="drought" onChange={(e) => st.setHazard(e.target.value as "hurricane" | "drought")} data-testid="hazard-type">
-                <option value="hurricane">Hurricane · wind-exposure model v0.1</option>
-                <option value="drought">Drought · regional index v0.1</option>
-                <option disabled>Wildfire · not built yet</option>
-                <option disabled>Earthquake, flood, other · not built yet</option>
-              </select>
-            </div>
+            <HazardSelect id="dhaz" />
             <div className="field">
               <label htmlFor="dreg">Region</label>
               <select id="dreg" value={d.regionId} onChange={(e) => setDrought({ regionId: e.target.value })} data-testid="drought-region">

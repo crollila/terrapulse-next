@@ -7,6 +7,7 @@ import { SimPanel } from "./components/SimPanel";
 import { Timeline } from "./components/Timeline";
 import { SimWorkspace } from "./components/SimWorkspace";
 import { DroughtLab } from "./components/DroughtLab";
+import { RainfallLab } from "./components/RainfallLab";
 import { TrendDetective } from "./components/TrendDetective";
 import { CaseStudy } from "./components/CaseStudy";
 import { Methods } from "./components/Methods";
@@ -192,6 +193,8 @@ export function App() {
             </div>
             {hazard === "drought" ? (
               <DroughtLab onMethods={() => setMethods(true)} pane={mobilePane} />
+            ) : hazard === "rainfall" ? (
+              <RainfallLab onMethods={() => setMethods(true)} pane={mobilePane} />
             ) : (
               <>
                 <Timeline />

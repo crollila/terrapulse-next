@@ -9,7 +9,23 @@ const CASE_TARGET: Record<CaseKey, { regionId: string; variableId: string }> = {
   amazon: { regionId: "rondonia", variableId: "PRECTOTCORR" },
   alaska: { regionId: "north-slope", variableId: "T2M" },
 };
-export type HazardType = "hurricane" | "drought";
+export type HazardType = "hurricane" | "rainfall" | "drought";
+/** View state of the observed-rainfall record (Hurricane Harvey 2017). */
+export interface RainView {
+  /** Hours since the start of the record window (1200 UTC 23 August 2017). */
+  hours: number;
+  playing: boolean;
+  /** Atlas 14 average recurrence interval used as the screening threshold, years. */
+  ariYears: 10 | 25 | 100 | 500 | 1000;
+  /** Which Atlas 14 value to compare with: the estimate, or its upper or lower 90% bound. */
+  reading: "estimate" | "conservative" | "liberal";
+  showField: boolean;
+  showMarks: boolean;
+  showWind: boolean;
+}
+/** Length of the rainfall record window, hours (ten Stage IV days). */
+export const RAIN_WINDOW_H = 240;
+export const DEFAULT_RAIN: RainView = { hours: RAIN_WINDOW_H, playing: false, ariYears: 100, reading: "estimate", showField: true, showMarks: true, showWind: true };
 export interface DroughtInputs {
   regionId: string;
   /** Accumulation period in months. */
@@ -97,6 +113,10 @@ interface State {
   setTourStep: (i: number | null) => void;
   drought: DroughtInputs;
   setDrought: (d: Partial<DroughtInputs>) => void;
+  rain: RainView;
+  setRain: (r: Partial<RainView>) => void;
+  /** True once the rainfall record files are in memory (set by the map layer hook). */
+  rainLoaded: boolean;
   setTab: (t: Tab) => void;
   toggleLayer: (id: LayerId) => void;
   setLayer: (id: LayerId, on: boolean) => void;
@@ -171,16 +191,19 @@ export const useStore = create<State>((set, get) => ({
   tourStep: null,
   setTourStep: (tourStep) => set({ tourStep }),
   hazard: "hurricane",
-  setHazard: (hazard) => set({ hazard, selection: null, simPlaying: false }),
+  setHazard: (hazard) => set((s) => ({ hazard, selection: null, simPlaying: false, rain: { ...s.rain, playing: false } })),
   drought: { ...DEFAULT_DROUGHT },
   setDrought: (d) => set((s) => ({ drought: { ...s.drought, ...d } })),
+  rain: { ...DEFAULT_RAIN },
+  rainLoaded: false,
+  setRain: (r) => set((s) => ({ rain: { ...s.rain, ...r, hours: Math.min(RAIN_WINDOW_H, Math.max(0, r.hours ?? s.rain.hours)) } })),
   setTab: (tab) => {
     const layers = { ...get().layers };
     if (tab === "sim") {
       layers.refineries = true;
       layers.ports = true;
     }
-    set({ tab, layers, selection: null, simPlaying: false });
+    set((s) => ({ tab, layers, selection: null, simPlaying: false, rain: { ...s.rain, playing: false } }));
   },
   toggleLayer: (id) => set((s) => ({ layers: { ...s.layers, [id]: !s.layers[id] } })),
   setLayer: (id, on) => set((s) => ({ layers: { ...s.layers, [id]: on } })),
@@ -198,7 +221,7 @@ export const useStore = create<State>((set, get) => ({
   setSimPos: (x) => set({ simPos: Math.min(1, Math.max(0, x)) }),
   setSimPlaying: (simPlaying) => set({ simPlaying }),
   startSim: () => set({ simStarted: true, simPlaying: true, simPos: get().simPos >= 0.999 ? 0 : get().simPos }),
-  resetSim: () => set({ sim: { ...SCENARIO_001 }, simPos: 0, simPlaying: false, simStarted: false, selection: null, graphFilter: {}, hazard: "hurricane", drought: { ...DEFAULT_DROUGHT } }),
+  resetSim: () => set({ sim: { ...SCENARIO_001 }, simPos: 0, simPlaying: false, simStarted: false, selection: null, graphFilter: {}, hazard: "hurricane", drought: { ...DEFAULT_DROUGHT }, rain: { ...DEFAULT_RAIN } }),
   toggleGraphFilter: (k) => set((s) => ({ graphFilter: { ...s.graphFilter, [k]: !s.graphFilter[k] } })),
   setMapReady: (mapReady) => set({ mapReady }),
   setMapError: (mapError) => set({ mapError }),

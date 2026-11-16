@@ -1,0 +1,9084 @@
+{
+ "builtAt": "2026-11-16T06:46:20Z",
+ "what": "Ten-day totals (2017-08-24 to 2017-09-02) at GHCN-Daily stations against the Stage IV cell containing each station.",
+ "source": {
+  "provider": "NOAA National Centers for Environmental Information (NCEI)",
+  "dataset": "Global Historical Climatology Network - Daily (daily-summaries), PRCP",
+  "sourceUrl": "https://www.ncei.noaa.gov/access/services/data/v1",
+  "retrievedAt": "2026-11-16T06:42:59Z",
+  "license": "U.S. Government work, public domain"
+ },
+ "selection": "Stations inside the domain with a PRCP value on all ten dates and no value carrying a quality-control flag. Stations with any flagged value are dropped whole.",
+ "stationsInDomain": 2218,
+ "stationsWithFlaggedValues": 4,
+ "caveats": [
+  "Not an independent test: Stage IV is itself adjusted with rain gauges, and some of these stations may be among them.",
+  "A gauge samples a few hundred square centimetres; a Stage IV cell is an average over about 15 square kilometres.",
+  "Station days differ: many observers read at about 7 a.m. local time (close to the 1200 UTC Stage IV day), airport stations report midnight to midnight local time. Ten-day totals limit this effect; it does not vanish.",
+  "Gauges under-catch in strong wind and can overflow or fail in extreme rain; stations that failed leave no record and are absent here."
+ ],
+ "all": {
+  "n": 1129,
+  "gaugeMeanMm": 187.3,
+  "stage4MeanMm": 192.7,
+  "meanDifferenceMm": 5.4,
+  "meanAbsoluteDifferenceMm": 23.7,
+  "rmsDifferenceMm": 42.0,
+  "medianRatioStage4OverGauge": 1.047,
+  "pearsonR": 0.984
+ },
+ "gaugeAtLeast250mm": {
+  "n": 274,
+  "gaugeMeanMm": 529.2,
+  "stage4MeanMm": 535.0,
+  "meanDifferenceMm": 5.8,
+  "meanAbsoluteDifferenceMm": 53.1,
+  "rmsDifferenceMm": 75.2,
+  "medianRatioStage4OverGauge": 1.002,
+  "pearsonR": 0.949
+ },
+ "gaugeAtLeast750mm": {
+  "n": 45,
+  "gaugeMeanMm": 947.1,
+  "stage4MeanMm": 946.3,
+  "meanDifferenceMm": -0.8,
+  "meanAbsoluteDifferenceMm": 74.5,
+  "rmsDifferenceMm": 97.3,
+  "medianRatioStage4OverGauge": 0.999,
+  "pearsonR": 0.753
+ },
+ "pairs": [
+  {
+   "id": "USW00012917",
+   "name": "PORT ARTHUR SE TX REGIONAL AIRPORT, TX US",
+   "lat": 29.95205,
+   "lon": -94.02616,
+   "gaugeMm": 1207.0,
+   "stage4Mm": 1283.4
+  },
+  {
+   "id": "US1TXGV0060",
+   "name": "SANTA FE 0.7 S, TX US",
+   "lat": 29.37156,
+   "lon": -95.099,
+   "gaugeMm": 1186.3,
+   "stage4Mm": 1116.6
+  },
+  {
+   "id": "US1TXHRR093",
+   "name": "PASADENA 4.4 WNW, TX US",
+   "lat": 29.684861,
+   "lon": -95.219703,
+   "gaugeMm": 1162.6,
+   "stage4Mm": 1100.2
+  },
+  {
+   "id": "US1TXJJ0011",
+   "name": "BEAUMONT 4.6 S, TX US",
+   "lat": 30.022459,
+   "lon": -94.155461,
+   "gaugeMm": 1160.3,
+   "stage4Mm": 1196.9
+  },
+  {
+   "id": "USC00410586",
+   "name": "BAYTOWN, TX US",
+   "lat": 29.9142,
+   "lon": -94.9908,
+   "gaugeMm": 1145.6,
+   "stage4Mm": 968.4
+  },
+  {
+   "id": "US1TXHRR032",
+   "name": "SOUTH HOUSTON 4.0 SSW, TX US",
+   "lat": 29.607714,
+   "lon": -95.256128,
+   "gaugeMm": 1140.8,
+   "stage4Mm": 1119.1
+  },
+  {
+   "id": "USC00417172",
+   "name": "PORT ARTHUR CITY, TX US",
+   "lat": 29.9044,
+   "lon": -93.9708,
+   "gaugeMm": 1131.6,
+   "stage4Mm": 1221.8
+  },
+  {
+   "id": "US1TXHRR031",
+   "name": "FRIENDSWOOD 2.5 NNE, TX US",
+   "lat": 29.545275,
+   "lon": -95.182089,
+   "gaugeMm": 1124.7,
+   "stage4Mm": 978.0
+  },
+  {
+   "id": "USC00414333",
+   "name": "HOUSTON NATIONAL WEATHER SERVICE OFFICE, TX US",
+   "lat": 29.4718,
+   "lon": -95.0832,
+   "gaugeMm": 1115.9,
+   "stage4Mm": 1053.6
+  },
+  {
+   "id": "US1TXGV0034",
+   "name": "LEAGUE CITY 2.7 NE, TX US",
+   "lat": 29.540703,
+   "lon": -95.069822,
+   "gaugeMm": 1112.0,
+   "stage4Mm": 1081.1
+  },
+  {
+   "id": "US1TXHRR028",
+   "name": "WEBSTER 0.4 NW, TX US",
+   "lat": 29.5371,
+   "lon": -95.1215,
+   "gaugeMm": 1104.5,
+   "stage4Mm": 1026.3
+  },
+  {
+   "id": "USC00415196",
+   "name": "LIBERTY, TX US",
+   "lat": 30.0591,
+   "lon": -94.7949,
+   "gaugeMm": 1060.5,
+   "stage4Mm": 985.0
+  },
+  {
+   "id": "US1TXHRR217",
+   "name": "WEBSTER 1.6 NNW, TX US",
+   "lat": 29.5547561645508,
+   "lon": -95.1255416870117,
+   "gaugeMm": 1053.8,
+   "stage4Mm": 1040.8
+  },
+  {
+   "id": "US1TXGV0044",
+   "name": "BACLIFF 0.5 SSE, TX US",
+   "lat": 29.501437,
+   "lon": -94.9897979,
+   "gaugeMm": 1028.4,
+   "stage4Mm": 922.6
+  },
+  {
+   "id": "US1TXHRR139",
+   "name": "CLOVERLEAF 1.7 W, TX US",
+   "lat": 29.785071,
+   "lon": -95.201477,
+   "gaugeMm": 1015.3,
+   "stage4Mm": 1060.5
+  },
+  {
+   "id": "US1TXHRR168",
+   "name": "PEARLAND 4.0 ENE, TX US",
+   "lat": 29.5761,
+   "lon": -95.214,
+   "gaugeMm": 1009.7,
+   "stage4Mm": 1051.7
+  },
+  {
+   "id": "US1TXGV0064",
+   "name": "HITCHCOCK 1.6 NNW, TX US",
+   "lat": 29.338008,
+   "lon": -95.026056,
+   "gaugeMm": 980.0,
+   "stage4Mm": 966.6
+  },
+  {
+   "id": "US1TXGV0051",
+   "name": "LA MARQUE 1.8 E, TX US",
+   "lat": 29.363333,
+   "lon": -94.964371,
+   "gaugeMm": 976.9,
+   "stage4Mm": 843.7
+  },
+  {
+   "id": "USC00415435",
+   "name": "LUMBERTON, TX US",
+   "lat": 30.2504,
+   "lon": -94.17838,
+   "gaugeMm": 948.7,
+   "stage4Mm": 1015.2
+  },
+  {
+   "id": "US1TXGV0046",
+   "name": "LEAGUE CITY 3.6 ENE, TX US",
+   "lat": 29.523101,
+   "lon": -95.0382,
+   "gaugeMm": 941.4,
+   "stage4Mm": 940.6
+  },
+  {
+   "id": "USW00012918",
+   "name": "HOUSTON WILLIAM P HOBBY AIRPORT, TX US",
+   "lat": 29.64586,
+   "lon": -95.28212,
+   "gaugeMm": 940.0,
+   "stage4Mm": 1045.1
+  },
+  {
+   "id": "US1TXHRR228",
+   "name": "KATY 5.2 E, TX US",
+   "lat": 29.794802,
+   "lon": -95.737007,
+   "gaugeMm": 932.2,
+   "stage4Mm": 868.5
+  },
+  {
+   "id": "US1TXLR0013",
+   "name": "CLEVELAND 3.6 S, TX US",
+   "lat": 30.2928409576416,
+   "lon": -95.0819702148438,
+   "gaugeMm": 925.1,
+   "stage4Mm": 791.3
+  },
+  {
+   "id": "USC00416664",
+   "name": "ORANGE, TX US",
+   "lat": 30.0858,
+   "lon": -93.7416,
+   "gaugeMm": 924.4,
+   "stage4Mm": 1043.3
+  },
+  {
+   "id": "US1TXFB0005",
+   "name": "SUGAR LAND 1.1 WSW, TX US",
+   "lat": 29.614304,
+   "lon": -95.634029,
+   "gaugeMm": 923.5,
+   "stage4Mm": 900.4
+  },
+  {
+   "id": "USC00414878",
+   "name": "KOUNTZE, TX US",
+   "lat": 30.375,
+   "lon": -94.2994,
+   "gaugeMm": 875.8,
+   "stage4Mm": 857.3
+  },
+  {
+   "id": "US1TXHRR222",
+   "name": "MISSION BEND 5.7 NNW, TX US",
+   "lat": 29.766,
+   "lon": -95.7086,
+   "gaugeMm": 875.2,
+   "stage4Mm": 891.2
+  },
+  {
+   "id": "USW00012975",
+   "name": "HOUSTON CLOVER FIELD, TX US",
+   "lat": 29.51924,
+   "lon": -95.2423,
+   "gaugeMm": 874.6,
+   "stage4Mm": 984.2
+  },
+  {
+   "id": "USC00411956",
+   "name": "CONROE, TX US",
+   "lat": 30.3302,
+   "lon": -95.4831,
+   "gaugeMm": 873.8,
+   "stage4Mm": 593.8
+  },
+  {
+   "id": "US1TXGV0069",
+   "name": "LEAGUE CITY 0.9 WNW, TX US",
+   "lat": 29.490395,
+   "lon": -95.120691,
+   "gaugeMm": 867.9,
+   "stage4Mm": 990.8
+  },
+  {
+   "id": "US1TXHRR209",
+   "name": "HOUSTON 2.1 NNE, TX US",
+   "lat": 29.797255,
+   "lon": -95.374054,
+   "gaugeMm": 838.8,
+   "stage4Mm": 896.9
+  },
+  {
+   "id": "US1TXHRR122",
+   "name": "MISSION BEND 0.8 N, TX US",
+   "lat": 29.7054,
+   "lon": -95.6652,
+   "gaugeMm": 837.9,
+   "stage4Mm": 910.6
+  },
+  {
+   "id": "US1TXHRR119",
+   "name": "WEST UNIVERSITY PLACE 0.4 WNW, TX US",
+   "lat": 29.717979,
+   "lon": -95.436928,
+   "gaugeMm": 836.6,
+   "stage4Mm": 839.6
+  },
+  {
+   "id": "US1TXHRR015",
+   "name": "KINGWOOD 3.9 S, TX US",
+   "lat": 30.00218,
+   "lon": -95.196038,
+   "gaugeMm": 817.6,
+   "stage4Mm": 829.1
+  },
+  {
+   "id": "US1TXBRZ025",
+   "name": "PEARLAND 4.4 W, TX US",
+   "lat": 29.547816,
+   "lon": -95.348541,
+   "gaugeMm": 815.1,
+   "stage4Mm": 929.4
+  },
+  {
+   "id": "US1TXHRR232",
+   "name": "HOUSTON 2.1 SSW, TX US",
+   "lat": 29.739753,
+   "lon": -95.397682,
+   "gaugeMm": 811.0,
+   "stage4Mm": 901.1
+  },
+  {
+   "id": "US1TXMNG061",
+   "name": "CONROE 2.1 SSW, TX US",
+   "lat": 30.294684,
+   "lon": -95.484215,
+   "gaugeMm": 799.4,
+   "stage4Mm": 631.5
+  },
+  {
+   "id": "USC00414325",
+   "name": "HOUSTON WESTBURY, TX US",
+   "lat": 29.70032,
+   "lon": -95.42916,
+   "gaugeMm": 796.1,
+   "stage4Mm": 871.1
+  },
+  {
+   "id": "USW00012960",
+   "name": "HOUSTON INTERCONTINENTAL AIRPORT, TX US",
+   "lat": 29.98438,
+   "lon": -95.36072,
+   "gaugeMm": 794.0,
+   "stage4Mm": 789.4
+  },
+  {
+   "id": "US1TXHRR124",
+   "name": "SPRING 7.1 WSW, TX US",
+   "lat": 30.0074653625488,
+   "lon": -95.4846343994141,
+   "gaugeMm": 790.5,
+   "stage4Mm": 827.4
+  },
+  {
+   "id": "US1TXGV0070",
+   "name": "TEXAS CITY 3.8 E, TX US",
+   "lat": 29.40516,
+   "lon": -94.894383,
+   "gaugeMm": 788.4,
+   "stage4Mm": 778.9
+  },
+  {
+   "id": "US1TXHRR306",
+   "name": "KINGWOOD 2.4 W, TX US",
+   "lat": 30.0592,
+   "lon": -95.2262,
+   "gaugeMm": 785.4,
+   "stage4Mm": 782.1
+  },
+  {
+   "id": "USC00417594",
+   "name": "RICHMOND, TX US",
+   "lat": 29.5838,
+   "lon": -95.7552,
+   "gaugeMm": 770.7,
+   "stage4Mm": 790.9
+  },
+  {
+   "id": "US1TXHRR203",
+   "name": "HEDWIG VILLAGE 1.1 NNW, TX US",
+   "lat": 29.7945919036865,
+   "lon": -95.5261077880859,
+   "gaugeMm": 768.6,
+   "stage4Mm": 858.6
+  },
+  {
+   "id": "US1TXOR0006",
+   "name": "VIDOR 7.2 N, TX US",
+   "lat": 30.2327,
+   "lon": -93.9818,
+   "gaugeMm": 752.8,
+   "stage4Mm": 1010.5
+  },
+  {
+   "id": "US1TXGV0054",
+   "name": "GALVESTON 8.4 NE, TX US",
+   "lat": 29.301657,
+   "lon": -94.780869,
+   "gaugeMm": 745.0,
+   "stage4Mm": 592.9
+  },
+  {
+   "id": "US1TXTR0012",
+   "name": "SPURGER 6.2 S, TX US",
+   "lat": 30.60209,
+   "lon": -94.167327,
+   "gaugeMm": 745.0,
+   "stage4Mm": 811.9
+  },
+  {
+   "id": "US1TXFY0003",
+   "name": "LA GRANGE 10.2 NW, TX US",
+   "lat": 30.008049,
+   "lon": -97.005228,
+   "gaugeMm": 741.4,
+   "stage4Mm": 640.5
+  },
+  {
+   "id": "US1TXHRR027",
+   "name": "BUNKER HILL VILLAGE 3.6 NNW, TX US",
+   "lat": 29.813836,
+   "lon": -95.550465,
+   "gaugeMm": 735.0,
+   "stage4Mm": 869.3
+  },
+  {
+   "id": "US1TXHRR033",
+   "name": "KINGWOOD 1.8 E, TX US",
+   "lat": 30.0553,
+   "lon": -95.1564,
+   "gaugeMm": 733.5,
+   "stage4Mm": 835.9
+  },
+  {
+   "id": "US1TXHRR058",
+   "name": "SPRING VALLEY 2.7 NW, TX US",
+   "lat": 29.8133,
+   "lon": -95.5389,
+   "gaugeMm": 729.8,
+   "stage4Mm": 869.3
+  },
+  {
+   "id": "US1TXTR0013",
+   "name": "COLMESNEIL 11.6 ESE, TX US",
+   "lat": 30.857075,
+   "lon": -94.236686,
+   "gaugeMm": 713.5,
+   "stage4Mm": 699.9
+  },
+  {
+   "id": "US1TXHRR074",
+   "name": "CYPRESS 3.2 ESE, TX US",
+   "lat": 29.956425,
+   "lon": -95.646324,
+   "gaugeMm": 707.1,
+   "stage4Mm": 852.3
+  },
+  {
+   "id": "US1TXFB0022",
+   "name": "RICHMOND 4.6 SE, TX US",
+   "lat": 29.52608,
+   "lon": -95.722116,
+   "gaugeMm": 703.6,
+   "stage4Mm": 758.5
+  },
+  {
+   "id": "USC00414327",
+   "name": "HOUSTON NORTH HOUSTON, TX US",
+   "lat": 29.8732,
+   "lon": -95.5274,
+   "gaugeMm": 701.3,
+   "stage4Mm": 858.5
+  },
+  {
+   "id": "US1TXHRR162",
+   "name": "BELLAIRE 4.2 W, TX US",
+   "lat": 29.6953945159912,
+   "lon": -95.5300445556641,
+   "gaugeMm": 696.0,
+   "stage4Mm": 881.3
+  },
+  {
+   "id": "USC00414704",
+   "name": "KATY CITY, TX US",
+   "lat": 29.8024,
+   "lon": -95.8196,
+   "gaugeMm": 694.7,
+   "stage4Mm": 905.4
+  },
+  {
+   "id": "US1TXHRR117",
+   "name": "TOMBALL 2.7 ENE, TX US",
+   "lat": 30.1134853363037,
+   "lon": -95.5747985839844,
+   "gaugeMm": 690.7,
+   "stage4Mm": 647.8
+  },
+  {
+   "id": "USW00053910",
+   "name": "HOUSTON HOOKS MEMORIAL AIRPORT, TX US",
+   "lat": 30.06801,
+   "lon": -95.55628,
+   "gaugeMm": 686.0,
+   "stage4Mm": 692.3
+  },
+  {
+   "id": "US1TXMNG051",
+   "name": "MAGNOLIA 2.8 S, TX US",
+   "lat": 30.170301,
+   "lon": -95.755222,
+   "gaugeMm": 684.8,
+   "stage4Mm": 733.2
+  },
+  {
+   "id": "US1TXWA0021",
+   "name": "BRENHAM 8.2 WSW, TX US",
+   "lat": 30.0963,
+   "lon": -96.5126,
+   "gaugeMm": 668.0,
+   "stage4Mm": 555.3
+  },
+  {
+   "id": "US1TXFY0030",
+   "name": "LA GRANGE 7.8 NNE, TX US",
+   "lat": 30.019371,
+   "lon": -96.851402,
+   "gaugeMm": 665.6,
+   "stage4Mm": 667.1
+  },
+  {
+   "id": "US1TXCLR006",
+   "name": "NEW ULM 7.2 S, TX US",
+   "lat": 29.7891,
+   "lon": -96.477,
+   "gaugeMm": 658.1,
+   "stage4Mm": 660.5
+  },
+  {
+   "id": "USC00419101",
+   "name": "TOWN BLUFF DAM, TX US",
+   "lat": 30.79303,
+   "lon": -94.18195,
+   "gaugeMm": 657.9,
+   "stage4Mm": 724.2
+  },
+  {
+   "id": "US1TXWK0026",
+   "name": "HUNTSVILLE 7.1 ESE, TX US",
+   "lat": 30.683056,
+   "lon": -95.435278,
+   "gaugeMm": 657.6,
+   "stage4Mm": 621.2
+  },
+  {
+   "id": "USC00412206",
+   "name": "CYPRESS, TX US",
+   "lat": 30.021,
+   "lon": -95.7069,
+   "gaugeMm": 640.9,
+   "stage4Mm": 838.1
+  },
+  {
+   "id": "US1TXTR0003",
+   "name": "WOODVILLE 7.2 S, TX US",
+   "lat": 30.6704,
+   "lon": -94.4295,
+   "gaugeMm": 635.3,
+   "stage4Mm": 674.3
+  },
+  {
+   "id": "US1TXFY0052",
+   "name": "LA GRANGE 3.5 ENE, TX US",
+   "lat": 29.928821,
+   "lon": -96.824835,
+   "gaugeMm": 633.7,
+   "stage4Mm": 700.4
+  },
+  {
+   "id": "US1TXWA0012",
+   "name": "WASHINGTON 3.1 SSW, TX US",
+   "lat": 30.28213889,
+   "lon": -96.17095833,
+   "gaugeMm": 628.5,
+   "stage4Mm": 566.9
+  },
+  {
+   "id": "US1TXGV0049",
+   "name": "LA MARQUE 3.9 SE, TX US",
+   "lat": 29.333967,
+   "lon": -94.939934,
+   "gaugeMm": 624.0,
+   "stage4Mm": 720.5
+  },
+  {
+   "id": "US1TXFY0047",
+   "name": "WEST POINT 0.8 NE, TX US",
+   "lat": 29.953327,
+   "lon": -97.027686,
+   "gaugeMm": 621.1,
+   "stage4Mm": 606.0
+  },
+  {
+   "id": "USC00414382",
+   "name": "HUNTSVILLE, TX US",
+   "lat": 30.7065,
+   "lon": -95.5421,
+   "gaugeMm": 607.9,
+   "stage4Mm": 565.0
+  },
+  {
+   "id": "US1TXFY0053",
+   "name": "LA GRANGE 3.5 SW, TX US",
+   "lat": 29.87867,
+   "lon": -96.924749,
+   "gaugeMm": 607.5,
+   "stage4Mm": 602.8
+  },
+  {
+   "id": "US1TXWK0005",
+   "name": "HUNTSVILLE 2.8 WSW, TX US",
+   "lat": 30.702,
+   "lon": -95.596,
+   "gaugeMm": 606.8,
+   "stage4Mm": 536.7
+  },
+  {
+   "id": "US1TXMNG064",
+   "name": "PINEHURST 0.4 SSE, TX US",
+   "lat": 30.09911,
+   "lon": -95.40832,
+   "gaugeMm": 605.8,
+   "stage4Mm": 783.9
+  },
+  {
+   "id": "US1TXWA0015",
+   "name": "CARMINE 3.1 WNW, TX US",
+   "lat": 30.15944444,
+   "lon": -96.73944444,
+   "gaugeMm": 602.0,
+   "stage4Mm": 568.1
+  },
+  {
+   "id": "US1TXWK0018",
+   "name": "HUNTSVILLE 1.3 SSE, TX US",
+   "lat": 30.695361,
+   "lon": -95.540406,
+   "gaugeMm": 601.5,
+   "stage4Mm": 565.0
+  },
+  {
+   "id": "US1TXFY0033",
+   "name": "FAYETTEVILLE 1.0 SW, TX US",
+   "lat": 29.896486,
+   "lon": -96.686552,
+   "gaugeMm": 598.7,
+   "stage4Mm": 521.6
+  },
+  {
+   "id": "US1TXBST098",
+   "name": "CIRCLE D KC ESTATES 3.6 ESE, TX US",
+   "lat": 30.139958,
+   "lon": -97.175324,
+   "gaugeMm": 597.2,
+   "stage4Mm": 499.2
+  },
+  {
+   "id": "USC00418415",
+   "name": "SMITHVILLE, TX US",
+   "lat": 30.0093,
+   "lon": -97.1644,
+   "gaugeMm": 593.1,
+   "stage4Mm": 635.2
+  },
+  {
+   "id": "US1TXAS0003",
+   "name": "CAT SPRING 3.8 N, TX US",
+   "lat": 29.881,
+   "lon": -96.331,
+   "gaugeMm": 592.5,
+   "stage4Mm": 565.2
+  },
+  {
+   "id": "US1TXAS0006",
+   "name": "SAN FELIPE 1.0 WNW, TX US",
+   "lat": 29.8028926276908,
+   "lon": -96.121105402708,
+   "gaugeMm": 591.6,
+   "stage4Mm": 670.8
+  },
+  {
+   "id": "US1TXAS0007",
+   "name": "SEALY 1.9 NNE, TX US",
+   "lat": 29.796711,
+   "lon": -96.139374,
+   "gaugeMm": 591.5,
+   "stage4Mm": 590.1
+  },
+  {
+   "id": "US1TXLV0028",
+   "name": "YOAKUM 5.5 NNE, TX US",
+   "lat": 29.367197,
+   "lon": -97.114166,
+   "gaugeMm": 587.4,
+   "stage4Mm": 432.7
+  },
+  {
+   "id": "US1TXMNG020",
+   "name": "MONTGOMERY 3.8 ESE, TX US",
+   "lat": 30.3774013519287,
+   "lon": -95.6334533691406,
+   "gaugeMm": 581.8,
+   "stage4Mm": 509.8
+  },
+  {
+   "id": "USW00012923",
+   "name": "GALVESTON SCHOLES FIELD, TX US",
+   "lat": 29.27036,
+   "lon": -94.86421,
+   "gaugeMm": 580.9,
+   "stage4Mm": 608.4
+  },
+  {
+   "id": "USC00416024",
+   "name": "MONTGOMERY, TX US",
+   "lat": 30.3907,
+   "lon": -95.697,
+   "gaugeMm": 580.3,
+   "stage4Mm": 534.1
+  },
+  {
+   "id": "US1TXMNG031",
+   "name": "CONROE 0.7 E, TX US",
+   "lat": 30.3227034956217,
+   "lon": -95.4595781117678,
+   "gaugeMm": 579.5,
+   "stage4Mm": 595.6
+  },
+  {
+   "id": "US1TXNW0002",
+   "name": "BURKEVILLE 11.2 NNE, TX US",
+   "lat": 31.1510306596756,
+   "lon": -93.5992757230997,
+   "gaugeMm": 579.2,
+   "stage4Mm": 591.8
+  },
+  {
+   "id": "USW00012977",
+   "name": "HOUSTON SUGARLAND MEM, TX US",
+   "lat": 29.61971,
+   "lon": -95.65748,
+   "gaugeMm": 578.8,
+   "stage4Mm": 897.8
+  },
+  {
+   "id": "US1TXBZS100",
+   "name": "COLLEGE STATION 4.5 SW, TX US",
+   "lat": 30.55955,
+   "lon": -96.37109,
+   "gaugeMm": 574.8,
+   "stage4Mm": 454.8
+  },
+  {
+   "id": "US1TXFY0036",
+   "name": "LA GRANGE 4.5 SW, TX US",
+   "lat": 29.86353,
+   "lon": -96.932442,
+   "gaugeMm": 569.7,
+   "stage4Mm": 574.7
+  },
+  {
+   "id": "US1TXPL0027",
+   "name": "ONALASKA 0.6 WSW, TX US",
+   "lat": 30.80636667,
+   "lon": -95.11648333,
+   "gaugeMm": 569.6,
+   "stage4Mm": 502.4
+  },
+  {
+   "id": "US1TXPL0018",
+   "name": "LIVINGSTON 8.4 W, TX US",
+   "lat": 30.698418,
+   "lon": -95.076545,
+   "gaugeMm": 569.2,
+   "stage4Mm": 553.6
+  },
+  {
+   "id": "USC00169074",
+   "name": "TOLEDO BEND LAKE, LA US",
+   "lat": 31.2021,
+   "lon": -93.5726,
+   "gaugeMm": 569.0,
+   "stage4Mm": 558.3
+  },
+  {
+   "id": "US1TXWK0021",
+   "name": "RIVERSIDE 2.0 WNW, TX US",
+   "lat": 30.856037,
+   "lon": -95.43094,
+   "gaugeMm": 566.4,
+   "stage4Mm": 495.0
+  },
+  {
+   "id": "US1TXWA0001",
+   "name": "BURTON 6.9 SSW, TX US",
+   "lat": 30.081667,
+   "lon": -96.623806,
+   "gaugeMm": 565.4,
+   "stage4Mm": 562.5
+  },
+  {
+   "id": "USC00166968",
+   "name": "OLD TOWN BAY, LA US",
+   "lat": 30.2869,
+   "lon": -93.1444,
+   "gaugeMm": 563.5,
+   "stage4Mm": 546.4
+  },
+  {
+   "id": "USC00160658",
+   "name": "BELL CITY 13 SW, LA US",
+   "lat": 29.9747,
+   "lon": -93.0897,
+   "gaugeMm": 560.1,
+   "stage4Mm": 583.2
+  },
+  {
+   "id": "US1TXWA0003",
+   "name": "HEMPSTEAD 10.0 NNW, TX US",
+   "lat": 30.22988,
+   "lon": -96.13557,
+   "gaugeMm": 555.5,
+   "stage4Mm": 497.9
+  },
+  {
+   "id": "US1TXAS0005",
+   "name": "SEALY 0.3 WNW, TX US",
+   "lat": 29.775671,
+   "lon": -96.158141,
+   "gaugeMm": 552.2,
+   "stage4Mm": 552.1
+  },
+  {
+   "id": "US1TXMNG026",
+   "name": "THE WOODLANDS 2.8 N, TX US",
+   "lat": 30.198522,
+   "lon": -95.4958769,
+   "gaugeMm": 552.0,
+   "stage4Mm": 612.8
+  },
+  {
+   "id": "USC00418996",
+   "name": "THOMPSONS 3 WSW, TX US",
+   "lat": 29.4821,
+   "lon": -95.6314,
+   "gaugeMm": 550.9,
+   "stage4Mm": 824.1
+  },
+  {
+   "id": "US1TXBST024",
+   "name": "ROSANKY 4.5 N, TX US",
+   "lat": 29.995499,
+   "lon": -97.28603,
+   "gaugeMm": 549.2,
+   "stage4Mm": 509.3
+  },
+  {
+   "id": "USW00053902",
+   "name": "CONROE MONTGOMERY CO AIRPORT, TX US",
+   "lat": 30.36109,
+   "lon": -95.41757,
+   "gaugeMm": 544.6,
+   "stage4Mm": 525.2
+  },
+  {
+   "id": "US1TXCLR009",
+   "name": "COLUMBUS 3.2 WSW, TX US",
+   "lat": 29.6801319122314,
+   "lon": -96.5975036621094,
+   "gaugeMm": 543.3,
+   "stage4Mm": 434.1
+  },
+  {
+   "id": "USC00418126",
+   "name": "SCHULENBURG, TX US",
+   "lat": 29.6825,
+   "lon": -96.8563,
+   "gaugeMm": 536.0,
+   "stage4Mm": 428.0
+  },
+  {
+   "id": "USC00413525",
+   "name": "GIDDINGS 5 E, TX US",
+   "lat": 30.1872,
+   "lon": -96.8594,
+   "gaugeMm": 535.0,
+   "stage4Mm": 484.4
+  },
+  {
+   "id": "US1TXBRZ021",
+   "name": "ANGLETON 1.3 E, TX US",
+   "lat": 29.16962,
+   "lon": -95.4068,
+   "gaugeMm": 533.0,
+   "stage4Mm": 500.4
+  },
+  {
+   "id": "US1TXWK0012",
+   "name": "HUNTSVILLE 3.6 NNW, TX US",
+   "lat": 30.7586630433798,
+   "lon": -95.5759605020285,
+   "gaugeMm": 532.9,
+   "stage4Mm": 548.5
+  },
+  {
+   "id": "US1TXWK0013",
+   "name": "HUNTSVILLE 4.8 NNW, TX US",
+   "lat": 30.775136500597,
+   "lon": -95.5834519118071,
+   "gaugeMm": 531.4,
+   "stage4Mm": 494.9
+  },
+  {
+   "id": "USC00411911",
+   "name": "COLUMBUS, TX US",
+   "lat": 29.699,
+   "lon": -96.573,
+   "gaugeMm": 530.9,
+   "stage4Mm": 447.6
+  },
+  {
+   "id": "US1TXGM0007",
+   "name": "IOLA 10.4 SSW, TX US",
+   "lat": 30.634778,
+   "lon": -96.142272,
+   "gaugeMm": 530.3,
+   "stage4Mm": 479.2
+  },
+  {
+   "id": "US1TXMNG014",
+   "name": "MONTGOMERY 2.6 NE, TX US",
+   "lat": 30.413,
+   "lon": -95.66,
+   "gaugeMm": 529.7,
+   "stage4Mm": 516.6
+  },
+  {
+   "id": "USC00166434",
+   "name": "MOSS BLUFF 2 NNW, LA US",
+   "lat": 30.33971,
+   "lon": -93.21504,
+   "gaugeMm": 528.5,
+   "stage4Mm": 529.7
+  },
+  {
+   "id": "US1TXWH0018",
+   "name": "EAST BERNARD 7.6 S, TX US",
+   "lat": 29.417772,
+   "lon": -96.05768,
+   "gaugeMm": 520.4,
+   "stage4Mm": 533.6
+  },
+  {
+   "id": "USC00419655",
+   "name": "WHARTON, TX US",
+   "lat": 29.3177,
+   "lon": -96.0847,
+   "gaugeMm": 520.0,
+   "stage4Mm": 522.1
+  },
+  {
+   "id": "US1TXLV0026",
+   "name": "SHINER 4.1 NE, TX US",
+   "lat": 29.4770217686892,
+   "lon": -97.1282862871885,
+   "gaugeMm": 517.1,
+   "stage4Mm": 483.7
+  },
+  {
+   "id": "US1TXAG0002",
+   "name": "ZAVALLA 2.0 ESE, TX US",
+   "lat": 31.1464,
+   "lon": -94.3856,
+   "gaugeMm": 514.9,
+   "stage4Mm": 529.5
+  },
+  {
+   "id": "US1TXMNG035",
+   "name": "PINEHURST 3.8 SE, TX US",
+   "lat": 30.1529655456543,
+   "lon": -95.6572113037109,
+   "gaugeMm": 512.1,
+   "stage4Mm": 644.8
+  },
+  {
+   "id": "USC00413873",
+   "name": "HALLETTSVILLE 2 N, TX US",
+   "lat": 29.4705,
+   "lon": -96.9397,
+   "gaugeMm": 507.0,
+   "stage4Mm": 420.9
+  },
+  {
+   "id": "US1TXJS0003",
+   "name": "KIRBYVILLE 1.5 SE, TX US",
+   "lat": 30.64054,
+   "lon": -93.88509,
+   "gaugeMm": 506.0,
+   "stage4Mm": 590.2
+  },
+  {
+   "id": "USW00053903",
+   "name": "HUNTSVILLE MUNICIPAL AIRPORT, TX US",
+   "lat": 30.74432,
+   "lon": -95.58657,
+   "gaugeMm": 501.1,
+   "stage4Mm": 548.5
+  },
+  {
+   "id": "US1TXBZS103",
+   "name": "COLLEGE STATION 0.8 W, TX US",
+   "lat": 30.599356,
+   "lon": -96.325693,
+   "gaugeMm": 499.3,
+   "stage4Mm": 483.0
+  },
+  {
+   "id": "US1TXMNG021",
+   "name": "MONTGOMERY 0.4 N, TX US",
+   "lat": 30.39761667,
+   "lon": -95.69545,
+   "gaugeMm": 499.3,
+   "stage4Mm": 534.1
+  },
+  {
+   "id": "USC00417040",
+   "name": "PINELAND, TX US",
+   "lat": 31.2447,
+   "lon": -93.9657,
+   "gaugeMm": 499.0,
+   "stage4Mm": 528.4
+  },
+  {
+   "id": "US1TXBST122",
+   "name": "SMITHVILLE 5.4 NNW, TX US",
+   "lat": 30.07943,
+   "lon": -97.194421,
+   "gaugeMm": 493.1,
+   "stage4Mm": 500.4
+  },
+  {
+   "id": "USC00410436",
+   "name": "AUSTWELL, TX US",
+   "lat": 28.389,
+   "lon": -96.8388,
+   "gaugeMm": 491.2,
+   "stage4Mm": 375.0
+  },
+  {
+   "id": "US1TXSA0001",
+   "name": "BROADDUS 15.3 SE, TX US",
+   "lat": 31.1342,
+   "lon": -94.1062,
+   "gaugeMm": 489.9,
+   "stage4Mm": 503.4
+  },
+  {
+   "id": "US1TXGZ0010",
+   "name": "GONZALES 4.5 SSE, TX US",
+   "lat": 29.446073,
+   "lon": -97.425052,
+   "gaugeMm": 489.6,
+   "stage4Mm": 459.7
+  },
+  {
+   "id": "US1TXLV0021",
+   "name": "HALLETTSVILLE 8.0 N, TX US",
+   "lat": 29.559671,
+   "lon": -96.927533,
+   "gaugeMm": 489.4,
+   "stage4Mm": 441.9
+  },
+  {
+   "id": "US1TXBST035",
+   "name": "BASTROP 5.9 SSW, TX US",
+   "lat": 30.040288,
+   "lon": -97.358071,
+   "gaugeMm": 489.2,
+   "stage4Mm": 497.5
+  },
+  {
+   "id": "US1TXBST083",
+   "name": "PAIGE 4.6 SW, TX US",
+   "lat": 30.157124,
+   "lon": -97.158409,
+   "gaugeMm": 489.2,
+   "stage4Mm": 499.2
+  },
+  {
+   "id": "US1TXLV0020",
+   "name": "YOAKUM 6.2 NNE, TX US",
+   "lat": 29.3695,
+   "lon": -97.0942,
+   "gaugeMm": 488.2,
+   "stage4Mm": 432.7
+  },
+  {
+   "id": "US1TXWA0017",
+   "name": "BRENHAM 9.9 N, TX US",
+   "lat": 30.30139,
+   "lon": -96.421313,
+   "gaugeMm": 485.0,
+   "stage4Mm": 429.8
+  },
+  {
+   "id": "US1TXGZ0021",
+   "name": "GONZALES 4.4 NNW, TX US",
+   "lat": 29.5645398,
+   "lon": -97.4814345,
+   "gaugeMm": 484.3,
+   "stage4Mm": 486.9
+  },
+  {
+   "id": "US1TXLV0027",
+   "name": "MOULTON 6.9 SE, TX US",
+   "lat": 29.5121612548828,
+   "lon": -97.0535125732422,
+   "gaugeMm": 483.6,
+   "stage4Mm": 442.6
+  },
+  {
+   "id": "US1TXWA0006",
+   "name": "BRENHAM 8.0 E, TX US",
+   "lat": 30.1572,
+   "lon": -96.2626,
+   "gaugeMm": 482.4,
+   "stage4Mm": 462.3
+  },
+  {
+   "id": "US1TXWH0001",
+   "name": "WHARTON 0.3 E, TX US",
+   "lat": 29.31613,
+   "lon": -96.093434,
+   "gaugeMm": 481.8,
+   "stage4Mm": 522.1
+  },
+  {
+   "id": "US1TXPL0035",
+   "name": "LIVINGSTON 13.4 NW, TX US",
+   "lat": 30.860255,
+   "lon": -95.078262,
+   "gaugeMm": 481.5,
+   "stage4Mm": 506.5
+  },
+  {
+   "id": "USW00012978",
+   "name": "FAYETTE REGIONAL AIR CENTER AIRPORT, TX US",
+   "lat": 29.90778,
+   "lon": -96.95,
+   "gaugeMm": 481.4,
+   "stage4Mm": 593.3
+  },
+  {
+   "id": "US1TXWA0014",
+   "name": "WASHINGTON 8.6 SSW, TX US",
+   "lat": 30.221422,
+   "lon": -96.222499,
+   "gaugeMm": 478.8,
+   "stage4Mm": 457.8
+  },
+  {
+   "id": "US1TXWA0009",
+   "name": "CHAPPELL HILL 1.0 NW, TX US",
+   "lat": 30.15644,
+   "lon": -96.26298,
+   "gaugeMm": 470.9,
+   "stage4Mm": 462.3
+  },
+  {
+   "id": "USC00168831",
+   "name": "SULPHUR, LA US",
+   "lat": 30.2383,
+   "lon": -93.3447,
+   "gaugeMm": 469.8,
+   "stage4Mm": 375.3
+  },
+  {
+   "id": "US1TXBST007",
+   "name": "BASTROP 1.2 N, TX US",
+   "lat": 30.1306,
+   "lon": -97.3025,
+   "gaugeMm": 467.5,
+   "stage4Mm": 435.4
+  },
+  {
+   "id": "USC00417936",
+   "name": "SAM RAYBURN DAM, TX US",
+   "lat": 31.0619,
+   "lon": -94.1011,
+   "gaugeMm": 466.0,
+   "stage4Mm": 549.6
+  },
+  {
+   "id": "US1TXBST051",
+   "name": "BASTROP 5.2 SE, TX US",
+   "lat": 30.054658,
+   "lon": -97.249557,
+   "gaugeMm": 455.2,
+   "stage4Mm": 545.9
+  },
+  {
+   "id": "US1TXBST107",
+   "name": "CEDAR CREEK 5.6 ESE, TX US",
+   "lat": 30.045482,
+   "lon": -97.420589,
+   "gaugeMm": 454.6,
+   "stage4Mm": 497.9
+  },
+  {
+   "id": "USC00413340",
+   "name": "FREEPORT 2 NW, TX US",
+   "lat": 28.9845,
+   "lon": -95.3809,
+   "gaugeMm": 453.6,
+   "stage4Mm": 372.5
+  },
+  {
+   "id": "US1LACC0009",
+   "name": "IOWA 9.7 NNW, LA US",
+   "lat": 30.369757,
+   "lon": -93.066912,
+   "gaugeMm": 449.0,
+   "stage4Mm": 442.3
+  },
+  {
+   "id": "USW00012981",
+   "name": "BAY CITY MUNICIPAL AIRPORT, TX US",
+   "lat": 28.97306,
+   "lon": -95.86333,
+   "gaugeMm": 448.7,
+   "stage4Mm": 650.1
+  },
+  {
+   "id": "US1TXCLD018",
+   "name": "DALE 7.3 SE, TX US",
+   "lat": 29.85765674579,
+   "lon": -97.4713924527168,
+   "gaugeMm": 447.8,
+   "stage4Mm": 473.1
+  },
+  {
+   "id": "US1TXWA0024",
+   "name": "BRENHAM 0.7 E, TX US",
+   "lat": 30.158889,
+   "lon": -96.384869,
+   "gaugeMm": 446.5,
+   "stage4Mm": 423.5
+  },
+  {
+   "id": "US1TXBZS096",
+   "name": "COLLEGE STATION 1.0 WNW, TX US",
+   "lat": 30.6041526794434,
+   "lon": -96.3283843994141,
+   "gaugeMm": 445.5,
+   "stage4Mm": 483.0
+  },
+  {
+   "id": "USC00411048",
+   "name": "BRENHAM, TX US",
+   "lat": 30.1591,
+   "lon": -96.3972,
+   "gaugeMm": 442.0,
+   "stage4Mm": 457.2
+  },
+  {
+   "id": "USC00165074",
+   "name": "LAKE CHARLES 2 N, LA US",
+   "lat": 30.2544,
+   "lon": -93.2186,
+   "gaugeMm": 439.0,
+   "stage4Mm": 452.1
+  },
+  {
+   "id": "US1TXLV0023",
+   "name": "HALLETTSVILLE 1.6 SSE, TX US",
+   "lat": 29.42235,
+   "lon": -96.9357,
+   "gaugeMm": 437.9,
+   "stage4Mm": 473.0
+  },
+  {
+   "id": "US1TXBST099",
+   "name": "BASTROP 5.8 NE, TX US",
+   "lat": 30.167985,
+   "lon": -97.232655,
+   "gaugeMm": 435.6,
+   "stage4Mm": 399.5
+  },
+  {
+   "id": "US1TXBZS102",
+   "name": "BRYAN 2.5 SSE, TX US",
+   "lat": 30.6337738037109,
+   "lon": -96.3509826660156,
+   "gaugeMm": 434.3,
+   "stage4Mm": 431.4
+  },
+  {
+   "id": "US1TXVC0026",
+   "name": "VICTORIA 3.8 NW, TX US",
+   "lat": 28.8644,
+   "lon": -97.0254,
+   "gaugeMm": 433.9,
+   "stage4Mm": 275.6
+  },
+  {
+   "id": "US1TXBST100",
+   "name": "SMITHVILLE 5.7 W, TX US",
+   "lat": 29.995471,
+   "lon": -97.251181,
+   "gaugeMm": 433.4,
+   "stage4Mm": 478.3
+  },
+  {
+   "id": "US1TXBST102",
+   "name": "BASTROP 0.6 WNW, TX US",
+   "lat": 30.115627,
+   "lon": -97.314937,
+   "gaugeMm": 431.5,
+   "stage4Mm": 403.0
+  },
+  {
+   "id": "US1TXBST119",
+   "name": "BASTROP 2.4 WNW, TX US",
+   "lat": 30.120665,
+   "lon": -97.343743,
+   "gaugeMm": 431.5,
+   "stage4Mm": 404.2
+  },
+  {
+   "id": "US1TXWA0027",
+   "name": "BRENHAM 8.7 NW, TX US",
+   "lat": 30.2454,
+   "lon": -96.5051,
+   "gaugeMm": 430.6,
+   "stage4Mm": 460.4
+  },
+  {
+   "id": "USC00410655",
+   "name": "BELLVILLE 6 NNE, TX US",
+   "lat": 30.0316,
+   "lon": -96.2166,
+   "gaugeMm": 428.1,
+   "stage4Mm": 469.1
+  },
+  {
+   "id": "US1TXBZS099",
+   "name": "BRYAN 3.8 SSW, TX US",
+   "lat": 30.6216,
+   "lon": -96.399,
+   "gaugeMm": 426.3,
+   "stage4Mm": 415.6
+  },
+  {
+   "id": "US1LACC0003",
+   "name": "IOWA 0.9 ESE, LA US",
+   "lat": 30.232246,
+   "lon": -92.998641,
+   "gaugeMm": 425.6,
+   "stage4Mm": 416.9
+  },
+  {
+   "id": "USC00165266",
+   "name": "LEESVILLE, LA US",
+   "lat": 31.1416,
+   "lon": -93.2397,
+   "gaugeMm": 421.5,
+   "stage4Mm": 409.8
+  },
+  {
+   "id": "US1TXSJ0011",
+   "name": "POINT BLANK 0.7 ESE, TX US",
+   "lat": 30.74071667,
+   "lon": -95.20721667,
+   "gaugeMm": 420.9,
+   "stage4Mm": 593.8
+  },
+  {
+   "id": "US1LACM0003",
+   "name": "LAKE CHARLES 11.5 SSW, LA US",
+   "lat": 30.0483,
+   "lon": -93.2414,
+   "gaugeMm": 419.0,
+   "stage4Mm": 439.8
+  },
+  {
+   "id": "USC00414575",
+   "name": "JEDDO 3 S, TX US",
+   "lat": 29.7663,
+   "lon": -97.3163,
+   "gaugeMm": 416.6,
+   "stage4Mm": 484.3
+  },
+  {
+   "id": "USC00413112",
+   "name": "FEDOR 3 SE, TX US",
+   "lat": 30.2757,
+   "lon": -97.0192,
+   "gaugeMm": 415.0,
+   "stage4Mm": 390.4
+  },
+  {
+   "id": "US1LABG0002",
+   "name": "RAGLEY 5.0 SE, LA US",
+   "lat": 30.4713,
+   "lon": -93.15908,
+   "gaugeMm": 412.8,
+   "stage4Mm": 398.6
+  },
+  {
+   "id": "USC00413183",
+   "name": "FLATONIA 4 SE, TX US",
+   "lat": 29.634,
+   "lon": -97.0645,
+   "gaugeMm": 408.7,
+   "stage4Mm": 404.0
+  },
+  {
+   "id": "US1TXBST116",
+   "name": "BASTROP 4.4 NE, TX US",
+   "lat": 30.1501903533936,
+   "lon": -97.2450103759766,
+   "gaugeMm": 406.4,
+   "stage4Mm": 368.0
+  },
+  {
+   "id": "USC00167932",
+   "name": "ROCKEFELLR WL REFUGE, LA US",
+   "lat": 29.7286,
+   "lon": -92.818,
+   "gaugeMm": 405.9,
+   "stage4Mm": 358.0
+  },
+  {
+   "id": "USC00411671",
+   "name": "CHEAPSIDE, TX US",
+   "lat": 29.30922,
+   "lon": -97.40607,
+   "gaugeMm": 403.6,
+   "stage4Mm": 370.2
+  },
+  {
+   "id": "USW00003904",
+   "name": "COLLEGE STATION EASTERWOOD FIELD, TX US",
+   "lat": 30.5912,
+   "lon": -96.36309,
+   "gaugeMm": 399.7,
+   "stage4Mm": 485.2
+  },
+  {
+   "id": "USW00053928",
+   "name": "BRENHAM MUNICIPAL AIRPORT, TX US",
+   "lat": 30.21889,
+   "lon": -96.37417,
+   "gaugeMm": 395.8,
+   "stage4Mm": 433.2
+  },
+  {
+   "id": "US1TXLV0003",
+   "name": "SHINER 5.1 ESE, TX US",
+   "lat": 29.41122,
+   "lon": -97.09046,
+   "gaugeMm": 387.5,
+   "stage4Mm": 429.4
+  },
+  {
+   "id": "US1TXCLD043",
+   "name": "LULING 7.8 ENE, TX US",
+   "lat": 29.706758,
+   "lon": -97.521426,
+   "gaugeMm": 387.3,
+   "stage4Mm": 410.2
+  },
+  {
+   "id": "US1TXWH0002",
+   "name": "EL CAMPO 4.9 SSE, TX US",
+   "lat": 29.12673,
+   "lon": -96.26024,
+   "gaugeMm": 386.7,
+   "stage4Mm": 398.5
+  },
+  {
+   "id": "US1TXTT0006",
+   "name": "TRINITY 2.9 E, TX US",
+   "lat": 30.9441465139389,
+   "lon": -95.3236739337444,
+   "gaugeMm": 385.7,
+   "stage4Mm": 429.1
+  },
+  {
+   "id": "USW00023906",
+   "name": "PORT ARANSAS 32 NNE, TX US",
+   "lat": 28.3045,
+   "lon": -96.823,
+   "gaugeMm": 383.0,
+   "stage4Mm": 403.0
+  },
+  {
+   "id": "USC00411314",
+   "name": "CALDWELL, TX US",
+   "lat": 30.5327,
+   "lon": -96.7022,
+   "gaugeMm": 382.8,
+   "stage4Mm": 340.1
+  },
+  {
+   "id": "US1LASN0003",
+   "name": "PLEASANT HILL 10.2 SE, LA US",
+   "lat": 31.7014271,
+   "lon": -93.4070032,
+   "gaugeMm": 382.3,
+   "stage4Mm": 384.6
+  },
+  {
+   "id": "USC00165896",
+   "name": "MANY 9 WSW, LA US",
+   "lat": 31.5119,
+   "lon": -93.6199,
+   "gaugeMm": 382.3,
+   "stage4Mm": 399.7
+  },
+  {
+   "id": "US1TXBST110",
+   "name": "PAIGE 3.2 SW, TX US",
+   "lat": 30.178806,
+   "lon": -97.149731,
+   "gaugeMm": 379.3,
+   "stage4Mm": 420.2
+  },
+  {
+   "id": "USC00413622",
+   "name": "GONZALES 2 S, TX US",
+   "lat": 29.4744,
+   "lon": -97.4481,
+   "gaugeMm": 379.0,
+   "stage4Mm": 439.1
+  },
+  {
+   "id": "US1TXLE0013",
+   "name": "LEXINGTON 8.8 SW, TX US",
+   "lat": 30.320213,
+   "lon": -97.107923,
+   "gaugeMm": 378.8,
+   "stage4Mm": 379.2
+  },
+  {
+   "id": "USC00412462",
+   "name": "DIME BOX, TX US",
+   "lat": 30.35576,
+   "lon": -96.82893,
+   "gaugeMm": 377.2,
+   "stage4Mm": 349.9
+  },
+  {
+   "id": "US1TXBST069",
+   "name": "CEDAR CREEK 1.0 ENE, TX US",
+   "lat": 30.09343333,
+   "lon": -97.48565,
+   "gaugeMm": 376.8,
+   "stage4Mm": 434.5
+  },
+  {
+   "id": "US1TXBST043",
+   "name": "DALE 7.6 N, TX US",
+   "lat": 30.03779,
+   "lon": -97.569559,
+   "gaugeMm": 374.4,
+   "stage4Mm": 429.1
+  },
+  {
+   "id": "US1TXVC0034",
+   "name": "VICTORIA 6.4 SSW, TX US",
+   "lat": 28.74225,
+   "lon": -97.0267686992884,
+   "gaugeMm": 372.4,
+   "stage4Mm": 306.4
+  },
+  {
+   "id": "USW00003937",
+   "name": "LAKE CHARLES REGIONAL AIRPORT, LA US",
+   "lat": 30.12551,
+   "lon": -93.22771,
+   "gaugeMm": 368.8,
+   "stage4Mm": 418.2
+  },
+  {
+   "id": "USC00416368",
+   "name": "NIXON, TX US",
+   "lat": 29.2827,
+   "lon": -97.7675,
+   "gaugeMm": 366.5,
+   "stage4Mm": 331.6
+  },
+  {
+   "id": "US1TXGD0022",
+   "name": "VICTORIA 15.0 WSW, TX US",
+   "lat": 28.7068076,
+   "lon": -97.1917534,
+   "gaugeMm": 363.9,
+   "stage4Mm": 289.9
+  },
+  {
+   "id": "US1TXVC0037",
+   "name": "INEZ 1.1 SSE, TX US",
+   "lat": 28.860295,
+   "lon": -96.787646,
+   "gaugeMm": 363.0,
+   "stage4Mm": 253.6
+  },
+  {
+   "id": "USW00003949",
+   "name": "PEASON RIDGE RANGE, LA US",
+   "lat": 31.35694,
+   "lon": -93.17603,
+   "gaugeMm": 359.1,
+   "stage4Mm": 371.6
+  },
+  {
+   "id": "US1TXBRZ032",
+   "name": "LAKE JACKSON 1.6 E, TX US",
+   "lat": 29.043001,
+   "lon": -95.420226,
+   "gaugeMm": 357.0,
+   "stage4Mm": 387.0
+  },
+  {
+   "id": "US1TXCLD031",
+   "name": "LOCKHART 4.3 ENE, TX US",
+   "lat": 29.904818,
+   "lon": -97.614774,
+   "gaugeMm": 354.8,
+   "stage4Mm": 384.5
+  },
+  {
+   "id": "USC00415285",
+   "name": "LOCKHART 2 SW, TX US",
+   "lat": 29.8569,
+   "lon": -97.6958,
+   "gaugeMm": 351.8,
+   "stage4Mm": 367.7
+  },
+  {
+   "id": "US1LACC0006",
+   "name": "SULPHUR 2.2 E, LA US",
+   "lat": 30.233936,
+   "lon": -93.320547,
+   "gaugeMm": 351.6,
+   "stage4Mm": 359.6
+  },
+  {
+   "id": "USC00164050",
+   "name": "HANNA 4 SSE, LA US",
+   "lat": 31.92716,
+   "lon": -93.31017,
+   "gaugeMm": 351.4,
+   "stage4Mm": 356.1
+  },
+  {
+   "id": "US1TXLE0019",
+   "name": "GIDDINGS 7.3 NW, TX US",
+   "lat": 30.255996,
+   "lon": -97.017603,
+   "gaugeMm": 350.8,
+   "stage4Mm": 426.2
+  },
+  {
+   "id": "USC00419952",
+   "name": "YOAKUM, TX US",
+   "lat": 29.2738,
+   "lon": -97.1555,
+   "gaugeMm": 350.0,
+   "stage4Mm": 323.2
+  },
+  {
+   "id": "USC00412266",
+   "name": "DANEVANG 1 W, TX US",
+   "lat": 29.0662,
+   "lon": -96.25833,
+   "gaugeMm": 348.2,
+   "stage4Mm": 345.9
+  },
+  {
+   "id": "US1TXTT0003",
+   "name": "TRINITY 5.1 NW, TX US",
+   "lat": 31.00456111,
+   "lon": -95.423525,
+   "gaugeMm": 347.3,
+   "stage4Mm": 383.3
+  },
+  {
+   "id": "USC00169980",
+   "name": "ZWOLLE 2 NW, LA US",
+   "lat": 31.6598,
+   "lon": -93.6633,
+   "gaugeMm": 346.7,
+   "stage4Mm": 368.9
+  },
+  {
+   "id": "USC00419367",
+   "name": "VICTORIA REGIONAL AIRPORT, TX US",
+   "lat": 28.8439,
+   "lon": -96.9214,
+   "gaugeMm": 342.7,
+   "stage4Mm": 247.0
+  },
+  {
+   "id": "US1TXBST061",
+   "name": "BASTROP 7.6 N, TX US",
+   "lat": 30.2211971282959,
+   "lon": -97.3242416381836,
+   "gaugeMm": 342.1,
+   "stage4Mm": 336.4
+  },
+  {
+   "id": "US1LANT0005",
+   "name": "GOLDONNA 1.5 N, LA US",
+   "lat": 32.041958,
+   "lon": -92.910789,
+   "gaugeMm": 340.3,
+   "stage4Mm": 293.1
+  },
+  {
+   "id": "USW00012912",
+   "name": "VICTORIA REGIONAL AIRPORT, TX US",
+   "lat": 28.86245,
+   "lon": -96.9301,
+   "gaugeMm": 339.9,
+   "stage4Mm": 252.0
+  },
+  {
+   "id": "USC00165065",
+   "name": "LAKE ARTHUR 7 SW, LA US",
+   "lat": 30.02054,
+   "lon": -92.76808,
+   "gaugeMm": 337.8,
+   "stage4Mm": 320.4
+  },
+  {
+   "id": "USC00415193",
+   "name": "LEXINGTON, TX US",
+   "lat": 30.4065,
+   "lon": -97.0134,
+   "gaugeMm": 336.5,
+   "stage4Mm": 316.1
+  },
+  {
+   "id": "USC00415427",
+   "name": "LUFKIN NUMBER 2, TX US",
+   "lat": 31.3416,
+   "lon": -94.7325,
+   "gaugeMm": 336.2,
+   "stage4Mm": 346.0
+  },
+  {
+   "id": "US1TXWH0004",
+   "name": "EL CAMPO 1.0 NW, TX US",
+   "lat": 29.206125,
+   "lon": -96.289001,
+   "gaugeMm": 335.8,
+   "stage4Mm": 330.3
+  },
+  {
+   "id": "US1TXWH0011",
+   "name": "EL CAMPO 2.7 NW, TX US",
+   "lat": 29.227813,
+   "lon": -96.302022,
+   "gaugeMm": 335.3,
+   "stage4Mm": 330.3
+  },
+  {
+   "id": "US1TXCLD030",
+   "name": "LULING 4.4 NNW, TX US",
+   "lat": 29.740865,
+   "lon": -97.680187,
+   "gaugeMm": 335.1,
+   "stage4Mm": 352.8
+  },
+  {
+   "id": "US1TXDW0015",
+   "name": "YORKTOWN 10.7 NNW, TX US",
+   "lat": 29.123685,
+   "lon": -97.581094,
+   "gaugeMm": 329.4,
+   "stage4Mm": 295.9
+  },
+  {
+   "id": "USC00410569",
+   "name": "BAY CITY WATERWORKS, TX US",
+   "lat": 28.9798,
+   "lon": -95.9749,
+   "gaugeMm": 326.2,
+   "stage4Mm": 583.5
+  },
+  {
+   "id": "US1TXLE0012",
+   "name": "LEXINGTON 2.7 SSE, TX US",
+   "lat": 30.3798599243164,
+   "lon": -96.9875793457031,
+   "gaugeMm": 324.9,
+   "stage4Mm": 343.0
+  },
+  {
+   "id": "US1TXLV0002",
+   "name": "HALLETTSVILLE 17.1 SE, TX US",
+   "lat": 29.255,
+   "lon": -96.76005,
+   "gaugeMm": 324.9,
+   "stage4Mm": 266.9
+  },
+  {
+   "id": "USC00411880",
+   "name": "COLETO CREEK RESERVOIR, TX US",
+   "lat": 28.7156,
+   "lon": -97.1742,
+   "gaugeMm": 323.9,
+   "stage4Mm": 331.3
+  },
+  {
+   "id": "US1TXBST123",
+   "name": "PAIGE 7.5 NNW, TX US",
+   "lat": 30.31147,
+   "lon": -97.17019,
+   "gaugeMm": 323.1,
+   "stage4Mm": 370.6
+  },
+  {
+   "id": "USC00418519",
+   "name": "SPEAKS 2, TX US",
+   "lat": 29.2728,
+   "lon": -96.6858,
+   "gaugeMm": 320.6,
+   "stage4Mm": 260.6
+  },
+  {
+   "id": "USC00417951",
+   "name": "SAN AUGUSTINE, TX US",
+   "lat": 31.51921,
+   "lon": -94.11866,
+   "gaugeMm": 315.0,
+   "stage4Mm": 358.0
+  },
+  {
+   "id": "US1TXTV0135",
+   "name": "CREEDMOOR 1.5 NNW, TX US",
+   "lat": 30.112186,
+   "lon": -97.7493329,
+   "gaugeMm": 314.1,
+   "stage4Mm": 312.2
+  },
+  {
+   "id": "USW00093987",
+   "name": "LUFKIN ANGELINA CO AIRPORT, TX US",
+   "lat": 31.23593,
+   "lon": -94.75468,
+   "gaugeMm": 313.7,
+   "stage4Mm": 398.3
+  },
+  {
+   "id": "US1TXTV0281",
+   "name": "BUDA 8.6 E, TX US",
+   "lat": 30.06187,
+   "lon": -97.699208,
+   "gaugeMm": 311.5,
+   "stage4Mm": 330.1
+  },
+  {
+   "id": "US1TXLE0015",
+   "name": "LEXINGTON 2.3 SSW, TX US",
+   "lat": 30.384,
+   "lon": -97.0256,
+   "gaugeMm": 310.7,
+   "stage4Mm": 341.0
+  },
+  {
+   "id": "USW00012935",
+   "name": "PALACIOS MUNICIPAL AIRPORT, TX US",
+   "lat": 28.7248,
+   "lon": -96.25353,
+   "gaugeMm": 309.9,
+   "stage4Mm": 321.6
+  },
+  {
+   "id": "US1TXBST049",
+   "name": "MCDADE 4.6 SSW, TX US",
+   "lat": 30.2199,
+   "lon": -97.257483,
+   "gaugeMm": 308.5,
+   "stage4Mm": 343.4
+  },
+  {
+   "id": "US1TXBRZ020",
+   "name": "LAKE JACKSON 0.9 SSW, TX US",
+   "lat": 29.0295739,
+   "lon": -95.4509935,
+   "gaugeMm": 306.9,
+   "stage4Mm": 367.7
+  },
+  {
+   "id": "USC00417140",
+   "name": "POINT COMFORT, TX US",
+   "lat": 28.6575,
+   "lon": -96.5553,
+   "gaugeMm": 302.5,
+   "stage4Mm": 262.3
+  },
+  {
+   "id": "US1TXVC0022",
+   "name": "VICTORIA 12.1 W, TX US",
+   "lat": 28.8421,
+   "lon": -97.18231667,
+   "gaugeMm": 300.9,
+   "stage4Mm": 249.1
+  },
+  {
+   "id": "US1TXBST095",
+   "name": "ELGIN 3.3 NE, TX US",
+   "lat": 30.376829,
+   "lon": -97.326944,
+   "gaugeMm": 300.0,
+   "stage4Mm": 272.5
+  },
+  {
+   "id": "US1TXAG0003",
+   "name": "LUFKIN 3.0 SW, TX US",
+   "lat": 31.3034,
+   "lon": -94.7627,
+   "gaugeMm": 298.3,
+   "stage4Mm": 351.1
+  },
+  {
+   "id": "USC00415429",
+   "name": "LULING, TX US",
+   "lat": 29.6755,
+   "lon": -97.6577,
+   "gaugeMm": 298.0,
+   "stage4Mm": 326.8
+  },
+  {
+   "id": "USC00163313",
+   "name": "FRANKLIN 3 NW, LA US",
+   "lat": 29.8233,
+   "lon": -91.5441,
+   "gaugeMm": 296.7,
+   "stage4Mm": 224.2
+  },
+  {
+   "id": "US1TXCLD009",
+   "name": "UHLAND 4.4 SE, TX US",
+   "lat": 29.921663,
+   "lon": -97.739445,
+   "gaugeMm": 295.7,
+   "stage4Mm": 378.5
+  },
+  {
+   "id": "US1TXGP0016",
+   "name": "KINGSBURY 0.5 S, TX US",
+   "lat": 29.640271,
+   "lon": -97.827258,
+   "gaugeMm": 292.4,
+   "stage4Mm": 347.2
+  },
+  {
+   "id": "US1TXJK0005",
+   "name": "GANADO 1.5 W, TX US",
+   "lat": 29.04321,
+   "lon": -96.53674,
+   "gaugeMm": 292.4,
+   "stage4Mm": 240.2
+  },
+  {
+   "id": "US1TXBST002",
+   "name": "ELGIN 4.3 SE, TX US",
+   "lat": 30.301944,
+   "lon": -97.325833,
+   "gaugeMm": 289.6,
+   "stage4Mm": 319.1
+  },
+  {
+   "id": "USC00414805",
+   "name": "KINGSBURY, TX US",
+   "lat": 29.6834,
+   "lon": -97.7671,
+   "gaugeMm": 287.8,
+   "stage4Mm": 332.7
+  },
+  {
+   "id": "USC00410431",
+   "name": "AUSTIN 6 S, TX US",
+   "lat": 30.2247,
+   "lon": -97.7327,
+   "gaugeMm": 284.5,
+   "stage4Mm": 269.9
+  },
+  {
+   "id": "US1TXDW0014",
+   "name": "CUERO 2.7 ESE, TX US",
+   "lat": 29.07744,
+   "lon": -97.249158,
+   "gaugeMm": 283.9,
+   "stage4Mm": 219.2
+  },
+  {
+   "id": "US1TXCLD015",
+   "name": "MAXWELL 1.5 NE, TX US",
+   "lat": 29.897328,
+   "lon": -97.786143,
+   "gaugeMm": 282.8,
+   "stage4Mm": 355.8
+  },
+  {
+   "id": "US1TXGD0025",
+   "name": "GOLIAD 14.3 NNE, TX US",
+   "lat": 28.864142,
+   "lon": -97.33107,
+   "gaugeMm": 282.7,
+   "stage4Mm": 265.7
+  },
+  {
+   "id": "US1TXDW0012",
+   "name": "CUERO 2.5 ESE, TX US",
+   "lat": 29.07611111,
+   "lon": -97.25194444,
+   "gaugeMm": 282.0,
+   "stage4Mm": 219.2
+  },
+  {
+   "id": "USC00165296",
+   "name": "LELAND BOWMAN LOCK, LA US",
+   "lat": 29.7869,
+   "lon": -92.20826,
+   "gaugeMm": 280.9,
+   "stage4Mm": 242.8
+  },
+  {
+   "id": "USC00412786",
+   "name": "EL CAMPO, TX US",
+   "lat": 29.2,
+   "lon": -96.2654,
+   "gaugeMm": 277.0,
+   "stage4Mm": 396.4
+  },
+  {
+   "id": "US1LARP0007",
+   "name": "ALEXANDRIA 2.8 SW, LA US",
+   "lat": 31.262413,
+   "lon": -92.494619,
+   "gaugeMm": 276.2,
+   "stage4Mm": 230.4
+  },
+  {
+   "id": "US1TXBST044",
+   "name": "ELGIN 0.9 NW, TX US",
+   "lat": 30.358042,
+   "lon": -97.384201,
+   "gaugeMm": 276.1,
+   "stage4Mm": 279.5
+  },
+  {
+   "id": "US1TXBST072",
+   "name": "ELGIN 2.8 NNE, TX US",
+   "lat": 30.387438,
+   "lon": -97.357269,
+   "gaugeMm": 272.9,
+   "stage4Mm": 272.5
+  },
+  {
+   "id": "US1TXBST019",
+   "name": "BASTROP 7.2 N, TX US",
+   "lat": 30.215411,
+   "lon": -97.328436,
+   "gaugeMm": 266.8,
+   "stage4Mm": 336.4
+  },
+  {
+   "id": "US1TXDW0013",
+   "name": "CUERO 2.6 ESE, TX US",
+   "lat": 29.075024,
+   "lon": -97.24994,
+   "gaugeMm": 266.1,
+   "stage4Mm": 219.2
+  },
+  {
+   "id": "US1TXGD0012",
+   "name": "GOLIAD 11.5 N, TX US",
+   "lat": 28.834927,
+   "lon": -97.407655,
+   "gaugeMm": 265.2,
+   "stage4Mm": 256.3
+  },
+  {
+   "id": "USC00164775",
+   "name": "KAPLAN, LA US",
+   "lat": 29.9941,
+   "lon": -92.2825,
+   "gaugeMm": 264.5,
+   "stage4Mm": 265.3
+  },
+  {
+   "id": "US1TXTV0096",
+   "name": "TANGLEWOOD FOREST 2.9 E, TX US",
+   "lat": 30.177585,
+   "lon": -97.78995,
+   "gaugeMm": 264.3,
+   "stage4Mm": 256.9
+  },
+  {
+   "id": "US1LASJ0002",
+   "name": "GRAMERCY 0.4 NW, LA US",
+   "lat": 30.063414,
+   "lon": -90.699688,
+   "gaugeMm": 264.2,
+   "stage4Mm": 273.5
+  },
+  {
+   "id": "US1TXMLM017",
+   "name": "GAUSE 2.5 W, TX US",
+   "lat": 30.78998333,
+   "lon": -96.76308333,
+   "gaugeMm": 261.6,
+   "stage4Mm": 244.3
+  },
+  {
+   "id": "USC00166584",
+   "name": "NATCHITOCHES NUMBER 2, LA US",
+   "lat": 31.8142,
+   "lon": -93.0856,
+   "gaugeMm": 261.2,
+   "stage4Mm": 273.4
+  },
+  {
+   "id": "US1LAVM0004",
+   "name": "ABBEVILLE 1.0 E, LA US",
+   "lat": 29.97619,
+   "lon": -92.107181,
+   "gaugeMm": 259.8,
+   "stage4Mm": 241.8
+  },
+  {
+   "id": "US1TXHYS028",
+   "name": "MANCHACA 2.1 ENE, TX US",
+   "lat": 30.1368,
+   "lon": -97.86819,
+   "gaugeMm": 258.9,
+   "stage4Mm": 256.3
+  },
+  {
+   "id": "US1TXAG0009",
+   "name": "LUFKIN 7.6 WSW, TX US",
+   "lat": 31.297985,
+   "lon": -94.847255,
+   "gaugeMm": 258.4,
+   "stage4Mm": 256.9
+  },
+  {
+   "id": "USW00013904",
+   "name": "AUSTIN BERGSTROM INTERNATIONAL AIRPORT, TX US",
+   "lat": 30.18311,
+   "lon": -97.67989,
+   "gaugeMm": 255.8,
+   "stage4Mm": 281.1
+  },
+  {
+   "id": "USC00419001",
+   "name": "THORNDALE, TX US",
+   "lat": 30.6146,
+   "lon": -97.2085,
+   "gaugeMm": 254.6,
+   "stage4Mm": 230.8
+  },
+  {
+   "id": "US1TXMLM018",
+   "name": "GAUSE 2.8 NNW, TX US",
+   "lat": 30.818171,
+   "lon": -96.748496,
+   "gaugeMm": 254.2,
+   "stage4Mm": 244.3
+  },
+  {
+   "id": "US1TXAG0006",
+   "name": "LUFKIN 5.2 WNW, TX US",
+   "lat": 31.3626864552498,
+   "lon": -94.8073480278254,
+   "gaugeMm": 254.1,
+   "stage4Mm": 308.9
+  },
+  {
+   "id": "US1LAVM0002",
+   "name": "KAPLAN 1.6 SSE, LA US",
+   "lat": 29.981428,
+   "lon": -92.274077,
+   "gaugeMm": 251.3,
+   "stage4Mm": 265.3
+  },
+  {
+   "id": "USW00053988",
+   "name": "FORT POLK FULLERTON LANDING STRIP, LA US",
+   "lat": 31.0217,
+   "lon": -92.9107,
+   "gaugeMm": 250.2,
+   "stage4Mm": 262.8
+  },
+  {
+   "id": "US1TXHYS164",
+   "name": "KYLE 0.8 SW, TX US",
+   "lat": 29.98606,
+   "lon": -97.8802,
+   "gaugeMm": 250.0,
+   "stage4Mm": 269.9
+  },
+  {
+   "id": "USC00166394",
+   "name": "MORGAN CITY, LA US",
+   "lat": 29.6833,
+   "lon": -91.1761,
+   "gaugeMm": 250.0,
+   "stage4Mm": 238.8
+  },
+  {
+   "id": "US1LASB0002",
+   "name": "ST. BERNARD 2.7 E, LA US",
+   "lat": 29.86914,
+   "lon": -89.814,
+   "gaugeMm": 247.8,
+   "stage4Mm": 159.5
+  },
+  {
+   "id": "USC00412173",
+   "name": "CUERO, TX US",
+   "lat": 29.0893,
+   "lon": -97.3432,
+   "gaugeMm": 247.6,
+   "stage4Mm": 156.8
+  },
+  {
+   "id": "US1TXMLM015",
+   "name": "CAMERON 8.2 SE, TX US",
+   "lat": 30.780074,
+   "lon": -96.872036,
+   "gaugeMm": 247.5,
+   "stage4Mm": 235.0
+  },
+  {
+   "id": "US1TXHYS154",
+   "name": "KYLE 2.1 NNW, TX US",
+   "lat": 30.020955,
+   "lon": -97.887701,
+   "gaugeMm": 247.4,
+   "stage4Mm": 269.5
+  },
+  {
+   "id": "US1TXGD0003",
+   "name": "GOLIAD 2.4 SE, TX US",
+   "lat": 28.649551,
+   "lon": -97.358453,
+   "gaugeMm": 247.3,
+   "stage4Mm": 254.3
+  },
+  {
+   "id": "USC00166938",
+   "name": "OBERLIN FIRE TOWER, LA US",
+   "lat": 30.6036,
+   "lon": -92.7739,
+   "gaugeMm": 246.2,
+   "stage4Mm": 305.3
+  },
+  {
+   "id": "US1TXTV0087",
+   "name": "AUSTIN 3.9 NNE, TX US",
+   "lat": 30.3574,
+   "lon": -97.72355,
+   "gaugeMm": 244.6,
+   "stage4Mm": 214.8
+  },
+  {
+   "id": "US1TXAG0001",
+   "name": "LUFKIN 7.0 W, TX US",
+   "lat": 31.321333,
+   "lon": -94.844472,
+   "gaugeMm": 243.9,
+   "stage4Mm": 256.9
+  },
+  {
+   "id": "US1TXTV0218",
+   "name": "ONION CREEK 3.2 ENE, TX US",
+   "lat": 30.1589279174805,
+   "lon": -97.7373046875,
+   "gaugeMm": 242.6,
+   "stage4Mm": 284.8
+  },
+  {
+   "id": "USC00160007",
+   "name": "ABBEVILLE, LA US",
+   "lat": 29.9688,
+   "lon": -92.1169,
+   "gaugeMm": 242.4,
+   "stage4Mm": 241.8
+  },
+  {
+   "id": "US1TXGD0031",
+   "name": "GOLIAD 8.7 NNW, TX US",
+   "lat": 28.78611111,
+   "lon": -97.4475,
+   "gaugeMm": 240.7,
+   "stage4Mm": 217.9
+  },
+  {
+   "id": "USC00164700",
+   "name": "JENNINGS, LA US",
+   "lat": 30.2002,
+   "lon": -92.6641,
+   "gaugeMm": 240.0,
+   "stage4Mm": 231.5
+  },
+  {
+   "id": "US1TXGD0027",
+   "name": "GOLIAD 6.5 WNW, TX US",
+   "lat": 28.702768,
+   "lon": -97.491219,
+   "gaugeMm": 239.3,
+   "stage4Mm": 225.8
+  },
+  {
+   "id": "USW00012979",
+   "name": "SAN MARCOS MUNICIPAL AIRPORT, TX US",
+   "lat": 29.89083,
+   "lon": -97.86444,
+   "gaugeMm": 239.3,
+   "stage4Mm": 315.8
+  },
+  {
+   "id": "US1TXMLM001",
+   "name": "THORNDALE 8.8 N, TX US",
+   "lat": 30.740862,
+   "lon": -97.213828,
+   "gaugeMm": 238.0,
+   "stage4Mm": 218.4
+  },
+  {
+   "id": "US1TXHYS082",
+   "name": "KYLE 2.4 SE, TX US",
+   "lat": 29.96473056,
+   "lon": -97.84748889,
+   "gaugeMm": 237.8,
+   "stage4Mm": 292.4
+  },
+  {
+   "id": "USC00163695",
+   "name": "GONZALES, LA US",
+   "lat": 30.2033,
+   "lon": -90.9225,
+   "gaugeMm": 237.8,
+   "stage4Mm": 231.2
+  },
+  {
+   "id": "US1TXHYS019",
+   "name": "SAN MARCOS 2.9 WNW, TX US",
+   "lat": 29.902747,
+   "lon": -97.970787,
+   "gaugeMm": 237.3,
+   "stage4Mm": 260.0
+  },
+  {
+   "id": "US1TXHYS135",
+   "name": "SAN MARCOS 6.8 SSW, TX US",
+   "lat": 29.78895,
+   "lon": -97.96928,
+   "gaugeMm": 236.4,
+   "stage4Mm": 294.9
+  },
+  {
+   "id": "US1LASM0002",
+   "name": "ST. MARTINVILLE 0.2 S, LA US",
+   "lat": 30.12212,
+   "lon": -91.83098,
+   "gaugeMm": 232.5,
+   "stage4Mm": 209.2
+  },
+  {
+   "id": "USW00053915",
+   "name": "NEW IBERIA AIRPORT ACADIANA REGIONAL, LA US",
+   "lat": 30.02916,
+   "lon": -91.88456,
+   "gaugeMm": 231.8,
+   "stage4Mm": 238.3
+  },
+  {
+   "id": "USC00165438",
+   "name": "LIVINGSTON, LA US",
+   "lat": 30.5197,
+   "lon": -90.7544,
+   "gaugeMm": 227.3,
+   "stage4Mm": 182.1
+  },
+  {
+   "id": "US1TXHYS128",
+   "name": "KYLE 2.8 SSW, TX US",
+   "lat": 29.9599,
+   "lon": -97.8954,
+   "gaugeMm": 227.1,
+   "stage4Mm": 279.4
+  },
+  {
+   "id": "USC00417983",
+   "name": "SAN MARCOS, TX US",
+   "lat": 29.8832,
+   "lon": -97.9494,
+   "gaugeMm": 227.1,
+   "stage4Mm": 278.5
+  },
+  {
+   "id": "USC00418187",
+   "name": "SEGUIN 1 SSW, TX US",
+   "lat": 29.552,
+   "lon": -97.9704,
+   "gaugeMm": 226.6,
+   "stage4Mm": 252.8
+  },
+  {
+   "id": "USC00419559",
+   "name": "WELDER W LIFE FOUNDATION, TX US",
+   "lat": 28.1136,
+   "lon": -97.4177,
+   "gaugeMm": 225.4,
+   "stage4Mm": 377.3
+  },
+  {
+   "id": "US1TXTV0290",
+   "name": "PFLUGERVILLE 0.5 N, TX US",
+   "lat": 30.4477,
+   "lon": -97.62,
+   "gaugeMm": 225.1,
+   "stage4Mm": 199.7
+  },
+  {
+   "id": "US1TXTV0014",
+   "name": "AUSTIN 2.9 NE LAMAR AND ARPT, TX US",
+   "lat": 30.339555,
+   "lon": -97.722753,
+   "gaugeMm": 224.9,
+   "stage4Mm": 214.8
+  },
+  {
+   "id": "US1TXTV0150",
+   "name": "AUSTIN 4.5 NNE, TX US",
+   "lat": 30.3693962097168,
+   "lon": -97.731315612793,
+   "gaugeMm": 224.3,
+   "stage4Mm": 204.3
+  },
+  {
+   "id": "US1TXTV0049",
+   "name": "WELLS BRANCH 4.2 S, TX US",
+   "lat": 30.385237,
+   "lon": -97.67878,
+   "gaugeMm": 224.2,
+   "stage4Mm": 215.5
+  },
+  {
+   "id": "US1TXHYS055",
+   "name": "MOUNTAIN CITY 6.7 WNW, TX US",
+   "lat": 30.058889,
+   "lon": -98.003444,
+   "gaugeMm": 224.0,
+   "stage4Mm": 188.1
+  },
+  {
+   "id": "US1TXGP0014",
+   "name": "NEW BERLIN 6.7 SE, TX US",
+   "lat": 29.40624,
+   "lon": -98.01159,
+   "gaugeMm": 223.0,
+   "stage4Mm": 238.9
+  },
+  {
+   "id": "USC00412114",
+   "name": "CROCKETT, TX US",
+   "lat": 31.3072,
+   "lon": -95.4509,
+   "gaugeMm": 223.0,
+   "stage4Mm": 288.3
+  },
+  {
+   "id": "US1TXHYS003",
+   "name": "WIMBERLEY 4.4 E, TX US",
+   "lat": 30.005355,
+   "lon": -98.029015,
+   "gaugeMm": 221.2,
+   "stage4Mm": 197.9
+  },
+  {
+   "id": "US1LAAS0011",
+   "name": "GONZALES 4.5 S, LA US",
+   "lat": 30.1518993377686,
+   "lon": -90.9289169311523,
+   "gaugeMm": 220.5,
+   "stage4Mm": 193.8
+  },
+  {
+   "id": "US1TXHYS158",
+   "name": "SAN MARCOS 10.4 WNW, TX US",
+   "lat": 29.924627,
+   "lon": -98.094962,
+   "gaugeMm": 219.9,
+   "stage4Mm": 213.5
+  },
+  {
+   "id": "US1TXTV0164",
+   "name": "AUSTIN 4.1 SW, TX US",
+   "lat": 30.2277973,
+   "lon": -97.793987,
+   "gaugeMm": 219.5,
+   "stage4Mm": 226.5
+  },
+  {
+   "id": "USC00160103",
+   "name": "ALEXANDRIA 5 SSE, LA US",
+   "lat": 31.24838,
+   "lon": -92.44849,
+   "gaugeMm": 218.9,
+   "stage4Mm": 225.4
+  },
+  {
+   "id": "USC00169013",
+   "name": "THIBODAUX 4 SE, LA US",
+   "lat": 29.7547,
+   "lon": -90.7748,
+   "gaugeMm": 218.5,
+   "stage4Mm": 249.6
+  },
+  {
+   "id": "US1TXGP0034",
+   "name": "MCQUEENEY 0.5 ENE, TX US",
+   "lat": 29.59955,
+   "lon": -98.03549,
+   "gaugeMm": 218.2,
+   "stage4Mm": 247.9
+  },
+  {
+   "id": "US1TXTV0118",
+   "name": "AUSTIN 4.5 ENE, TX US",
+   "lat": 30.320119,
+   "lon": -97.677162,
+   "gaugeMm": 217.5,
+   "stage4Mm": 239.8
+  },
+  {
+   "id": "USC00168181",
+   "name": "ST MARTINVILLE 3 SW, LA US",
+   "lat": 30.0858,
+   "lon": -91.8694,
+   "gaugeMm": 216.5,
+   "stage4Mm": 216.1
+  },
+  {
+   "id": "US1TXGP0064",
+   "name": "SEGUIN 7.6 N, TX US",
+   "lat": 29.6879,
+   "lon": -97.9916,
+   "gaugeMm": 214.6,
+   "stage4Mm": 269.0
+  },
+  {
+   "id": "US1TXHYS124",
+   "name": "SAN MARCOS 2.3 WNW, TX US",
+   "lat": 29.888798,
+   "lon": -97.966034,
+   "gaugeMm": 213.9,
+   "stage4Mm": 260.0
+  },
+  {
+   "id": "USW00053960",
+   "name": "LAFAYETTE 13 SE, LA US",
+   "lat": 30.0918,
+   "lon": -91.8731,
+   "gaugeMm": 213.8,
+   "stage4Mm": 216.1
+  },
+  {
+   "id": "US1TXNC0007",
+   "name": "NACOGDOCHES ARBOR OAKS, TX US",
+   "lat": 31.5676026377936,
+   "lon": -94.6816322898718,
+   "gaugeMm": 213.4,
+   "stage4Mm": 247.9
+  },
+  {
+   "id": "USC00164674",
+   "name": "JEANERETTE 5 NW, LA US",
+   "lat": 29.95938,
+   "lon": -91.71118,
+   "gaugeMm": 211.6,
+   "stage4Mm": 187.8
+  },
+  {
+   "id": "US1TXHYS133",
+   "name": "WIMBERLEY 3.6 ENE, TX US",
+   "lat": 30.017504,
+   "lon": -98.048497,
+   "gaugeMm": 208.7,
+   "stage4Mm": 197.9
+  },
+  {
+   "id": "US1TXWM0161",
+   "name": "TAYLOR 2.4 S, TX US",
+   "lat": 30.5369,
+   "lon": -97.4078,
+   "gaugeMm": 207.1,
+   "stage4Mm": 216.8
+  },
+  {
+   "id": "US1LAAS0005",
+   "name": "GONZALES 4.0 S, LA US",
+   "lat": 30.158418,
+   "lon": -90.920684,
+   "gaugeMm": 206.8,
+   "stage4Mm": 193.8
+  },
+  {
+   "id": "USC00162673",
+   "name": "DULAC 3 N, LA US",
+   "lat": 29.4336,
+   "lon": -90.7011,
+   "gaugeMm": 206.8,
+   "stage4Mm": 147.2
+  },
+  {
+   "id": "US1TXTV0044",
+   "name": "AUSTIN 1.0 N 45TH AND SHCRK, TX US",
+   "lat": 30.320713,
+   "lon": -97.750208,
+   "gaugeMm": 206.3,
+   "stage4Mm": 200.9
+  },
+  {
+   "id": "US1TXTV0303",
+   "name": "AUSTIN 1.6 NE, TX US",
+   "lat": 30.324785,
+   "lon": -97.734624,
+   "gaugeMm": 205.5,
+   "stage4Mm": 223.1
+  },
+  {
+   "id": "US1TXHYS168",
+   "name": "HAYS 6.0 WNW, TX US",
+   "lat": 30.166707,
+   "lon": -97.957619,
+   "gaugeMm": 203.7,
+   "stage4Mm": 214.8
+  },
+  {
+   "id": "US1TXTV0035",
+   "name": "PFLUGERVILLE 0.6 ENE, TX US",
+   "lat": 30.44391,
+   "lon": -97.611681,
+   "gaugeMm": 203.7,
+   "stage4Mm": 199.7
+  },
+  {
+   "id": "US1TXTV0273",
+   "name": "PFLUGERVILLE 2.9 ENE, TX US",
+   "lat": 30.453564,
+   "lon": -97.573806,
+   "gaugeMm": 203.3,
+   "stage4Mm": 196.6
+  },
+  {
+   "id": "US1TXWM0044",
+   "name": "JOLLYVILLE 1.2 WNW, TX US",
+   "lat": 30.455636,
+   "lon": -97.769188,
+   "gaugeMm": 203.2,
+   "stage4Mm": 174.6
+  },
+  {
+   "id": "US1TXHYS088",
+   "name": "DRIPPING SPRINGS 3.8 ESE, TX US",
+   "lat": 30.17649269104,
+   "lon": -98.0267562866211,
+   "gaugeMm": 203.0,
+   "stage4Mm": 183.4
+  },
+  {
+   "id": "USW00013958",
+   "name": "AUSTIN CAMP MABRY, TX US",
+   "lat": 30.3208,
+   "lon": -97.7604,
+   "gaugeMm": 202.1,
+   "stage4Mm": 200.9
+  },
+  {
+   "id": "USC00160800",
+   "name": "BIENVILLE 3 NE, LA US",
+   "lat": 32.3744,
+   "lon": -92.9433,
+   "gaugeMm": 201.5,
+   "stage4Mm": 117.1
+  },
+  {
+   "id": "US1TXTV0060",
+   "name": "TANGLEWOOD FOREST 3.5 NW, TX US",
+   "lat": 30.213148,
+   "lon": -97.877137,
+   "gaugeMm": 201.1,
+   "stage4Mm": 216.0
+  },
+  {
+   "id": "USC00416273",
+   "name": "NEW BRAUNFELS WEATHER FORECAST OFFICE, TX US",
+   "lat": 29.70439,
+   "lon": -98.0283,
+   "gaugeMm": 200.7,
+   "stage4Mm": 196.1
+  },
+  {
+   "id": "US1LATG0010",
+   "name": "PONCHATOULA 4.9 E, LA US",
+   "lat": 30.430185,
+   "lon": -90.362313,
+   "gaugeMm": 200.0,
+   "stage4Mm": 195.5
+  },
+  {
+   "id": "US1TXTV0122",
+   "name": "AUSTIN 5.6 WSW, TX US",
+   "lat": 30.280817,
+   "lon": -97.839183,
+   "gaugeMm": 199.9,
+   "stage4Mm": 202.1
+  },
+  {
+   "id": "US1TXTV0047",
+   "name": "AUSTIN 4.7 E JORDANPK, TX US",
+   "lat": 30.31417,
+   "lon": -97.67283,
+   "gaugeMm": 199.3,
+   "stage4Mm": 239.8
+  },
+  {
+   "id": "US1TXCML080",
+   "name": "NEW BRAUNFELS 6.3 NNE, TX US",
+   "lat": 29.787889,
+   "lon": -98.077005,
+   "gaugeMm": 198.6,
+   "stage4Mm": 208.2
+  },
+  {
+   "id": "USW00013976",
+   "name": "LAFAYETTE REGIONAL AIRPORT, LA US",
+   "lat": 30.19859,
+   "lon": -91.98957,
+   "gaugeMm": 198.1,
+   "stage4Mm": 210.2
+  },
+  {
+   "id": "US1TXCML126",
+   "name": "CANYON LAKE 4.1 E, TX US",
+   "lat": 29.8801177,
+   "lon": -98.1943941,
+   "gaugeMm": 195.6,
+   "stage4Mm": 167.6
+  },
+  {
+   "id": "USC00416177",
+   "name": "NACOGDOCHES, TX US",
+   "lat": 31.6163,
+   "lon": -94.643,
+   "gaugeMm": 194.6,
+   "stage4Mm": 223.8
+  },
+  {
+   "id": "US1TXHYS065",
+   "name": "SAN MARCOS 6.3 WSW, TX US",
+   "lat": 29.846387,
+   "lon": -98.028662,
+   "gaugeMm": 193.8,
+   "stage4Mm": 252.9
+  },
+  {
+   "id": "USC00411429",
+   "name": "CANYON DAM, TX US",
+   "lat": 29.8607,
+   "lon": -98.1959,
+   "gaugeMm": 193.3,
+   "stage4Mm": 207.7
+  },
+  {
+   "id": "US1TXTV0030",
+   "name": "ANDERSON MILL 2.2 S, TX US",
+   "lat": 30.4223,
+   "lon": -97.8062,
+   "gaugeMm": 191.1,
+   "stage4Mm": 189.1
+  },
+  {
+   "id": "US1TXTV0052",
+   "name": "OAK HILL 1.1 WSW, TX US",
+   "lat": 30.229669,
+   "lon": -97.876765,
+   "gaugeMm": 190.3,
+   "stage4Mm": 204.9
+  },
+  {
+   "id": "US1TXWM0229",
+   "name": "ROUND ROCK 2.2 ESE, TX US",
+   "lat": 30.50213,
+   "lon": -97.63992,
+   "gaugeMm": 189.9,
+   "stage4Mm": 179.0
+  },
+  {
+   "id": "US1TXCLH014",
+   "name": "PORT LAVACA 3.3 NNW, TX US",
+   "lat": 28.6605,
+   "lon": -96.635316,
+   "gaugeMm": 189.3,
+   "stage4Mm": 229.1
+  },
+  {
+   "id": "US1TXHYS061",
+   "name": "SAN MARCOS 8.1 W, TX US",
+   "lat": 29.901528,
+   "lon": -98.062052,
+   "gaugeMm": 188.2,
+   "stage4Mm": 213.6
+  },
+  {
+   "id": "US1TXWO0054",
+   "name": "LA VERNIA 3.0 E, TX US",
+   "lat": 29.347053,
+   "lon": -98.064753,
+   "gaugeMm": 187.7,
+   "stage4Mm": 188.4
+  },
+  {
+   "id": "US1TXWM0148",
+   "name": "ROUND ROCK 3.0 NE, TX US",
+   "lat": 30.5518321990967,
+   "lon": -97.6398468017578,
+   "gaugeMm": 187.5,
+   "stage4Mm": 129.3
+  },
+  {
+   "id": "US1TXHYS007",
+   "name": "DRIPPING SPRINGS 4.3 E, TX US",
+   "lat": 30.1974,
+   "lon": -98.016508,
+   "gaugeMm": 186.7,
+   "stage4Mm": 192.3
+  },
+  {
+   "id": "US1TXWM0222",
+   "name": "HUTTO 0.8 WNW, TX US",
+   "lat": 30.5494785308838,
+   "lon": -97.554443359375,
+   "gaugeMm": 186.2,
+   "stage4Mm": 139.1
+  },
+  {
+   "id": "US1TXHYS138",
+   "name": "DRIPPING SPRINGS 0.6 SSE, TX US",
+   "lat": 30.180998,
+   "lon": -98.083565,
+   "gaugeMm": 186.0,
+   "stage4Mm": 165.2
+  },
+  {
+   "id": "US1TXKS0009",
+   "name": "GILLETT 1.6 WNW, TX US",
+   "lat": 29.1363667,
+   "lon": -97.8102833,
+   "gaugeMm": 185.4,
+   "stage4Mm": 187.5
+  },
+  {
+   "id": "USC00166561",
+   "name": "NAPOLEONVILLE, LA US",
+   "lat": 29.9341,
+   "lon": -91.0163,
+   "gaugeMm": 185.1,
+   "stage4Mm": 165.5
+  },
+  {
+   "id": "USC00161232",
+   "name": "BOYCE 3 WNW, LA US",
+   "lat": 31.39511,
+   "lon": -92.71665,
+   "gaugeMm": 184.2,
+   "stage4Mm": 163.9
+  },
+  {
+   "id": "USC00413201",
+   "name": "FLORESVILLE, TX US",
+   "lat": 29.1333,
+   "lon": -98.1629,
+   "gaugeMm": 183.1,
+   "stage4Mm": 176.4
+  },
+  {
+   "id": "US1TXCML184",
+   "name": "NEW BRAUNFELS 9.2 N, TX US",
+   "lat": 29.8355,
+   "lon": -98.08796,
+   "gaugeMm": 182.6,
+   "stage4Mm": 221.1
+  },
+  {
+   "id": "US1TXWM0135",
+   "name": "GEORGETOWN 8.9 E, TX US",
+   "lat": 30.653002,
+   "lon": -97.536597,
+   "gaugeMm": 182.4,
+   "stage4Mm": 162.8
+  },
+  {
+   "id": "US1LASL0001",
+   "name": "GRAND COTEAU 2.7 E, LA US",
+   "lat": 30.4197010303997,
+   "lon": -91.9986319541931,
+   "gaugeMm": 181.8,
+   "stage4Mm": 151.8
+  },
+  {
+   "id": "US1TXNC0005",
+   "name": "NACOGDOCHES 9.5 NE, TX US",
+   "lat": 31.69850731,
+   "lon": -94.52358246,
+   "gaugeMm": 181.7,
+   "stage4Mm": 211.6
+  },
+  {
+   "id": "US1TXTV0289",
+   "name": "PFLUGERVILLE 4.0 NE, TX US",
+   "lat": 30.477009,
+   "lon": -97.568133,
+   "gaugeMm": 181.2,
+   "stage4Mm": 189.2
+  },
+  {
+   "id": "USW00012971",
+   "name": "NEW BRAUNFELS MUNICIPAL AIRPORT, TX US",
+   "lat": 29.70887,
+   "lon": -98.04585,
+   "gaugeMm": 181.0,
+   "stage4Mm": 196.1
+  },
+  {
+   "id": "US1LARP0009",
+   "name": "PINEVILLE 1.0 SSW, LA US",
+   "lat": 31.31945,
+   "lon": -92.42227,
+   "gaugeMm": 180.7,
+   "stage4Mm": 149.0
+  },
+  {
+   "id": "US1TXGD0024",
+   "name": "BERCLAIR 7.3 NW, TX US",
+   "lat": 28.6137776076794,
+   "lon": -97.6647307723761,
+   "gaugeMm": 180.4,
+   "stage4Mm": 140.7
+  },
+  {
+   "id": "US1TXTV0068",
+   "name": "JOLLYVILLE 1.6 SSE, TX US",
+   "lat": 30.428989,
+   "lon": -97.737413,
+   "gaugeMm": 179.2,
+   "stage4Mm": 192.0
+  },
+  {
+   "id": "USC00161287",
+   "name": "BUNKIE, LA US",
+   "lat": 30.9594,
+   "lon": -92.1786,
+   "gaugeMm": 179.0,
+   "stage4Mm": 196.2
+  },
+  {
+   "id": "US1TXTV0149",
+   "name": "AUSTIN 2.9 NNW, TX US",
+   "lat": 30.3420581817627,
+   "lon": -97.7762145996094,
+   "gaugeMm": 178.9,
+   "stage4Mm": 191.8
+  },
+  {
+   "id": "US1TXTV0160",
+   "name": "ROLLINGWOOD 2.8 SW, TX US",
+   "lat": 30.24929,
+   "lon": -97.82408,
+   "gaugeMm": 178.6,
+   "stage4Mm": 195.2
+  },
+  {
+   "id": "USC00412013",
+   "name": "C C BOTANICAL GARDENS, TX US",
+   "lat": 27.6606,
+   "lon": -97.3983,
+   "gaugeMm": 177.9,
+   "stage4Mm": 196.4
+  },
+  {
+   "id": "USC00162212",
+   "name": "CROWLEY 2 NE, LA US",
+   "lat": 30.24099,
+   "lon": -92.34759,
+   "gaugeMm": 177.8,
+   "stage4Mm": 185.1
+  },
+  {
+   "id": "US1TXWM0068",
+   "name": "GEORGETOWN 4.5 SSE, TX US",
+   "lat": 30.5907,
+   "lon": -97.6509,
+   "gaugeMm": 176.7,
+   "stage4Mm": 148.9
+  },
+  {
+   "id": "US1TXTV0293",
+   "name": "AUSTIN 1.0 NNE, TX US",
+   "lat": 30.318536,
+   "lon": -97.743766,
+   "gaugeMm": 175.6,
+   "stage4Mm": 200.9
+  },
+  {
+   "id": "US1TXTV0009",
+   "name": "WEST LAKE HILLS 2.4 NNW, TX US",
+   "lat": 30.323086,
+   "lon": -97.827954,
+   "gaugeMm": 175.2,
+   "stage4Mm": 188.9
+  },
+  {
+   "id": "USC00161535",
+   "name": "CARENCRO, LA US",
+   "lat": 30.32005,
+   "lon": -92.04455,
+   "gaugeMm": 175.1,
+   "stage4Mm": 165.9
+  },
+  {
+   "id": "US1TXHYS056",
+   "name": "DRIFTWOOD 2.8 NNW, TX US",
+   "lat": 30.1632729438,
+   "lon": -98.0403184890747,
+   "gaugeMm": 175.0,
+   "stage4Mm": 188.9
+  },
+  {
+   "id": "US1TXHYS103",
+   "name": "DRIPPING SPRINGS 6.0 NNE, TX US",
+   "lat": 30.271702632308,
+   "lon": -98.060219809413,
+   "gaugeMm": 173.8,
+   "stage4Mm": 161.5
+  },
+  {
+   "id": "USC00412585",
+   "name": "DRIPPING SPRINGS 6 E, TX US",
+   "lat": 30.2195,
+   "lon": -97.9879,
+   "gaugeMm": 173.5,
+   "stage4Mm": 206.4
+  },
+  {
+   "id": "USW00053973",
+   "name": "HEARNE MUNICIPAL AIRPORT, TX US",
+   "lat": 30.87194,
+   "lon": -96.62222,
+   "gaugeMm": 173.0,
+   "stage4Mm": 221.8
+  },
+  {
+   "id": "US1TXWM0016",
+   "name": "CEDAR PARK 2.7 SSW, TX US",
+   "lat": 30.4779,
+   "lon": -97.8474,
+   "gaugeMm": 172.5,
+   "stage4Mm": 187.7
+  },
+  {
+   "id": "US1TXWM0223",
+   "name": "HUTTO 1.3 W, TX US",
+   "lat": 30.5459480285645,
+   "lon": -97.5641555786133,
+   "gaugeMm": 172.2,
+   "stage4Mm": 139.1
+  },
+  {
+   "id": "US1TXCML022",
+   "name": "CANYON LAKE 7.5 ESE, TX US",
+   "lat": 29.83462,
+   "lon": -98.146466,
+   "gaugeMm": 171.7,
+   "stage4Mm": 205.3
+  },
+  {
+   "id": "USC00411578",
+   "name": "CENTER, TX US",
+   "lat": 31.81957,
+   "lon": -94.25285,
+   "gaugeMm": 171.5,
+   "stage4Mm": 141.8
+  },
+  {
+   "id": "US1TXTV0271",
+   "name": "PFLUGERVILLE 3.1 ENE, TX US",
+   "lat": 30.453467,
+   "lon": -97.570311,
+   "gaugeMm": 170.0,
+   "stage4Mm": 196.6
+  },
+  {
+   "id": "USW00093915",
+   "name": "ALEXANDRIA INTERNATIONAL AIRPORT, LA US",
+   "lat": 31.33464,
+   "lon": -92.55849,
+   "gaugeMm": 169.7,
+   "stage4Mm": 179.9
+  },
+  {
+   "id": "USW00053948",
+   "name": "NACOGDOCHES A L MANGHAM JR REGIONAL AIRPORT, TX US",
+   "lat": 31.57778,
+   "lon": -94.70944,
+   "gaugeMm": 169.5,
+   "stage4Mm": 246.6
+  },
+  {
+   "id": "USC00419815",
+   "name": "WIMBERLEY 1 NW, TX US",
+   "lat": 30.0016,
+   "lon": -98.1048,
+   "gaugeMm": 169.4,
+   "stage4Mm": 178.4
+  },
+  {
+   "id": "US1TXWM0195",
+   "name": "ROUND ROCK 1.6 WSW, TX US",
+   "lat": 30.508275,
+   "lon": -97.697191,
+   "gaugeMm": 168.5,
+   "stage4Mm": 177.1
+  },
+  {
+   "id": "US1TXWM0074",
+   "name": "GEORGETOWN 3.0 ESE, TX US",
+   "lat": 30.634132,
+   "lon": -97.638732,
+   "gaugeMm": 168.2,
+   "stage4Mm": 143.8
+  },
+  {
+   "id": "US1TXTV0267",
+   "name": "PFLUGERVILLE 2.2 ENE, TX US",
+   "lat": 30.453919,
+   "lon": -97.58589,
+   "gaugeMm": 168.0,
+   "stage4Mm": 196.6
+  },
+  {
+   "id": "USC00160565",
+   "name": "BAYOU SORREL LOCK, LA US",
+   "lat": 30.1327,
+   "lon": -91.3227,
+   "gaugeMm": 167.6,
+   "stage4Mm": 174.5
+  },
+  {
+   "id": "US1TXNU0009",
+   "name": "CORPUS CHRISTI 6.4 WSW, TX US",
+   "lat": 27.686549,
+   "lon": -97.395051,
+   "gaugeMm": 166.4,
+   "stage4Mm": 196.4
+  },
+  {
+   "id": "USC00166130",
+   "name": "CHALMETTE, LA US",
+   "lat": 29.94318,
+   "lon": -89.95072,
+   "gaugeMm": 166.0,
+   "stage4Mm": 114.5
+  },
+  {
+   "id": "US1TXTV0302",
+   "name": "LAKEWAY 3.1 ENE, TX US",
+   "lat": 30.381451,
+   "lon": -97.929518,
+   "gaugeMm": 165.9,
+   "stage4Mm": 141.3
+  },
+  {
+   "id": "US1LAJF0013",
+   "name": "METAIRIE 1.6 ESE, LA US",
+   "lat": 29.986522,
+   "lon": -90.154711,
+   "gaugeMm": 165.8,
+   "stage4Mm": 165.6
+  },
+  {
+   "id": "US1TXCML040",
+   "name": "NEW BRAUNFELS 0.1 ENE, TX US",
+   "lat": 29.704998,
+   "lon": -98.115385,
+   "gaugeMm": 165.8,
+   "stage4Mm": 173.3
+  },
+  {
+   "id": "USC00412295",
+   "name": "DAVILLA 2 N, TX US",
+   "lat": 30.8014,
+   "lon": -97.2689,
+   "gaugeMm": 164.4,
+   "stage4Mm": 172.1
+  },
+  {
+   "id": "US1LATG0012",
+   "name": "PONCHATOULA 0.7 SW, LA US",
+   "lat": 30.431101,
+   "lon": -90.451755,
+   "gaugeMm": 162.6,
+   "stage4Mm": 170.4
+  },
+  {
+   "id": "US1LATG0002",
+   "name": "HAMMOND 2.3 WSW, LA US",
+   "lat": 30.49558,
+   "lon": -90.49652,
+   "gaugeMm": 162.3,
+   "stage4Mm": 152.1
+  },
+  {
+   "id": "USC00418862",
+   "name": "TAYLOR 1 NW, TX US",
+   "lat": 30.5844,
+   "lon": -97.4156,
+   "gaugeMm": 160.9,
+   "stage4Mm": 190.0
+  },
+  {
+   "id": "US1TXWM0245",
+   "name": "JARRELL 4.2 W, TX US",
+   "lat": 30.8286,
+   "lon": -97.67568,
+   "gaugeMm": 159.5,
+   "stage4Mm": 97.3
+  },
+  {
+   "id": "US1LAAC0002",
+   "name": "CHURCH POINT 0.7 WSW, LA US",
+   "lat": 30.4009876251221,
+   "lon": -92.2248992919922,
+   "gaugeMm": 159.1,
+   "stage4Mm": 169.7
+  },
+  {
+   "id": "US1TXCML103",
+   "name": "NEW BRAUNFELS 0.5 N, TX US",
+   "lat": 29.7108631134033,
+   "lon": -98.1185150146484,
+   "gaugeMm": 159.0,
+   "stage4Mm": 173.3
+  },
+  {
+   "id": "US1LALY0007",
+   "name": "CARENCRO 3.9 ENE, LA US",
+   "lat": 30.3357289731503,
+   "lon": -91.9781130552292,
+   "gaugeMm": 158.9,
+   "stage4Mm": 162.6
+  },
+  {
+   "id": "USC00160098",
+   "name": "ALEXANDRIA, LA US",
+   "lat": 31.3205,
+   "lon": -92.4611,
+   "gaugeMm": 158.2,
+   "stage4Mm": 145.1
+  },
+  {
+   "id": "USC00410433",
+   "name": "AUSTIN GREAT HILLS, TX US",
+   "lat": 30.4144,
+   "lon": -97.7664,
+   "gaugeMm": 157.8,
+   "stage4Mm": 194.7
+  },
+  {
+   "id": "USW00012916",
+   "name": "NEW ORLEANS AIRPORT, LA US",
+   "lat": 29.99755,
+   "lon": -90.27772,
+   "gaugeMm": 157.8,
+   "stage4Mm": 155.9
+  },
+  {
+   "id": "USC00164931",
+   "name": "KORAN, LA US",
+   "lat": 32.4169,
+   "lon": -93.4428,
+   "gaugeMm": 156.5,
+   "stage4Mm": 137.2
+  },
+  {
+   "id": "USC00413686",
+   "name": "GRANGER DAM, TX US",
+   "lat": 30.7188,
+   "lon": -97.3211,
+   "gaugeMm": 155.4,
+   "stage4Mm": 179.6
+  },
+  {
+   "id": "US1TXHYS130",
+   "name": "WIMBERLEY 3.5 NW, TX US",
+   "lat": 30.0317146629095,
+   "lon": -98.1382466107607,
+   "gaugeMm": 155.2,
+   "stage4Mm": 170.2
+  },
+  {
+   "id": "US1TXHYS054",
+   "name": "WIMBERLEY 5.2 WNW, TX US",
+   "lat": 30.02147,
+   "lon": -98.18126,
+   "gaugeMm": 154.9,
+   "stage4Mm": 155.2
+  },
+  {
+   "id": "US1TXWO0045",
+   "name": "LA VERNIA 3.6 SSW, TX US",
+   "lat": 29.308983,
+   "lon": -98.144898,
+   "gaugeMm": 154.4,
+   "stage4Mm": 153.8
+  },
+  {
+   "id": "US1TXHST003",
+   "name": "CROCKETT 1.8 NNE, TX US",
+   "lat": 31.343774870038,
+   "lon": -95.4493944346905,
+   "gaugeMm": 154.1,
+   "stage4Mm": 242.2
+  },
+  {
+   "id": "US1TXHYS151",
+   "name": "DRIPPING SPRINGS 6.3 E, TX US",
+   "lat": 30.180769,
+   "lon": -97.982898,
+   "gaugeMm": 153.9,
+   "stage4Mm": 206.3
+  },
+  {
+   "id": "US1TXCML041",
+   "name": "NEW BRAUNFELS 2.8 NNE, TX US",
+   "lat": 29.7427,
+   "lon": -98.1009,
+   "gaugeMm": 153.6,
+   "stage4Mm": 227.7
+  },
+  {
+   "id": "US1TXWM0126",
+   "name": "TAYLOR 1.0 NNW, TX US",
+   "lat": 30.585012,
+   "lon": -97.416311,
+   "gaugeMm": 152.4,
+   "stage4Mm": 190.0
+  },
+  {
+   "id": "USC00163800",
+   "name": "GRAND COTEAU, LA US",
+   "lat": 30.4184,
+   "lon": -92.0443,
+   "gaugeMm": 151.9,
+   "stage4Mm": 158.3
+  },
+  {
+   "id": "USC00168094",
+   "name": "SAILES FIRE TOWER, LA US",
+   "lat": 32.3625,
+   "lon": -93.14,
+   "gaugeMm": 150.6,
+   "stage4Mm": 140.7
+  },
+  {
+   "id": "USC00164592",
+   "name": "JAMESTOWN, LA US",
+   "lat": 32.34837,
+   "lon": -93.20137,
+   "gaugeMm": 149.7,
+   "stage4Mm": 110.8
+  },
+  {
+   "id": "USC00221865",
+   "name": "COLUMBIA, MS US",
+   "lat": 31.2502,
+   "lon": -89.8361,
+   "gaugeMm": 149.7,
+   "stage4Mm": 156.4
+  },
+  {
+   "id": "US1TXCML135",
+   "name": "NEW BRAUNFELS 1.5 NNW, TX US",
+   "lat": 29.72356,
+   "lon": -98.12778,
+   "gaugeMm": 149.3,
+   "stage4Mm": 189.6
+  },
+  {
+   "id": "US1TXCML128",
+   "name": "NEW BRAUNFELS 10.0 W, TX US",
+   "lat": 29.697746,
+   "lon": -98.283194,
+   "gaugeMm": 148.7,
+   "stage4Mm": 106.9
+  },
+  {
+   "id": "US1TXCML187",
+   "name": "NEW BRAUNFELS 7.3 NNE, TX US",
+   "lat": 29.80193,
+   "lon": -98.07195,
+   "gaugeMm": 147.8,
+   "stage4Mm": 208.2
+  },
+  {
+   "id": "USC00166995",
+   "name": "OPELOUSAS, LA US",
+   "lat": 30.508,
+   "lon": -92.0925,
+   "gaugeMm": 147.8,
+   "stage4Mm": 151.0
+  },
+  {
+   "id": "USC00167304",
+   "name": "PINE GROVE FIRE TOWER, LA US",
+   "lat": 30.7112,
+   "lon": -90.7526,
+   "gaugeMm": 147.5,
+   "stage4Mm": 127.0
+  },
+  {
+   "id": "US1TXHYS161",
+   "name": "DRIPPING SPRINGS 6.4 N, TX US",
+   "lat": 30.280532,
+   "lon": -98.07109,
+   "gaugeMm": 147.1,
+   "stage4Mm": 159.8
+  },
+  {
+   "id": "USC00162534",
+   "name": "DONALDSONVILLE 4 SW, LA US",
+   "lat": 30.0719,
+   "lon": -91.0278,
+   "gaugeMm": 146.5,
+   "stage4Mm": 141.5
+  },
+  {
+   "id": "US1TXHYS141",
+   "name": "WIMBERLEY 1.5 SSW, TX US",
+   "lat": 29.972595,
+   "lon": -98.111406,
+   "gaugeMm": 146.1,
+   "stage4Mm": 170.0
+  },
+  {
+   "id": "USC00167425",
+   "name": "PONCHATOULA 4 E, LA US",
+   "lat": 30.42971,
+   "lon": -90.36298,
+   "gaugeMm": 145.6,
+   "stage4Mm": 195.5
+  },
+  {
+   "id": "US1TXHYS166",
+   "name": "WIMBERLEY 1.3 NNW, TX US",
+   "lat": 30.009273,
+   "lon": -98.11345,
+   "gaugeMm": 145.4,
+   "stage4Mm": 170.2
+  },
+  {
+   "id": "US1TXCML011",
+   "name": "TIMBERWOOD PARK 7.7 ENE, TX US",
+   "lat": 29.751932,
+   "lon": -98.361556,
+   "gaugeMm": 144.8,
+   "stage4Mm": 136.5
+  },
+  {
+   "id": "US1TXWM0119",
+   "name": "BARTLETT 5.0 W, TX US",
+   "lat": 30.7922821044922,
+   "lon": -97.5161819458008,
+   "gaugeMm": 143.0,
+   "stage4Mm": 129.7
+  },
+  {
+   "id": "US1LAEB0046",
+   "name": "BATON ROUGE 1.4 WSW, LA US",
+   "lat": 30.442111,
+   "lon": -91.148984,
+   "gaugeMm": 142.6,
+   "stage4Mm": 131.4
+  },
+  {
+   "id": "US1LAAS0019",
+   "name": "PRAIRIEVILLE 2.0 S, LA US",
+   "lat": 30.276934,
+   "lon": -90.979147,
+   "gaugeMm": 142.0,
+   "stage4Mm": 124.0
+  },
+  {
+   "id": "US1TXWO0030",
+   "name": "ADKINS 6.4 SSE, TX US",
+   "lat": 29.3083,
+   "lon": -98.1993,
+   "gaugeMm": 142.0,
+   "stage4Mm": 148.0
+  },
+  {
+   "id": "USC00410639",
+   "name": "BEEVILLE 5 NE, TX US",
+   "lat": 28.4575,
+   "lon": -97.7061,
+   "gaugeMm": 141.8,
+   "stage4Mm": 126.1
+  },
+  {
+   "id": "US1TXHYS039",
+   "name": "DRIPPING SPRINGS 3.3 NE, TX US",
+   "lat": 30.21855,
+   "lon": -98.04505,
+   "gaugeMm": 141.7,
+   "stage4Mm": 174.6
+  },
+  {
+   "id": "US1TXWM0168",
+   "name": "CEDAR PARK 1.3 S, TX US",
+   "lat": 30.49535,
+   "lon": -97.83289,
+   "gaugeMm": 141.3,
+   "stage4Mm": 103.5
+  },
+  {
+   "id": "USC00167738",
+   "name": "RED RIVER RESEARCH STATION, LA US",
+   "lat": 32.4219,
+   "lon": -93.638,
+   "gaugeMm": 141.2,
+   "stage4Mm": 144.3
+  },
+  {
+   "id": "USC00165522",
+   "name": "LOGANSPORT, LA US",
+   "lat": 31.9672,
+   "lon": -94.0002,
+   "gaugeMm": 139.8,
+   "stage4Mm": 189.8
+  },
+  {
+   "id": "USC00417836",
+   "name": "RUNGE, TX US",
+   "lat": 28.8297,
+   "lon": -97.7133,
+   "gaugeMm": 138.5,
+   "stage4Mm": 136.4
+  },
+  {
+   "id": "US1TXCML175",
+   "name": "CANYON LAKE 4.3 NNW, TX US",
+   "lat": 29.92887,
+   "lon": -98.29708,
+   "gaugeMm": 138.4,
+   "stage4Mm": 146.0
+  },
+  {
+   "id": "US1TXTV0292",
+   "name": "AUSTIN 7.6 W, TX US",
+   "lat": 30.295181,
+   "lon": -97.877516,
+   "gaugeMm": 137.4,
+   "stage4Mm": 173.5
+  },
+  {
+   "id": "USC00166808",
+   "name": "NORWOOD, LA US",
+   "lat": 30.9678,
+   "lon": -91.1003,
+   "gaugeMm": 137.4,
+   "stage4Mm": 118.9
+  },
+  {
+   "id": "US1TXBXR134",
+   "name": "MARION 6.3 SW, TX US",
+   "lat": 29.492066,
+   "lon": -98.191072,
+   "gaugeMm": 136.0,
+   "stage4Mm": 116.7
+  },
+  {
+   "id": "USW00053917",
+   "name": "NEW ORLEANS LAKEFRONT AIRPORT, LA US",
+   "lat": 30.04934,
+   "lon": -90.02899,
+   "gaugeMm": 135.4,
+   "stage4Mm": 139.1
+  },
+  {
+   "id": "US1TXCML035",
+   "name": "NEW BRAUNFELS 5.5 WNW, TX US",
+   "lat": 29.734,
+   "lon": -98.2021,
+   "gaugeMm": 134.6,
+   "stage4Mm": 136.0
+  },
+  {
+   "id": "US1TXHYS148",
+   "name": "WIMBERLEY 4.0 WSW, TX US",
+   "lat": 29.9731712341309,
+   "lon": -98.1644973754883,
+   "gaugeMm": 134.6,
+   "stage4Mm": 153.9
+  },
+  {
+   "id": "US1LAWB0002",
+   "name": "ADDIS 1.7 N, LA US",
+   "lat": 30.37969,
+   "lon": -91.26744,
+   "gaugeMm": 134.5,
+   "stage4Mm": 134.9
+  },
+  {
+   "id": "USC00166686",
+   "name": "NEW ROADS 5 NE, LA US",
+   "lat": 30.7268,
+   "lon": -91.3672,
+   "gaugeMm": 134.4,
+   "stage4Mm": 127.4
+  },
+  {
+   "id": "USC00160021",
+   "name": "ABITA SPRINGS FIRE TOWER, LA US",
+   "lat": 30.4372,
+   "lon": -90.0519,
+   "gaugeMm": 133.0,
+   "stage4Mm": 119.1
+  },
+  {
+   "id": "US1TXCML049",
+   "name": "CANYON LAKE 5.3 SW, TX US",
+   "lat": 29.831839,
+   "lon": -98.335817,
+   "gaugeMm": 132.6,
+   "stage4Mm": 137.1
+  },
+  {
+   "id": "US1TXCML112",
+   "name": "SPRING BRANCH 7.5 NE, TX US",
+   "lat": 29.951096,
+   "lon": -98.322399,
+   "gaugeMm": 132.6,
+   "stage4Mm": 139.1
+  },
+  {
+   "id": "US1LAEB0002",
+   "name": "BATON ROUGE 2.7 SW, LA US",
+   "lat": 30.4218,
+   "lon": -91.1576,
+   "gaugeMm": 132.3,
+   "stage4Mm": 131.4
+  },
+  {
+   "id": "US1TXCML029",
+   "name": "NEW BRAUNFELS 5.9 NW, TX US",
+   "lat": 29.765288,
+   "lon": -98.186506,
+   "gaugeMm": 131.7,
+   "stage4Mm": 179.2
+  },
+  {
+   "id": "USC00162688",
+   "name": "DUTCHTOWN NUMBER 2, LA US",
+   "lat": 30.2508,
+   "lon": -90.9872,
+   "gaugeMm": 131.7,
+   "stage4Mm": 129.5
+  },
+  {
+   "id": "USC00168539",
+   "name": "SLIDELL, LA US",
+   "lat": 30.265,
+   "lon": -89.7697,
+   "gaugeMm": 131.7,
+   "stage4Mm": 126.4
+  },
+  {
+   "id": "US1TXCML061",
+   "name": "NEW BRAUNFELS 10.0 W, TX US",
+   "lat": 29.70746725,
+   "lon": -98.28427748,
+   "gaugeMm": 131.2,
+   "stage4Mm": 128.8
+  },
+  {
+   "id": "USC00168444",
+   "name": "SHREVEPORT SOUTHERN HILLS, LA US",
+   "lat": 32.3795,
+   "lon": -93.8019,
+   "gaugeMm": 131.1,
+   "stage4Mm": 120.5
+  },
+  {
+   "id": "USW00013935",
+   "name": "ALEXANDRIA ESLER FIELD, LA US",
+   "lat": 31.3963,
+   "lon": -92.28278,
+   "gaugeMm": 131.0,
+   "stage4Mm": 119.1
+  },
+  {
+   "id": "US1TXCML156",
+   "name": "CANYON LAKE 0.4 NE, TX US",
+   "lat": 29.8791,
+   "lon": -98.257337,
+   "gaugeMm": 130.8,
+   "stage4Mm": 157.2
+  },
+  {
+   "id": "US1TXWM0235",
+   "name": "GEORGETOWN 10.2 W, TX US",
+   "lat": 30.63479,
+   "lon": -97.857386,
+   "gaugeMm": 129.8,
+   "stage4Mm": 112.5
+  },
+  {
+   "id": "US1TXWO0005",
+   "name": "FLORESVILLE 8.1 NNW, TX US",
+   "lat": 29.249549,
+   "lon": -98.195823,
+   "gaugeMm": 128.6,
+   "stage4Mm": 144.5
+  },
+  {
+   "id": "US1TXTV0099",
+   "name": "BEE CAVE 2.5 ENE, TX US",
+   "lat": 30.323362,
+   "lon": -97.916501,
+   "gaugeMm": 128.5,
+   "stage4Mm": 170.2
+  },
+  {
+   "id": "US1TXWM0209",
+   "name": "GEORGETOWN 5.0 NNW, TX US",
+   "lat": 30.708026,
+   "lon": -97.732582,
+   "gaugeMm": 128.5,
+   "stage4Mm": 113.6
+  },
+  {
+   "id": "USW00012924",
+   "name": "CORPUS CHRISTI INTERNATIONAL AIRPORT, TX US",
+   "lat": 27.77335,
+   "lon": -97.51302,
+   "gaugeMm": 128.3,
+   "stage4Mm": 150.1
+  },
+  {
+   "id": "USC00412011",
+   "name": "CORPUS CHRISTI NWS, TX US",
+   "lat": 27.7793,
+   "lon": -97.5055,
+   "gaugeMm": 127.5,
+   "stage4Mm": 150.1
+  },
+  {
+   "id": "US1TXHYS017",
+   "name": "DRIPPING SPRINGS 8.4 W, TX US",
+   "lat": 30.166634,
+   "lon": -98.226313,
+   "gaugeMm": 126.8,
+   "stage4Mm": 138.1
+  },
+  {
+   "id": "USC00411596",
+   "name": "CENTERVILLE, TX US",
+   "lat": 31.258,
+   "lon": -95.9744,
+   "gaugeMm": 126.6,
+   "stage4Mm": 172.7
+  },
+  {
+   "id": "US1TXGP0062",
+   "name": "NEW BRAUNFELS 2.3 S, TX US",
+   "lat": 29.671647,
+   "lon": -98.115438,
+   "gaugeMm": 126.0,
+   "stage4Mm": 161.1
+  },
+  {
+   "id": "US1LAEB0033",
+   "name": "LSU, LA US",
+   "lat": 30.41175795066,
+   "lon": -91.17856800556,
+   "gaugeMm": 125.6,
+   "stage4Mm": 117.5
+  },
+  {
+   "id": "USC00160012",
+   "name": "ABITA RIVER COVINGTON, LA US",
+   "lat": 30.4586,
+   "lon": -90.0975,
+   "gaugeMm": 125.6,
+   "stage4Mm": 127.4
+  },
+  {
+   "id": "US1TXTV0305",
+   "name": "LAKEWAY 2.9 SSW, TX US",
+   "lat": 30.3291,
+   "lon": -98.001,
+   "gaugeMm": 125.3,
+   "stage4Mm": 161.3
+  },
+  {
+   "id": "US1LAEB0041",
+   "name": "BATON ROUGE 4.3 S, LA US",
+   "lat": 30.3876486,
+   "lon": -91.1371785,
+   "gaugeMm": 124.4,
+   "stage4Mm": 136.8
+  },
+  {
+   "id": "US1TXCML183",
+   "name": "CANYON LAKE 3.3 SW, TX US",
+   "lat": 29.84008,
+   "lon": -98.29953,
+   "gaugeMm": 124.3,
+   "stage4Mm": 152.6
+  },
+  {
+   "id": "USC00160277",
+   "name": "ARCADIA, LA US",
+   "lat": 32.5511,
+   "lon": -92.9186,
+   "gaugeMm": 123.9,
+   "stage4Mm": 89.6
+  },
+  {
+   "id": "US1LACD0001",
+   "name": "SHREVEPORT 6.2 S, LA US",
+   "lat": 32.382509,
+   "lon": -93.797925,
+   "gaugeMm": 122.8,
+   "stage4Mm": 120.5
+  },
+  {
+   "id": "USC00411045",
+   "name": "BREMOND, TX US",
+   "lat": 31.15874,
+   "lon": -96.68288,
+   "gaugeMm": 121.7,
+   "stage4Mm": 119.3
+  },
+  {
+   "id": "USC00167366",
+   "name": "PLAQUEMINE 2 N, LA US",
+   "lat": 30.3214,
+   "lon": -91.2517,
+   "gaugeMm": 121.6,
+   "stage4Mm": 120.2
+  },
+  {
+   "id": "US1LAEB0042",
+   "name": "INNISWOLD 2.8 S, LA US",
+   "lat": 30.35863,
+   "lon": -91.077973,
+   "gaugeMm": 120.9,
+   "stage4Mm": 114.3
+  },
+  {
+   "id": "US1LALN0003",
+   "name": "RUSTON 5.5 NNW, LA US",
+   "lat": 32.6093,
+   "lon": -92.66288333,
+   "gaugeMm": 120.5,
+   "stage4Mm": 91.0
+  },
+  {
+   "id": "US1TXCML003",
+   "name": "NEW BRAUNFELS 3.1 WNW, TX US",
+   "lat": 29.720969,
+   "lon": -98.165542,
+   "gaugeMm": 120.5,
+   "stage4Mm": 155.8
+  },
+  {
+   "id": "USW00003961",
+   "name": "NATCHEZ ADAM CO AIRPORT, MS US",
+   "lat": 31.61667,
+   "lon": -91.28333,
+   "gaugeMm": 120.5,
+   "stage4Mm": 116.1
+  },
+  {
+   "id": "US1TXCML164",
+   "name": "CANYON LAKE 1.7 WSW, TX US",
+   "lat": 29.870167,
+   "lon": -98.28933,
+   "gaugeMm": 120.4,
+   "stage4Mm": 147.9
+  },
+  {
+   "id": "US1TXCML095",
+   "name": "BULVERDE 4.2 ENE, TX US",
+   "lat": 29.756944,
+   "lon": -98.385556,
+   "gaugeMm": 120.2,
+   "stage4Mm": 112.2
+  },
+  {
+   "id": "US1LAST0010",
+   "name": "SLIDELL 0.2 SE, LA US",
+   "lat": 30.280509,
+   "lon": -89.773471,
+   "gaugeMm": 120.1,
+   "stage4Mm": 112.4
+  },
+  {
+   "id": "USC00416276",
+   "name": "NEW BRAUNFELS, TX US",
+   "lat": 29.6596,
+   "lon": -98.1636,
+   "gaugeMm": 119.4,
+   "stage4Mm": 137.9
+  },
+  {
+   "id": "USC00164816",
+   "name": "KEITHVILLE, LA US",
+   "lat": 32.355,
+   "lon": -93.8619,
+   "gaugeMm": 119.2,
+   "stage4Mm": 112.2
+  },
+  {
+   "id": "US1TXWM0142",
+   "name": "LEANDER 3.4 NNE, TX US",
+   "lat": 30.610203,
+   "lon": -97.844589,
+   "gaugeMm": 119.0,
+   "stage4Mm": 120.0
+  },
+  {
+   "id": "US1TXBXR168",
+   "name": "HOLLYWOOD PARK 4.3 ENE, TX US",
+   "lat": 29.620108,
+   "lon": -98.416876,
+   "gaugeMm": 118.6,
+   "stage4Mm": 85.1
+  },
+  {
+   "id": "US1TXCML048",
+   "name": "CANYON LAKE 8.1 NW, TX US",
+   "lat": 29.94537,
+   "lon": -98.370583,
+   "gaugeMm": 118.4,
+   "stage4Mm": 119.0
+  },
+  {
+   "id": "US1TXWM0236",
+   "name": "GEORGETOWN 7.3 NW, TX US",
+   "lat": 30.719922,
+   "lon": -97.77504,
+   "gaugeMm": 118.4,
+   "stage4Mm": 110.2
+  },
+  {
+   "id": "USC00168136",
+   "name": "ST. FRANCISVILLE, LA US",
+   "lat": 30.7775,
+   "lon": -91.3769,
+   "gaugeMm": 118.4,
+   "stage4Mm": 114.9
+  },
+  {
+   "id": "US1LAST0008",
+   "name": "LACOMBE 1.4 N, LA US",
+   "lat": 30.3282,
+   "lon": -89.9313,
+   "gaugeMm": 117.9,
+   "stage4Mm": 107.8
+  },
+  {
+   "id": "US1TXTV0117",
+   "name": "AUSTIN 5.9 NW, TX US",
+   "lat": 30.372069,
+   "lon": -97.81338,
+   "gaugeMm": 117.7,
+   "stage4Mm": 176.6
+  },
+  {
+   "id": "USC00165620",
+   "name": "LSU BEN HUR FARM, LA US",
+   "lat": 30.3644,
+   "lon": -91.1672,
+   "gaugeMm": 117.7,
+   "stage4Mm": 126.9
+  },
+  {
+   "id": "US1MSFK0003",
+   "name": "BUDE 0.5 ENE, MS US",
+   "lat": 31.465696,
+   "lon": -90.843762,
+   "gaugeMm": 117.0,
+   "stage4Mm": 101.2
+  },
+  {
+   "id": "USC00414556",
+   "name": "JARRELL, TX US",
+   "lat": 30.8294,
+   "lon": -97.601,
+   "gaugeMm": 116.9,
+   "stage4Mm": 108.1
+  },
+  {
+   "id": "US1TXCML113",
+   "name": "CANYON LAKE 1.5 WSW, TX US",
+   "lat": 29.868966,
+   "lon": -98.285561,
+   "gaugeMm": 116.7,
+   "stage4Mm": 147.9
+  },
+  {
+   "id": "USW00053942",
+   "name": "GEORGETOWN MUNICIPAL AIRPORT, TX US",
+   "lat": 30.67917,
+   "lon": -97.67944,
+   "gaugeMm": 116.6,
+   "stage4Mm": 126.4
+  },
+  {
+   "id": "US1LAEB0022",
+   "name": "SHENANDOAH 1.5 E, LA US",
+   "lat": 30.402252,
+   "lon": -90.976169,
+   "gaugeMm": 116.5,
+   "stage4Mm": 128.6
+  },
+  {
+   "id": "US1TXWM0249",
+   "name": "GEORGETOWN 3.5 N, TX US",
+   "lat": 30.69854,
+   "lon": -97.69215,
+   "gaugeMm": 116.1,
+   "stage4Mm": 121.9
+  },
+  {
+   "id": "US1LAST0009",
+   "name": "ABITA SPRINGS 1.9 NE, LA US",
+   "lat": 30.5001,
+   "lon": -90.0134,
+   "gaugeMm": 115.3,
+   "stage4Mm": 108.4
+  },
+  {
+   "id": "USC00225704",
+   "name": "MEADVILLE, MS US",
+   "lat": 31.4663,
+   "lon": -90.8852,
+   "gaugeMm": 115.1,
+   "stage4Mm": 89.2
+  },
+  {
+   "id": "USW00053961",
+   "name": "MONROE 26 N, LA US",
+   "lat": 32.8833,
+   "lon": -92.1165,
+   "gaugeMm": 115.1,
+   "stage4Mm": 77.8
+  },
+  {
+   "id": "US1MSWR0008",
+   "name": "VICKSBURG 6.9 NE, MS US",
+   "lat": 32.39598333,
+   "lon": -90.78205,
+   "gaugeMm": 114.8,
+   "stage4Mm": 104.1
+  },
+  {
+   "id": "USW00053865",
+   "name": "SLIDELL AIRPORT, LA US",
+   "lat": 30.34355,
+   "lon": -89.82237,
+   "gaugeMm": 114.6,
+   "stage4Mm": 118.6
+  },
+  {
+   "id": "USC00160558",
+   "name": "BATON ROUGE SHERWOOD, LA US",
+   "lat": 30.4494,
+   "lon": -91.0477,
+   "gaugeMm": 114.2,
+   "stage4Mm": 128.2
+  },
+  {
+   "id": "US1LAEB0027",
+   "name": "BATON ROUGE 2.5 E, LA US",
+   "lat": 30.4507,
+   "lon": -91.0843,
+   "gaugeMm": 114.1,
+   "stage4Mm": 152.4
+  },
+  {
+   "id": "USC00411434",
+   "name": "CANYON DAM NUMBER 4, TX US",
+   "lat": 29.9111,
+   "lon": -98.3713,
+   "gaugeMm": 113.8,
+   "stage4Mm": 113.1
+  },
+  {
+   "id": "USC00161565",
+   "name": "CARVILLE 2 SW, LA US",
+   "lat": 30.198,
+   "lon": -91.1255,
+   "gaugeMm": 113.5,
+   "stage4Mm": 100.2
+  },
+  {
+   "id": "US1LAST0006",
+   "name": "SLIDELL 2.2 NE, LA US",
+   "lat": 30.3019,
+   "lon": -89.74965,
+   "gaugeMm": 112.5,
+   "stage4Mm": 112.4
+  },
+  {
+   "id": "US1LALV0004",
+   "name": "DENHAM SPRINGS 4.1 NE, LA US",
+   "lat": 30.524149,
+   "lon": -90.912678,
+   "gaugeMm": 112.3,
+   "stage4Mm": 106.4
+  },
+  {
+   "id": "US1TXBXR313",
+   "name": "ELMENDORF 0.8 NNE, TX US",
+   "lat": 29.2683,
+   "lon": -98.3282,
+   "gaugeMm": 111.5,
+   "stage4Mm": 93.9
+  },
+  {
+   "id": "USC00166244",
+   "name": "MINDEN, LA US",
+   "lat": 32.6052,
+   "lon": -93.2947,
+   "gaugeMm": 111.5,
+   "stage4Mm": 74.7
+  },
+  {
+   "id": "USC00413507",
+   "name": "GEORGETOWN LAKE, TX US",
+   "lat": 30.6763,
+   "lon": -97.7208,
+   "gaugeMm": 111.3,
+   "stage4Mm": 129.3
+  },
+  {
+   "id": "USC00227172",
+   "name": "PRENTISS, MS US",
+   "lat": 31.5868,
+   "lon": -89.8819,
+   "gaugeMm": 110.6,
+   "stage4Mm": 86.1
+  },
+  {
+   "id": "USC00229230",
+   "name": "VICKSBURG CITY, MS US",
+   "lat": 32.385,
+   "lon": -90.8752,
+   "gaugeMm": 110.4,
+   "stage4Mm": 104.6
+  },
+  {
+   "id": "US1LACT0001",
+   "name": "SICILY ISLAND 3.3 WNW, LA US",
+   "lat": 31.8719,
+   "lon": -91.7097,
+   "gaugeMm": 110.0,
+   "stage4Mm": 92.7
+  },
+  {
+   "id": "US1LAEB0056",
+   "name": "JACKSON 10.1 SSW, LA US",
+   "lat": 30.694328,
+   "lon": -91.256519,
+   "gaugeMm": 109.8,
+   "stage4Mm": 105.2
+  },
+  {
+   "id": "US1LAEB0060",
+   "name": "BATON ROUGE 4.0 SSE, LA US",
+   "lat": 30.4005,
+   "lon": -91.0896,
+   "gaugeMm": 109.2,
+   "stage4Mm": 121.5
+  },
+  {
+   "id": "USC00164355",
+   "name": "HOMER 1 N, LA US",
+   "lat": 32.81,
+   "lon": -93.0626,
+   "gaugeMm": 108.9,
+   "stage4Mm": 71.1
+  },
+  {
+   "id": "US1LACD0019",
+   "name": "SHREVEPORT 6.7 S, LA US",
+   "lat": 32.375538,
+   "lon": -93.805489,
+   "gaugeMm": 108.8,
+   "stage4Mm": 119.7
+  },
+  {
+   "id": "USC00411433",
+   "name": "CANYON DAM NUMBER 3, TX US",
+   "lat": 29.946,
+   "lon": -98.3967,
+   "gaugeMm": 108.7,
+   "stage4Mm": 99.2
+  },
+  {
+   "id": "US1TXWM0110",
+   "name": "LIBERTY HILL 4.3 ENE, TX US",
+   "lat": 30.690289,
+   "lon": -97.856375,
+   "gaugeMm": 108.5,
+   "stage4Mm": 104.5
+  },
+  {
+   "id": "US1LAST0017",
+   "name": "SLIDELL 4.4 E, LA US",
+   "lat": 30.275048,
+   "lon": -89.704087,
+   "gaugeMm": 107.7,
+   "stage4Mm": 111.2
+  },
+  {
+   "id": "US1TXWM0231",
+   "name": "GEORGETOWN 2.8 NNW, TX US",
+   "lat": 30.681339263916,
+   "lon": -97.7117462158203,
+   "gaugeMm": 107.5,
+   "stage4Mm": 129.3
+  },
+  {
+   "id": "USC00410832",
+   "name": "BLANCO, TX US",
+   "lat": 30.095,
+   "lon": -98.4142,
+   "gaugeMm": 107.1,
+   "stage4Mm": 86.4
+  },
+  {
+   "id": "US1LAWF0004",
+   "name": "WAKEFIELD 0.9 WNW, LA US",
+   "lat": 30.892842,
+   "lon": -91.364056,
+   "gaugeMm": 106.6,
+   "stage4Mm": 97.9
+  },
+  {
+   "id": "US1TXWM0096",
+   "name": "GEORGETOWN 4.6 NNW, TX US",
+   "lat": 30.70724,
+   "lon": -97.722609,
+   "gaugeMm": 106.5,
+   "stage4Mm": 113.6
+  },
+  {
+   "id": "US1TXCML012",
+   "name": "CANYON LAKE 2.5 W, TX US",
+   "lat": 29.873972,
+   "lon": -98.303825,
+   "gaugeMm": 106.0,
+   "stage4Mm": 147.9
+  },
+  {
+   "id": "US1TXLO0005",
+   "name": "CHOKE CANYON DAM NORTH SIDE, TX US",
+   "lat": 28.4673,
+   "lon": -98.2462,
+   "gaugeMm": 105.8,
+   "stage4Mm": 65.9
+  },
+  {
+   "id": "US1TXWM0156",
+   "name": "GEORGETOWN 4.9 NW, TX US",
+   "lat": 30.706116,
+   "lon": -97.73386,
+   "gaugeMm": 104.9,
+   "stage4Mm": 113.6
+  },
+  {
+   "id": "US1LAST0011",
+   "name": "COVINGTON 4.0 NNE, LA US",
+   "lat": 30.5318681895733,
+   "lon": -90.0862209498882,
+   "gaugeMm": 104.8,
+   "stage4Mm": 106.8
+  },
+  {
+   "id": "US1TXWM0022",
+   "name": "LIBERTY HILL 0.6 NNW, TX US",
+   "lat": 30.671343,
+   "lon": -97.928297,
+   "gaugeMm": 104.4,
+   "stage4Mm": 103.0
+  },
+  {
+   "id": "USC00168861",
+   "name": "SUN, LA US",
+   "lat": 30.6434,
+   "lon": -89.924,
+   "gaugeMm": 103.5,
+   "stage4Mm": 96.3
+  },
+  {
+   "id": "US1LAOC0016",
+   "name": "CALHOUN 4.3 SSE, LA US",
+   "lat": 32.45182701,
+   "lon": -92.3438912,
+   "gaugeMm": 102.5,
+   "stage4Mm": 96.9
+  },
+  {
+   "id": "US1LAOR0006",
+   "name": "NEW ORLEANS 2.1 ENE, LA US",
+   "lat": 29.961679,
+   "lon": -90.038803,
+   "gaugeMm": 102.3,
+   "stage4Mm": 106.8
+  },
+  {
+   "id": "US1TXFA0010",
+   "name": "ROSEBUD 6.9 WNW, TX US",
+   "lat": 31.125266,
+   "lon": -97.075107,
+   "gaugeMm": 102.3,
+   "stage4Mm": 104.2
+  },
+  {
+   "id": "US1TXTV0294",
+   "name": "LAGO VISTA 2.1 SW, TX US",
+   "lat": 30.42739,
+   "lon": -98.018226,
+   "gaugeMm": 101.8,
+   "stage4Mm": 119.3
+  },
+  {
+   "id": "USC00168448",
+   "name": "SHREVEPORT WEATHER FORECAST OFFICE, LA US",
+   "lat": 32.4513,
+   "lon": -93.8416,
+   "gaugeMm": 101.1,
+   "stage4Mm": 102.1
+  },
+  {
+   "id": "US1LAWR0004",
+   "name": "MINDEN 2.2 NE, LA US",
+   "lat": 32.638648,
+   "lon": -93.254504,
+   "gaugeMm": 100.6,
+   "stage4Mm": 68.7
+  },
+  {
+   "id": "US1TXCML134",
+   "name": "NEW BRAUNFELS 5.6 WNW, TX US",
+   "lat": 29.73346,
+   "lon": -98.20421,
+   "gaugeMm": 100.6,
+   "stage4Mm": 136.0
+  },
+  {
+   "id": "US1TXWO0014",
+   "name": "ST. HEDWIG 4.9 S, TX US",
+   "lat": 29.354481,
+   "lon": -98.205157,
+   "gaugeMm": 100.1,
+   "stage4Mm": 131.0
+  },
+  {
+   "id": "US1TXWM0001",
+   "name": "GEORGETOWN 1.2 W, TX US",
+   "lat": 30.650374,
+   "lon": -97.706937,
+   "gaugeMm": 100.0,
+   "stage4Mm": 127.6
+  },
+  {
+   "id": "US1TXWM0228",
+   "name": "JARRELL 1.2 SSE, TX US",
+   "lat": 30.809715,
+   "lon": -97.596093,
+   "gaugeMm": 99.4,
+   "stage4Mm": 120.1
+  },
+  {
+   "id": "US1TXBLC006",
+   "name": "BLANCO 5.5 E, TX US",
+   "lat": 30.09125,
+   "lon": -98.329722,
+   "gaugeMm": 99.3,
+   "stage4Mm": 101.6
+  },
+  {
+   "id": "US1MSPR0008",
+   "name": "CARRIERE 5.9 N, MS US",
+   "lat": 30.7039,
+   "lon": -89.66096667,
+   "gaugeMm": 98.6,
+   "stage4Mm": 80.2
+  },
+  {
+   "id": "USC00227128",
+   "name": "POPLARVILLE EXPERIMENTAL STATION, MS US",
+   "lat": 30.8408,
+   "lon": -89.5452,
+   "gaugeMm": 98.3,
+   "stage4Mm": 93.5
+  },
+  {
+   "id": "US1TXTN0124",
+   "name": "SAGINAW 1.0 SSW, TX US",
+   "lat": 32.8526,
+   "lon": -97.3729,
+   "gaugeMm": 97.8,
+   "stage4Mm": 74.1
+  },
+  {
+   "id": "US1MSAM0004",
+   "name": "LIBERTY 1.4 W, MS US",
+   "lat": 31.15983,
+   "lon": -90.82535,
+   "gaugeMm": 97.6,
+   "stage4Mm": 102.7
+  },
+  {
+   "id": "US1TXWM0203",
+   "name": "GEORGETOWN 5.3 NNW, TX US",
+   "lat": 30.715344,
+   "lon": -97.728512,
+   "gaugeMm": 97.3,
+   "stage4Mm": 113.6
+  },
+  {
+   "id": "USC00225070",
+   "name": "LIBERTY, MS US",
+   "lat": 31.1659,
+   "lon": -90.8178,
+   "gaugeMm": 97.3,
+   "stage4Mm": 100.0
+  },
+  {
+   "id": "US1LACD0010",
+   "name": "KEITHVILLE 4.2 WNW, LA US",
+   "lat": 32.362475,
+   "lon": -93.898121,
+   "gaugeMm": 97.1,
+   "stage4Mm": 103.9
+  },
+  {
+   "id": "US1TXWO0010",
+   "name": "ELMENDORF 5.6 ENE, TX US",
+   "lat": 29.282869,
+   "lon": -98.245602,
+   "gaugeMm": 97.1,
+   "stage4Mm": 114.1
+  },
+  {
+   "id": "USC00417677",
+   "name": "ROBSTOWN, TX US",
+   "lat": 27.7895,
+   "lon": -97.662,
+   "gaugeMm": 96.8,
+   "stage4Mm": 142.4
+  },
+  {
+   "id": "US1TXCML151",
+   "name": "CANYON LAKE 0.9 NNE, TX US",
+   "lat": 29.886828,
+   "lon": -98.25563,
+   "gaugeMm": 96.3,
+   "stage4Mm": 157.2
+  },
+  {
+   "id": "US1TXWM0212",
+   "name": "GEORGETOWN 6.8 NW, TX US",
+   "lat": 30.723947,
+   "lon": -97.758873,
+   "gaugeMm": 96.2,
+   "stage4Mm": 113.6
+  },
+  {
+   "id": "USC00164696",
+   "name": "JENA, LA US",
+   "lat": 31.6782,
+   "lon": -92.1288,
+   "gaugeMm": 96.1,
+   "stage4Mm": 79.3
+  },
+  {
+   "id": "US1MSPR0001",
+   "name": "CARRIERE 3.2 SSW, MS US",
+   "lat": 30.6616,
+   "lon": -89.6746,
+   "gaugeMm": 96.0,
+   "stage4Mm": 85.8
+  },
+  {
+   "id": "US1TXBEL010",
+   "name": "SALADO 1.5 S, TX US",
+   "lat": 30.929356,
+   "lon": -97.523966,
+   "gaugeMm": 95.8,
+   "stage4Mm": 101.1
+  },
+  {
+   "id": "US1TXGP0029",
+   "name": "SCHERTZ 2.2 N, TX US",
+   "lat": 29.585565,
+   "lon": -98.255353,
+   "gaugeMm": 95.2,
+   "stage4Mm": 101.2
+  },
+  {
+   "id": "US1MSPK0004",
+   "name": "MCCOMB 4.1 ESE, MS US",
+   "lat": 31.23299,
+   "lon": -90.3964,
+   "gaugeMm": 95.1,
+   "stage4Mm": 99.3
+  },
+  {
+   "id": "US1TXCML182",
+   "name": "SPRING BRANCH 0.8 SSE, TX US",
+   "lat": 29.829772,
+   "lon": -98.40398,
+   "gaugeMm": 94.7,
+   "stage4Mm": 113.3
+  },
+  {
+   "id": "US1TXWO0055",
+   "name": "FLORESVILLE 5.7 WNW, TX US",
+   "lat": 29.1797,
+   "lon": -98.2366,
+   "gaugeMm": 94.3,
+   "stage4Mm": 99.5
+  },
+  {
+   "id": "US1TXCML145",
+   "name": "GARDEN RIDGE 3.9 NW, TX US",
+   "lat": 29.6795330047607,
+   "lon": -98.3322677612305,
+   "gaugeMm": 94.0,
+   "stage4Mm": 112.5
+  },
+  {
+   "id": "US1TXNU0012",
+   "name": "ORANGE GROVE 4.5 SE, TX US",
+   "lat": 27.908074,
+   "lon": -97.889426,
+   "gaugeMm": 93.9,
+   "stage4Mm": 83.7
+  },
+  {
+   "id": "USC00223441",
+   "name": "GLOSTER, MS US",
+   "lat": 31.1699,
+   "lon": -91.0259,
+   "gaugeMm": 93.3,
+   "stage4Mm": 97.2
+  },
+  {
+   "id": "US1TXCML139",
+   "name": "NEW BRAUNFELS 13.1 NW, TX US",
+   "lat": 29.829718,
+   "lon": -98.281219,
+   "gaugeMm": 92.8,
+   "stage4Mm": 171.3
+  },
+  {
+   "id": "US1TXNU0010",
+   "name": "FLOUR BLUFF 1.6 SW, TX US",
+   "lat": 27.661316,
+   "lon": -97.303112,
+   "gaugeMm": 92.7,
+   "stage4Mm": 233.5
+  },
+  {
+   "id": "US1TXPN0003",
+   "name": "GARY CITY 3.8 W, TX US",
+   "lat": 32.023118,
+   "lon": -94.432634,
+   "gaugeMm": 92.4,
+   "stage4Mm": 107.4
+  },
+  {
+   "id": "USC00161979",
+   "name": "COLUMBIA LOCK, LA US",
+   "lat": 32.1673,
+   "lon": -92.10769,
+   "gaugeMm": 92.2,
+   "stage4Mm": 88.6
+  },
+  {
+   "id": "US1TXCML176",
+   "name": "CANYON LAKE 2.3 ESE, TX US",
+   "lat": 29.863989,
+   "lon": -98.225265,
+   "gaugeMm": 92.0,
+   "stage4Mm": 182.2
+  },
+  {
+   "id": "US1TXGP0111",
+   "name": "SCHERTZ 4.5 NNE, TX US",
+   "lat": 29.618943,
+   "lon": -98.247171,
+   "gaugeMm": 92.0,
+   "stage4Mm": 95.0
+  },
+  {
+   "id": "US1TXGS0061",
+   "name": "FREDERICKSBURG 2.0 WNW, TX US",
+   "lat": 30.279855,
+   "lon": -98.903289,
+   "gaugeMm": 91.7,
+   "stage4Mm": 67.9
+  },
+  {
+   "id": "US1TXBEL056",
+   "name": "TEMPLE 2.3 WSW, TX US",
+   "lat": 31.081391,
+   "lon": -97.397019,
+   "gaugeMm": 91.6,
+   "stage4Mm": 72.2
+  },
+  {
+   "id": "US1TXWM0185",
+   "name": "GEORGETOWN 5.9 NNW, TX US",
+   "lat": 30.71945,
+   "lon": -97.73905,
+   "gaugeMm": 91.4,
+   "stage4Mm": 113.6
+  },
+  {
+   "id": "USC00228556",
+   "name": "SUMRALL, MS US",
+   "lat": 31.4222,
+   "lon": -89.5386,
+   "gaugeMm": 91.2,
+   "stage4Mm": 89.4
+  },
+  {
+   "id": "USW00093904",
+   "name": "FORT WORTH MEACHAM FIELD NAAF, TX US",
+   "lat": 32.81667,
+   "lon": -97.35,
+   "gaugeMm": 91.1,
+   "stage4Mm": 88.8
+  },
+  {
+   "id": "US1TXBLC012",
+   "name": "BLANCO 1.8 ESE, TX US",
+   "lat": 30.09209228,
+   "lon": -98.39271356,
+   "gaugeMm": 90.8,
+   "stage4Mm": 90.1
+  },
+  {
+   "id": "US1TXCML150",
+   "name": "SPRING BRANCH 4.3 ESE, TX US",
+   "lat": 29.8141,
+   "lon": -98.3457,
+   "gaugeMm": 90.8,
+   "stage4Mm": 136.1
+  },
+  {
+   "id": "US1LAEB0023",
+   "name": "BROWNFIELDS 4.0 E, LA US",
+   "lat": 30.554087,
+   "lon": -91.053986,
+   "gaugeMm": 90.2,
+   "stage4Mm": 92.5
+  },
+  {
+   "id": "US1TXLO0014",
+   "name": "SANDIA 5.1 NNW, TX US",
+   "lat": 28.08472222,
+   "lon": -97.91722222,
+   "gaugeMm": 90.2,
+   "stage4Mm": 91.9
+  },
+  {
+   "id": "US1TXWM0183",
+   "name": "GEORGETOWN 6.6 NW, TX US",
+   "lat": 30.723719,
+   "lon": -97.75248,
+   "gaugeMm": 89.1,
+   "stage4Mm": 113.6
+  },
+  {
+   "id": "USC00413290",
+   "name": "FORT WORTH BOTANIC GARDEN, TX US",
+   "lat": 32.7341,
+   "lon": -97.3677,
+   "gaugeMm": 89.1,
+   "stage4Mm": 70.4
+  },
+  {
+   "id": "USC00169806",
+   "name": "WINNSBORO 5 SSE, LA US",
+   "lat": 32.0997,
+   "lon": -91.7022,
+   "gaugeMm": 88.9,
+   "stage4Mm": 81.8
+  },
+  {
+   "id": "US1TXFT0001",
+   "name": "OAKWOOD 4.2 NE, TX US",
+   "lat": 31.633444,
+   "lon": -95.806277,
+   "gaugeMm": 88.7,
+   "stage4Mm": 135.9
+  },
+  {
+   "id": "USW00013957",
+   "name": "SHREVEPORT AIRPORT, LA US",
+   "lat": 32.4473,
+   "lon": -93.8244,
+   "gaugeMm": 88.5,
+   "stage4Mm": 102.1
+  },
+  {
+   "id": "US1TXCML146",
+   "name": "GARDEN RIDGE 3.4 NW, TX US",
+   "lat": 29.6723,
+   "lon": -98.3309,
+   "gaugeMm": 88.4,
+   "stage4Mm": 99.7
+  },
+  {
+   "id": "US1TXLT0008",
+   "name": "KOSSE 4.0 E, TX US",
+   "lat": 31.31744,
+   "lon": -96.562315,
+   "gaugeMm": 88.1,
+   "stage4Mm": 100.7
+  },
+  {
+   "id": "USC00417841",
+   "name": "RUSK, TX US",
+   "lat": 31.8093,
+   "lon": -95.1428,
+   "gaugeMm": 87.6,
+   "stage4Mm": 88.5
+  },
+  {
+   "id": "US1TXNU0038",
+   "name": "CORPUS CHRISTI 4.8 W, TX US",
+   "lat": 27.808389,
+   "lon": -97.470553,
+   "gaugeMm": 87.5,
+   "stage4Mm": 170.2
+  },
+  {
+   "id": "USC00168163",
+   "name": "ST. JOSEPH 3 N, LA US",
+   "lat": 31.9497,
+   "lon": -91.2336,
+   "gaugeMm": 87.2,
+   "stage4Mm": 81.3
+  },
+  {
+   "id": "USC00419099",
+   "name": "TOW, TX US",
+   "lat": 30.8837,
+   "lon": -98.4707,
+   "gaugeMm": 87.1,
+   "stage4Mm": 86.7
+  },
+  {
+   "id": "USC00411215",
+   "name": "BULVERDE, TX US",
+   "lat": 29.7382,
+   "lon": -98.4521,
+   "gaugeMm": 86.9,
+   "stage4Mm": 79.3
+  },
+  {
+   "id": "US1TXWO0053",
+   "name": "FALLS CITY 8.3 WSW, TX US",
+   "lat": 28.95385,
+   "lon": -98.15503,
+   "gaugeMm": 86.8,
+   "stage4Mm": 84.3
+  },
+  {
+   "id": "US1TXCML051",
+   "name": "SPRING BRANCH 2.4 SW, TX US",
+   "lat": 29.863026,
+   "lon": -98.45444,
+   "gaugeMm": 86.3,
+   "stage4Mm": 70.6
+  },
+  {
+   "id": "US1TXBEE018",
+   "name": "BEEVILLE 9.0 S, TX US",
+   "lat": 28.2751067,
+   "lon": -97.7600733,
+   "gaugeMm": 86.2,
+   "stage4Mm": 98.2
+  },
+  {
+   "id": "US1TXBXR065",
+   "name": "HOLLYWOOD PARK 5.2 NE, TX US",
+   "lat": 29.647416,
+   "lon": -98.417802,
+   "gaugeMm": 86.2,
+   "stage4Mm": 85.1
+  },
+  {
+   "id": "US1TXBEL038",
+   "name": "BELTON 6.4 S, TX US",
+   "lat": 30.975857,
+   "lon": -97.460482,
+   "gaugeMm": 85.8,
+   "stage4Mm": 78.6
+  },
+  {
+   "id": "USC00413199",
+   "name": "FLORENCE, TX US",
+   "lat": 30.8394,
+   "lon": -97.7927,
+   "gaugeMm": 85.0,
+   "stage4Mm": 80.5
+  },
+  {
+   "id": "US1MSRN0033",
+   "name": "FLORENCE 1.0 WSW, MS US",
+   "lat": 32.1481,
+   "lon": -90.1444,
+   "gaugeMm": 84.9,
+   "stage4Mm": 71.1
+  },
+  {
+   "id": "US1TXBEL001",
+   "name": "TEMPLE 8.5 SE, TX US",
+   "lat": 31.0229,
+   "lon": -97.2493,
+   "gaugeMm": 84.6,
+   "stage4Mm": 93.4
+  },
+  {
+   "id": "US1MSAM0001",
+   "name": "LIBERTY 6.4 ENE, MS US",
+   "lat": 31.195986,
+   "lon": -90.700824,
+   "gaugeMm": 84.4,
+   "stage4Mm": 79.8
+  },
+  {
+   "id": "US1LALN0008",
+   "name": "RUSTON 5.4 ENE, LA US",
+   "lat": 32.557378,
+   "lon": -92.551703,
+   "gaugeMm": 83.9,
+   "stage4Mm": 65.1
+  },
+  {
+   "id": "US1TXHYS053",
+   "name": "DRIPPING SPRINGS 4.1 SSW, TX US",
+   "lat": 30.130576,
+   "lon": -98.106367,
+   "gaugeMm": 83.8,
+   "stage4Mm": 159.1
+  },
+  {
+   "id": "US1TXBXR133",
+   "name": "WINDCREST 0.3 NNE, TX US",
+   "lat": 29.52151,
+   "lon": -98.376812,
+   "gaugeMm": 83.7,
+   "stage4Mm": 76.1
+  },
+  {
+   "id": "US1TXBLC010",
+   "name": "JOHNSON CITY 2.2 N, TX US",
+   "lat": 30.30546,
+   "lon": -98.4088,
+   "gaugeMm": 83.2,
+   "stage4Mm": 69.2
+  },
+  {
+   "id": "US1TXCML008",
+   "name": "NEW BRAUNFELS 7.2 NW, TX US",
+   "lat": 29.77794,
+   "lon": -98.203083,
+   "gaugeMm": 82.5,
+   "stage4Mm": 179.2
+  },
+  {
+   "id": "USW00013970",
+   "name": "BATON ROUGE METRO AIRPORT, LA US",
+   "lat": 30.53782,
+   "lon": -91.14681,
+   "gaugeMm": 82.1,
+   "stage4Mm": 90.7
+  },
+  {
+   "id": "USC00411500",
+   "name": "CARTHAGE, TX US",
+   "lat": 32.1615,
+   "lon": -94.3398,
+   "gaugeMm": 81.8,
+   "stage4Mm": 71.8
+  },
+  {
+   "id": "US1TXCML105",
+   "name": "NEW BRAUNFELS 5.8 SW, TX US",
+   "lat": 29.6559807658196,
+   "lon": -98.1959798187017,
+   "gaugeMm": 81.7,
+   "stage4Mm": 106.1
+  },
+  {
+   "id": "USC00411720",
+   "name": "CHOKE CANYON DAM, TX US",
+   "lat": 28.4675,
+   "lon": -98.2525,
+   "gaugeMm": 81.1,
+   "stage4Mm": 65.9
+  },
+  {
+   "id": "US1TXBXR242",
+   "name": "HOLLYWOOD PARK 3.7 NNE, TX US",
+   "lat": 29.6486434936523,
+   "lon": -98.4614944458008,
+   "gaugeMm": 80.5,
+   "stage4Mm": 72.8
+  },
+  {
+   "id": "US1TXBEL023",
+   "name": "BELTON 0.4 E, TX US",
+   "lat": 31.066986,
+   "lon": -97.456434,
+   "gaugeMm": 80.3,
+   "stage4Mm": 78.6
+  },
+  {
+   "id": "US1LAOC0001",
+   "name": "SWARTZ 2.0 SSW, LA US",
+   "lat": 32.54475,
+   "lon": -92.0039,
+   "gaugeMm": 79.9,
+   "stage4Mm": 78.8
+  },
+  {
+   "id": "USC00169631",
+   "name": "WEST MONROE, LA US",
+   "lat": 32.46,
+   "lon": -92.1483,
+   "gaugeMm": 79.8,
+   "stage4Mm": 76.5
+  },
+  {
+   "id": "US1TXLO0016",
+   "name": "GEORGE WEST 11.3 S, TX US",
+   "lat": 28.16765,
+   "lon": -98.09258333,
+   "gaugeMm": 79.5,
+   "stage4Mm": 58.7
+  },
+  {
+   "id": "US1TXBEL021",
+   "name": "TEMPLE 8.1 SE, TX US",
+   "lat": 31.0264333,
+   "lon": -97.2538594,
+   "gaugeMm": 79.3,
+   "stage4Mm": 93.4
+  },
+  {
+   "id": "US1LAEB0009",
+   "name": "BROWNFIELDS 5.8 NE, LA US",
+   "lat": 30.60694,
+   "lon": -91.0533,
+   "gaugeMm": 79.0,
+   "stage4Mm": 88.8
+  },
+  {
+   "id": "USC00414605",
+   "name": "JOHNSON CITY 2 N, TX US",
+   "lat": 30.30005,
+   "lon": -98.40957,
+   "gaugeMm": 79.0,
+   "stage4Mm": 69.2
+  },
+  {
+   "id": "US1TXFA0006",
+   "name": "LOTT 7.2 WSW, TX US",
+   "lat": 31.168434,
+   "lon": -97.146591,
+   "gaugeMm": 78.8,
+   "stage4Mm": 84.9
+  },
+  {
+   "id": "US1MSWR0007",
+   "name": "VICKSBURG 12.3 S, MS US",
+   "lat": 32.1541089,
+   "lon": -90.9074381,
+   "gaugeMm": 77.7,
+   "stage4Mm": 68.6
+  },
+  {
+   "id": "USC00168923",
+   "name": "TALLULAH, LA US",
+   "lat": 32.3994,
+   "lon": -91.1841,
+   "gaugeMm": 77.5,
+   "stage4Mm": 73.7
+  },
+  {
+   "id": "US1TXBXR341",
+   "name": "LIVE OAK 1.8 W, TX US",
+   "lat": 29.550382,
+   "lon": -98.369699,
+   "gaugeMm": 77.3,
+   "stage4Mm": 80.5
+  },
+  {
+   "id": "USC00413065",
+   "name": "FALLS CITY 7 WSW, TX US",
+   "lat": 28.9613,
+   "lon": -98.1102,
+   "gaugeMm": 77.2,
+   "stage4Mm": 90.8
+  },
+  {
+   "id": "US1LAOC0023",
+   "name": "MONROE 5.5 ENE, LA US",
+   "lat": 32.5447006225586,
+   "lon": -91.9981994628906,
+   "gaugeMm": 76.6,
+   "stage4Mm": 78.8
+  },
+  {
+   "id": "US1MSHD0025",
+   "name": "RAYMOND 2.7 E, MS US",
+   "lat": 32.2646789550781,
+   "lon": -90.3772506713867,
+   "gaugeMm": 76.3,
+   "stage4Mm": 72.1
+  },
+  {
+   "id": "US1TXLT0002",
+   "name": "MEXIA 9.4 SSE, TX US",
+   "lat": 31.556142,
+   "lon": -96.4251,
+   "gaugeMm": 76.2,
+   "stage4Mm": 92.6
+  },
+  {
+   "id": "US1TXCRL003",
+   "name": "KEMPNER 6.7 ENE, TX US",
+   "lat": 31.091592,
+   "lon": -97.889957,
+   "gaugeMm": 75.7,
+   "stage4Mm": 59.8
+  },
+  {
+   "id": "USC00419504",
+   "name": "WATSON, TX US",
+   "lat": 30.9297,
+   "lon": -98.022,
+   "gaugeMm": 75.7,
+   "stage4Mm": 76.7
+  },
+  {
+   "id": "US1TXTN0134",
+   "name": "BLUE MOUND 1.6 ENE, TX US",
+   "lat": 32.865927,
+   "lon": -97.313138,
+   "gaugeMm": 75.3,
+   "stage4Mm": 67.0
+  },
+  {
+   "id": "USW00003996",
+   "name": "TALLULAH VICKSBURG REGIONAL AIRPORT, LA US",
+   "lat": 32.34808,
+   "lon": -91.02994,
+   "gaugeMm": 75.2,
+   "stage4Mm": 86.0
+  },
+  {
+   "id": "US1TXBEL059",
+   "name": "HARKER HEIGHTS 2.4 S, TX US",
+   "lat": 31.027297,
+   "lon": -97.650762,
+   "gaugeMm": 74.9,
+   "stage4Mm": 73.2
+  },
+  {
+   "id": "US1TXBRT056",
+   "name": "BERTRAM 9.1 SSW, TX US",
+   "lat": 30.6148906052113,
+   "lon": -98.0877479910851,
+   "gaugeMm": 74.4,
+   "stage4Mm": 83.8
+  },
+  {
+   "id": "USC00414960",
+   "name": "TUSCOLA 2 NW, TX US",
+   "lat": 32.2262,
+   "lon": -99.8173,
+   "gaugeMm": 73.6,
+   "stage4Mm": 29.3
+  },
+  {
+   "id": "USW00013961",
+   "name": "FORT WORTH MEACHAM FIELD, TX US",
+   "lat": 32.82478,
+   "lon": -97.36403,
+   "gaugeMm": 73.3,
+   "stage4Mm": 85.2
+  },
+  {
+   "id": "US1TXBSQ004",
+   "name": "MERIDIAN 12.3 WSW, TX US",
+   "lat": 31.8288,
+   "lon": -97.8234,
+   "gaugeMm": 72.6,
+   "stage4Mm": 83.1
+  },
+  {
+   "id": "US1MSPK0002",
+   "name": "JAYESS 5.6 SW, MS US",
+   "lat": 31.300618,
+   "lon": -90.261628,
+   "gaugeMm": 72.5,
+   "stage4Mm": 79.3
+  },
+  {
+   "id": "US1TXLL0007",
+   "name": "HORSESHOE BAY 2.7 S, TX US",
+   "lat": 30.49775,
+   "lon": -98.359883,
+   "gaugeMm": 71.7,
+   "stage4Mm": 68.5
+  },
+  {
+   "id": "US1TXBRT046",
+   "name": "SPICEWOOD 2.6 ESE, TX US",
+   "lat": 30.4589405059814,
+   "lon": -98.117561340332,
+   "gaugeMm": 71.1,
+   "stage4Mm": 96.6
+  },
+  {
+   "id": "US1TXAN0007",
+   "name": "PALESTINE 1.8 ESE, TX US",
+   "lat": 31.744633,
+   "lon": -95.619201,
+   "gaugeMm": 70.5,
+   "stage4Mm": 85.3
+  },
+  {
+   "id": "USC00419532",
+   "name": "WEATHERFORD, TX US",
+   "lat": 32.74789,
+   "lon": -97.77039,
+   "gaugeMm": 70.0,
+   "stage4Mm": 100.9
+  },
+  {
+   "id": "USW00053977",
+   "name": "GRANBURY MUNICIPAL AIRPORT, TX US",
+   "lat": 32.44444,
+   "lon": -97.81694,
+   "gaugeMm": 69.6,
+   "stage4Mm": 85.1
+  },
+  {
+   "id": "US1MSRN0040",
+   "name": "PEARL 2.0 W, MS US",
+   "lat": 32.2706,
+   "lon": -90.1389,
+   "gaugeMm": 69.4,
+   "stage4Mm": 57.9
+  },
+  {
+   "id": "US1TXTN0057",
+   "name": "BENBROOK 2.1 N, TX US",
+   "lat": 32.7081,
+   "lon": -97.4603,
+   "gaugeMm": 69.4,
+   "stage4Mm": 45.5
+  },
+  {
+   "id": "USC00410738",
+   "name": "BERTRAM 3 ENE, TX US",
+   "lat": 30.7625,
+   "lon": -98.0213,
+   "gaugeMm": 68.6,
+   "stage4Mm": 72.5
+  },
+  {
+   "id": "USC00415661",
+   "name": "MATHIS 4 SSW, TX US",
+   "lat": 28.0372,
+   "lon": -97.8725,
+   "gaugeMm": 68.6,
+   "stage4Mm": 74.7
+  },
+  {
+   "id": "USC00418696",
+   "name": "STRAWN 8 NNE, TX US",
+   "lat": 32.6591,
+   "lon": -98.4677,
+   "gaugeMm": 68.6,
+   "stage4Mm": 59.2
+  },
+  {
+   "id": "USC00418544",
+   "name": "SPRING BRANCH 2 SE, TX US",
+   "lat": 29.8652,
+   "lon": -98.3796,
+   "gaugeMm": 68.5,
+   "stage4Mm": 110.0
+  },
+  {
+   "id": "US1TXCML004",
+   "name": "NEW BRAUNFELS 2.4 SSW, TX US",
+   "lat": 29.670093,
+   "lon": -98.127538,
+   "gaugeMm": 68.4,
+   "stage4Mm": 161.1
+  },
+  {
+   "id": "US1LAEB0031",
+   "name": "CENTRAL 2.2 SE, LA US",
+   "lat": 30.544074,
+   "lon": -91.005026,
+   "gaugeMm": 68.1,
+   "stage4Mm": 103.1
+  },
+  {
+   "id": "US1TXBEL005",
+   "name": "HARKER HEIGHTS 1.7 NW, TX US",
+   "lat": 31.07601,
+   "lon": -97.67733,
+   "gaugeMm": 68.1,
+   "stage4Mm": 71.4
+  },
+  {
+   "id": "US1TXBRT062",
+   "name": "SPICEWOOD 2.5 ENE, TX US",
+   "lat": 30.4824272,
+   "lon": -98.1146961,
+   "gaugeMm": 68.1,
+   "stage4Mm": 96.6
+  },
+  {
+   "id": "US1TXGP0107",
+   "name": "SEGUIN 9.4 SW, TX US",
+   "lat": 29.48377,
+   "lon": -98.080332,
+   "gaugeMm": 68.1,
+   "stage4Mm": 193.3
+  },
+  {
+   "id": "USC00166466",
+   "name": "MOUNT HERMON 2 W, LA US",
+   "lat": 30.9502,
+   "lon": -90.3061,
+   "gaugeMm": 68.1,
+   "stage4Mm": 93.4
+  },
+  {
+   "id": "US1TXCML006",
+   "name": "SPRING BRANCH 5.6 SSE, TX US",
+   "lat": 29.837416,
+   "lon": -98.398683,
+   "gaugeMm": 67.9,
+   "stage4Mm": 113.3
+  },
+  {
+   "id": "US1TXBXR336",
+   "name": "CONVERSE 1.2 SSE, TX US",
+   "lat": 29.497371673584,
+   "lon": -98.3044281005859,
+   "gaugeMm": 67.8,
+   "stage4Mm": 85.3
+  },
+  {
+   "id": "USC00411239",
+   "name": "BURKETT, TX US",
+   "lat": 31.99538,
+   "lon": -99.22778,
+   "gaugeMm": 67.7,
+   "stage4Mm": 65.1
+  },
+  {
+   "id": "US1TXWM0035",
+   "name": "BERTRAM 6.4 ESE, TX US",
+   "lat": 30.713117,
+   "lon": -97.9559,
+   "gaugeMm": 67.6,
+   "stage4Mm": 82.4
+  },
+  {
+   "id": "US1TXWM0162",
+   "name": "LIBERTY HILL 1.2 N, TX US",
+   "lat": 30.6825885772705,
+   "lon": -97.922981262207,
+   "gaugeMm": 67.5,
+   "stage4Mm": 100.9
+  },
+  {
+   "id": "USC00165090",
+   "name": "LAKE PROVIDENCE, LA US",
+   "lat": 32.81518,
+   "lon": -91.17326,
+   "gaugeMm": 66.5,
+   "stage4Mm": 79.8
+  },
+  {
+   "id": "USC00414810",
+   "name": "KINGSVILLE, TX US",
+   "lat": 27.5311,
+   "lon": -97.8497,
+   "gaugeMm": 66.4,
+   "stage4Mm": 72.9
+  },
+  {
+   "id": "US1TXTN0139",
+   "name": "WATAUGA 3.0 WNW, TX US",
+   "lat": 32.8905487060547,
+   "lon": -97.2982177734375,
+   "gaugeMm": 66.1,
+   "stage4Mm": 54.0
+  },
+  {
+   "id": "USC00410202",
+   "name": "ALVARADO 4 NE, TX US",
+   "lat": 32.4644,
+   "lon": -97.183,
+   "gaugeMm": 65.6,
+   "stage4Mm": 48.3
+  },
+  {
+   "id": "US1TXGS0046",
+   "name": "FREDERICKSBURG 9.1 WSW, TX US",
+   "lat": 30.226622,
+   "lon": -99.016444,
+   "gaugeMm": 65.1,
+   "stage4Mm": 69.4
+  },
+  {
+   "id": "US1MSRN0007",
+   "name": "RICHLAND 0.3 WSW, MS US",
+   "lat": 32.231677,
+   "lon": -90.170272,
+   "gaugeMm": 65.0,
+   "stage4Mm": 54.9
+  },
+  {
+   "id": "US1TXBXR291",
+   "name": "CONVERSE 1.8 S, TX US",
+   "lat": 29.4873,
+   "lon": -98.3157,
+   "gaugeMm": 65.0,
+   "stage4Mm": 85.3
+  },
+  {
+   "id": "US1TXBEL008",
+   "name": "BELTON 3.9 N, TX US",
+   "lat": 31.123892,
+   "lon": -97.473297,
+   "gaugeMm": 64.8,
+   "stage4Mm": 66.8
+  },
+  {
+   "id": "US1TXCML140",
+   "name": "CANYON LAKE 3.2 ESE, TX US",
+   "lat": 29.85,
+   "lon": -98.21666667,
+   "gaugeMm": 64.8,
+   "stage4Mm": 182.2
+  },
+  {
+   "id": "USW00023907",
+   "name": "AUSTIN 33 NW, TX US",
+   "lat": 30.6222,
+   "lon": -98.0846,
+   "gaugeMm": 64.6,
+   "stage4Mm": 64.3
+  },
+  {
+   "id": "USW00053905",
+   "name": "SHREVEPORT DOWNTOWN AIRPORT, LA US",
+   "lat": 32.53984,
+   "lon": -93.74616,
+   "gaugeMm": 64.1,
+   "stage4Mm": 59.0
+  },
+  {
+   "id": "USC00414757",
+   "name": "KENDALIA, TX US",
+   "lat": 29.964,
+   "lon": -98.5292,
+   "gaugeMm": 63.8,
+   "stage4Mm": 58.6
+  },
+  {
+   "id": "USW00093919",
+   "name": "MCCOMB AIRPORT, MS US",
+   "lat": 31.18228,
+   "lon": -90.47207,
+   "gaugeMm": 63.5,
+   "stage4Mm": 85.5
+  },
+  {
+   "id": "USC00411138",
+   "name": "BROWNWOOD 2 NE, TX US",
+   "lat": 31.72278,
+   "lon": -99.01417,
+   "gaugeMm": 63.3,
+   "stage4Mm": 64.1
+  },
+  {
+   "id": "US1TXKM0002",
+   "name": "JUNCTION 11.6 ENE, TX US",
+   "lat": 30.5695,
+   "lon": -99.5996,
+   "gaugeMm": 63.1,
+   "stage4Mm": 49.0
+  },
+  {
+   "id": "USC00223920",
+   "name": "HAZLEHURST 5 SW, MS US",
+   "lat": 31.8327,
+   "lon": -90.4541,
+   "gaugeMm": 63.0,
+   "stage4Mm": 43.9
+  },
+  {
+   "id": "US1TXGS0031",
+   "name": "FREDERICKSBURG 9.1 WSW, TX US",
+   "lat": 30.22535,
+   "lon": -99.01537,
+   "gaugeMm": 62.8,
+   "stage4Mm": 51.1
+  },
+  {
+   "id": "US1TXBRT051",
+   "name": "BERTRAM 8.8 SSW, TX US",
+   "lat": 30.62321667,
+   "lon": -98.10461667,
+   "gaugeMm": 62.7,
+   "stage4Mm": 71.7
+  },
+  {
+   "id": "USC00413675",
+   "name": "GRANBURY 5 N, TX US",
+   "lat": 32.5216,
+   "lon": -97.8069,
+   "gaugeMm": 62.2,
+   "stage4Mm": 75.3
+  },
+  {
+   "id": "USC00221094",
+   "name": "BROOKHAVEN CITY, MS US",
+   "lat": 31.5447,
+   "lon": -90.458,
+   "gaugeMm": 62.0,
+   "stage4Mm": 58.4
+  },
+  {
+   "id": "US1TXBXR058",
+   "name": "HOLLYWOOD PARK 3.3 ENE, TX US",
+   "lat": 29.609011,
+   "lon": -98.431278,
+   "gaugeMm": 61.7,
+   "stage4Mm": 79.0
+  },
+  {
+   "id": "USC00417215",
+   "name": "POTEET, TX US",
+   "lat": 29.028,
+   "lon": -98.5686,
+   "gaugeMm": 60.9,
+   "stage4Mm": 30.2
+  },
+  {
+   "id": "USC00418487",
+   "name": "SOUTH PADRE ISLAND, TX US",
+   "lat": 26.1376,
+   "lon": -97.17417,
+   "gaugeMm": 60.9,
+   "stage4Mm": 65.6
+  },
+  {
+   "id": "USC00410297",
+   "name": "AQUILLA 1 SSE, TX US",
+   "lat": 31.83894,
+   "lon": -97.21084,
+   "gaugeMm": 60.5,
+   "stage4Mm": 39.7
+  },
+  {
+   "id": "USC00417947",
+   "name": "SAN ANTONIO INCARNATE WORD, TX US",
+   "lat": 29.4704,
+   "lon": -98.47278,
+   "gaugeMm": 60.2,
+   "stage4Mm": 55.0
+  },
+  {
+   "id": "US1TXJW0006",
+   "name": "ORANGE GROVE 3.3 NW, TX US",
+   "lat": 27.992672,
+   "lon": -97.973464,
+   "gaugeMm": 59.2,
+   "stage4Mm": 84.6
+  },
+  {
+   "id": "USC00160718",
+   "name": "BENTON 5 E, LA US",
+   "lat": 32.6997,
+   "lon": -93.6619,
+   "gaugeMm": 58.9,
+   "stage4Mm": 34.2
+  },
+  {
+   "id": "USC00222094",
+   "name": "CRYSTAL SPRINGS EXPERIMENTAL STATION, MS US",
+   "lat": 31.9461,
+   "lon": -90.3775,
+   "gaugeMm": 58.7,
+   "stage4Mm": 70.2
+  },
+  {
+   "id": "US1TXBXR184",
+   "name": "SAN ANTONIO 8.0 NNW, TX US",
+   "lat": 29.5291058449486,
+   "lon": -98.552942276001,
+   "gaugeMm": 58.1,
+   "stage4Mm": 65.4
+  },
+  {
+   "id": "US1TXBXR253",
+   "name": "CASTLE HILLS 1.9 NE, TX US",
+   "lat": 29.540395,
+   "lon": -98.494724,
+   "gaugeMm": 57.5,
+   "stage4Mm": 71.4
+  },
+  {
+   "id": "USC00417243",
+   "name": "PRAIRIE MOUNTAIN, TX US",
+   "lat": 30.5768,
+   "lon": -98.8766,
+   "gaugeMm": 57.5,
+   "stage4Mm": 40.0
+  },
+  {
+   "id": "US1TXCMN006",
+   "name": "GUSTINE 9.8 E, TX US",
+   "lat": 31.827375,
+   "lon": -98.237081,
+   "gaugeMm": 57.1,
+   "stage4Mm": 55.0
+  },
+  {
+   "id": "US1MSMD0002",
+   "name": "MADISON 1.6 E, MS US",
+   "lat": 32.4523,
+   "lon": -90.0811,
+   "gaugeMm": 56.6,
+   "stage4Mm": 44.6
+  },
+  {
+   "id": "US1TXBEL009",
+   "name": "BELTON 5.4 NW, TX US",
+   "lat": 31.1231,
+   "lon": -97.52838,
+   "gaugeMm": 56.5,
+   "stage4Mm": 73.0
+  },
+  {
+   "id": "US1TXKR0030",
+   "name": "INGRAM 10.2 NW, TX US",
+   "lat": 30.166111,
+   "lon": -99.374722,
+   "gaugeMm": 56.4,
+   "stage4Mm": 37.8
+  },
+  {
+   "id": "USC00166866",
+   "name": "OAK GROVE, LA US",
+   "lat": 32.8641,
+   "lon": -91.38,
+   "gaugeMm": 56.3,
+   "stage4Mm": 49.6
+  },
+  {
+   "id": "US1TXGS0015",
+   "name": "STONEWALL 2.3 ENE, TX US",
+   "lat": 30.237494,
+   "lon": -98.625827,
+   "gaugeMm": 55.8,
+   "stage4Mm": 43.6
+  },
+  {
+   "id": "US1TXMCL045",
+   "name": "WOODWAY 1.4 SSE, TX US",
+   "lat": 31.477594,
+   "lon": -97.223201,
+   "gaugeMm": 55.7,
+   "stage4Mm": 46.4
+  },
+  {
+   "id": "USW00012921",
+   "name": "SAN ANTONIO INTERNATIONAL AIRPORT, TX US",
+   "lat": 29.54429,
+   "lon": -98.48395,
+   "gaugeMm": 55.7,
+   "stage4Mm": 58.4
+  },
+  {
+   "id": "US1TXBXR048",
+   "name": "HOLLYWOOD PARK 1.7 ESE, TX US",
+   "lat": 29.59027,
+   "lon": -98.457922,
+   "gaugeMm": 55.3,
+   "stage4Mm": 69.2
+  },
+  {
+   "id": "US1TXCRL007",
+   "name": "GATESVILLE 9.8 SW, TX US",
+   "lat": 31.3393249511719,
+   "lon": -97.8507690429688,
+   "gaugeMm": 54.9,
+   "stage4Mm": 36.6
+  },
+  {
+   "id": "US1TXBEL025",
+   "name": "KILLEEN 2.9 SSW, TX US",
+   "lat": 31.058145,
+   "lon": -97.732556,
+   "gaugeMm": 54.5,
+   "stage4Mm": 61.1
+  },
+  {
+   "id": "US1TXTY0013",
+   "name": "ABILENE 7.8 SSE, TX US",
+   "lat": 32.346794128418,
+   "lon": -99.6975250244141,
+   "gaugeMm": 54.4,
+   "stage4Mm": 43.4
+  },
+  {
+   "id": "US1LABS0016",
+   "name": "BOSSIER CITY 8.2 NNW, LA US",
+   "lat": 32.622839,
+   "lon": -93.731137,
+   "gaugeMm": 54.3,
+   "stage4Mm": 38.2
+  },
+  {
+   "id": "USC00412096",
+   "name": "CRESSON, TX US",
+   "lat": 32.52241,
+   "lon": -97.64772,
+   "gaugeMm": 54.3,
+   "stage4Mm": 37.8
+  },
+  {
+   "id": "US1TXBEL039",
+   "name": "TEMPLE 6.2 NNE, TX US",
+   "lat": 31.18611111,
+   "lon": -97.34222222,
+   "gaugeMm": 54.2,
+   "stage4Mm": 62.8
+  },
+  {
+   "id": "US1TXKN0015",
+   "name": "KENDALIA 5.4 S, TX US",
+   "lat": 29.888825,
+   "lon": -98.522842,
+   "gaugeMm": 53.5,
+   "stage4Mm": 61.7
+  },
+  {
+   "id": "USC00413485",
+   "name": "GATESVILLE, TX US",
+   "lat": 31.4144,
+   "lon": -97.7019,
+   "gaugeMm": 53.2,
+   "stage4Mm": 23.7
+  },
+  {
+   "id": "USC00414278",
+   "name": "HORDS CREEK DAM, TX US",
+   "lat": 31.84555,
+   "lon": -99.56068,
+   "gaugeMm": 53.0,
+   "stage4Mm": 50.1
+  },
+  {
+   "id": "USW00012928",
+   "name": "KINGSVILLE NAAS, TX US",
+   "lat": 27.50898,
+   "lon": -97.80408,
+   "gaugeMm": 52.9,
+   "stage4Mm": 73.6
+  },
+  {
+   "id": "USC00411337",
+   "name": "CALLIHAM, TX US",
+   "lat": 28.4657,
+   "lon": -98.3539,
+   "gaugeMm": 52.8,
+   "stage4Mm": 51.7
+  },
+  {
+   "id": "US1TXCLN001",
+   "name": "CISCO 10.5 NW, TX US",
+   "lat": 32.48363,
+   "lon": -99.11608,
+   "gaugeMm": 52.3,
+   "stage4Mm": 81.0
+  },
+  {
+   "id": "US1TXMCL049",
+   "name": "LORENA 8.0 E, TX US",
+   "lat": 31.398687,
+   "lon": -97.079027,
+   "gaugeMm": 52.3,
+   "stage4Mm": 60.1
+  },
+  {
+   "id": "US1TXBRN009",
+   "name": "BROWNWOOD 13.7 NW, TX US",
+   "lat": 31.8319759368896,
+   "lon": -99.1686172485352,
+   "gaugeMm": 51.9,
+   "stage4Mm": 41.6
+  },
+  {
+   "id": "USW00013942",
+   "name": "MONROE REGIONAL AIRPORT, LA US",
+   "lat": 32.51552,
+   "lon": -92.02995,
+   "gaugeMm": 51.9,
+   "stage4Mm": 80.8
+  },
+  {
+   "id": "US1TXBXR011",
+   "name": "HILL COUNTRY VILLAGE 1.2 SE, TX US",
+   "lat": 29.572784,
+   "lon": -98.477463,
+   "gaugeMm": 51.8,
+   "stage4Mm": 62.2
+  },
+  {
+   "id": "USC00413508",
+   "name": "GEORGE WEST 2 SSW, TX US",
+   "lat": 28.3063,
+   "lon": -98.1222,
+   "gaugeMm": 51.8,
+   "stage4Mm": 52.5
+  },
+  {
+   "id": "USC00417111",
+   "name": "PLEASANTON, TX US",
+   "lat": 28.9605,
+   "lon": -98.4772,
+   "gaugeMm": 51.6,
+   "stage4Mm": 55.9
+  },
+  {
+   "id": "USC00226476",
+   "name": "OAKLEY EXPERIMENTAL STATION, MS US",
+   "lat": 32.2061,
+   "lon": -90.5133,
+   "gaugeMm": 51.5,
+   "stage4Mm": 62.1
+  },
+  {
+   "id": "USC00229860",
+   "name": "YAZOO CITY 5 NNE, MS US",
+   "lat": 32.9027,
+   "lon": -90.3816,
+   "gaugeMm": 51.5,
+   "stage4Mm": 53.9
+  },
+  {
+   "id": "USC00415303",
+   "name": "LOMA ALTA, TX US",
+   "lat": 28.1569,
+   "lon": -98.5141,
+   "gaugeMm": 51.5,
+   "stage4Mm": 47.5
+  },
+  {
+   "id": "US1TXBXR326",
+   "name": "SHAVANO PARK 0.8 W, TX US",
+   "lat": 29.582248,
+   "lon": -98.56799,
+   "gaugeMm": 51.3,
+   "stage4Mm": 53.1
+  },
+  {
+   "id": "US1TXBEL027",
+   "name": "TROY 3.1 SE, TX US",
+   "lat": 31.1636,
+   "lon": -97.26945,
+   "gaugeMm": 51.0,
+   "stage4Mm": 67.0
+  },
+  {
+   "id": "US1TXGS0052",
+   "name": "FREDERICKSBURG 7.2 NW, TX US",
+   "lat": 30.356611,
+   "lon": -98.940789,
+   "gaugeMm": 51.0,
+   "stage4Mm": 40.8
+  },
+  {
+   "id": "USC00410691",
+   "name": "BENBROOK DAM, TX US",
+   "lat": 32.6475,
+   "lon": -97.4439,
+   "gaugeMm": 50.9,
+   "stage4Mm": 31.8
+  },
+  {
+   "id": "US1TXGS0012",
+   "name": "HARPER 3.7 SW, TX US",
+   "lat": 30.268176,
+   "lon": -99.29255,
+   "gaugeMm": 50.4,
+   "stage4Mm": 37.5
+  },
+  {
+   "id": "US1TXBEL055",
+   "name": "TEMPLE 5.9 NNE, TX US",
+   "lat": 31.1778297424316,
+   "lon": -97.3293991088867,
+   "gaugeMm": 50.1,
+   "stage4Mm": 62.8
+  },
+  {
+   "id": "US1TXBRT034",
+   "name": "MARBLE FALLS 3.4 NW, TX US",
+   "lat": 30.6146083333,
+   "lon": -98.3134361111,
+   "gaugeMm": 49.6,
+   "stage4Mm": 60.5
+  },
+  {
+   "id": "USC00418646",
+   "name": "STILLHOUSE HOLLOW DAM, TX US",
+   "lat": 31.0372,
+   "lon": -97.5283,
+   "gaugeMm": 49.6,
+   "stage4Mm": 64.0
+  },
+  {
+   "id": "US1TXKR0071",
+   "name": "KERRVILLE 2.2 S, TX US",
+   "lat": 30.0106678,
+   "lon": -99.140274,
+   "gaugeMm": 49.5,
+   "stage4Mm": 27.4
+  },
+  {
+   "id": "USW00093914",
+   "name": "PALESTINE 2 NE, TX US",
+   "lat": 31.7831,
+   "lon": -95.6039,
+   "gaugeMm": 49.3,
+   "stage4Mm": 69.9
+  },
+  {
+   "id": "USC00164739",
+   "name": "JONESVILLE LOCKS, LA US",
+   "lat": 31.4825,
+   "lon": -91.8627,
+   "gaugeMm": 49.2,
+   "stage4Mm": 66.8
+  },
+  {
+   "id": "USC00410246",
+   "name": "ANDICE 2 SW, TX US",
+   "lat": 30.7579,
+   "lon": -97.8615,
+   "gaugeMm": 49.1,
+   "stage4Mm": 84.4
+  },
+  {
+   "id": "USC00418531",
+   "name": "SPICEWOOD, TX US",
+   "lat": 30.48128,
+   "lon": -98.16066,
+   "gaugeMm": 49.1,
+   "stage4Mm": 84.5
+  },
+  {
+   "id": "US1TXBSQ002",
+   "name": "KOPPERL 5.2 WNW, TX US",
+   "lat": 32.11133333,
+   "lon": -97.57533333,
+   "gaugeMm": 49.0,
+   "stage4Mm": 50.4
+  },
+  {
+   "id": "US1TXTN0094",
+   "name": "FORT WORTH 13.4 N, TX US",
+   "lat": 32.920524,
+   "lon": -97.302238,
+   "gaugeMm": 49.0,
+   "stage4Mm": 38.3
+  },
+  {
+   "id": "US1TXTN0106",
+   "name": "HASLET 2.2 S, TX US",
+   "lat": 32.9259643554688,
+   "lon": -97.3398818969727,
+   "gaugeMm": 48.9,
+   "stage4Mm": 47.3
+  },
+  {
+   "id": "US1TXBLC020",
+   "name": "JOHNSON CITY 7.9 WNW, TX US",
+   "lat": 30.3004,
+   "lon": -98.5435,
+   "gaugeMm": 48.5,
+   "stage4Mm": 60.6
+  },
+  {
+   "id": "US1TXBXR135",
+   "name": "TERRELL HILLS 1.0 NE, TX US",
+   "lat": 29.485591,
+   "lon": -98.433551,
+   "gaugeMm": 48.5,
+   "stage4Mm": 68.2
+  },
+  {
+   "id": "US1TXKN0018",
+   "name": "COMFORT 11.5 ENE, TX US",
+   "lat": 30.055222,
+   "lon": -98.735294,
+   "gaugeMm": 48.4,
+   "stage4Mm": 50.1
+  },
+  {
+   "id": "US1TXKN0005",
+   "name": "KENDALIA 5.2 SSW, TX US",
+   "lat": 29.895847,
+   "lon": -98.538197,
+   "gaugeMm": 48.3,
+   "stage4Mm": 61.7
+  },
+  {
+   "id": "US1TXES0002",
+   "name": "CISCO 4.1 N, TX US",
+   "lat": 32.44384,
+   "lon": -98.986634,
+   "gaugeMm": 48.2,
+   "stage4Mm": 69.2
+  },
+  {
+   "id": "US1MSRN0029",
+   "name": "BRANDON 2.1 ESE, MS US",
+   "lat": 32.2685,
+   "lon": -89.970116667,
+   "gaugeMm": 47.9,
+   "stage4Mm": 49.4
+  },
+  {
+   "id": "US1TXPR0005",
+   "name": "DENNIS 1.4 SW, TX US",
+   "lat": 32.605525,
+   "lon": -97.945411,
+   "gaugeMm": 47.9,
+   "stage4Mm": 75.6
+  },
+  {
+   "id": "USC00413691",
+   "name": "GRAPEVINE DAM, TX US",
+   "lat": 32.9506,
+   "lon": -97.0553,
+   "gaugeMm": 47.8,
+   "stage4Mm": 36.8
+  },
+  {
+   "id": "US1TXBLC004",
+   "name": "JOHNSON CITY 7.3 W, TX US",
+   "lat": 30.258882,
+   "lon": -98.527359,
+   "gaugeMm": 47.6,
+   "stage4Mm": 61.9
+  },
+  {
+   "id": "US1TXPP0002",
+   "name": "GRAFORD 8.1 ENE, TX US",
+   "lat": 32.988267,
+   "lon": -98.121544,
+   "gaugeMm": 47.2,
+   "stage4Mm": 48.1
+  },
+  {
+   "id": "US1TXSO0004",
+   "name": "WALNUT SPRINGS 7.9 NW, TX US",
+   "lat": 32.13033,
+   "lon": -97.854675,
+   "gaugeMm": 47.0,
+   "stage4Mm": 42.8
+  },
+  {
+   "id": "US1TXHRS012",
+   "name": "MARSHALL 9.7 SE, TX US",
+   "lat": 32.439976260066,
+   "lon": -94.2302881926298,
+   "gaugeMm": 46.7,
+   "stage4Mm": 44.3
+  },
+  {
+   "id": "US1TXKL0011",
+   "name": "KINGSVILLE 0.6 E, TX US",
+   "lat": 27.507757,
+   "lon": -97.851582,
+   "gaugeMm": 46.7,
+   "stage4Mm": 72.9
+  },
+  {
+   "id": "USW00003999",
+   "name": "BURNET MUNICIPAL AIRPORT, TX US",
+   "lat": 30.74067,
+   "lon": -98.23539,
+   "gaugeMm": 46.3,
+   "stage4Mm": 40.8
+  },
+  {
+   "id": "US1TXBXR129",
+   "name": "TIMBERWOOD PARK 3.0 SW, TX US",
+   "lat": 29.671141,
+   "lon": -98.50869,
+   "gaugeMm": 45.9,
+   "stage4Mm": 64.3
+  },
+  {
+   "id": "US1MSHD0014",
+   "name": "BYRAM 2.5 E, MS US",
+   "lat": 32.176468,
+   "lon": -90.286755,
+   "gaugeMm": 45.5,
+   "stage4Mm": 63.2
+  },
+  {
+   "id": "US1TXBEL024",
+   "name": "BELTON 2.3 NNW, TX US",
+   "lat": 31.098431,
+   "lon": -97.481556,
+   "gaugeMm": 45.5,
+   "stage4Mm": 50.4
+  },
+  {
+   "id": "US1TXCNC001",
+   "name": "EDEN 2.5 SSW, TX US",
+   "lat": 31.181613,
+   "lon": -99.8595183,
+   "gaugeMm": 45.5,
+   "stage4Mm": 28.3
+  },
+  {
+   "id": "USC00413285",
+   "name": "FORT WORTH WSFO, TX US",
+   "lat": 32.8342,
+   "lon": -97.2981,
+   "gaugeMm": 45.4,
+   "stage4Mm": 68.6
+  },
+  {
+   "id": "US1TXBEL043",
+   "name": "BELTON 4.4 WNW, TX US",
+   "lat": 31.0947,
+   "lon": -97.5319,
+   "gaugeMm": 45.2,
+   "stage4Mm": 55.7
+  },
+  {
+   "id": "US1TXBXR343",
+   "name": "SAN ANTONIO 8.1 SSE, TX US",
+   "lat": 29.347416,
+   "lon": -98.460106,
+   "gaugeMm": 45.2,
+   "stage4Mm": 48.9
+  },
+  {
+   "id": "US1TXGS0026",
+   "name": "FREDERICKSBURG 11.4 NE, TX US",
+   "lat": 30.383283,
+   "lon": -98.732096,
+   "gaugeMm": 45.2,
+   "stage4Mm": 41.8
+  },
+  {
+   "id": "US1TXBRT002",
+   "name": "MARBLE FALLS 2.7 SE, TX US",
+   "lat": 30.550485,
+   "lon": -98.240923,
+   "gaugeMm": 45.0,
+   "stage4Mm": 57.2
+  },
+  {
+   "id": "US1TXBRT100",
+   "name": "BURNET 1.3 NE, TX US",
+   "lat": 30.772372,
+   "lon": -98.212456,
+   "gaugeMm": 45.0,
+   "stage4Mm": 38.0
+  },
+  {
+   "id": "USC00417327",
+   "name": "PUTNAM, TX US",
+   "lat": 32.36644,
+   "lon": -99.19245,
+   "gaugeMm": 45.0,
+   "stage4Mm": 51.7
+  },
+  {
+   "id": "US1TXBXR146",
+   "name": "FAIR OAKS RANCH 0.4 WSW, TX US",
+   "lat": 29.734786,
+   "lon": -98.642528,
+   "gaugeMm": 44.3,
+   "stage4Mm": 41.2
+  },
+  {
+   "id": "US1TXMCL018",
+   "name": "LORENA 5.2 NW, TX US",
+   "lat": 31.43833333,
+   "lon": -97.27255,
+   "gaugeMm": 44.3,
+   "stage4Mm": 50.1
+  },
+  {
+   "id": "USC00415897",
+   "name": "MIDLOTHIAN, TX US",
+   "lat": 32.49156,
+   "lon": -96.99915,
+   "gaugeMm": 44.2,
+   "stage4Mm": 21.4
+  },
+  {
+   "id": "US1LACD0026",
+   "name": "BLANCHARD 2.8 NNE, LA US",
+   "lat": 32.621665,
+   "lon": -93.88497,
+   "gaugeMm": 43.8,
+   "stage4Mm": 32.7
+  },
+  {
+   "id": "USC00410013",
+   "name": "ABILENE 6 ESE, TX US",
+   "lat": 32.43176,
+   "lon": -99.63262,
+   "gaugeMm": 43.7,
+   "stage4Mm": 29.6
+  },
+  {
+   "id": "USC00413265",
+   "name": "FORT GRIFFIN, TX US",
+   "lat": 32.9263,
+   "lon": -99.2343,
+   "gaugeMm": 43.7,
+   "stage4Mm": 33.1
+  },
+  {
+   "id": "USC00414402",
+   "name": "HYE, TX US",
+   "lat": 30.2533,
+   "lon": -98.5711,
+   "gaugeMm": 43.6,
+   "stage4Mm": 54.4
+  },
+  {
+   "id": "USC00410510",
+   "name": "BANKERSMITH 2 SE, TX US",
+   "lat": 30.1196,
+   "lon": -98.7868,
+   "gaugeMm": 43.4,
+   "stage4Mm": 42.8
+  },
+  {
+   "id": "US1TXGS0025",
+   "name": "WILLOW CITY 4.3 W, TX US",
+   "lat": 30.41029,
+   "lon": -98.77303,
+   "gaugeMm": 43.2,
+   "stage4Mm": 33.0
+  },
+  {
+   "id": "USC00412088",
+   "name": "CRAWFORD, TX US",
+   "lat": 31.5333,
+   "lon": -97.4525,
+   "gaugeMm": 43.1,
+   "stage4Mm": 37.8
+  },
+  {
+   "id": "US1TXBXR014",
+   "name": "HELOTES 1.0 ENE, TX US",
+   "lat": 29.572029,
+   "lon": -98.677986,
+   "gaugeMm": 42.4,
+   "stage4Mm": 46.8
+  },
+  {
+   "id": "US1TXKN0060",
+   "name": "BOERNE 8.4 ENE, TX US",
+   "lat": 29.82444444,
+   "lon": -98.59666667,
+   "gaugeMm": 42.4,
+   "stage4Mm": 50.6
+  },
+  {
+   "id": "US1TXTN0061",
+   "name": "MANSFIELD 2.6 NNE, TX US",
+   "lat": 32.602139,
+   "lon": -97.101033,
+   "gaugeMm": 42.4,
+   "stage4Mm": 21.5
+  },
+  {
+   "id": "USC00413605",
+   "name": "GOLD, TX US",
+   "lat": 30.3481,
+   "lon": -98.6861,
+   "gaugeMm": 42.4,
+   "stage4Mm": 38.4
+  },
+  {
+   "id": "US1TXAT0001",
+   "name": "POTEET 4.1 ENE, TX US",
+   "lat": 29.065423,
+   "lon": -98.515984,
+   "gaugeMm": 42.2,
+   "stage4Mm": 37.7
+  },
+  {
+   "id": "US1TXBXR269",
+   "name": "LEON VALLEY 2.7 WSW, TX US",
+   "lat": 29.485403,
+   "lon": -98.656125,
+   "gaugeMm": 42.0,
+   "stage4Mm": 42.6
+  },
+  {
+   "id": "USC00413341",
+   "name": "FREER, TX US",
+   "lat": 27.8722,
+   "lon": -98.6176,
+   "gaugeMm": 42.0,
+   "stage4Mm": 37.0
+  },
+  {
+   "id": "USW00053968",
+   "name": "PALESTINE 6 WNW, TX US",
+   "lat": 31.7796,
+   "lon": -95.7232,
+   "gaugeMm": 42.0,
+   "stage4Mm": 48.4
+  },
+  {
+   "id": "USW00012970",
+   "name": "SAN ANTONIO STINSON MUNICIPAL AIRPORT, TX US",
+   "lat": 29.33896,
+   "lon": -98.47198,
+   "gaugeMm": 41.4,
+   "stage4Mm": 42.8
+  },
+  {
+   "id": "USC00410120",
+   "name": "ALBANY, TX US",
+   "lat": 32.7047,
+   "lon": -99.3012,
+   "gaugeMm": 41.2,
+   "stage4Mm": 32.5
+  },
+  {
+   "id": "US1MSCP0003",
+   "name": "HAZLEHURST 0.8 WSW, MS US",
+   "lat": 31.858527,
+   "lon": -90.402878,
+   "gaugeMm": 41.0,
+   "stage4Mm": 50.7
+  },
+  {
+   "id": "US1TXGS0028",
+   "name": "WILLOW CITY 4.2 W, TX US",
+   "lat": 30.4105,
+   "lon": -98.77116667,
+   "gaugeMm": 40.9,
+   "stage4Mm": 33.0
+  },
+  {
+   "id": "US1TXKN0010",
+   "name": "BOERNE 6.0 WSW, TX US",
+   "lat": 29.754064,
+   "lon": -98.820183,
+   "gaugeMm": 40.9,
+   "stage4Mm": 23.5
+  },
+  {
+   "id": "USC00413329",
+   "name": "FREDERICKSBURG, TX US",
+   "lat": 30.2391,
+   "lon": -98.9088,
+   "gaugeMm": 40.9,
+   "stage4Mm": 48.4
+  },
+  {
+   "id": "USC00414081",
+   "name": "HENDERSON, TX US",
+   "lat": 32.18265,
+   "lon": -94.7967,
+   "gaugeMm": 40.9,
+   "stage4Mm": 46.6
+  },
+  {
+   "id": "USC00416060",
+   "name": "MORGAN MILL, TX US",
+   "lat": 32.3841,
+   "lon": -98.1702,
+   "gaugeMm": 40.4,
+   "stage4Mm": 58.3
+  },
+  {
+   "id": "US1TXBRT087",
+   "name": "MARBLE FALLS 3.2 ESE, TX US",
+   "lat": 30.569718,
+   "lon": -98.219531,
+   "gaugeMm": 40.3,
+   "stage4Mm": 59.4
+  },
+  {
+   "id": "US1TXBXR027",
+   "name": "SCENIC OAKS 0.8 SW, TX US",
+   "lat": 29.701292,
+   "lon": -98.684133,
+   "gaugeMm": 40.3,
+   "stage4Mm": 41.1
+  },
+  {
+   "id": "US1TXBXR192",
+   "name": "HELOTES 2.4 NNW, TX US",
+   "lat": 29.599,
+   "lon": -98.7127,
+   "gaugeMm": 40.0,
+   "stage4Mm": 39.1
+  },
+  {
+   "id": "US1TXBRT005",
+   "name": "MARBLE FALLS 0.7 NW, TX US",
+   "lat": 30.587315,
+   "lon": -98.27883,
+   "gaugeMm": 39.8,
+   "stage4Mm": 36.3
+  },
+  {
+   "id": "US1TXBXR163",
+   "name": "LEON VALLEY 1.9 WNW, TX US",
+   "lat": 29.504864,
+   "lon": -98.642795,
+   "gaugeMm": 39.4,
+   "stage4Mm": 63.7
+  },
+  {
+   "id": "US1TXSO0003",
+   "name": "GLEN ROSE 5.1 SSW, TX US",
+   "lat": 32.166223,
+   "lon": -97.781225,
+   "gaugeMm": 39.3,
+   "stage4Mm": 38.7
+  },
+  {
+   "id": "USC00411250",
+   "name": "BURNET, TX US",
+   "lat": 30.7587,
+   "lon": -98.2339,
+   "gaugeMm": 39.2,
+   "stage4Mm": 38.0
+  },
+  {
+   "id": "US1TXDA0063",
+   "name": "DESOTO 2.2 ENE, TX US",
+   "lat": 32.613008,
+   "lon": -96.827942,
+   "gaugeMm": 38.9,
+   "stage4Mm": 20.2
+  },
+  {
+   "id": "US1TXKN0007",
+   "name": "FAIR OAKS RANCH 10.0 NNE, TX US",
+   "lat": 29.873664,
+   "lon": -98.585433,
+   "gaugeMm": 38.8,
+   "stage4Mm": 58.9
+  },
+  {
+   "id": "US1MSSM0006",
+   "name": "MIZE 3.9 SSW, MS US",
+   "lat": 31.813821,
+   "lon": -89.57814,
+   "gaugeMm": 38.5,
+   "stage4Mm": 29.4
+  },
+  {
+   "id": "US1TXCRL004",
+   "name": "GATESVILLE 12.0 SE, TX US",
+   "lat": 31.3371,
+   "lon": -97.5704,
+   "gaugeMm": 38.3,
+   "stage4Mm": 48.2
+  },
+  {
+   "id": "USC00410902",
+   "name": "BOERNE, TX US",
+   "lat": 29.7986,
+   "lon": -98.7353,
+   "gaugeMm": 38.2,
+   "stage4Mm": 34.7
+  },
+  {
+   "id": "USC00411246",
+   "name": "BURLESON, TX US",
+   "lat": 32.5066,
+   "lon": -97.3444,
+   "gaugeMm": 38.2,
+   "stage4Mm": 32.6
+  },
+  {
+   "id": "US1TXKN0061",
+   "name": "BOERNE 12.4 N, TX US",
+   "lat": 29.971721,
+   "lon": -98.699246,
+   "gaugeMm": 37.9,
+   "stage4Mm": 47.2
+  },
+  {
+   "id": "US1TXKN0110",
+   "name": "FAIR OAKS RANCH 1.1 NNW, TX US",
+   "lat": 29.751073,
+   "lon": -98.640211,
+   "gaugeMm": 37.9,
+   "stage4Mm": 45.9
+  },
+  {
+   "id": "US1TXKN0008",
+   "name": "FAIR OAKS RANCH 2.2 NNW, TX US",
+   "lat": 29.766739,
+   "lon": -98.646492,
+   "gaugeMm": 37.4,
+   "stage4Mm": 45.9
+  },
+  {
+   "id": "US1TXGD0004",
+   "name": "GOLIAD 14.5 WNW, TX US",
+   "lat": 28.742355,
+   "lon": -97.615537,
+   "gaugeMm": 37.1,
+   "stage4Mm": 172.2
+  },
+  {
+   "id": "USC00413954",
+   "name": "HARPER 3 ENE, TX US",
+   "lat": 30.3086,
+   "lon": -99.203,
+   "gaugeMm": 37.1,
+   "stage4Mm": 44.2
+  },
+  {
+   "id": "US1TXBRT013",
+   "name": "HIGHLAND HAVEN 1.3 SW, TX US",
+   "lat": 30.599532,
+   "lon": -98.397607,
+   "gaugeMm": 36.8,
+   "stage4Mm": 33.4
+  },
+  {
+   "id": "US1TXAT0037",
+   "name": "PLEASANTON 2.0 W, TX US",
+   "lat": 28.960859,
+   "lon": -98.524058,
+   "gaugeMm": 36.6,
+   "stage4Mm": 46.2
+  },
+  {
+   "id": "US1TXHDD006",
+   "name": "GRANBURY 3.9 SSW, TX US",
+   "lat": 32.388975,
+   "lon": -97.814609,
+   "gaugeMm": 36.6,
+   "stage4Mm": 55.8
+  },
+  {
+   "id": "USW00053952",
+   "name": "WACO MCGREGOR EXECUTIVE AIRPORT, TX US",
+   "lat": 31.48472,
+   "lon": -97.31639,
+   "gaugeMm": 36.6,
+   "stage4Mm": 36.9
+  },
+  {
+   "id": "US1TXBRT017",
+   "name": "BURNET 4.2 W, TX US",
+   "lat": 30.768049,
+   "lon": -98.299832,
+   "gaugeMm": 36.5,
+   "stage4Mm": 29.7
+  },
+  {
+   "id": "US1TXGS0055",
+   "name": "HARPER 1.0 NW, TX US",
+   "lat": 30.310006,
+   "lon": -99.256235,
+   "gaugeMm": 36.5,
+   "stage4Mm": 44.9
+  },
+  {
+   "id": "USC00412446",
+   "name": "DIANA 2 W, TX US",
+   "lat": 32.7056,
+   "lon": -94.7888,
+   "gaugeMm": 36.3,
+   "stage4Mm": 28.6
+  },
+  {
+   "id": "US1TXRS0008",
+   "name": "HENDERSON 7.0 SSW, TX US",
+   "lat": 32.071761,
+   "lon": -94.862763,
+   "gaugeMm": 36.1,
+   "stage4Mm": 42.4
+  },
+  {
+   "id": "US1TXGS0018",
+   "name": "FREDERICKSBURG 12.2 W, TX US",
+   "lat": 30.2617044,
+   "lon": -99.0766134,
+   "gaugeMm": 35.4,
+   "stage4Mm": 53.5
+  },
+  {
+   "id": "USC00413289",
+   "name": "FORT WORTH NATURE CENTER, TX US",
+   "lat": 32.8472,
+   "lon": -97.4761,
+   "gaugeMm": 35.3,
+   "stage4Mm": 49.8
+  },
+  {
+   "id": "US1TXLO0009",
+   "name": "GEORGE WEST 2.7 NNW, TX US",
+   "lat": 28.363792,
+   "lon": -98.140485,
+   "gaugeMm": 35.1,
+   "stage4Mm": 49.5
+  },
+  {
+   "id": "US1TXTN0122",
+   "name": "NORTH RICHLAND HILLS 2.3 NNE, TX US",
+   "lat": 32.892799,
+   "lon": -97.210899,
+   "gaugeMm": 35.0,
+   "stage4Mm": 38.7
+  },
+  {
+   "id": "USC00412086",
+   "name": "CRANFILLS GAP, TX US",
+   "lat": 31.773,
+   "lon": -97.8265,
+   "gaugeMm": 35.0,
+   "stage4Mm": 38.5
+  },
+  {
+   "id": "USC00418358",
+   "name": "SISTERDALE 2 SE, TX US",
+   "lat": 29.95233,
+   "lon": -98.71252,
+   "gaugeMm": 35.0,
+   "stage4Mm": 41.2
+  },
+  {
+   "id": "USC00415312",
+   "name": "LONDON 3 N, TX US",
+   "lat": 30.713,
+   "lon": -99.568,
+   "gaugeMm": 34.6,
+   "stage4Mm": 24.9
+  },
+  {
+   "id": "US1TXER0004",
+   "name": "STEPHENVILLE 2.6 NNW, TX US",
+   "lat": 32.252179,
+   "lon": -98.235884,
+   "gaugeMm": 34.1,
+   "stage4Mm": 44.5
+  },
+  {
+   "id": "USC00418877",
+   "name": "TEAGUE RANCH, TX US",
+   "lat": 30.4332,
+   "lon": -98.8097,
+   "gaugeMm": 34.1,
+   "stage4Mm": 32.3
+  },
+  {
+   "id": "US1TXKN0103",
+   "name": "BOERNE 8.1 NNW, TX US",
+   "lat": 29.9069444,
+   "lon": -98.7694444,
+   "gaugeMm": 33.8,
+   "stage4Mm": 39.1
+  },
+  {
+   "id": "USC00411934",
+   "name": "CONCHO PARK IVIE RESERVOIR, TX US",
+   "lat": 31.55174,
+   "lon": -99.70829,
+   "gaugeMm": 33.8,
+   "stage4Mm": 32.9
+  },
+  {
+   "id": "US1TXBRK003",
+   "name": "FALFURRIAS 8.9 SSW, TX US",
+   "lat": 27.1058789,
+   "lon": -98.2058397,
+   "gaugeMm": 33.6,
+   "stage4Mm": 44.4
+  },
+  {
+   "id": "US1TXKN0042",
+   "name": "BOERNE 5.2 ENE, TX US",
+   "lat": 29.826,
+   "lon": -98.653,
+   "gaugeMm": 33.6,
+   "stage4Mm": 41.1
+  },
+  {
+   "id": "US1MSSM0005",
+   "name": "MIZE 4.9 N, MS US",
+   "lat": 31.9381047,
+   "lon": -89.56254619,
+   "gaugeMm": 33.5,
+   "stage4Mm": 21.3
+  },
+  {
+   "id": "US1TXBND013",
+   "name": "PIPE CREEK 1.5 SE, TX US",
+   "lat": 29.71098,
+   "lon": -98.912322,
+   "gaugeMm": 33.5,
+   "stage4Mm": 24.8
+  },
+  {
+   "id": "USC00225943",
+   "name": "MIZE 3 SW, MS US",
+   "lat": 31.8375,
+   "lon": -89.5975,
+   "gaugeMm": 33.4,
+   "stage4Mm": 29.6
+  },
+  {
+   "id": "USC00417588",
+   "name": "RICHARDSON, TX US",
+   "lat": 32.9963,
+   "lon": -96.7427,
+   "gaugeMm": 33.3,
+   "stage4Mm": 26.2
+  },
+  {
+   "id": "US1TXBXR095",
+   "name": "HELOTES 3.7 SSE, TX US",
+   "lat": 29.51703262,
+   "lon": -98.67495728,
+   "gaugeMm": 33.1,
+   "stage4Mm": 52.0
+  },
+  {
+   "id": "US1TXKR0074",
+   "name": "KERRVILLE 1.6 SSE, TX US",
+   "lat": 30.020153,
+   "lon": -99.128995,
+   "gaugeMm": 33.1,
+   "stage4Mm": 27.4
+  },
+  {
+   "id": "US1TXKN0028",
+   "name": "BOERNE 8.5 NNW, TX US",
+   "lat": 29.910117,
+   "lon": -98.762533,
+   "gaugeMm": 33.0,
+   "stage4Mm": 39.1
+  },
+  {
+   "id": "US1LACD0025",
+   "name": "SHREVEPORT 4.2 E, LA US",
+   "lat": 32.482069,
+   "lon": -93.726766,
+   "gaugeMm": 32.8,
+   "stage4Mm": 74.4
+  },
+  {
+   "id": "US1MSRN0042",
+   "name": "FLOWOOD 1.5 E, MS US",
+   "lat": 32.3191,
+   "lon": -90.0806,
+   "gaugeMm": 32.8,
+   "stage4Mm": 37.5
+  },
+  {
+   "id": "USW00013927",
+   "name": "JACKSON HAWKINS FIELD, MS US",
+   "lat": 32.33756,
+   "lon": -90.2214,
+   "gaugeMm": 32.6,
+   "stage4Mm": 46.2
+  },
+  {
+   "id": "USC00411017",
+   "name": "BRADY, TX US",
+   "lat": 31.14453,
+   "lon": -99.34922,
+   "gaugeMm": 32.5,
+   "stage4Mm": 30.0
+  },
+  {
+   "id": "USC00413579",
+   "name": "GLEN COVE 2 NE, TX US",
+   "lat": 31.88969,
+   "lon": -99.62938,
+   "gaugeMm": 32.5,
+   "stage4Mm": 33.8
+  },
+  {
+   "id": "USC00419593",
+   "name": "WEST, TX US",
+   "lat": 31.81183,
+   "lon": -97.07961,
+   "gaugeMm": 32.5,
+   "stage4Mm": 26.2
+  },
+  {
+   "id": "US1TXBXR287",
+   "name": "HELOTES 2.0 S, TX US",
+   "lat": 29.53929,
+   "lon": -98.696927,
+   "gaugeMm": 32.3,
+   "stage4Mm": 38.6
+  },
+  {
+   "id": "USC00417184",
+   "name": "PORT MANSFIELD, TX US",
+   "lat": 26.5534,
+   "lon": -97.42776,
+   "gaugeMm": 32.3,
+   "stage4Mm": 34.5
+  },
+  {
+   "id": "US1TXMCL012",
+   "name": "CRAWFORD 7.5 ENE, TX US",
+   "lat": 31.5800800323486,
+   "lon": -97.3242568969727,
+   "gaugeMm": 32.2,
+   "stage4Mm": 38.1
+  },
+  {
+   "id": "USC00414782",
+   "name": "KERRVILLE 3 NNE, TX US",
+   "lat": 30.074,
+   "lon": -99.1095,
+   "gaugeMm": 32.2,
+   "stage4Mm": 23.7
+  },
+  {
+   "id": "US1TXBXR304",
+   "name": "CROSS MOUNTAIN 2.1 N, TX US",
+   "lat": 29.67494,
+   "lon": -98.6535,
+   "gaugeMm": 32.1,
+   "stage4Mm": 46.6
+  },
+  {
+   "id": "US1TXBRT031",
+   "name": "MARBLE FALLS 5.8 NNW, TX US",
+   "lat": 30.66008333,
+   "lon": -98.30588333,
+   "gaugeMm": 31.8,
+   "stage4Mm": 47.8
+  },
+  {
+   "id": "US1TXBRT106",
+   "name": "MEADOWLAKES 0.4 SW, TX US",
+   "lat": 30.55911,
+   "lon": -98.30106,
+   "gaugeMm": 31.4,
+   "stage4Mm": 42.3
+  },
+  {
+   "id": "US1TXTN0055",
+   "name": "FORT WORTH 11.8 NW, TX US",
+   "lat": 32.893,
+   "lon": -97.45193333,
+   "gaugeMm": 31.2,
+   "stage4Mm": 39.1
+  },
+  {
+   "id": "USC00166364",
+   "name": "MOORINGSPORT 1 N, LA US",
+   "lat": 32.7052,
+   "lon": -93.9602,
+   "gaugeMm": 31.2,
+   "stage4Mm": 25.3
+  },
+  {
+   "id": "USC00416448",
+   "name": "NORTHINGTON RANCH, TX US",
+   "lat": 29.8648,
+   "lon": -98.6582,
+   "gaugeMm": 31.0,
+   "stage4Mm": 40.3
+  },
+  {
+   "id": "US1MSCP0004",
+   "name": "HAZLEHURST 8.3 WSW, MS US",
+   "lat": 31.809359,
+   "lon": -90.516126,
+   "gaugeMm": 30.8,
+   "stage4Mm": 36.6
+  },
+  {
+   "id": "US1TXEL0010",
+   "name": "OVILLA 2.6 S, TX US",
+   "lat": 32.5019,
+   "lon": -96.8983,
+   "gaugeMm": 30.7,
+   "stage4Mm": 27.8
+  },
+  {
+   "id": "USC00415618",
+   "name": "MARSHALL, TX US",
+   "lat": 32.48919,
+   "lon": -94.32883,
+   "gaugeMm": 30.5,
+   "stage4Mm": 30.2
+  },
+  {
+   "id": "USC00418863",
+   "name": "TAYLOR RANCH, TX US",
+   "lat": 30.95914,
+   "lon": -98.93761,
+   "gaugeMm": 30.5,
+   "stage4Mm": 15.0
+  },
+  {
+   "id": "US1TXGS0033",
+   "name": "FREDERICKSBURG 8.3 SSW, TX US",
+   "lat": 30.156659,
+   "lon": -98.914976,
+   "gaugeMm": 30.4,
+   "stage4Mm": 36.7
+  },
+  {
+   "id": "US1TXHRS002",
+   "name": "HALLSVILLE 5.5 N, TX US",
+   "lat": 32.580479,
+   "lon": -94.580091,
+   "gaugeMm": 30.2,
+   "stage4Mm": 24.6
+  },
+  {
+   "id": "US1TXJN0002",
+   "name": "BURLESON 1.1 WNW, TX US",
+   "lat": 32.541,
+   "lon": -97.3458,
+   "gaugeMm": 30.2,
+   "stage4Mm": 35.9
+  },
+  {
+   "id": "US1TXKN0054",
+   "name": "BOERNE 0.7 N, TX US",
+   "lat": 29.804212,
+   "lon": -98.733208,
+   "gaugeMm": 30.2,
+   "stage4Mm": 34.7
+  },
+  {
+   "id": "US1TXPR0023",
+   "name": "WILLOW PARK 1.4 ESE, TX US",
+   "lat": 32.748936,
+   "lon": -97.629,
+   "gaugeMm": 30.1,
+   "stage4Mm": 43.4
+  },
+  {
+   "id": "US1TXRS0004",
+   "name": "HENDERSON 6.9 WNW, TX US",
+   "lat": 32.1818178,
+   "lon": -94.910682,
+   "gaugeMm": 30.1,
+   "stage4Mm": 34.1
+  },
+  {
+   "id": "US1TXGS0053",
+   "name": "FREDERICKSBURG 12.1 NNE, TX US",
+   "lat": 30.4391851,
+   "lon": -98.8157795,
+   "gaugeMm": 29.9,
+   "stage4Mm": 36.9
+  },
+  {
+   "id": "US1TXRS0001",
+   "name": "HENDERSON 6.1 NW, TX US",
+   "lat": 32.217138,
+   "lon": -94.87433,
+   "gaugeMm": 29.5,
+   "stage4Mm": 32.7
+  },
+  {
+   "id": "US1MSRN0003",
+   "name": "BRANDON 1.9 NE, MS US",
+   "lat": 32.298658,
+   "lon": -89.979848,
+   "gaugeMm": 28.7,
+   "stage4Mm": 33.8
+  },
+  {
+   "id": "US1TXBRT081",
+   "name": "BURNET 2.8 WNW, TX US",
+   "lat": 30.7726158946753,
+   "lon": -98.2747697085142,
+   "gaugeMm": 28.7,
+   "stage4Mm": 33.9
+  },
+  {
+   "id": "US1TXMLS002",
+   "name": "MULLIN 3.9 WSW, TX US",
+   "lat": 31.52797,
+   "lon": -98.72429,
+   "gaugeMm": 28.7,
+   "stage4Mm": 30.4
+  },
+  {
+   "id": "US1TXKR0020",
+   "name": "KERRVILLE 1.1 SSW, TX US",
+   "lat": 30.026073,
+   "lon": -99.140974,
+   "gaugeMm": 28.5,
+   "stage4Mm": 27.4
+  },
+  {
+   "id": "USC00415822",
+   "name": "MENARD, TX US",
+   "lat": 30.90445,
+   "lon": -99.78658,
+   "gaugeMm": 28.5,
+   "stage4Mm": 42.6
+  },
+  {
+   "id": "US1MSRN0001",
+   "name": "BRANDON 2.6 NNE, MS US",
+   "lat": 32.313791,
+   "lon": -89.983764,
+   "gaugeMm": 28.2,
+   "stage4Mm": 24.2
+  },
+  {
+   "id": "US1TXMCL042",
+   "name": "WACO 2.2 ESE, TX US",
+   "lat": 31.556360244751,
+   "lon": -97.1494598388672,
+   "gaugeMm": 28.1,
+   "stage4Mm": 36.5
+  },
+  {
+   "id": "US1TXBXR015",
+   "name": "LACKLAND AFB 3.5 SSE, TX US",
+   "lat": 29.3387,
+   "lon": -98.5987,
+   "gaugeMm": 27.9,
+   "stage4Mm": 35.9
+  },
+  {
+   "id": "USW00013960",
+   "name": "DALLAS FAA AIRPORT, TX US",
+   "lat": 32.83839,
+   "lon": -96.83583,
+   "gaugeMm": 27.9,
+   "stage4Mm": 22.2
+  },
+  {
+   "id": "US1TXTN0027",
+   "name": "NORTH RICHLAND HILLS 1.7 NNE, TX US",
+   "lat": 32.88427,
+   "lon": -97.21132,
+   "gaugeMm": 27.7,
+   "stage4Mm": 30.2
+  },
+  {
+   "id": "US1TXTN0140",
+   "name": "WATAUGA 1.2 SSE, TX US",
+   "lat": 32.85503,
+   "lon": -97.242028,
+   "gaugeMm": 27.7,
+   "stage4Mm": 39.0
+  },
+  {
+   "id": "US1MSRN0002",
+   "name": "FLOWOOD 2.9 NE, MS US",
+   "lat": 32.3518,
+   "lon": -90.0688,
+   "gaugeMm": 27.6,
+   "stage4Mm": 35.8
+  },
+  {
+   "id": "US1MSMD0008",
+   "name": "MADISON 5.7 WNW, MS US",
+   "lat": 32.490785,
+   "lon": -90.195209,
+   "gaugeMm": 27.4,
+   "stage4Mm": 38.1
+  },
+  {
+   "id": "US1TXLL0047",
+   "name": "LLANO 7.2 W, TX US",
+   "lat": 30.7659345120192,
+   "lon": -98.7944906204939,
+   "gaugeMm": 27.4,
+   "stage4Mm": 17.8
+  },
+  {
+   "id": "US1TXBRN002",
+   "name": "BROWNWOOD 6.7 ENE, TX US",
+   "lat": 31.755469,
+   "lon": -98.869718,
+   "gaugeMm": 27.2,
+   "stage4Mm": 41.0
+  },
+  {
+   "id": "USC00419313",
+   "name": "VANDERPOOL 4 N, TX US",
+   "lat": 29.8075,
+   "lon": -99.5763,
+   "gaugeMm": 27.2,
+   "stage4Mm": 42.1
+  },
+  {
+   "id": "US1TXBRT065",
+   "name": "GRANITE SHOALS 0.9 S, TX US",
+   "lat": 30.5766,
+   "lon": -98.381033,
+   "gaugeMm": 26.9,
+   "stage4Mm": 36.8
+  },
+  {
+   "id": "US1TXUP0008",
+   "name": "BIG SANDY 3.9 E, TX US",
+   "lat": 32.58543,
+   "lon": -95.04561,
+   "gaugeMm": 26.8,
+   "stage4Mm": 26.5
+  },
+  {
+   "id": "US1TXDA0050",
+   "name": "CEDAR HILL 1.4 N, TX US",
+   "lat": 32.599609,
+   "lon": -96.953694,
+   "gaugeMm": 26.7,
+   "stage4Mm": 24.4
+  },
+  {
+   "id": "USC00412125",
+   "name": "CROSS, TX US",
+   "lat": 28.5978,
+   "lon": -98.5547,
+   "gaugeMm": 26.7,
+   "stage4Mm": 29.8
+  },
+  {
+   "id": "US1TXKN0012",
+   "name": "BOERNE 4.0 WSW, TX US",
+   "lat": 29.762631,
+   "lon": -98.786833,
+   "gaugeMm": 26.4,
+   "stage4Mm": 29.2
+  },
+  {
+   "id": "US1TXKR0054",
+   "name": "CENTER POINT 0.5 SE, TX US",
+   "lat": 29.9293632507324,
+   "lon": -99.0305099487305,
+   "gaugeMm": 26.2,
+   "stage4Mm": 23.3
+  },
+  {
+   "id": "US1TXKR0078",
+   "name": "KERRVILLE 0.9 N, TX US",
+   "lat": 30.055422,
+   "lon": -99.135155,
+   "gaugeMm": 26.2,
+   "stage4Mm": 23.5
+  },
+  {
+   "id": "US1TXDA0077",
+   "name": "GLENN HEIGHTS 1.4 NE, TX US",
+   "lat": 32.566194,
+   "lon": -96.837615,
+   "gaugeMm": 26.0,
+   "stage4Mm": 20.5
+  },
+  {
+   "id": "US1TXTN0127",
+   "name": "MANSFIELD 5.3 W, TX US",
+   "lat": 32.568004,
+   "lon": -97.208167,
+   "gaugeMm": 25.9,
+   "stage4Mm": 29.0
+  },
+  {
+   "id": "USC00413133",
+   "name": "FERRIS, TX US",
+   "lat": 32.5338,
+   "lon": -96.6608,
+   "gaugeMm": 25.9,
+   "stage4Mm": 15.2
+  },
+  {
+   "id": "USC00227276",
+   "name": "RALEIGH 6 N, MS US",
+   "lat": 32.1432,
+   "lon": -89.5524,
+   "gaugeMm": 25.4,
+   "stage4Mm": 16.1
+  },
+  {
+   "id": "USC00411990",
+   "name": "COPPERAS COVE 5 NW, TX US",
+   "lat": 31.1602,
+   "lon": -97.9563,
+   "gaugeMm": 25.4,
+   "stage4Mm": 29.2
+  },
+  {
+   "id": "US1TXGS0058",
+   "name": "KERRVILLE 6.8 N, TX US",
+   "lat": 30.139155,
+   "lon": -99.157514,
+   "gaugeMm": 25.2,
+   "stage4Mm": 29.3
+  },
+  {
+   "id": "US1TXKR0089",
+   "name": "INGRAM 1.2 WSW, TX US",
+   "lat": 30.074945,
+   "lon": -99.257056,
+   "gaugeMm": 25.2,
+   "stage4Mm": 5.7
+  },
+  {
+   "id": "USC00419417",
+   "name": "WACO DAM, TX US",
+   "lat": 31.6003,
+   "lon": -97.2169,
+   "gaugeMm": 25.1,
+   "stage4Mm": 17.3
+  },
+  {
+   "id": "US1TXPR0011",
+   "name": "ALEDO 2.9 SW, TX US",
+   "lat": 32.664,
+   "lon": -97.637,
+   "gaugeMm": 24.9,
+   "stage4Mm": 35.6
+  },
+  {
+   "id": "USW00003940",
+   "name": "JACKSON INTERNATIONAL AIRPORT, MS US",
+   "lat": 32.31982,
+   "lon": -90.07778,
+   "gaugeMm": 24.9,
+   "stage4Mm": 37.5
+  },
+  {
+   "id": "USW00053909",
+   "name": "FORT WORTH ALLIANCE AIRPORT, TX US",
+   "lat": 32.99434,
+   "lon": -97.32034,
+   "gaugeMm": 24.9,
+   "stage4Mm": 30.1
+  },
+  {
+   "id": "US1TXKR0083",
+   "name": "KERRVILLE 5.7 SSW, TX US",
+   "lat": 29.979441,
+   "lon": -99.191372,
+   "gaugeMm": 24.7,
+   "stage4Mm": 22.4
+  },
+  {
+   "id": "USC00413877",
+   "name": "HALLSVILLE 4 S, TX US",
+   "lat": 32.44771,
+   "lon": -94.59554,
+   "gaugeMm": 24.7,
+   "stage4Mm": 22.7
+  },
+  {
+   "id": "USC00417388",
+   "name": "RAINBOW, TX US",
+   "lat": 32.2619,
+   "lon": -97.7063,
+   "gaugeMm": 24.6,
+   "stage4Mm": 26.8
+  },
+  {
+   "id": "USC00416367",
+   "name": "NIX STORE 1 W, TX US",
+   "lat": 31.10837,
+   "lon": -98.38034,
+   "gaugeMm": 24.4,
+   "stage4Mm": 13.5
+  },
+  {
+   "id": "US1TXKN0112",
+   "name": "BOERNE 13.4 NE, TX US",
+   "lat": 29.9075306,
+   "lon": -98.5506083,
+   "gaugeMm": 24.1,
+   "stage4Mm": 61.1
+  },
+  {
+   "id": "US1TXKR0079",
+   "name": "KERRVILLE 6.3 SW, TX US",
+   "lat": 29.97063333,
+   "lon": -99.20108333,
+   "gaugeMm": 24.0,
+   "stage4Mm": 22.4
+  },
+  {
+   "id": "USC00410337",
+   "name": "ARLINGTON SIX FLAGS, TX US",
+   "lat": 32.7572,
+   "lon": -97.0736,
+   "gaugeMm": 23.7,
+   "stage4Mm": 16.8
+  },
+  {
+   "id": "US1TXKN0081",
+   "name": "COMFORT 2.6 N, TX US",
+   "lat": 30.009453,
+   "lon": -98.902276,
+   "gaugeMm": 23.4,
+   "stage4Mm": 33.0
+  },
+  {
+   "id": "US1TXTN0040",
+   "name": "BEDFORD 0.5 W, TX US",
+   "lat": 32.847326,
+   "lon": -97.142105,
+   "gaugeMm": 23.4,
+   "stage4Mm": 28.4
+  },
+  {
+   "id": "USC00221389",
+   "name": "CANTON 4 N, MS US",
+   "lat": 32.6713,
+   "lon": -90.0361,
+   "gaugeMm": 23.3,
+   "stage4Mm": 25.1
+  },
+  {
+   "id": "US1TXCMR021",
+   "name": "LOS FRESNOS 0.3 NE, TX US",
+   "lat": 26.077132,
+   "lon": -97.47585,
+   "gaugeMm": 23.1,
+   "stage4Mm": 29.1
+  },
+  {
+   "id": "USC00414980",
+   "name": "LAKE TAWAKONI, TX US",
+   "lat": 32.8522,
+   "lon": -95.8863,
+   "gaugeMm": 23.1,
+   "stage4Mm": 20.4
+  },
+  {
+   "id": "USC00414505",
+   "name": "ITASCA 5 SSW, TX US",
+   "lat": 32.09134,
+   "lon": -97.12103,
+   "gaugeMm": 22.9,
+   "stage4Mm": 14.3
+  },
+  {
+   "id": "US1TXKR0081",
+   "name": "KERRVILLE 1.6 NW, TX US",
+   "lat": 30.0599166666667,
+   "lon": -99.1531833333333,
+   "gaugeMm": 22.8,
+   "stage4Mm": 20.5
+  },
+  {
+   "id": "US1TXKR0077",
+   "name": "INGRAM 2.1 W, TX US",
+   "lat": 30.081516,
+   "lon": -99.271114,
+   "gaugeMm": 22.7,
+   "stage4Mm": 5.7
+  },
+  {
+   "id": "US1TXMSN008",
+   "name": "MASON 0.4 W, TX US",
+   "lat": 30.7496,
+   "lon": -99.238,
+   "gaugeMm": 22.7,
+   "stage4Mm": 26.7
+  },
+  {
+   "id": "USW00013911",
+   "name": "FORT WORTH NAS, TX US",
+   "lat": 32.76667,
+   "lon": -97.45,
+   "gaugeMm": 22.6,
+   "stage4Mm": 45.5
+  },
+  {
+   "id": "US1TXDA0003",
+   "name": "UNIVERSITY PARK 3.1 WNW, TX US",
+   "lat": 32.863,
+   "lon": -96.845,
+   "gaugeMm": 22.4,
+   "stage4Mm": 28.8
+  },
+  {
+   "id": "USC00415742",
+   "name": "MEDINA 1 NE, TX US",
+   "lat": 29.8099,
+   "lon": -99.2498,
+   "gaugeMm": 22.4,
+   "stage4Mm": 16.8
+  },
+  {
+   "id": "US1TXBXR138",
+   "name": "LEON VALLEY 2.8 W, TX US",
+   "lat": 29.489401,
+   "lon": -98.659329,
+   "gaugeMm": 22.3,
+   "stage4Mm": 42.6
+  },
+  {
+   "id": "US1TXDA0036",
+   "name": "CEDAR HILL 1.8 S, TX US",
+   "lat": 32.55479,
+   "lon": -96.957414,
+   "gaugeMm": 22.3,
+   "stage4Mm": 22.4
+  },
+  {
+   "id": "USC00415695",
+   "name": "MAYPEARL, TX US",
+   "lat": 32.3116,
+   "lon": -97.0161,
+   "gaugeMm": 22.3,
+   "stage4Mm": 31.7
+  },
+  {
+   "id": "USC00418046",
+   "name": "SANTA ANNA 12 SSE, TX US",
+   "lat": 31.59061,
+   "lon": -99.22579,
+   "gaugeMm": 22.2,
+   "stage4Mm": 42.8
+  },
+  {
+   "id": "US1TXBRT003",
+   "name": "BUCHANAN DAM 7.4 NNE, TX US",
+   "lat": 30.8474,
+   "lon": -98.363,
+   "gaugeMm": 22.1,
+   "stage4Mm": 22.1
+  },
+  {
+   "id": "US1TXMCC009",
+   "name": "BRADY 8.1 NNE, TX US",
+   "lat": 31.24673,
+   "lon": -99.34117,
+   "gaugeMm": 22.1,
+   "stage4Mm": 29.3
+  },
+  {
+   "id": "USW00012957",
+   "name": "PORT ISABEL CAMERON CO AIRPORT, TX US",
+   "lat": 26.15966,
+   "lon": -97.33781,
+   "gaugeMm": 22.1,
+   "stage4Mm": 23.5
+  },
+  {
+   "id": "US1TXKN0022",
+   "name": "BOERNE 4.7 WNW, TX US",
+   "lat": 29.827772,
+   "lon": -98.800917,
+   "gaugeMm": 21.9,
+   "stage4Mm": 33.0
+  },
+  {
+   "id": "USC00416210",
+   "name": "NAVARRO MILLS DAM, TX US",
+   "lat": 31.9611,
+   "lon": -96.688,
+   "gaugeMm": 21.9,
+   "stage4Mm": 20.5
+  },
+  {
+   "id": "USW00003927",
+   "name": "DAL FTW WSCMO AIRPORT, TX US",
+   "lat": 32.89744,
+   "lon": -97.02196,
+   "gaugeMm": 21.9,
+   "stage4Mm": 24.5
+  },
+  {
+   "id": "US1TXKN0080",
+   "name": "COMFORT 0.9 WSW, TX US",
+   "lat": 29.968503,
+   "lon": -98.917164,
+   "gaugeMm": 21.6,
+   "stage4Mm": 28.8
+  },
+  {
+   "id": "USW00003951",
+   "name": "LONGVIEW 11 SE, TX US",
+   "lat": 32.3466,
+   "lon": -94.6533,
+   "gaugeMm": 21.6,
+   "stage4Mm": 25.8
+  },
+  {
+   "id": "US1TXCMN004",
+   "name": "COMANCHE 7.0 ENE, TX US",
+   "lat": 31.93452,
+   "lon": -98.49263,
+   "gaugeMm": 21.5,
+   "stage4Mm": 35.6
+  },
+  {
+   "id": "USC00419312",
+   "name": "VANDERPOOL 10 N, TX US",
+   "lat": 29.8453,
+   "lon": -99.5519,
+   "gaugeMm": 21.5,
+   "stage4Mm": 27.2
+  },
+  {
+   "id": "USC00417232",
+   "name": "PRADE RANCH, TX US",
+   "lat": 29.9167,
+   "lon": -99.7908,
+   "gaugeMm": 20.5,
+   "stage4Mm": 34.7
+  },
+  {
+   "id": "USC00417773",
+   "name": "ROSSER, TX US",
+   "lat": 32.45784,
+   "lon": -96.45588,
+   "gaugeMm": 20.3,
+   "stage4Mm": 4.5
+  },
+  {
+   "id": "US1TXKN0004",
+   "name": "BOERNE 5.1 NNW, TX US",
+   "lat": 29.856008,
+   "lon": -98.777403,
+   "gaugeMm": 19.6,
+   "stage4Mm": 33.0
+  },
+  {
+   "id": "USC00414182",
+   "name": "HILLSBORO, TX US",
+   "lat": 32.0161,
+   "lon": -97.1094,
+   "gaugeMm": 19.6,
+   "stage4Mm": 23.3
+  },
+  {
+   "id": "USC00414458",
+   "name": "INGRAM 2 NW, TX US",
+   "lat": 30.0933,
+   "lon": -99.2449,
+   "gaugeMm": 19.3,
+   "stage4Mm": 17.0
+  },
+  {
+   "id": "US1TXLL0043",
+   "name": "KINGSLAND 2.0 SW, TX US",
+   "lat": 30.64168,
+   "lon": -98.474064,
+   "gaugeMm": 19.1,
+   "stage4Mm": 22.5
+  },
+  {
+   "id": "USC00412741",
+   "name": "EDEN, TX US",
+   "lat": 31.22102,
+   "lon": -99.85015,
+   "gaugeMm": 19.1,
+   "stage4Mm": 21.9
+  },
+  {
+   "id": "US1TXEL0014",
+   "name": "OAK LEAF 0.8 WSW, TX US",
+   "lat": 32.515474852749,
+   "lon": -96.8618275553862,
+   "gaugeMm": 19.0,
+   "stage4Mm": 23.3
+  },
+  {
+   "id": "US1TXKR0003",
+   "name": "INGRAM 4.4 NW, TX US",
+   "lat": 30.115451,
+   "lon": -99.297679,
+   "gaugeMm": 18.7,
+   "stage4Mm": 15.1
+  },
+  {
+   "id": "US1TXAT0042",
+   "name": "CHARLOTTE 0.6 SW, TX US",
+   "lat": 28.854149,
+   "lon": -98.7072,
+   "gaugeMm": 18.6,
+   "stage4Mm": 28.6
+  },
+  {
+   "id": "USW00003901",
+   "name": "LONGVIEW E TX REGIONAL AIRPORT, TX US",
+   "lat": 32.39094,
+   "lon": -94.71396,
+   "gaugeMm": 18.6,
+   "stage4Mm": 18.6
+  },
+  {
+   "id": "USW00003969",
+   "name": "STEPHENVILLE 9 NNE, TX US",
+   "lat": 32.36074,
+   "lon": -98.12689,
+   "gaugeMm": 18.6,
+   "stage4Mm": 64.0
+  },
+  {
+   "id": "USW00012987",
+   "name": "EDINBURG 17 NNE, TX US",
+   "lat": 26.5258,
+   "lon": -98.0633,
+   "gaugeMm": 18.5,
+   "stage4Mm": 21.2
+  },
+  {
+   "id": "USW00093947",
+   "name": "FREDERICKSBURG GILLESPIE CO AIRPORT, TX US",
+   "lat": 30.24333,
+   "lon": -98.90972,
+   "gaugeMm": 18.5,
+   "stage4Mm": 48.4
+  },
+  {
+   "id": "US1TXDA0080",
+   "name": "DUNCANVILLE 3.2 WNW, TX US",
+   "lat": 32.656483,
+   "lon": -96.966564,
+   "gaugeMm": 18.3,
+   "stage4Mm": 20.3
+  },
+  {
+   "id": "US1TXEL0007",
+   "name": "PECAN HILL 2.7 WSW, TX US",
+   "lat": 32.4778,
+   "lon": -96.8147,
+   "gaugeMm": 18.3,
+   "stage4Mm": 15.7
+  },
+  {
+   "id": "USW00013973",
+   "name": "JUNCTION KIMBLE CO AIRPORT, TX US",
+   "lat": 30.51048,
+   "lon": -99.76649,
+   "gaugeMm": 18.3,
+   "stage4Mm": 23.9
+  },
+  {
+   "id": "US1TXHND005",
+   "name": "ATHENS 10.1 SSW, TX US",
+   "lat": 32.07271111,
+   "lon": -95.93086667,
+   "gaugeMm": 18.0,
+   "stage4Mm": 19.5
+  },
+  {
+   "id": "USC00415701",
+   "name": "MCALLEN, TX US",
+   "lat": 26.19222,
+   "lon": -98.25028,
+   "gaugeMm": 17.8,
+   "stage4Mm": 5.5
+  },
+  {
+   "id": "USC00417994",
+   "name": "SAN SABA 7 NW, TX US",
+   "lat": 31.2841,
+   "lon": -98.7588,
+   "gaugeMm": 17.8,
+   "stage4Mm": 19.0
+  },
+  {
+   "id": "USC00411920",
+   "name": "COMFORT 2, TX US",
+   "lat": 29.9615,
+   "lon": -98.8945,
+   "gaugeMm": 17.6,
+   "stage4Mm": 28.7
+  },
+  {
+   "id": "US1TXRK0010",
+   "name": "ROCKWALL 1.6 NNE, TX US",
+   "lat": 32.942655,
+   "lon": -96.446929,
+   "gaugeMm": 17.3,
+   "stage4Mm": 13.2
+  },
+  {
+   "id": "USC00415243",
+   "name": "LIPAN 4 NW, TX US",
+   "lat": 32.56861,
+   "lon": -98.08258,
+   "gaugeMm": 17.3,
+   "stage4Mm": 32.5
+  },
+  {
+   "id": "US1TXMCL040",
+   "name": "AXTELL 1.9 SW, TX US",
+   "lat": 31.63775,
+   "lon": -96.99203,
+   "gaugeMm": 17.0,
+   "stage4Mm": 31.8
+  },
+  {
+   "id": "USC00415344",
+   "name": "LONGVIEW NUMBER 2, TX US",
+   "lat": 32.5183,
+   "lon": -94.7188,
+   "gaugeMm": 17.0,
+   "stage4Mm": 21.5
+  },
+  {
+   "id": "US1TXJN0019",
+   "name": "CLEBURNE 4.8 NNE, TX US",
+   "lat": 32.412228,
+   "lon": -97.370735,
+   "gaugeMm": 16.8,
+   "stage4Mm": 30.2
+  },
+  {
+   "id": "US1TXLL0046",
+   "name": "BUCHANAN DAM 2.2 SSW, TX US",
+   "lat": 30.7716884613037,
+   "lon": -98.4561309814453,
+   "gaugeMm": 16.5,
+   "stage4Mm": 16.0
+  },
+  {
+   "id": "US1TXSS0001",
+   "name": "SAN SABA 7.3 ENE, TX US",
+   "lat": 31.242511,
+   "lon": -98.614646,
+   "gaugeMm": 16.5,
+   "stage4Mm": 18.2
+  },
+  {
+   "id": "US1TXTN0109",
+   "name": "KENNEDALE 0.6 SE, TX US",
+   "lat": 32.6414337158203,
+   "lon": -97.2107543945313,
+   "gaugeMm": 16.5,
+   "stage4Mm": 16.1
+  },
+  {
+   "id": "USC00168067",
+   "name": "RUSTON LA TECH, LA US",
+   "lat": 32.5099,
+   "lon": -92.6504,
+   "gaugeMm": 16.5,
+   "stage4Mm": 78.2
+  },
+  {
+   "id": "US1TXCMN001",
+   "name": "DE LEON 4.5 W, TX US",
+   "lat": 32.099809,
+   "lon": -98.61301,
+   "gaugeMm": 16.3,
+   "stage4Mm": 25.2
+  },
+  {
+   "id": "US1TXNV0005",
+   "name": "BLOOMING GROVE 2.4 SW, TX US",
+   "lat": 32.067011,
+   "lon": -96.745022,
+   "gaugeMm": 16.3,
+   "stage4Mm": 14.9
+  },
+  {
+   "id": "USW00093985",
+   "name": "MINERAL WELLS AIRPORT, TX US",
+   "lat": 32.78155,
+   "lon": -98.06023,
+   "gaugeMm": 16.3,
+   "stage4Mm": 29.2
+  },
+  {
+   "id": "USC00414577",
+   "name": "JEFFERSON, TX US",
+   "lat": 32.7692,
+   "lon": -94.3591,
+   "gaugeMm": 16.2,
+   "stage4Mm": 15.1
+  },
+  {
+   "id": "USC00415650",
+   "name": "MASON, TX US",
+   "lat": 30.74765,
+   "lon": -99.23067,
+   "gaugeMm": 16.1,
+   "stage4Mm": 26.7
+  },
+  {
+   "id": "US1TXDA0076",
+   "name": "DALLAS 1.0 NNE, TX US",
+   "lat": 32.807458,
+   "lon": -96.759065,
+   "gaugeMm": 16.0,
+   "stage4Mm": 11.6
+  },
+  {
+   "id": "US1TXLL0052",
+   "name": "KINGSLAND 1.2 SW, TX US",
+   "lat": 30.653557,
+   "lon": -98.469864,
+   "gaugeMm": 16.0,
+   "stage4Mm": 22.5
+  },
+  {
+   "id": "USC00414597",
+   "name": "JOE POOL LAKE, TX US",
+   "lat": 32.6405,
+   "lon": -96.9747,
+   "gaugeMm": 16.0,
+   "stage4Mm": 22.8
+  },
+  {
+   "id": "US1TXBXR136",
+   "name": "LACKLAND AFB 7.8 WNW, TX US",
+   "lat": 29.433687,
+   "lon": -98.741747,
+   "gaugeMm": 15.8,
+   "stage4Mm": 22.9
+  },
+  {
+   "id": "US1TXLL0039",
+   "name": "BUCHANAN DAM 3.6 SSW, TX US",
+   "lat": 30.752592,
+   "lon": -98.463931,
+   "gaugeMm": 15.8,
+   "stage4Mm": 16.3
+  },
+  {
+   "id": "US1TXLL0023",
+   "name": "KINGSLAND 0.5 S, TX US",
+   "lat": 30.657238,
+   "lon": -98.452138,
+   "gaugeMm": 15.7,
+   "stage4Mm": 18.7
+  },
+  {
+   "id": "US1TXKR0065",
+   "name": "COMFORT 4.4 W, TX US",
+   "lat": 29.9617691040039,
+   "lon": -98.9755477905273,
+   "gaugeMm": 15.5,
+   "stage4Mm": 20.9
+  },
+  {
+   "id": "USC00412040",
+   "name": "COTTONWOOD 2 NW, TX US",
+   "lat": 30.1805,
+   "lon": -99.1538,
+   "gaugeMm": 15.5,
+   "stage4Mm": 33.5
+  },
+  {
+   "id": "USC00417300",
+   "name": "PROCTOR RESERVOIR, TX US",
+   "lat": 31.9633,
+   "lon": -98.4941,
+   "gaugeMm": 15.4,
+   "stage4Mm": 20.4
+  },
+  {
+   "id": "US1TXBND029",
+   "name": "BANDERA 4.7 NE, TX US",
+   "lat": 29.771426,
+   "lon": -99.016105,
+   "gaugeMm": 15.3,
+   "stage4Mm": 7.7
+  },
+  {
+   "id": "US1TXKR0052",
+   "name": "CENTER POINT 2.2 NNE, TX US",
+   "lat": 29.96454,
+   "lon": -99.02338,
+   "gaugeMm": 15.0,
+   "stage4Mm": 19.0
+  },
+  {
+   "id": "US1TXTY0007",
+   "name": "ABILENE 3.3 SW, TX US",
+   "lat": 32.41801,
+   "lon": -99.775791,
+   "gaugeMm": 15.0,
+   "stage4Mm": 17.9
+  },
+  {
+   "id": "USC00410518",
+   "name": "BARDWELL DAM, TX US",
+   "lat": 32.263,
+   "lon": -96.6369,
+   "gaugeMm": 15.0,
+   "stage4Mm": 40.9
+  },
+  {
+   "id": "US1TXBND050",
+   "name": "BANDERA 5.2 E, TX US",
+   "lat": 29.7166,
+   "lon": -98.988,
+   "gaugeMm": 14.8,
+   "stage4Mm": 8.2
+  },
+  {
+   "id": "US1TXEL0015",
+   "name": "ENNIS 7.0 ENE, TX US",
+   "lat": 32.362018,
+   "lon": -96.512243,
+   "gaugeMm": 14.8,
+   "stage4Mm": 18.2
+  },
+  {
+   "id": "US1TXEL0018",
+   "name": "MIDLOTHIAN 3.5 S, TX US",
+   "lat": 32.44396667,
+   "lon": -97.00333333,
+   "gaugeMm": 14.8,
+   "stage4Mm": 24.4
+  },
+  {
+   "id": "US1TXEL0037",
+   "name": "MIDLOTHIAN 6.2 S, TX US",
+   "lat": 32.404621,
+   "lon": -97.012957,
+   "gaugeMm": 14.7,
+   "stage4Mm": 9.6
+  },
+  {
+   "id": "US1TXLL0030",
+   "name": "KINGSLAND 1.9 WSW, TX US",
+   "lat": 30.659221,
+   "lon": -98.485022,
+   "gaugeMm": 14.7,
+   "stage4Mm": 22.5
+  },
+  {
+   "id": "USW00053972",
+   "name": "HILLSBORO MUNICIPAL AIRPORT, TX US",
+   "lat": 32.08361,
+   "lon": -97.09722,
+   "gaugeMm": 14.5,
+   "stage4Mm": 14.3
+  },
+  {
+   "id": "US1TXDA0065",
+   "name": "GARLAND 3.6 NNW, TX US",
+   "lat": 32.955,
+   "lon": -96.6622,
+   "gaugeMm": 14.2,
+   "stage4Mm": 15.3
+  },
+  {
+   "id": "US1TXEL0025",
+   "name": "MIDLOTHIAN 5.2 SSW, TX US",
+   "lat": 32.422096,
+   "lon": -97.022944,
+   "gaugeMm": 14.2,
+   "stage4Mm": 14.5
+  },
+  {
+   "id": "US1TXCMN003",
+   "name": "COMANCHE 12.2 NW, TX US",
+   "lat": 32.017262,
+   "lon": -98.759265,
+   "gaugeMm": 14.0,
+   "stage4Mm": 27.4
+  },
+  {
+   "id": "US1TXBND048",
+   "name": "PIPE CREEK 2.7 S, TX US",
+   "lat": 29.684101,
+   "lon": -98.926803,
+   "gaugeMm": 13.8,
+   "stage4Mm": 16.4
+  },
+  {
+   "id": "US1TXKF0010",
+   "name": "TERRELL 8.2 SSW, TX US",
+   "lat": 32.627806,
+   "lon": -96.35887,
+   "gaugeMm": 13.2,
+   "stage4Mm": 15.8
+  },
+  {
+   "id": "US1TXKR0050",
+   "name": "INGRAM 3.1 NW, TX US",
+   "lat": 30.10365,
+   "lon": -99.27918333,
+   "gaugeMm": 13.2,
+   "stage4Mm": 5.7
+  },
+  {
+   "id": "USW00013959",
+   "name": "WACO REGIONAL AIRPORT, TX US",
+   "lat": 31.61796,
+   "lon": -97.2283,
+   "gaugeMm": 12.9,
+   "stage4Mm": 22.5
+  },
+  {
+   "id": "US1TXCMR001",
+   "name": "RANCHO VIEJO 0.7 E, TX US",
+   "lat": 26.0344,
+   "lon": -97.5465,
+   "gaugeMm": 12.7,
+   "stage4Mm": 24.7
+  },
+  {
+   "id": "US1TXDA0035",
+   "name": "RICHARDSON 2.4 WSW, TX US",
+   "lat": 32.957486,
+   "lon": -96.747908,
+   "gaugeMm": 12.7,
+   "stage4Mm": 17.4
+  },
+  {
+   "id": "US1TXMCM005",
+   "name": "CROSS 1.7 NNW, TX US",
+   "lat": 28.628463,
+   "lon": -98.552108,
+   "gaugeMm": 12.4,
+   "stage4Mm": 31.2
+  },
+  {
+   "id": "US1TXRK0011",
+   "name": "ROCKWALL 2.0 NW, TX US",
+   "lat": 32.94484,
+   "lon": -96.479505,
+   "gaugeMm": 12.3,
+   "stage4Mm": 13.2
+  },
+  {
+   "id": "US1TXNV0003",
+   "name": "KERENS 3.4 NW, TX US",
+   "lat": 32.16288,
+   "lon": -96.26843,
+   "gaugeMm": 12.2,
+   "stage4Mm": 13.6
+  },
+  {
+   "id": "US1TXBND041",
+   "name": "BANDERA 4.0 NNW, TX US",
+   "lat": 29.7759037017822,
+   "lon": -99.1063385009766,
+   "gaugeMm": 12.0,
+   "stage4Mm": 9.9
+  },
+  {
+   "id": "US1TXBND055",
+   "name": "MEDINA 1.1 S, TX US",
+   "lat": 29.7811,
+   "lon": -99.2453,
+   "gaugeMm": 12.0,
+   "stage4Mm": 10.8
+  },
+  {
+   "id": "US1TXCMR097",
+   "name": "RIO HONDO 7.9 E, TX US",
+   "lat": 26.214389,
+   "lon": -97.457626,
+   "gaugeMm": 12.0,
+   "stage4Mm": 16.8
+  },
+  {
+   "id": "USC00412019",
+   "name": "CORSICANA, TX US",
+   "lat": 32.12258,
+   "lon": -96.48663,
+   "gaugeMm": 11.7,
+   "stage4Mm": 14.5
+  },
+  {
+   "id": "USC00415369",
+   "name": "LOS ANGELES 4 WSW, TX US",
+   "lat": 28.44879,
+   "lon": -99.066,
+   "gaugeMm": 11.7,
+   "stage4Mm": 9.6
+  },
+  {
+   "id": "US1TXUV0019",
+   "name": "CAMP WOOD 5.02 SSE, TX US",
+   "lat": 29.597551,
+   "lon": -99.998945,
+   "gaugeMm": 11.5,
+   "stage4Mm": 25.7
+  },
+  {
+   "id": "US1TXCMR085",
+   "name": "HARLINGEN 0.4 N, TX US",
+   "lat": 26.2010173797607,
+   "lon": -97.6856231689453,
+   "gaugeMm": 11.4,
+   "stage4Mm": 11.6
+  },
+  {
+   "id": "US1TXCMR101",
+   "name": "SAN BENITO 0.9 SSE, TX US",
+   "lat": 26.1243521,
+   "lon": -97.63061,
+   "gaugeMm": 11.4,
+   "stage4Mm": 13.6
+  },
+  {
+   "id": "US1TXDA0069",
+   "name": "MESQUITE 3.7 N, TX US",
+   "lat": 32.822,
+   "lon": -96.5999,
+   "gaugeMm": 11.2,
+   "stage4Mm": 6.7
+  },
+  {
+   "id": "USW00012961",
+   "name": "KERRVILLE MUNICIPAL AIRPORT, TX US",
+   "lat": 29.98333,
+   "lon": -99.08333,
+   "gaugeMm": 11.2,
+   "stage4Mm": 19.7
+  },
+  {
+   "id": "US1TXEL0041",
+   "name": "WAXAHACHIE 1.7 ENE, TX US",
+   "lat": 32.41993,
+   "lon": -96.82787,
+   "gaugeMm": 10.8,
+   "stage4Mm": 15.0
+  },
+  {
+   "id": "US1TXTY0024",
+   "name": "ABILENE 4.7 SE, TX US",
+   "lat": 32.407663,
+   "lon": -99.680523,
+   "gaugeMm": 10.7,
+   "stage4Mm": 20.6
+  },
+  {
+   "id": "USC00411395",
+   "name": "CAMP VERDE, TX US",
+   "lat": 29.8948,
+   "lon": -99.1045,
+   "gaugeMm": 10.6,
+   "stage4Mm": 21.0
+  },
+  {
+   "id": "US1TXEL0045",
+   "name": "WAXAHACHIE 2.6 ENE, TX US",
+   "lat": 32.41475,
+   "lon": -96.807754,
+   "gaugeMm": 10.4,
+   "stage4Mm": 27.6
+  },
+  {
+   "id": "US1TXFR0012",
+   "name": "DILLEY 0.4 SSW, TX US",
+   "lat": 28.663225,
+   "lon": -99.172441,
+   "gaugeMm": 10.4,
+   "stage4Mm": 11.4
+  },
+  {
+   "id": "US1TXBND023",
+   "name": "BANDERA 3.2 W, TX US",
+   "lat": 29.720246,
+   "lon": -99.126232,
+   "gaugeMm": 10.2,
+   "stage4Mm": 12.4
+  },
+  {
+   "id": "US1TXKR0015",
+   "name": "INGRAM 8.6 WSW, TX US",
+   "lat": 30.021879,
+   "lon": -99.364192,
+   "gaugeMm": 10.2,
+   "stage4Mm": 10.0
+  },
+  {
+   "id": "USC00418583",
+   "name": "STAMFORD 1, TX US",
+   "lat": 32.94035,
+   "lon": -99.80357,
+   "gaugeMm": 10.2,
+   "stage4Mm": 39.8
+  },
+  {
+   "id": "US1TXDA0016",
+   "name": "DUNCANVILLE 1.7 NNW, TX US",
+   "lat": 32.669782,
+   "lon": -96.921618,
+   "gaugeMm": 10.1,
+   "stage4Mm": 13.9
+  },
+  {
+   "id": "USW00053997",
+   "name": "COMANCHE CO CITY AIRPORT, TX US",
+   "lat": 31.91667,
+   "lon": -98.60028,
+   "gaugeMm": 10.1,
+   "stage4Mm": 21.9
+  },
+  {
+   "id": "US1TXDA0058",
+   "name": "GARLAND 2.6 S, TX US",
+   "lat": 32.873088,
+   "lon": -96.623847,
+   "gaugeMm": 9.9,
+   "stage4Mm": 6.3
+  },
+  {
+   "id": "US1TXEL0017",
+   "name": "MIDLOTHIAN 5.2 SE, TX US",
+   "lat": 32.440833,
+   "lon": -96.934833,
+   "gaugeMm": 9.8,
+   "stage4Mm": 13.8
+  },
+  {
+   "id": "US1TXNV0006",
+   "name": "CORSICANA 4.3 WSW, TX US",
+   "lat": 32.059224,
+   "lon": -96.532937,
+   "gaugeMm": 9.7,
+   "stage4Mm": 12.1
+  },
+  {
+   "id": "USC00415221",
+   "name": "LINDALE 3 NE, TX US",
+   "lat": 32.5401,
+   "lon": -95.3761,
+   "gaugeMm": 9.6,
+   "stage4Mm": 19.2
+  },
+  {
+   "id": "US1TXSM0004",
+   "name": "TYLER 4.1 SSW, TX US",
+   "lat": 32.272033,
+   "lon": -95.323222,
+   "gaugeMm": 9.5,
+   "stage4Mm": 17.9
+  },
+  {
+   "id": "USW00013962",
+   "name": "ABILENE REGIONAL AIRPORT, TX US",
+   "lat": 32.41063,
+   "lon": -99.68208,
+   "gaugeMm": 9.5,
+   "stage4Mm": 20.6
+  },
+  {
+   "id": "US1TXDA0052",
+   "name": "MESQUITE 2.4 W, TX US",
+   "lat": 32.77092,
+   "lon": -96.640881,
+   "gaugeMm": 9.4,
+   "stage4Mm": 6.0
+  },
+  {
+   "id": "US1TXMDN023",
+   "name": "DEVINE 0.4 S, TX US",
+   "lat": 29.1399633,
+   "lon": -98.905306,
+   "gaugeMm": 9.4,
+   "stage4Mm": 20.7
+  },
+  {
+   "id": "USC00413614",
+   "name": "GOLDTHWAITE 1 WSW, TX US",
+   "lat": 31.4405,
+   "lon": -98.5902,
+   "gaugeMm": 9.4,
+   "stage4Mm": 13.0
+  },
+  {
+   "id": "USC00413943",
+   "name": "HARLINGEN, TX US",
+   "lat": 26.2027,
+   "lon": -97.6727,
+   "gaugeMm": 9.4,
+   "stage4Mm": 12.4
+  },
+  {
+   "id": "US1TXBXR298",
+   "name": "CASTROVILLE 7.0 NE, TX US",
+   "lat": 29.430345,
+   "lon": -98.804456,
+   "gaugeMm": 9.2,
+   "stage4Mm": 16.5
+  },
+  {
+   "id": "US1TXDA0004",
+   "name": "ROWLETT 2.3 NW, TX US",
+   "lat": 32.932145,
+   "lon": -96.57692,
+   "gaugeMm": 9.2,
+   "stage4Mm": 13.4
+  },
+  {
+   "id": "USW00012904",
+   "name": "HARLINGEN RIO GRANDE VALLEY INTERNATIONAL AIRPORT, TX US",
+   "lat": 26.2303,
+   "lon": -97.65565,
+   "gaugeMm": 9.2,
+   "stage4Mm": 11.1
+  },
+  {
+   "id": "US1TXMDN031",
+   "name": "DEVINE 6.7 NNE, TX US",
+   "lat": 29.23756980896,
+   "lon": -98.8686218261719,
+   "gaugeMm": 9.1,
+   "stage4Mm": 30.4
+  },
+  {
+   "id": "US1TXBRK006",
+   "name": "FALFURRIAS 0.8 SSW, TX US",
+   "lat": 27.21278,
+   "lon": -98.150455,
+   "gaugeMm": 9.0,
+   "stage4Mm": 15.7
+  },
+  {
+   "id": "US1TXCMR096",
+   "name": "SAN BENITO 6.3 ENE, TX US",
+   "lat": 26.1715773493052,
+   "lon": -97.540669888258,
+   "gaugeMm": 9.0,
+   "stage4Mm": 14.1
+  },
+  {
+   "id": "US1TXCSS006",
+   "name": "JEFFERSON 9.1 N, TX US",
+   "lat": 32.8917,
+   "lon": -94.3294,
+   "gaugeMm": 8.9,
+   "stage4Mm": 10.5
+  },
+  {
+   "id": "US1TXLL0049",
+   "name": "LLANO 0.4 ESE, TX US",
+   "lat": 30.74771,
+   "lon": -98.667093,
+   "gaugeMm": 8.6,
+   "stage4Mm": 10.7
+  },
+  {
+   "id": "US1TXNV0004",
+   "name": "POWELL 1.0 SW, TX US",
+   "lat": 32.1059519894017,
+   "lon": -96.3404738903046,
+   "gaugeMm": 8.5,
+   "stage4Mm": 14.3
+  },
+  {
+   "id": "USC00417480",
+   "name": "RED BLUFF CROSSING, TX US",
+   "lat": 31.21767,
+   "lon": -98.58338,
+   "gaugeMm": 8.4,
+   "stage4Mm": 7.1
+  },
+  {
+   "id": "US1TXCMR093",
+   "name": "HARLINGEN 4.4 W, TX US",
+   "lat": 26.201033,
+   "lon": -97.756545,
+   "gaugeMm": 8.2,
+   "stage4Mm": 8.2
+  },
+  {
+   "id": "US1TXSM0016",
+   "name": "WHITEHOUSE 1.2 SW, TX US",
+   "lat": 32.2143020629883,
+   "lon": -95.2339935302734,
+   "gaugeMm": 8.2,
+   "stage4Mm": 14.8
+  },
+  {
+   "id": "US1TXRN0002",
+   "name": "POINT 3.7 ESE, TX US",
+   "lat": 32.913333,
+   "lon": -95.810028,
+   "gaugeMm": 8.1,
+   "stage4Mm": 7.4
+  },
+  {
+   "id": "USC00414920",
+   "name": "LA PRYOR, TX US",
+   "lat": 28.9838,
+   "lon": -99.8684,
+   "gaugeMm": 8.1,
+   "stage4Mm": 6.1
+  },
+  {
+   "id": "USW00053912",
+   "name": "CORSICANA CAMPBELL FIELD, TX US",
+   "lat": 32.03155,
+   "lon": -96.39936,
+   "gaugeMm": 8.1,
+   "stage4Mm": 11.5
+  },
+  {
+   "id": "US1TXBXR310",
+   "name": "SAN ANTONIO 13.0 W, TX US",
+   "lat": 29.4925168901682,
+   "lon": -98.7180536985397,
+   "gaugeMm": 7.9,
+   "stage4Mm": 30.7
+  },
+  {
+   "id": "US1TXDA0070",
+   "name": "MESQUITE 2.3 N, TX US",
+   "lat": 32.8025,
+   "lon": -96.6065,
+   "gaugeMm": 7.9,
+   "stage4Mm": 8.5
+  },
+  {
+   "id": "US1TXMDN002",
+   "name": "CASTROVILLE 7.0 NNE, TX US",
+   "lat": 29.434984,
+   "lon": -98.814658,
+   "gaugeMm": 7.9,
+   "stage4Mm": 16.5
+  },
+  {
+   "id": "USW00053966",
+   "name": "MID WAY REGIONAL AIRPORT MIDLOTHIAN WAXAHACHIE, TX US",
+   "lat": 32.45611,
+   "lon": -96.9125,
+   "gaugeMm": 7.9,
+   "stage4Mm": 13.8
+  },
+  {
+   "id": "US1TXVZ0002",
+   "name": "CANTON 4.6 SSW, TX US",
+   "lat": 32.48625,
+   "lon": -95.89277,
+   "gaugeMm": 7.8,
+   "stage4Mm": 9.5
+  },
+  {
+   "id": "USW00012985",
+   "name": "GARNER FIELD AIRPORT, TX US",
+   "lat": 29.21139,
+   "lon": -99.74361,
+   "gaugeMm": 7.6,
+   "stage4Mm": 6.7
+  },
+  {
+   "id": "US1TXLS0009",
+   "name": "COTULLA 9.7 NNE, TX US",
+   "lat": 28.5521,
+   "lon": -99.1535,
+   "gaugeMm": 7.1,
+   "stage4Mm": 7.9
+  },
+  {
+   "id": "US1TXBND018",
+   "name": "LAKEHILLS 1.1 SE, TX US",
+   "lat": 29.593817,
+   "lon": -98.930153,
+   "gaugeMm": 6.9,
+   "stage4Mm": 6.8
+  },
+  {
+   "id": "US1TXKF0012",
+   "name": "TERRELL 1.8 NW, TX US",
+   "lat": 32.75238,
+   "lon": -96.334804,
+   "gaugeMm": 6.9,
+   "stage4Mm": 7.6
+  },
+  {
+   "id": "USC00410404",
+   "name": "ATHENS, TX US",
+   "lat": 32.1633,
+   "lon": -95.83,
+   "gaugeMm": 6.9,
+   "stage4Mm": 13.6
+  },
+  {
+   "id": "USC00418059",
+   "name": "SANTA ROSA 3 WNW, TX US",
+   "lat": 26.2655,
+   "lon": -97.8713,
+   "gaugeMm": 6.9,
+   "stage4Mm": 7.1
+  },
+  {
+   "id": "USW00053911",
+   "name": "TERRELL MUNICIPAL AIRPORT, TX US",
+   "lat": 32.71311,
+   "lon": -96.26878,
+   "gaugeMm": 6.9,
+   "stage4Mm": 11.6
+  },
+  {
+   "id": "US1TXRL0016",
+   "name": "LEAKEY 14.0 NW, TX US",
+   "lat": 29.88211667,
+   "lon": -99.90806667,
+   "gaugeMm": 6.7,
+   "stage4Mm": 28.3
+  },
+  {
+   "id": "US1TXDA0075",
+   "name": "CARROLLTON 2.8 SSE, TX US",
+   "lat": 32.952006,
+   "lon": -96.876272,
+   "gaugeMm": 6.4,
+   "stage4Mm": 20.3
+  },
+  {
+   "id": "US1TXBND039",
+   "name": "BANDERA 0.2 N, TX US",
+   "lat": 29.728373,
+   "lon": -99.073475,
+   "gaugeMm": 6.1,
+   "stage4Mm": 5.3
+  },
+  {
+   "id": "US1TXDA0053",
+   "name": "DALLAS 2.7 WNW, TX US",
+   "lat": 32.815197,
+   "lon": -96.803515,
+   "gaugeMm": 6.1,
+   "stage4Mm": 22.2
+  },
+  {
+   "id": "USC00411042",
+   "name": "BRECKENRIDGE, TX US",
+   "lat": 32.75,
+   "lon": -98.9016,
+   "gaugeMm": 5.6,
+   "stage4Mm": 11.4
+  },
+  {
+   "id": "USC00416879",
+   "name": "PEARSALL, TX US",
+   "lat": 28.8888,
+   "lon": -99.0897,
+   "gaugeMm": 5.6,
+   "stage4Mm": 10.2
+  },
+  {
+   "id": "US1TXKF0011",
+   "name": "KAUFMAN 2.9 S, TX US",
+   "lat": 32.540745,
+   "lon": -96.315971,
+   "gaugeMm": 5.4,
+   "stage4Mm": 11.2
+  },
+  {
+   "id": "USW00003971",
+   "name": "DALLAS REDBIRD AIRPORT, TX US",
+   "lat": 32.67816,
+   "lon": -96.86771,
+   "gaugeMm": 5.4,
+   "stage4Mm": 6.7
+  },
+  {
+   "id": "USC00414911",
+   "name": "LA JOYA, TX US",
+   "lat": 26.3233,
+   "lon": -98.3233,
+   "gaugeMm": 5.1,
+   "stage4Mm": 4.8
+  },
+  {
+   "id": "US1TXVZ0030",
+   "name": "MURCHISON 7.7 NNE, TX US",
+   "lat": 32.367602,
+   "lon": -95.686202,
+   "gaugeMm": 4.9,
+   "stage4Mm": 6.4
+  },
+  {
+   "id": "USC00414976",
+   "name": "LAKE FORK RESERVOIR, TX US",
+   "lat": 32.8228,
+   "lon": -95.5278,
+   "gaugeMm": 4.9,
+   "stage4Mm": 6.8
+  },
+  {
+   "id": "US1TXEL0029",
+   "name": "ENNIS 10.0 NNE, TX US",
+   "lat": 32.471294,
+   "lon": -96.562189,
+   "gaugeMm": 4.8,
+   "stage4Mm": 7.0
+  },
+  {
+   "id": "US1TXMDN041",
+   "name": "D HANIS 2.4 NNE, TX US",
+   "lat": 29.3601,
+   "lon": -99.2611,
+   "gaugeMm": 4.8,
+   "stage4Mm": 2.1
+  },
+  {
+   "id": "USW00000362",
+   "name": "GATESVILLE MUNICIPAL AIRPORT, TX US",
+   "lat": 31.417,
+   "lon": -97.8,
+   "gaugeMm": 4.8,
+   "stage4Mm": 14.5
+  },
+  {
+   "id": "US1TXDA0013",
+   "name": "DALLAS 7.2 SW, TX US",
+   "lat": 32.709079,
+   "lon": -96.83827,
+   "gaugeMm": 4.6,
+   "stage4Mm": 7.6
+  },
+  {
+   "id": "US1TXRK0006",
+   "name": "ROCKWALL 3.1 SSW, TX US",
+   "lat": 32.8831558227539,
+   "lon": -96.484260559082,
+   "gaugeMm": 4.6,
+   "stage4Mm": 9.8
+  },
+  {
+   "id": "USC00419207",
+   "name": "TYLER, TX US",
+   "lat": 32.3007,
+   "lon": -95.3102,
+   "gaugeMm": 4.4,
+   "stage4Mm": 19.9
+  },
+  {
+   "id": "US1TXWD0005",
+   "name": "MINEOLA 1.6 E, TX US",
+   "lat": 32.662885,
+   "lon": -95.46191667,
+   "gaugeMm": 4.3,
+   "stage4Mm": 40.7
+  },
+  {
+   "id": "US1TXFR0010",
+   "name": "PEARSALL 21.1 WNW, TX US",
+   "lat": 29.05,
+   "lon": -99.389,
+   "gaugeMm": 3.8,
+   "stage4Mm": 8.8
+  },
+  {
+   "id": "US1TXMDN033",
+   "name": "HONDO 3.4 S, TX US",
+   "lat": 29.307901,
+   "lon": -99.162915,
+   "gaugeMm": 3.8,
+   "stage4Mm": 7.6
+  },
+  {
+   "id": "US1TXZP0002",
+   "name": "SAN YGNACIO 2.3 SE, TX US",
+   "lat": 27.0188,
+   "lon": -99.4136,
+   "gaugeMm": 3.8,
+   "stage4Mm": 5.1
+  },
+  {
+   "id": "US1TXVZ0034",
+   "name": "BEN WHEELER 2.4 N, TX US",
+   "lat": 32.480195,
+   "lon": -95.702584,
+   "gaugeMm": 3.6,
+   "stage4Mm": 8.2
+  },
+  {
+   "id": "USC00417873",
+   "name": "SABINAL, TX US",
+   "lat": 29.32787,
+   "lon": -99.46537,
+   "gaugeMm": 3.6,
+   "stage4Mm": 3.9
+  },
+  {
+   "id": "US1TXVZ0028",
+   "name": "WILLS POINT 4.4 NNW, TX US",
+   "lat": 32.765396,
+   "lon": -96.04304,
+   "gaugeMm": 3.5,
+   "stage4Mm": 9.6
+  },
+  {
+   "id": "US1TXMDN045",
+   "name": "HONDO 14.1 ENE, TX US",
+   "lat": 29.4327,
+   "lon": -98.9413,
+   "gaugeMm": 3.3,
+   "stage4Mm": 7.6
+  },
+  {
+   "id": "US1TXMDN054",
+   "name": "D HANIS 0.4 NNE, TX US",
+   "lat": 29.335667,
+   "lon": -99.280449,
+   "gaugeMm": 3.1,
+   "stage4Mm": 5.0
+  },
+  {
+   "id": "USW00053983",
+   "name": "LLANO MUNICIPAL AIRPORT, TX US",
+   "lat": 30.78361,
+   "lon": -98.66194,
+   "gaugeMm": 3.1,
+   "stage4Mm": 5.8
+  },
+  {
+   "id": "USC00411148",
+   "name": "BRUNI, TX US",
+   "lat": 27.4392,
+   "lon": -98.8358,
+   "gaugeMm": 3.0,
+   "stage4Mm": 5.8
+  },
+  {
+   "id": "US1TXKF0020",
+   "name": "COTTONWOOD 1.3 NE, TX US",
+   "lat": 32.471614,
+   "lon": -96.379008,
+   "gaugeMm": 2.9,
+   "stage4Mm": 6.9
+  },
+  {
+   "id": "US1TXLS0005",
+   "name": "COTULLA 1.6 NE, TX US",
+   "lat": 28.45341,
+   "lon": -99.218382,
+   "gaugeMm": 2.8,
+   "stage4Mm": 1.8
+  },
+  {
+   "id": "US1TXMDN022",
+   "name": "HONDO 6.9 SSE, TX US",
+   "lat": 29.26,
+   "lon": -99.13,
+   "gaugeMm": 2.8,
+   "stage4Mm": 8.0
+  },
+  {
+   "id": "US1TXVZ0021",
+   "name": "CANTON 6.1 W, TX US",
+   "lat": 32.548405,
+   "lon": -95.968627,
+   "gaugeMm": 2.8,
+   "stage4Mm": 10.8
+  },
+  {
+   "id": "US1TXVZ0033",
+   "name": "EUSTACE 7.3 NE, TX US",
+   "lat": 32.374877,
+   "lon": -95.916771,
+   "gaugeMm": 2.8,
+   "stage4Mm": 4.3
+  },
+  {
+   "id": "US1TXMDN021",
+   "name": "D HANIS 3.5 WSW, TX US",
+   "lat": 29.326117,
+   "lon": -99.337833,
+   "gaugeMm": 2.6,
+   "stage4Mm": 3.6
+  },
+  {
+   "id": "US1TXHND008",
+   "name": "GUN BARREL CITY 1.9 NW, TX US",
+   "lat": 32.347965,
+   "lon": -96.159103,
+   "gaugeMm": 2.3,
+   "stage4Mm": 6.9
+  },
+  {
+   "id": "US1TXMDN003",
+   "name": "HONDO 8.7 E, TX US",
+   "lat": 29.356372,
+   "lon": -99.0171451,
+   "gaugeMm": 2.3,
+   "stage4Mm": 9.5
+  },
+  {
+   "id": "USC00415060",
+   "name": "LAREDO 2, TX US",
+   "lat": 27.56838,
+   "lon": -99.43295,
+   "gaugeMm": 2.3,
+   "stage4Mm": 2.5
+  },
+  {
+   "id": "USW00012947",
+   "name": "COTULLA LA SALLE CO AIRPORT, TX US",
+   "lat": 28.45854,
+   "lon": -99.22275,
+   "gaugeMm": 2.3,
+   "stage4Mm": 3.1
+  },
+  {
+   "id": "US1TXMDN018",
+   "name": "HONDO 8.8 E, TX US",
+   "lat": 29.353033,
+   "lon": -99.011713,
+   "gaugeMm": 2.1,
+   "stage4Mm": 9.5
+  },
+  {
+   "id": "USC00414254",
+   "name": "HONDO, TX US",
+   "lat": 29.3365,
+   "lon": -99.1386,
+   "gaugeMm": 2.1,
+   "stage4Mm": 7.8
+  },
+  {
+   "id": "USW00012907",
+   "name": "LAREDO INTERNATIONAL AIRPORT, TX US",
+   "lat": 27.53333,
+   "lon": -99.46667,
+   "gaugeMm": 2.1,
+   "stage4Mm": 4.9
+  },
+  {
+   "id": "US1TXCMR100",
+   "name": "HARLINGEN 6.2 WSW, TX US",
+   "lat": 26.163527,
+   "lon": -97.780598,
+   "gaugeMm": 2.0,
+   "stage4Mm": 5.9
+  },
+  {
+   "id": "USC00417628",
+   "name": "RIOMEDINA, TX US",
+   "lat": 29.4416,
+   "lon": -98.8801,
+   "gaugeMm": 2.0,
+   "stage4Mm": 8.1
+  },
+  {
+   "id": "USW00013972",
+   "name": "TYLER POUNDS FIELD, TX US",
+   "lat": 32.3587,
+   "lon": -95.404,
+   "gaugeMm": 2.0,
+   "stage4Mm": 17.6
+  },
+  {
+   "id": "US1TXMDN026",
+   "name": "HONDO 2.0 SE, TX US",
+   "lat": 29.3337122,
+   "lon": -99.1386528,
+   "gaugeMm": 1.8,
+   "stage4Mm": 7.8
+  },
+  {
+   "id": "US1TXVZ0019",
+   "name": "VAN 1.3 W, TX US",
+   "lat": 32.52082,
+   "lon": -95.65964,
+   "gaugeMm": 1.8,
+   "stage4Mm": 8.5
+  },
+  {
+   "id": "USC00415954",
+   "name": "MINEOLA, TX US",
+   "lat": 32.635,
+   "lon": -95.4822,
+   "gaugeMm": 1.8,
+   "stage4Mm": 20.6
+  },
+  {
+   "id": "USC00419800",
+   "name": "WILLS POINT, TX US",
+   "lat": 32.7019,
+   "lon": -96.015,
+   "gaugeMm": 1.6,
+   "stage4Mm": 8.0
+  },
+  {
+   "id": "USW00012962",
+   "name": "HONDO MUNICIPAL AIRPORT, TX US",
+   "lat": 29.36013,
+   "lon": -99.17423,
+   "gaugeMm": 1.6,
+   "stage4Mm": 3.5
+  },
+  {
+   "id": "US1TXMDN024",
+   "name": "HONDO 8.7 ENE, TX US",
+   "lat": 29.40432,
+   "lon": -99.02463,
+   "gaugeMm": 1.5,
+   "stage4Mm": 9.0
+  },
+  {
+   "id": "USC00412225",
+   "name": "DAINGERFIELD 9 S, TX US",
+   "lat": 32.9202,
+   "lon": -94.7225,
+   "gaugeMm": 1.4,
+   "stage4Mm": 4.4
+  },
+  {
+   "id": "US1TXGG0005",
+   "name": "LONGVIEW 3.4 NE, TX US",
+   "lat": 32.557766,
+   "lon": -94.727399,
+   "gaugeMm": 0.8,
+   "stage4Mm": 14.7
+  },
+  {
+   "id": "US1TXJO0004",
+   "name": "STAMFORD 2.4 E, TX US",
+   "lat": 32.9373845458031,
+   "lon": -99.7707965970039,
+   "gaugeMm": 0.8,
+   "stage4Mm": 10.3
+  },
+  {
+   "id": "US1TXKF0016",
+   "name": "GRAYS PRAIRIE 4.6 S, TX US",
+   "lat": 32.406552,
+   "lon": -96.33468,
+   "gaugeMm": 0.8,
+   "stage4Mm": 5.2
+  },
+  {
+   "id": "US1TXMRR004",
+   "name": "LONE STAR 1.4 N, TX US",
+   "lat": 32.9577,
+   "lon": -94.71217,
+   "gaugeMm": 0.8,
+   "stage4Mm": 4.1
+  },
+  {
+   "id": "US1TXHDL041",
+   "name": "EDINBURG 2.4 N, TX US",
+   "lat": 26.33077,
+   "lon": -98.17097,
+   "gaugeMm": 0.3,
+   "stage4Mm": 3.3
+  },
+  {
+   "id": "USW00012959",
+   "name": "MCALLEN MILLER INTERNATIONAL AIRPORT, TX US",
+   "lat": 26.17912,
+   "lon": -98.2445,
+   "gaugeMm": 0.3,
+   "stage4Mm": 5.5
+  },
+  {
+   "id": "US1TXDV0001",
+   "name": "HEBBRONVILLE 13.6 E, TX US",
+   "lat": 27.340319,
+   "lon": -98.464982,
+   "gaugeMm": 0.0,
+   "stage4Mm": 7.9
+  },
+  {
+   "id": "US1TXHDL032",
+   "name": "LINN 8.4 WNW, TX US",
+   "lat": 26.6063701361418,
+   "lon": -98.2488106191158,
+   "gaugeMm": 0.0,
+   "stage4Mm": 1.1
+  },
+  {
+   "id": "US1TXST0002",
+   "name": "RIO GRANDE CITY 17.7 NE, TX US",
+   "lat": 26.5386,
+   "lon": -98.603,
+   "gaugeMm": 0.0,
+   "stage4Mm": 3.8
+  },
+  {
+   "id": "US1TXWB0009",
+   "name": "EL CENIZO 8.8 E, TX US",
+   "lat": 27.3159,
+   "lon": -99.361,
+   "gaugeMm": 0.0,
+   "stage4Mm": 1.4
+  },
+  {
+   "id": "US1TXWB0023",
+   "name": "FREER 29.5 WSW, TX US",
+   "lat": 27.6765,
+   "lon": -99.0423,
+   "gaugeMm": 0.0,
+   "stage4Mm": 3.1
+  },
+  {
+   "id": "US1TXWD0002",
+   "name": "WINNSBORO 0.7 SSW, TX US",
+   "lat": 32.947033,
+   "lon": -95.296006,
+   "gaugeMm": 0.0,
+   "stage4Mm": 5.1
+  },
+  {
+   "id": "US1TXWD0004",
+   "name": "QUITMAN 6.9 N, TX US",
+   "lat": 32.894885,
+   "lon": -95.435434,
+   "gaugeMm": 0.0,
+   "stage4Mm": 5.4
+  },
+  {
+   "id": "USC00411486",
+   "name": "CARRIZO SPRINGS 3 S, TX US",
+   "lat": 28.4895,
+   "lon": -99.8734,
+   "gaugeMm": 0.0,
+   "stage4Mm": 2.9
+  },
+  {
+   "id": "USC00412906",
+   "name": "ENCINAL, TX US",
+   "lat": 27.9774,
+   "lon": -99.3847,
+   "gaugeMm": 0.0,
+   "stage4Mm": 0.0
+  },
+  {
+   "id": "USC00412950",
+   "name": "ESCOBAS, TX US",
+   "lat": 27.0267,
+   "lon": -98.9808,
+   "gaugeMm": 0.0,
+   "stage4Mm": 0.8
+  },
+  {
+   "id": "USC00413060",
+   "name": "FALCON DAM, TX US",
+   "lat": 26.558,
+   "lon": -99.1372,
+   "gaugeMm": 0.0,
+   "stage4Mm": 8.4
+  },
+  {
+   "id": "USC00414020",
+   "name": "HAWKINS, TX US",
+   "lat": 32.5781,
+   "lon": -95.2034,
+   "gaugeMm": 0.0,
+   "stage4Mm": 14.2
+  },
+  {
+   "id": "USC00414375",
+   "name": "HUNT 10 W, TX US",
+   "lat": 30.06297,
+   "lon": -99.50487,
+   "gaugeMm": 0.0,
+   "stage4Mm": 16.8
+  },
+  {
+   "id": "USC00414670",
+   "name": "JUNCTION 4 SSW, TX US",
+   "lat": 30.4452,
+   "lon": -99.8044,
+   "gaugeMm": 0.0,
+   "stage4Mm": 14.2
+  },
+  {
+   "id": "USC00415721",
+   "name": "MCCOOK, TX US",
+   "lat": 26.565,
+   "lon": -98.1236,
+   "gaugeMm": 0.0,
+   "stage4Mm": 9.0
+  },
+  {
+   "id": "USC00417622",
+   "name": "RIO GRANDE CITY, TX US",
+   "lat": 26.3769,
+   "lon": -98.8116,
+   "gaugeMm": 0.0,
+   "stage4Mm": 3.3
+  },
+  {
+   "id": "USC00419715",
+   "name": "WHITNEY DAM, TX US",
+   "lat": 31.8611,
+   "lon": -97.375,
+   "gaugeMm": 0.0,
+   "stage4Mm": 44.5
+  }
+ ]
+}

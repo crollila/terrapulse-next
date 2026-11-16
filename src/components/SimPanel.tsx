@@ -7,6 +7,7 @@ import { fmtBpd } from "../sim/graph";
 import { buildScenarioReport } from "../sim/report";
 import { niceName } from "../data/companies";
 import { Badge, Icon, Slider } from "./ui";
+import { HazardSelect } from "./HazardSelect";
 
 const PRESETS = ["Galveston", "Corpus Christi", "Port Arthur", "New Orleans", "Tampa", "Miami"];
 const isScenario001 = (p: HurricaneParams) => (Object.keys(SCENARIO_001) as (keyof HurricaneParams)[]).every((k) => p[k] === SCENARIO_001[k]);
@@ -125,15 +126,7 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
 
         <div className="section stack">
           <h4>Hazard</h4>
-          <div className="field">
-            <label htmlFor="haz">Disaster type</label>
-            <select id="haz" value="hurricane" onChange={(e) => st.setHazard(e.target.value as "hurricane" | "drought")} data-testid="hazard-type">
-              <option value="hurricane">Hurricane · wind-exposure model v0.1</option>
-              <option value="drought">Drought · regional index v0.1</option>
-              <option disabled>Wildfire · not built yet</option>
-              <option disabled>Earthquake, flood, other · not built yet</option>
-            </select>
-          </div>
+          <HazardSelect id="haz" />
           <div className="seg" role="group" aria-label="Intensity category">
             {[0, 1, 2, 3, 4, 5].map((c) => (
               <button key={c} aria-pressed={cat === c} onClick={() => setSim({ vmaxKt: c === 0 ? 50 : vmaxForCategory(c) })} data-testid={`cat-${c}`} title={c === 0 ? "Tropical storm, 34–63 kt" : `Category ${c}: ${SAFFIR_SIMPSON[c - 1].minKt}${Number.isFinite(SAFFIR_SIMPSON[c - 1].maxKt) ? `–${SAFFIR_SIMPSON[c - 1].maxKt}` : "+"} kt`}>
