@@ -1,0 +1,2722 @@
+{
+ "meta": {
+  "provider": "U.S. Army Corps of Engineers (USACE), Waterborne Commerce Statistics Center; distributed in the USDOT Bureau of Transportation Statistics (BTS) National Transportation Atlas Database (NTAD)",
+  "dataset": "Principal Ports",
+  "sourceUrl": "https://services7.arcgis.com/n1YM8pTrFmm7L4hs/ArcGIS/rest/services/Principal_Ports/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&returnCentroid=true&outSR=4326&f=json",
+  "landingPage": "https://www.arcgis.com/home/item.html?id=e3b6065cce144be8a13a59e03c4195fe",
+  "dataDictionary": "https://doi.org/10.21949/1529073",
+  "retrievedAt": "2026-11-16T02:45:26Z",
+  "dataAsOf": "CY 2023",
+  "layerDescription": "The principal port file contains USACE port codes, geographic location, names, and commodity tonnage summaries (total tons, domestic, foreign, imports and exports) for principal USACE ports for CY 2023.",
+  "tonnageField": "TOTAL",
+  "tonnageUnits": "short tons",
+  "license": "\"This data set is publicly available without any use restrictions; however, this data set was developed for use at a national scale and may not be appropriate for use in local scale mapping.\" Requested credit: \"Acknowledgment of the U.S. Army Corps of Engineers (USACE)/Navigation and Civil Works Decision Support/Waterborne Commerce Statistics Center, and the Bureau of Transportation Statistics (BTS) [distributor].\"",
+  "notes": "The source layer geometry is a POLYGON (port statistical area) per port. lat/lon are the polygon centroids computed by the ArcGIS server (returnCentroid=true, WGS84) and rounded to 6 decimals; they are representative points, not berth locations, and for large port areas can fall away from the docks. 'state'/'states' are parsed from the 2-letter codes in the source PORTNAME (state is null when the name lists several states or none). 'rank' is the source RANK: \"Numerical rank denoting the top 150 ports in total tonnage\". Tonnage units ('short tons') are from the NTAD data dictionary (ATTRUNIT). id = 'usace-' + source PORT code."
+ },
+ "ports": [
+  {
+   "id": "usace-2031",
+   "name": "Houston Port Authority, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 29.857623,
+   "lon": -95.392478,
+   "totalTons": 309531236,
+   "domesticTons": 80511805,
+   "foreignTons": 229019431,
+   "importTons": 61307109,
+   "exportTons": 167712322,
+   "rank": 1,
+   "year": 2023
+  },
+  {
+   "id": "usace-2253",
+   "name": "South Louisiana, LA, Port of",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Coastal",
+   "lat": 30.020217,
+   "lon": -90.507776,
+   "totalTons": 217531611,
+   "domesticTons": 109130807,
+   "foreignTons": 108400804,
+   "importTons": 32432311,
+   "exportTons": 75968493,
+   "rank": 2,
+   "year": 2023
+  },
+  {
+   "id": "usace-2436",
+   "name": "Corpus Christi, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 27.839005,
+   "lon": -97.517054,
+   "totalTons": 189775751,
+   "domesticTons": 26080462,
+   "foreignTons": 163695289,
+   "importTons": 15768907,
+   "exportTons": 147926382,
+   "rank": 3,
+   "year": 2023
+  },
+  {
+   "id": "usace-398",
+   "name": "New York, NY & NJ",
+   "state": null,
+   "states": [
+    "NY",
+    "NJ"
+   ],
+   "type": "Coastal",
+   "lat": 40.704068,
+   "lon": -74.035032,
+   "totalTons": 132289509,
+   "domesticTons": 42419305,
+   "foreignTons": 89870204,
+   "importTons": 74145286,
+   "exportTons": 15724918,
+   "rank": 4,
+   "year": 2023
+  },
+  {
+   "id": "usace-2393",
+   "name": "Beaumont, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 30.056153,
+   "lon": -94.137923,
+   "totalTons": 87879130,
+   "domesticTons": 26935520,
+   "foreignTons": 60943610,
+   "importTons": 15995662,
+   "exportTons": 44947948,
+   "rank": 5,
+   "year": 2023
+  },
+  {
+   "id": "usace-4110",
+   "name": "Port of Long Beach, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 33.746943,
+   "lon": -118.215527,
+   "totalTons": 85260786,
+   "domesticTons": 12684858,
+   "foreignTons": 72575928,
+   "importTons": 51838366,
+   "exportTons": 20737562,
+   "rank": 6,
+   "year": 2023
+  },
+  {
+   "id": "usace-2251",
+   "name": "New Orleans, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Coastal",
+   "lat": 30.061716,
+   "lon": -90.01088,
+   "totalTons": 75385883,
+   "domesticTons": 39813636,
+   "foreignTons": 35572247,
+   "importTons": 15718453,
+   "exportTons": 19853794,
+   "rank": 7,
+   "year": 2023
+  },
+  {
+   "id": "usace-2252",
+   "name": "Port of Greater Baton Rouge, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Coastal",
+   "lat": 30.450199,
+   "lon": -91.300028,
+   "totalTons": 73041412,
+   "domesticTons": 45783118,
+   "foreignTons": 27258294,
+   "importTons": 5743985,
+   "exportTons": 21514309,
+   "rank": 8,
+   "year": 2023
+  },
+  {
+   "id": "usace-5700",
+   "name": "Virginia, VA, Port of",
+   "state": "VA",
+   "states": [
+    "VA"
+   ],
+   "type": "Coastal",
+   "lat": 36.891313,
+   "lon": -76.328786,
+   "totalTons": 68766562,
+   "domesticTons": 4025881,
+   "foreignTons": 64740681,
+   "importTons": 14403791,
+   "exportTons": 50336890,
+   "rank": 9,
+   "year": 2023
+  },
+  {
+   "id": "usace-2248",
+   "name": "Lake Charles Harbor District, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Coastal",
+   "lat": 29.941626,
+   "lon": -93.304091,
+   "totalTons": 64163423,
+   "domesticTons": 23993254,
+   "foreignTons": 40170169,
+   "importTons": 3859024,
+   "exportTons": 36311145,
+   "rank": 10,
+   "year": 2023
+  },
+  {
+   "id": "usace-4120",
+   "name": "Port of Los Angeles, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 34.114232,
+   "lon": -118.406851,
+   "totalTons": 55378332,
+   "domesticTons": 2911282,
+   "foreignTons": 52467050,
+   "importTons": 36629827,
+   "exportTons": 15837223,
+   "rank": 11,
+   "year": 2023
+  },
+  {
+   "id": "usace-2032",
+   "name": "Mobile, AL",
+   "state": "AL",
+   "states": [
+    "AL"
+   ],
+   "type": "Coastal",
+   "lat": 30.667479,
+   "lon": -88.101014,
+   "totalTons": 52180346,
+   "domesticTons": 15730883,
+   "foreignTons": 36449463,
+   "importTons": 18938466,
+   "exportTons": 17510997,
+   "rank": 12,
+   "year": 2023
+  },
+  {
+   "id": "usace-2255",
+   "name": "Plaquemines Port District, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Coastal",
+   "lat": 29.381416,
+   "lon": -89.482238,
+   "totalTons": 50511758,
+   "domesticTons": 27536205,
+   "foreignTons": 22975553,
+   "importTons": 4012058,
+   "exportTons": 18963495,
+   "rank": 13,
+   "year": 2023
+  },
+  {
+   "id": "usace-700",
+   "name": "Baltimore, MD",
+   "state": "MD",
+   "states": [
+    "MD"
+   ],
+   "type": "Coastal",
+   "lat": 39.399085,
+   "lon": -76.604211,
+   "totalTons": 49875915,
+   "domesticTons": 3555543,
+   "foreignTons": 46320372,
+   "importTons": 14953658,
+   "exportTons": 31366714,
+   "rank": 14,
+   "year": 2023
+  },
+  {
+   "id": "usace-776",
+   "name": "Port of Savannah, GA",
+   "state": "GA",
+   "states": [
+    "GA"
+   ],
+   "type": "Coastal",
+   "lat": 32.09805,
+   "lon": -81.123139,
+   "totalTons": 49238007,
+   "domesticTons": 1501485,
+   "foreignTons": 47736522,
+   "importTons": 27138148,
+   "exportTons": 20598374,
+   "rank": 15,
+   "year": 2023
+  },
+  {
+   "id": "usace-2416",
+   "name": "Port Arthur, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 29.897151,
+   "lon": -93.932242,
+   "totalTons": 44195515,
+   "domesticTons": 15103875,
+   "foreignTons": 29091640,
+   "importTons": 9825168,
+   "exportTons": 19266472,
+   "rank": 16,
+   "year": 2023
+  },
+  {
+   "id": "usace-2408",
+   "name": "Port Freeport, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 29.136443,
+   "lon": -95.496034,
+   "totalTons": 39538812,
+   "domesticTons": 5792468,
+   "foreignTons": 33746344,
+   "importTons": 6081848,
+   "exportTons": 27664496,
+   "rank": 17,
+   "year": 2023
+  },
+  {
+   "id": "usace-2021",
+   "name": "Tampa Port Authority, FL",
+   "state": "FL",
+   "states": [
+    "FL"
+   ],
+   "type": "Coastal",
+   "lat": 27.906595,
+   "lon": -82.346906,
+   "totalTons": 32018524,
+   "domesticTons": 19362098,
+   "foreignTons": 12656426,
+   "importTons": 9370872,
+   "exportTons": 3285554,
+   "rank": 18,
+   "year": 2023
+  },
+  {
+   "id": "usace-552",
+   "name": "Philadelphia Regional Port, PA",
+   "state": "PA",
+   "states": [
+    "PA"
+   ],
+   "type": "Coastal",
+   "lat": 40.04199,
+   "lon": -75.015301,
+   "totalTons": 31131961,
+   "domesticTons": 10606267,
+   "foreignTons": 20525694,
+   "importTons": 11039557,
+   "exportTons": 9486137,
+   "rank": 19,
+   "year": 2023
+  },
+  {
+   "id": "usace-3924",
+   "name": "Duluth-Superior, MN and WI",
+   "state": null,
+   "states": [
+    "MN",
+    "WI"
+   ],
+   "type": "Great Lakes",
+   "lat": 46.746219,
+   "lon": -92.1184,
+   "totalTons": 30476838,
+   "domesticTons": 23161409,
+   "foreignTons": 7315429,
+   "importTons": 961148,
+   "exportTons": 6354281,
+   "rank": 20,
+   "year": 2023
+  },
+  {
+   "id": "usace-2428",
+   "name": "Texas City, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 29.447506,
+   "lon": -94.894184,
+   "totalTons": 29912934,
+   "domesticTons": 13425981,
+   "foreignTons": 16486953,
+   "importTons": 4518990,
+   "exportTons": 11967963,
+   "rank": 21,
+   "year": 2023
+  },
+  {
+   "id": "usace-1995",
+   "name": "Port of Pascagoula, MS",
+   "state": "MS",
+   "states": [
+    "MS"
+   ],
+   "type": "Coastal",
+   "lat": 30.463295,
+   "lon": -88.622891,
+   "totalTons": 27117158,
+   "domesticTons": 14139209,
+   "foreignTons": 12977949,
+   "importTons": 5649155,
+   "exportTons": 7328794,
+   "rank": 22,
+   "year": 2023
+  },
+  {
+   "id": "usace-2363",
+   "name": "Southern Indiana District, IN",
+   "state": "IN",
+   "states": [
+    "IN"
+   ],
+   "type": "Internal",
+   "lat": 38.34425,
+   "lon": -86.366947,
+   "totalTons": 26769839,
+   "domesticTons": 26769839,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 23,
+   "year": 2023
+  },
+  {
+   "id": "usace-775",
+   "name": "Port of Charleston, SC",
+   "state": "SC",
+   "states": [
+    "SC"
+   ],
+   "type": "Coastal",
+   "lat": 33.022938,
+   "lon": -80.036165,
+   "totalTons": 26403011,
+   "domesticTons": 1521083,
+   "foreignTons": 24881928,
+   "importTons": 16763802,
+   "exportTons": 8118126,
+   "rank": 24,
+   "year": 2023
+  },
+  {
+   "id": "usace-3743",
+   "name": "Northern Indiana District, IN",
+   "state": "IN",
+   "states": [
+    "IN"
+   ],
+   "type": "Great Lakes",
+   "lat": 41.510353,
+   "lon": -87.065635,
+   "totalTons": 26141470,
+   "domesticTons": 25614686,
+   "foreignTons": 526784,
+   "importTons": 526784,
+   "exportTons": 0,
+   "rank": 25,
+   "year": 2023
+  },
+  {
+   "id": "usace-4351",
+   "name": "Richmond, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 37.9518,
+   "lon": -122.360281,
+   "totalTons": 25750154,
+   "domesticTons": 5801833,
+   "foreignTons": 19948321,
+   "importTons": 14771225,
+   "exportTons": 5177096,
+   "rank": 26,
+   "year": 2023
+  },
+  {
+   "id": "usace-4816",
+   "name": "Valdez, AK",
+   "state": "AK",
+   "states": [
+    "AK"
+   ],
+   "type": "Coastal",
+   "lat": 61.096871,
+   "lon": -146.298167,
+   "totalTons": 25434106,
+   "domesticTons": 24962517,
+   "foreignTons": 471589,
+   "importTons": 2685,
+   "exportTons": 468904,
+   "rank": 27,
+   "year": 2023
+  },
+  {
+   "id": "usace-1911",
+   "name": "Port Everglades, FL",
+   "state": "FL",
+   "states": [
+    "FL"
+   ],
+   "type": "Coastal",
+   "lat": 26.152006,
+   "lon": -80.455887,
+   "totalTons": 22943522,
+   "domesticTons": 12407257,
+   "foreignTons": 10536265,
+   "importTons": 8244288,
+   "exportTons": 2291977,
+   "rank": 28,
+   "year": 2023
+  },
+  {
+   "id": "usace-550",
+   "name": "South Jersey Port Corp, NJ",
+   "state": "NJ",
+   "states": [
+    "NJ"
+   ],
+   "type": "Coastal",
+   "lat": 39.591712,
+   "lon": -74.946065,
+   "totalTons": 21504979,
+   "domesticTons": 9419632,
+   "foreignTons": 12085347,
+   "importTons": 10962699,
+   "exportTons": 1122648,
+   "rank": 29,
+   "year": 2023
+  },
+  {
+   "id": "usace-4719",
+   "name": "Tacoma, WA",
+   "state": "WA",
+   "states": [
+    "WA"
+   ],
+   "type": "Coastal",
+   "lat": 47.038285,
+   "lon": -122.137823,
+   "totalTons": 18895768,
+   "domesticTons": 3580679,
+   "foreignTons": 15315089,
+   "importTons": 6459959,
+   "exportTons": 8855130,
+   "rank": 30,
+   "year": 2023
+  },
+  {
+   "id": "usace-2358",
+   "name": "Pittsburgh, PA Port of",
+   "state": "PA",
+   "states": [
+    "PA"
+   ],
+   "type": "Internal",
+   "lat": 40.491316,
+   "lon": -79.853133,
+   "totalTons": 18698249,
+   "domesticTons": 18698249,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 31,
+   "year": 2023
+  },
+  {
+   "id": "usace-4646",
+   "name": "Port of Portland, OR",
+   "state": "OR",
+   "states": [
+    "OR"
+   ],
+   "type": "Coastal",
+   "lat": 45.332149,
+   "lon": -122.459617,
+   "totalTons": 18529426,
+   "domesticTons": 8438648,
+   "foreignTons": 10090778,
+   "importTons": 2958583,
+   "exportTons": 7132195,
+   "rank": 32,
+   "year": 2023
+  },
+  {
+   "id": "usace-2017",
+   "name": "Jacksonville, FL",
+   "state": "FL",
+   "states": [
+    "FL"
+   ],
+   "type": "Coastal",
+   "lat": 30.337186,
+   "lon": -81.660145,
+   "totalTons": 17629515,
+   "domesticTons": 8656889,
+   "foreignTons": 8972626,
+   "importTons": 7527715,
+   "exportTons": 1444911,
+   "rank": 33,
+   "year": 2023
+  },
+  {
+   "id": "usace-4722",
+   "name": "Seattle, WA",
+   "state": "WA",
+   "states": [
+    "WA"
+   ],
+   "type": "Coastal",
+   "lat": 47.491941,
+   "lon": -121.83592,
+   "totalTons": 17153645,
+   "domesticTons": 3647071,
+   "foreignTons": 13506574,
+   "importTons": 7640777,
+   "exportTons": 5865797,
+   "rank": 34,
+   "year": 2023
+  },
+  {
+   "id": "usace-4344",
+   "name": "Port of Oakland, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 37.724954,
+   "lon": -122.248796,
+   "totalTons": 16362201,
+   "domesticTons": 603272,
+   "foreignTons": 15758929,
+   "importTons": 7680399,
+   "exportTons": 8078530,
+   "rank": 35,
+   "year": 2023
+  },
+  {
+   "id": "usace-4626",
+   "name": "Port of Kalama, WA",
+   "state": "WA",
+   "states": [
+    "WA"
+   ],
+   "type": "Coastal",
+   "lat": 46.068156,
+   "lon": -122.559399,
+   "totalTons": 15046449,
+   "domesticTons": 1737473,
+   "foreignTons": 13308976,
+   "importTons": 333127,
+   "exportTons": 12975849,
+   "rank": 36,
+   "year": 2023
+  },
+  {
+   "id": "usace-3926",
+   "name": "Two Harbors, MN",
+   "state": "MN",
+   "states": [
+    "MN"
+   ],
+   "type": "Great Lakes",
+   "lat": 47.029585,
+   "lon": -91.675225,
+   "totalTons": 14617891,
+   "domesticTons": 10585288,
+   "foreignTons": 4032603,
+   "importTons": 0,
+   "exportTons": 4032603,
+   "rank": 37,
+   "year": 2023
+  },
+  {
+   "id": "usace-3217",
+   "name": "Cleveland-Cuyahoga Port, OH",
+   "state": "OH",
+   "states": [
+    "OH"
+   ],
+   "type": "Great Lakes",
+   "lat": 41.63602,
+   "lon": -81.700189,
+   "totalTons": 13831329,
+   "domesticTons": 12132520,
+   "foreignTons": 1698809,
+   "importTons": 1222393,
+   "exportTons": 476416,
+   "rank": 38,
+   "year": 2023
+  },
+  {
+   "id": "usace-4421",
+   "name": "Honolulu, O'ahu, HI",
+   "state": "HI",
+   "states": [
+    "HI"
+   ],
+   "type": "Coastal",
+   "lat": 21.310484,
+   "lon": -157.87635,
+   "totalTons": 13279954,
+   "domesticTons": 12208792,
+   "foreignTons": 1071162,
+   "importTons": 1051813,
+   "exportTons": 19349,
+   "rank": 39,
+   "year": 2023
+  },
+  {
+   "id": "usace-2417",
+   "name": "Galveston, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 29.244008,
+   "lon": -94.856459,
+   "totalTons": 12954272,
+   "domesticTons": 7759521,
+   "foreignTons": 5194751,
+   "importTons": 1835652,
+   "exportTons": 3359099,
+   "rank": 40,
+   "year": 2023
+  },
+  {
+   "id": "usace-2420",
+   "name": "Brownsville, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 26.023693,
+   "lon": -97.416565,
+   "totalTons": 11260429,
+   "domesticTons": 3501086,
+   "foreignTons": 7759343,
+   "importTons": 6647633,
+   "exportTons": 1111710,
+   "rank": 41,
+   "year": 2023
+  },
+  {
+   "id": "usace-3204",
+   "name": "Toledo-Lucas County Port, OH",
+   "state": "OH",
+   "states": [
+    "OH"
+   ],
+   "type": "Great Lakes",
+   "lat": 41.684453,
+   "lon": -83.467932,
+   "totalTons": 11209284,
+   "domesticTons": 7851803,
+   "foreignTons": 3357481,
+   "importTons": 1265844,
+   "exportTons": 2091637,
+   "rank": 42,
+   "year": 2023
+  },
+  {
+   "id": "usace-2306",
+   "name": "Mid-America Port, IA, IL and MO",
+   "state": null,
+   "states": [
+    "IA",
+    "IL",
+    "MO"
+   ],
+   "type": "Internal",
+   "lat": 40.235355,
+   "lon": -91.330346,
+   "totalTons": 11033628,
+   "domesticTons": 11033628,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 43,
+   "year": 2023
+  },
+  {
+   "id": "usace-2351",
+   "name": "New Bourbon Port Authority, MO",
+   "state": "MO",
+   "states": [
+    "MO"
+   ],
+   "type": "Internal",
+   "lat": 37.803286,
+   "lon": -90.014103,
+   "totalTons": 10843247,
+   "domesticTons": 10843247,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 44,
+   "year": 2023
+  },
+  {
+   "id": "usace-4730",
+   "name": "Anacortes, WA",
+   "state": "WA",
+   "states": [
+    "WA"
+   ],
+   "type": "Coastal",
+   "lat": 48.51737,
+   "lon": -122.598441,
+   "totalTons": 10579905,
+   "domesticTons": 7653279,
+   "foreignTons": 2926626,
+   "importTons": 1622708,
+   "exportTons": 1303918,
+   "rank": 45,
+   "year": 2023
+  },
+  {
+   "id": "usace-1913",
+   "name": "San Juan, PR",
+   "state": "PR",
+   "states": [
+    "PR"
+   ],
+   "type": "Coastal",
+   "lat": 18.422292,
+   "lon": -66.068327,
+   "totalTons": 10405331,
+   "domesticTons": 4714468,
+   "foreignTons": 5690863,
+   "importTons": 5105916,
+   "exportTons": 584947,
+   "rank": 46,
+   "year": 2023
+  },
+  {
+   "id": "usace-3321",
+   "name": "Detroit-Wayne County Port, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 42.285045,
+   "lon": -83.261029,
+   "totalTons": 10113741,
+   "domesticTons": 7310022,
+   "foreignTons": 2803719,
+   "importTons": 2525927,
+   "exportTons": 277792,
+   "rank": 47,
+   "year": 2023
+  },
+  {
+   "id": "usace-2333",
+   "name": "Louisville-Jefferson Port, KY",
+   "state": "KY",
+   "states": [
+    "KY"
+   ],
+   "type": "Internal",
+   "lat": 38.187305,
+   "lon": -85.659119,
+   "totalTons": 9183831,
+   "domesticTons": 9183831,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 48,
+   "year": 2023
+  },
+  {
+   "id": "usace-3749",
+   "name": "Illinois International Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Great Lakes",
+   "lat": 41.837188,
+   "lon": -87.684841,
+   "totalTons": 8950972,
+   "domesticTons": 7329829,
+   "foreignTons": 1621143,
+   "importTons": 1601594,
+   "exportTons": 19549,
+   "rank": 49,
+   "year": 2023
+  },
+  {
+   "id": "usace-1992",
+   "name": "PortMiami, FL",
+   "state": "FL",
+   "states": [
+    "FL"
+   ],
+   "type": "Coastal",
+   "lat": 25.609547,
+   "lon": -80.498597,
+   "totalTons": 8437423,
+   "domesticTons": 48736,
+   "foreignTons": 8388687,
+   "importTons": 5567882,
+   "exportTons": 2820805,
+   "rank": 50,
+   "year": 2023
+  },
+  {
+   "id": "usace-1506",
+   "name": "New Haven, CT",
+   "state": "CT",
+   "states": [
+    "CT"
+   ],
+   "type": "Coastal",
+   "lat": 41.310402,
+   "lon": -72.924294,
+   "totalTons": 8431032,
+   "domesticTons": 4364533,
+   "foreignTons": 4066499,
+   "importTons": 3754709,
+   "exportTons": 311790,
+   "rank": 51,
+   "year": 2023
+  },
+  {
+   "id": "usace-2341",
+   "name": "St. Louis City Port, MO",
+   "state": "MO",
+   "states": [
+    "MO"
+   ],
+   "type": "Internal",
+   "lat": 38.654205,
+   "lon": -90.207963,
+   "totalTons": 8429818,
+   "domesticTons": 8429818,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 52,
+   "year": 2023
+  },
+  {
+   "id": "usace-4622",
+   "name": "Port of Longview, WA",
+   "state": "WA",
+   "states": [
+    "WA"
+   ],
+   "type": "Coastal",
+   "lat": 46.255564,
+   "lon": -122.731313,
+   "totalTons": 8336795,
+   "domesticTons": 521528,
+   "foreignTons": 7815267,
+   "importTons": 360665,
+   "exportTons": 7454602,
+   "rank": 53,
+   "year": 2023
+  },
+  {
+   "id": "usace-4636",
+   "name": "Port of Vancouver USA, WA",
+   "state": "WA",
+   "states": [
+    "WA"
+   ],
+   "type": "Coastal",
+   "lat": 45.681374,
+   "lon": -122.527186,
+   "totalTons": 8071823,
+   "domesticTons": 1155128,
+   "foreignTons": 6916695,
+   "importTons": 846186,
+   "exportTons": 6070509,
+   "rank": 54,
+   "year": 2023
+  },
+  {
+   "id": "usace-3635",
+   "name": "Rogers City, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 45.419508,
+   "lon": -83.807936,
+   "totalTons": 7699861,
+   "domesticTons": 6842839,
+   "foreignTons": 857022,
+   "importTons": 165760,
+   "exportTons": 691262,
+   "rank": 55,
+   "year": 2023
+  },
+  {
+   "id": "usace-766",
+   "name": "Wilmington, NC",
+   "state": "NC",
+   "states": [
+    "NC"
+   ],
+   "type": "Coastal",
+   "lat": 34.209842,
+   "lon": -77.887021,
+   "totalTons": 7699429,
+   "domesticTons": 423312,
+   "foreignTons": 7276117,
+   "importTons": 3856868,
+   "exportTons": 3419249,
+   "rank": 56,
+   "year": 2023
+  },
+  {
+   "id": "usace-7711",
+   "name": "Joliet Regional Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 41.544838,
+   "lon": -88.128218,
+   "totalTons": 7620522,
+   "domesticTons": 7620522,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 57,
+   "year": 2023
+  },
+  {
+   "id": "usace-4458",
+   "name": "Kalaeloa Barbers Point, HI",
+   "state": "HI",
+   "states": [
+    "HI"
+   ],
+   "type": "Coastal",
+   "lat": 21.3047,
+   "lon": -158.106187,
+   "totalTons": 7596464,
+   "domesticTons": 2151807,
+   "foreignTons": 5444657,
+   "importTons": 5252427,
+   "exportTons": 192230,
+   "rank": 58,
+   "year": 2023
+  },
+  {
+   "id": "usace-1910",
+   "name": "Greater Lafourche Port, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Coastal",
+   "lat": 29.329964,
+   "lon": -90.239667,
+   "totalTons": 7594087,
+   "domesticTons": 7527397,
+   "foreignTons": 66690,
+   "importTons": 66690,
+   "exportTons": 0,
+   "rank": 59,
+   "year": 2023
+  },
+  {
+   "id": "usace-2370",
+   "name": "Nashville, TN",
+   "state": "TN",
+   "states": [
+    "TN"
+   ],
+   "type": "Internal",
+   "lat": 36.171629,
+   "lon": -86.784294,
+   "totalTons": 7557647,
+   "domesticTons": 7557647,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 60,
+   "year": 2023
+  },
+  {
+   "id": "usace-555",
+   "name": "Wilmington, DE",
+   "state": "DE",
+   "states": [
+    "DE"
+   ],
+   "type": "Coastal",
+   "lat": 39.735054,
+   "lon": -75.528092,
+   "totalTons": 7445983,
+   "domesticTons": 851372,
+   "foreignTons": 6594611,
+   "importTons": 5900510,
+   "exportTons": 694101,
+   "rank": 61,
+   "year": 2023
+  },
+  {
+   "id": "usace-2302",
+   "name": "Paducah-McCracken Riverport, KY",
+   "state": "KY",
+   "states": [
+    "KY"
+   ],
+   "type": "Internal",
+   "lat": 37.051479,
+   "lon": -88.712015,
+   "totalTons": 7410279,
+   "domesticTons": 7410279,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 62,
+   "year": 2023
+  },
+  {
+   "id": "usace-90",
+   "name": "Boston, MA",
+   "state": "MA",
+   "states": [
+    "MA"
+   ],
+   "type": "Coastal",
+   "lat": 42.333291,
+   "lon": -70.971787,
+   "totalTons": 7208213,
+   "domesticTons": 2183983,
+   "foreignTons": 5024230,
+   "importTons": 4106596,
+   "exportTons": 917634,
+   "rank": 63,
+   "year": 2023
+  },
+  {
+   "id": "usace-2294",
+   "name": "Memphis-Shelby County Port, TN",
+   "state": "TN",
+   "states": [
+    "TN"
+   ],
+   "type": "Internal",
+   "lat": 35.184641,
+   "lon": -89.921672,
+   "totalTons": 7195444,
+   "domesticTons": 7195444,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 64,
+   "year": 2023
+  },
+  {
+   "id": "usace-3841",
+   "name": "Marquette, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 46.550799,
+   "lon": -87.395923,
+   "totalTons": 6981543,
+   "domesticTons": 6537382,
+   "foreignTons": 444161,
+   "importTons": 372711,
+   "exportTons": 71450,
+   "rank": 65,
+   "year": 2023
+  },
+  {
+   "id": "usace-2307",
+   "name": "Kaskaskia Regional Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 38.217127,
+   "lon": -89.940159,
+   "totalTons": 6959579,
+   "domesticTons": 6959579,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 66,
+   "year": 2023
+  },
+  {
+   "id": "usace-2319",
+   "name": "Southwest Regional Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 38.569232,
+   "lon": -90.1478,
+   "totalTons": 6704741,
+   "domesticTons": 6704741,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 67,
+   "year": 2023
+  },
+  {
+   "id": "usace-2160",
+   "name": "Canaveral Port District, FL",
+   "state": "FL",
+   "states": [
+    "FL"
+   ],
+   "type": "Coastal",
+   "lat": 28.528453,
+   "lon": -80.727277,
+   "totalTons": 6080608,
+   "domesticTons": 923853,
+   "foreignTons": 5156755,
+   "importTons": 5156755,
+   "exportTons": 0,
+   "rank": 68,
+   "year": 2023
+  },
+  {
+   "id": "usace-203",
+   "name": "Port of Providence, RI",
+   "state": "RI",
+   "states": [
+    "RI"
+   ],
+   "type": "Coastal",
+   "lat": 41.799024,
+   "lon": -71.39079,
+   "totalTons": 6039050,
+   "domesticTons": 2531242,
+   "foreignTons": 3507808,
+   "importTons": 3063918,
+   "exportTons": 443890,
+   "rank": 69,
+   "year": 2023
+  },
+  {
+   "id": "usace-2445",
+   "name": "Cincinnati, OH",
+   "state": "OH",
+   "states": [
+    "OH"
+   ],
+   "type": "Internal",
+   "lat": 39.141198,
+   "lon": -84.50598,
+   "totalTons": 5972213,
+   "domesticTons": 5972213,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 70,
+   "year": 2023
+  },
+  {
+   "id": "usace-2443",
+   "name": "Virgin Islands - St. Croix, VI",
+   "state": "VI",
+   "states": [
+    "VI"
+   ],
+   "type": "Coastal",
+   "lat": 17.73564,
+   "lon": -64.747924,
+   "totalTons": 5878183,
+   "domesticTons": 867121,
+   "foreignTons": 5011062,
+   "importTons": 666710,
+   "exportTons": 4344352,
+   "rank": 71,
+   "year": 2023
+  },
+  {
+   "id": "usace-2368",
+   "name": "Southeast Missouri Port, MO",
+   "state": "MO",
+   "states": [
+    "MO"
+   ],
+   "type": "Internal",
+   "lat": 37.245905,
+   "lon": -89.635909,
+   "totalTons": 5417892,
+   "domesticTons": 5417892,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 72,
+   "year": 2023
+  },
+  {
+   "id": "usace-2437",
+   "name": "Manatee County Port, FL",
+   "state": "FL",
+   "states": [
+    "FL"
+   ],
+   "type": "Coastal",
+   "lat": 27.47768,
+   "lon": -82.357603,
+   "totalTons": 5311740,
+   "domesticTons": 1013951,
+   "foreignTons": 4297789,
+   "importTons": 3921195,
+   "exportTons": 376594,
+   "rank": 73,
+   "year": 2023
+  },
+  {
+   "id": "usace-2309",
+   "name": "America's Central Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 38.846674,
+   "lon": -90.164549,
+   "totalTons": 5056330,
+   "domesticTons": 5056330,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 74,
+   "year": 2023
+  },
+  {
+   "id": "usace-505",
+   "name": "Albany Port District, NY",
+   "state": "NY",
+   "states": [
+    "NY"
+   ],
+   "type": "Coastal",
+   "lat": 42.662962,
+   "lon": -73.789224,
+   "totalTons": 4852447,
+   "domesticTons": 3857810,
+   "foreignTons": 994637,
+   "importTons": 531614,
+   "exportTons": 463023,
+   "rank": 75,
+   "year": 2023
+  },
+  {
+   "id": "usace-3619",
+   "name": "Presque Isle Township, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 45.266335,
+   "lon": -83.464781,
+   "totalTons": 4686537,
+   "domesticTons": 4212253,
+   "foreignTons": 474284,
+   "importTons": 63603,
+   "exportTons": 410681,
+   "rank": 76,
+   "year": 2023
+  },
+  {
+   "id": "usace-3803",
+   "name": "Mueller Township, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 46.052809,
+   "lon": -85.929415,
+   "totalTons": 4482471,
+   "domesticTons": 4060450,
+   "foreignTons": 422021,
+   "importTons": 22046,
+   "exportTons": 399975,
+   "rank": 77,
+   "year": 2023
+  },
+  {
+   "id": "usace-99",
+   "name": "Portland, ME",
+   "state": "ME",
+   "states": [
+    "ME"
+   ],
+   "type": "Coastal",
+   "lat": 43.644558,
+   "lon": -70.188057,
+   "totalTons": 4263411,
+   "domesticTons": 678865,
+   "foreignTons": 3584546,
+   "importTons": 3584546,
+   "exportTons": 0,
+   "rank": 78,
+   "year": 2023
+  },
+  {
+   "id": "usace-2427",
+   "name": "Calhoun Port Authority, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 28.595107,
+   "lon": -96.550726,
+   "totalTons": 4261040,
+   "domesticTons": 1890031,
+   "foreignTons": 2371009,
+   "importTons": 436696,
+   "exportTons": 1934313,
+   "rank": 79,
+   "year": 2023
+  },
+  {
+   "id": "usace-4820",
+   "name": "Port of Alaska, AK",
+   "state": "AK",
+   "states": [
+    "AK"
+   ],
+   "type": "Coastal",
+   "lat": 61.149581,
+   "lon": -149.188937,
+   "totalTons": 4044294,
+   "domesticTons": 2019198,
+   "foreignTons": 2025096,
+   "importTons": 1997467,
+   "exportTons": 27629,
+   "rank": 80,
+   "year": 2023
+  },
+  {
+   "id": "usace-4270",
+   "name": "Stockton, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 37.976675,
+   "lon": -121.311173,
+   "totalTons": 4037335,
+   "domesticTons": 339331,
+   "foreignTons": 3698004,
+   "importTons": 2795958,
+   "exportTons": 902046,
+   "rank": 81,
+   "year": 2023
+  },
+  {
+   "id": "usace-2313",
+   "name": "Illinois Valley Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 41.278263,
+   "lon": -89.223612,
+   "totalTons": 3995114,
+   "domesticTons": 3995114,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 82,
+   "year": 2023
+  },
+  {
+   "id": "usace-6109",
+   "name": "Tulsa-Rogers County Port, OK",
+   "state": "OK",
+   "states": [
+    "OK"
+   ],
+   "type": "Internal",
+   "lat": 36.318537,
+   "lon": -95.67008,
+   "totalTons": 3888145,
+   "domesticTons": 3888145,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 83,
+   "year": 2023
+  },
+  {
+   "id": "usace-3227",
+   "name": "Conneaut, OH",
+   "state": "OH",
+   "states": [
+    "OH"
+   ],
+   "type": "Great Lakes",
+   "lat": 41.927806,
+   "lon": -80.568531,
+   "totalTons": 3735810,
+   "domesticTons": 3611798,
+   "foreignTons": 124012,
+   "importTons": 96454,
+   "exportTons": 27558,
+   "rank": 84,
+   "year": 2023
+  },
+  {
+   "id": "usace-2314",
+   "name": "Jackson-Union Port District, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 37.656763,
+   "lon": -89.330059,
+   "totalTons": 3486846,
+   "domesticTons": 3486846,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 85,
+   "year": 2023
+  },
+  {
+   "id": "usace-2316",
+   "name": "Massac-Metropolis Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 37.216555,
+   "lon": -88.707639,
+   "totalTons": 3484483,
+   "domesticTons": 3484483,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 86,
+   "year": 2023
+  },
+  {
+   "id": "usace-2383",
+   "name": "West St. Mary Parish Port, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Coastal",
+   "lat": 29.682138,
+   "lon": -91.567187,
+   "totalTons": 3449971,
+   "domesticTons": 3449971,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 87,
+   "year": 2023
+  },
+  {
+   "id": "usace-4410",
+   "name": "Kahului, Maui, HI",
+   "state": "HI",
+   "states": [
+    "HI"
+   ],
+   "type": "Coastal",
+   "lat": 20.901945,
+   "lon": -156.471317,
+   "totalTons": 3417744,
+   "domesticTons": 3385086,
+   "foreignTons": 32658,
+   "importTons": 32658,
+   "exportTons": 0,
+   "rank": 88,
+   "year": 2023
+  },
+  {
+   "id": "usace-3627",
+   "name": "Clark Township, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 46.020357,
+   "lon": -84.355302,
+   "totalTons": 3412535,
+   "domesticTons": 3090549,
+   "foreignTons": 321986,
+   "importTons": 0,
+   "exportTons": 321986,
+   "rank": 89,
+   "year": 2023
+  },
+  {
+   "id": "usace-2312",
+   "name": "Heart of Illinois Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 40.612396,
+   "lon": -89.71497,
+   "totalTons": 3392487,
+   "domesticTons": 3392487,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 90,
+   "year": 2023
+  },
+  {
+   "id": "usace-4831",
+   "name": "Nikiski, AK",
+   "state": "AK",
+   "states": [
+    "AK"
+   ],
+   "type": "Coastal",
+   "lat": 60.715102,
+   "lon": -151.231813,
+   "totalTons": 3265494,
+   "domesticTons": 2901043,
+   "foreignTons": 364451,
+   "importTons": 364451,
+   "exportTons": 0,
+   "rank": 91,
+   "year": 2023
+  },
+  {
+   "id": "usace-4709",
+   "name": "Grays Harbor Port District, WA",
+   "state": "WA",
+   "states": [
+    "WA"
+   ],
+   "type": "Coastal",
+   "lat": 47.145725,
+   "lon": -123.829104,
+   "totalTons": 3226346,
+   "domesticTons": 13838,
+   "foreignTons": 3212508,
+   "importTons": 226397,
+   "exportTons": 2986111,
+   "rank": 92,
+   "year": 2023
+  },
+  {
+   "id": "usace-2320",
+   "name": "St. Paul Port Authority, MN",
+   "state": "MN",
+   "states": [
+    "MN"
+   ],
+   "type": "Internal",
+   "lat": 44.947765,
+   "lon": -93.104011,
+   "totalTons": 3181874,
+   "domesticTons": 3181874,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 93,
+   "year": 2023
+  },
+  {
+   "id": "usace-3928",
+   "name": "Silver Bay, MN",
+   "state": "MN",
+   "states": [
+    "MN"
+   ],
+   "type": "Great Lakes",
+   "lat": 47.293249,
+   "lon": -91.27754,
+   "totalTons": 3090360,
+   "domesticTons": 3090360,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 94,
+   "year": 2023
+  },
+  {
+   "id": "usace-4629",
+   "name": "Port of Columbia County, OR",
+   "state": "OR",
+   "states": [
+    "OR"
+   ],
+   "type": "Internal",
+   "lat": 45.986827,
+   "lon": -123.018872,
+   "totalTons": 3021308,
+   "domesticTons": 2611370,
+   "foreignTons": 409938,
+   "importTons": 409938,
+   "exportTons": 0,
+   "rank": 95,
+   "year": 2023
+  },
+  {
+   "id": "usace-2331",
+   "name": "Owensboro Riverport, KY",
+   "state": "KY",
+   "states": [
+    "KY"
+   ],
+   "type": "Internal",
+   "lat": 37.757526,
+   "lon": -87.117356,
+   "totalTons": 2904015,
+   "domesticTons": 2904015,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 96,
+   "year": 2023
+  },
+  {
+   "id": "usace-4151",
+   "name": "Oxnard Harbor District, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 34.1966,
+   "lon": -119.213412,
+   "totalTons": 2825732,
+   "domesticTons": 1646,
+   "foreignTons": 2824086,
+   "importTons": 2522911,
+   "exportTons": 301175,
+   "rank": 97,
+   "year": 2023
+  },
+  {
+   "id": "usace-2344",
+   "name": "Jefferson County Port, MO",
+   "state": "MO",
+   "states": [
+    "MO"
+   ],
+   "type": "Internal",
+   "lat": 38.261414,
+   "lon": -90.537722,
+   "totalTons": 2739381,
+   "domesticTons": 2739381,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 98,
+   "year": 2023
+  },
+  {
+   "id": "usace-2439",
+   "name": "Port of Greenville, MS",
+   "state": "MS",
+   "states": [
+    "MS"
+   ],
+   "type": "Internal",
+   "lat": 33.385046,
+   "lon": -91.051419,
+   "totalTons": 2721859,
+   "domesticTons": 2721859,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 99,
+   "year": 2023
+  },
+  {
+   "id": "usace-1912",
+   "name": "Guaynabo, PR",
+   "state": "PR",
+   "states": [
+    "PR"
+   ],
+   "type": "Coastal",
+   "lat": 18.343845,
+   "lon": -66.114049,
+   "totalTons": 2719835,
+   "domesticTons": 298153,
+   "foreignTons": 2421682,
+   "importTons": 2393588,
+   "exportTons": 28094,
+   "rank": 100,
+   "year": 2023
+  },
+  {
+   "id": "usace-783",
+   "name": "Port of Brunswick, GA",
+   "state": "GA",
+   "states": [
+    "GA"
+   ],
+   "type": "Coastal",
+   "lat": 31.14749,
+   "lon": -81.48883,
+   "totalTons": 2634380,
+   "domesticTons": 75742,
+   "foreignTons": 2558638,
+   "importTons": 1494320,
+   "exportTons": 1064318,
+   "rank": 101,
+   "year": 2023
+  },
+  {
+   "id": "usace-3213",
+   "name": "Sandusky, OH",
+   "state": "OH",
+   "states": [
+    "OH"
+   ],
+   "type": "Great Lakes",
+   "lat": 41.456405,
+   "lon": -82.714136,
+   "totalTons": 2632248,
+   "domesticTons": 814510,
+   "foreignTons": 1817738,
+   "importTons": 20247,
+   "exportTons": 1797491,
+   "rank": 102,
+   "year": 2023
+  },
+  {
+   "id": "usace-2441",
+   "name": "Panama City Port Authority, FL",
+   "state": "FL",
+   "states": [
+    "FL"
+   ],
+   "type": "Coastal",
+   "lat": 30.23797,
+   "lon": -85.632667,
+   "totalTons": 2560292,
+   "domesticTons": 681726,
+   "foreignTons": 1878566,
+   "importTons": 807940,
+   "exportTons": 1070626,
+   "rank": 103,
+   "year": 2023
+  },
+  {
+   "id": "usace-3198",
+   "name": "Monroe, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 41.921609,
+   "lon": -83.494244,
+   "totalTons": 2539715,
+   "domesticTons": 2359064,
+   "foreignTons": 180651,
+   "importTons": 166672,
+   "exportTons": 13979,
+   "rank": 104,
+   "year": 2023
+  },
+  {
+   "id": "usace-2438",
+   "name": "Port of Vicksburg, MS",
+   "state": "MS",
+   "states": [
+    "MS"
+   ],
+   "type": "Internal",
+   "lat": 32.357548,
+   "lon": -90.851933,
+   "totalTons": 2539021,
+   "domesticTons": 2539021,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 105,
+   "year": 2023
+  },
+  {
+   "id": "usace-522",
+   "name": "Port Jefferson, NY",
+   "state": "NY",
+   "states": [
+    "NY"
+   ],
+   "type": "Coastal",
+   "lat": 40.962755,
+   "lon": -73.092666,
+   "totalTons": 2528059,
+   "domesticTons": 2528059,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 106,
+   "year": 2023
+  },
+  {
+   "id": "usace-3756",
+   "name": "Milwaukee, WI",
+   "state": "WI",
+   "states": [
+    "WI"
+   ],
+   "type": "Great Lakes",
+   "lat": 43.064196,
+   "lon": -87.967268,
+   "totalTons": 2477300,
+   "domesticTons": 1393249,
+   "foreignTons": 1084051,
+   "importTons": 1074231,
+   "exportTons": 9820,
+   "rank": 107,
+   "year": 2023
+  },
+  {
+   "id": "usace-4659",
+   "name": "Coos Bay OR, Port of",
+   "state": "OR",
+   "states": [
+    "OR"
+   ],
+   "type": "Coastal",
+   "lat": 43.394688,
+   "lon": -124.041548,
+   "totalTons": 2471561,
+   "domesticTons": 28529,
+   "foreignTons": 2443032,
+   "importTons": 398691,
+   "exportTons": 2044341,
+   "rank": 108,
+   "year": 2023
+  },
+  {
+   "id": "usace-3212",
+   "name": "Marblehead, OH",
+   "state": "OH",
+   "states": [
+    "OH"
+   ],
+   "type": "Great Lakes",
+   "lat": 41.523549,
+   "lon": -82.726313,
+   "totalTons": 2384589,
+   "domesticTons": 2254290,
+   "foreignTons": 130299,
+   "importTons": 0,
+   "exportTons": 130299,
+   "rank": 109,
+   "year": 2023
+  },
+  {
+   "id": "usace-4400",
+   "name": "Hilo, Hawai'i, HI",
+   "state": "HI",
+   "states": [
+    "HI"
+   ],
+   "type": "Coastal",
+   "lat": 19.735882,
+   "lon": -155.069847,
+   "totalTons": 2332771,
+   "domesticTons": 2278612,
+   "foreignTons": 54159,
+   "importTons": 54159,
+   "exportTons": 0,
+   "rank": 110,
+   "year": 2023
+  },
+  {
+   "id": "usace-2440",
+   "name": "Port of Gulfport, MS",
+   "state": "MS",
+   "states": [
+    "MS"
+   ],
+   "type": "Coastal",
+   "lat": 30.421171,
+   "lon": -89.069209,
+   "totalTons": 2268067,
+   "domesticTons": 199244,
+   "foreignTons": 2068823,
+   "importTons": 1095363,
+   "exportTons": 973460,
+   "rank": 111,
+   "year": 2023
+  },
+  {
+   "id": "usace-2030",
+   "name": "Port of Iberia District, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Coastal",
+   "lat": 29.727778,
+   "lon": -91.783848,
+   "totalTons": 2262508,
+   "domesticTons": 2251190,
+   "foreignTons": 11318,
+   "importTons": 0,
+   "exportTons": 11318,
+   "rank": 112,
+   "year": 2023
+  },
+  {
+   "id": "usace-3617",
+   "name": "Alpena, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 45.07403,
+   "lon": -83.439935,
+   "totalTons": 2225252,
+   "domesticTons": 2180662,
+   "foreignTons": 44590,
+   "importTons": 44590,
+   "exportTons": 0,
+   "rank": 113,
+   "year": 2023
+  },
+  {
+   "id": "usace-3700",
+   "name": "Muskegon, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 43.228086,
+   "lon": -86.256391,
+   "totalTons": 2219960,
+   "domesticTons": 1041812,
+   "foreignTons": 1178148,
+   "importTons": 1178148,
+   "exportTons": 0,
+   "rank": 114,
+   "year": 2023
+  },
+  {
+   "id": "usace-1983",
+   "name": "Port of Palm Beach District, FL",
+   "state": "FL",
+   "states": [
+    "FL"
+   ],
+   "type": "Coastal",
+   "lat": 26.690771,
+   "lon": -80.492968,
+   "totalTons": 2166125,
+   "domesticTons": 484697,
+   "foreignTons": 1681428,
+   "importTons": 644724,
+   "exportTons": 1036704,
+   "rank": 115,
+   "year": 2023
+  },
+  {
+   "id": "usace-759",
+   "name": "Morehead City, NC",
+   "state": "NC",
+   "states": [
+    "NC"
+   ],
+   "type": "Coastal",
+   "lat": 34.72919,
+   "lon": -76.736715,
+   "totalTons": 2157999,
+   "domesticTons": 525162,
+   "foreignTons": 1632837,
+   "importTons": 1050865,
+   "exportTons": 581972,
+   "rank": 116,
+   "year": 2023
+  },
+  {
+   "id": "usace-2399",
+   "name": "Victoria, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 28.796628,
+   "lon": -96.971536,
+   "totalTons": 2152956,
+   "domesticTons": 2152956,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 117,
+   "year": 2023
+  },
+  {
+   "id": "usace-2372",
+   "name": "Chattanooga, TN",
+   "state": "TN",
+   "states": [
+    "TN"
+   ],
+   "type": "Internal",
+   "lat": 35.06606,
+   "lon": -85.248144,
+   "totalTons": 2138974,
+   "domesticTons": 2138974,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 118,
+   "year": 2023
+  },
+  {
+   "id": "usace-2329",
+   "name": "Henderson County Riverport, KY",
+   "state": "KY",
+   "states": [
+    "KY"
+   ],
+   "type": "Internal",
+   "lat": 37.795682,
+   "lon": -87.572911,
+   "totalTons": 2111107,
+   "domesticTons": 2111107,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 119,
+   "year": 2023
+  },
+  {
+   "id": "usace-4405",
+   "name": "Kawaihae, Hawai'i, HI",
+   "state": "HI",
+   "states": [
+    "HI"
+   ],
+   "type": "Coastal",
+   "lat": 20.035071,
+   "lon": -155.83008,
+   "totalTons": 2055561,
+   "domesticTons": 2055561,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 120,
+   "year": 2023
+  },
+  {
+   "id": "usace-4431",
+   "name": "Nawiliwili, Kaua'i, HI",
+   "state": "HI",
+   "states": [
+    "HI"
+   ],
+   "type": "Coastal",
+   "lat": 21.952867,
+   "lon": -159.353353,
+   "totalTons": 2045738,
+   "domesticTons": 2017745,
+   "foreignTons": 27993,
+   "importTons": 27993,
+   "exportTons": 0,
+   "rank": 121,
+   "year": 2023
+  },
+  {
+   "id": "usace-2288",
+   "name": "New Madrid County Port, MO",
+   "state": "MO",
+   "states": [
+    "MO"
+   ],
+   "type": "Internal",
+   "lat": 36.594959,
+   "lon": -89.651735,
+   "totalTons": 2025067,
+   "domesticTons": 2025067,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 122,
+   "year": 2023
+  },
+  {
+   "id": "usace-2402",
+   "name": "Port of Harlingen Authority, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 26.276952,
+   "lon": -97.528221,
+   "totalTons": 1990780,
+   "domesticTons": 1990780,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 123,
+   "year": 2023
+  },
+  {
+   "id": "usace-3778",
+   "name": "Green Bay, WI",
+   "state": "WI",
+   "states": [
+    "WI"
+   ],
+   "type": "Great Lakes",
+   "lat": 44.474727,
+   "lon": -87.992852,
+   "totalTons": 1921359,
+   "domesticTons": 1458303,
+   "foreignTons": 463056,
+   "importTons": 463056,
+   "exportTons": 0,
+   "rank": 124,
+   "year": 2023
+  },
+  {
+   "id": "usace-2311",
+   "name": "Havana Regional Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 40.27779,
+   "lon": -90.010883,
+   "totalTons": 1886355,
+   "domesticTons": 1886355,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 125,
+   "year": 2023
+  },
+  {
+   "id": "usace-4102",
+   "name": "San Diego Unified Port, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 32.793219,
+   "lon": -117.109942,
+   "totalTons": 1883449,
+   "domesticTons": 396610,
+   "foreignTons": 1486839,
+   "importTons": 1463186,
+   "exportTons": 23653,
+   "rank": 126,
+   "year": 2023
+  },
+  {
+   "id": "usace-2397",
+   "name": "Sabine Pass Port Authority, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 29.709445,
+   "lon": -94.116399,
+   "totalTons": 1879372,
+   "domesticTons": 1593004,
+   "foreignTons": 286368,
+   "importTons": 182467,
+   "exportTons": 103901,
+   "rank": 127,
+   "year": 2023
+  },
+  {
+   "id": "usace-272",
+   "name": "Bridgeport, CT",
+   "state": "CT",
+   "states": [
+    "CT"
+   ],
+   "type": "Coastal",
+   "lat": 41.187249,
+   "lon": -73.195496,
+   "totalTons": 1754389,
+   "domesticTons": 1713433,
+   "foreignTons": 40956,
+   "importTons": 40956,
+   "exportTons": 0,
+   "rank": 128,
+   "year": 2023
+  },
+  {
+   "id": "usace-2227",
+   "name": "Central Louisiana Regional, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Internal",
+   "lat": 31.199004,
+   "lon": -92.533169,
+   "totalTons": 1727726,
+   "domesticTons": 1727726,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 129,
+   "year": 2023
+  },
+  {
+   "id": "usace-3500",
+   "name": "Marine City, MI",
+   "state": "MI",
+   "states": [
+    "MI"
+   ],
+   "type": "Great Lakes",
+   "lat": 42.713568,
+   "lon": -82.501345,
+   "totalTons": 1702537,
+   "domesticTons": 1670570,
+   "foreignTons": 31967,
+   "importTons": 31967,
+   "exportTons": 0,
+   "rank": 130,
+   "year": 2023
+  },
+  {
+   "id": "usace-2371",
+   "name": "Guntersville, AL",
+   "state": "AL",
+   "states": [
+    "AL"
+   ],
+   "type": "Internal",
+   "lat": 34.36727,
+   "lon": -86.263576,
+   "totalTons": 1580832,
+   "domesticTons": 1580832,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 131,
+   "year": 2023
+  },
+  {
+   "id": "usace-2224",
+   "name": "Terrebonne Parish Port, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Coastal",
+   "lat": 29.337751,
+   "lon": -90.837653,
+   "totalTons": 1559384,
+   "domesticTons": 1559384,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 132,
+   "year": 2023
+  },
+  {
+   "id": "usace-2342",
+   "name": "St. Louis County, MO",
+   "state": "MO",
+   "states": [
+    "MO"
+   ],
+   "type": "Internal",
+   "lat": 38.640953,
+   "lon": -90.443304,
+   "totalTons": 1511350,
+   "domesticTons": 1511350,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 133,
+   "year": 2023
+  },
+  {
+   "id": "usace-2259",
+   "name": "Port of Rosedale, MS",
+   "state": "MS",
+   "states": [
+    "MS"
+   ],
+   "type": "Internal",
+   "lat": 33.796007,
+   "lon": -90.880306,
+   "totalTons": 1479709,
+   "domesticTons": 1479709,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 134,
+   "year": 2023
+  },
+  {
+   "id": "usace-1981",
+   "name": "Guayama, PR",
+   "state": "PR",
+   "states": [
+    "PR"
+   ],
+   "type": "Coastal",
+   "lat": 17.973418,
+   "lon": -66.136337,
+   "totalTons": 1443237,
+   "domesticTons": 188324,
+   "foreignTons": 1254913,
+   "importTons": 1254913,
+   "exportTons": 0,
+   "rank": 135,
+   "year": 2023
+  },
+  {
+   "id": "usace-78",
+   "name": "Portsmouth, NH",
+   "state": "NH",
+   "states": [
+    "NH"
+   ],
+   "type": "Coastal",
+   "lat": 43.058105,
+   "lon": -70.78256,
+   "totalTons": 1442416,
+   "domesticTons": 163749,
+   "foreignTons": 1278667,
+   "importTons": 1278623,
+   "exportTons": 44,
+   "rank": 136,
+   "year": 2023
+  },
+  {
+   "id": "usace-4340",
+   "name": "Redwood City, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 37.51736,
+   "lon": -122.211376,
+   "totalTons": 1431714,
+   "domesticTons": 329009,
+   "foreignTons": 1102705,
+   "importTons": 1016185,
+   "exportTons": 86520,
+   "rank": 137,
+   "year": 2023
+  },
+  {
+   "id": "usace-2448",
+   "name": "Winona Port Authority, MN",
+   "state": "MN",
+   "states": [
+    "MN"
+   ],
+   "type": "Internal",
+   "lat": 44.050598,
+   "lon": -91.668346,
+   "totalTons": 1426720,
+   "domesticTons": 1426720,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 138,
+   "year": 2023
+  },
+  {
+   "id": "usace-2398",
+   "name": "Orange County Nav District, TX",
+   "state": "TX",
+   "states": [
+    "TX"
+   ],
+   "type": "Coastal",
+   "lat": 30.125507,
+   "lon": -93.895076,
+   "totalTons": 1336648,
+   "domesticTons": 1336648,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 139,
+   "year": 2023
+  },
+  {
+   "id": "usace-2365",
+   "name": "Helena-West Helena Port, AR",
+   "state": "AR",
+   "states": [
+    "AR"
+   ],
+   "type": "Internal",
+   "lat": 34.428656,
+   "lon": -90.847937,
+   "totalTons": 1260685,
+   "domesticTons": 1260685,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 140,
+   "year": 2023
+  },
+  {
+   "id": "usace-77",
+   "name": "Searsport, ME",
+   "state": "ME",
+   "states": [
+    "ME"
+   ],
+   "type": "Coastal",
+   "lat": 44.47291,
+   "lon": -68.92485,
+   "totalTons": 1210622,
+   "domesticTons": 150121,
+   "foreignTons": 1060501,
+   "importTons": 999363,
+   "exportTons": 61138,
+   "rank": 141,
+   "year": 2023
+  },
+  {
+   "id": "usace-2304",
+   "name": "Hickman-Fulton County Port, KY",
+   "state": "KY",
+   "states": [
+    "KY"
+   ],
+   "type": "Internal",
+   "lat": 36.554101,
+   "lon": -89.187602,
+   "totalTons": 1208350,
+   "domesticTons": 1208350,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 142,
+   "year": 2023
+  },
+  {
+   "id": "usace-4335",
+   "name": "San Francisco Port, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 37.778275,
+   "lon": -122.442505,
+   "totalTons": 1190181,
+   "domesticTons": 639877,
+   "foreignTons": 550304,
+   "importTons": 448909,
+   "exportTons": 101395,
+   "rank": 143,
+   "year": 2023
+  },
+  {
+   "id": "usace-4939",
+   "name": "Unalaska Island, AK",
+   "state": "AK",
+   "states": [
+    "AK"
+   ],
+   "type": "Coastal",
+   "lat": 53.937326,
+   "lon": -166.542399,
+   "totalTons": 1171539,
+   "domesticTons": 286974,
+   "foreignTons": 884565,
+   "importTons": 247252,
+   "exportTons": 637313,
+   "rank": 144,
+   "year": 2023
+  },
+  {
+   "id": "usace-2263",
+   "name": "Pemiscot County Port, MO",
+   "state": "MO",
+   "states": [
+    "MO"
+   ],
+   "type": "Internal",
+   "lat": 36.211703,
+   "lon": -89.785353,
+   "totalTons": 1171214,
+   "domesticTons": 1171214,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 145,
+   "year": 2023
+  },
+  {
+   "id": "usace-2353",
+   "name": "Heartland Port Authority, MO",
+   "state": "MO",
+   "states": [
+    "MO"
+   ],
+   "type": "Internal",
+   "lat": 38.73099,
+   "lon": -92.039084,
+   "totalTons": 1145830,
+   "domesticTons": 1145830,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 146,
+   "year": 2023
+  },
+  {
+   "id": "usace-4240",
+   "name": "Sacramento-Yolo Port, CA",
+   "state": "CA",
+   "states": [
+    "CA"
+   ],
+   "type": "Coastal",
+   "lat": 38.431198,
+   "lon": -121.579024,
+   "totalTons": 1110301,
+   "domesticTons": 0,
+   "foreignTons": 1110301,
+   "importTons": 811606,
+   "exportTons": 298695,
+   "rank": 147,
+   "year": 2023
+  },
+  {
+   "id": "usace-2446",
+   "name": "Lake Providence Port, LA",
+   "state": "LA",
+   "states": [
+    "LA"
+   ],
+   "type": "Internal",
+   "lat": 32.732844,
+   "lon": -91.235043,
+   "totalTons": 1043446,
+   "domesticTons": 1043446,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 148,
+   "year": 2023
+  },
+  {
+   "id": "usace-2318",
+   "name": "Shawneetown Regional Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 37.690445,
+   "lon": -88.207664,
+   "totalTons": 1032602,
+   "domesticTons": 1032602,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 149,
+   "year": 2023
+  },
+  {
+   "id": "usace-2308",
+   "name": "Alexandria-Cairo Port, IL",
+   "state": "IL",
+   "states": [
+    "IL"
+   ],
+   "type": "Internal",
+   "lat": 37.191798,
+   "lon": -89.337692,
+   "totalTons": 1009336,
+   "domesticTons": 1009336,
+   "foreignTons": 0,
+   "importTons": 0,
+   "exportTons": 0,
+   "rank": 150,
+   "year": 2023
+  }
+ ]
+}

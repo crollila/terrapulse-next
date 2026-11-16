@@ -1,0 +1,12 @@
+node_modules
+dist
+research/raw
+research/.venv
+*.log
+.DS_Store
+.vite
+public/vendor
+research/venv
+research/__pycache__
+__pycache__
+*.pyc
