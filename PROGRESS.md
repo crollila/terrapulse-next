@@ -9,7 +9,9 @@ live URL before trusting it.
 - Repository: https://github.com/crollila/terrapulse-next
 - Last verified: 2026-11-15 21:57 MST, commit `44220c1`: 18 of 18 browser tests passed against the
   live URL. Commit `d8f34f0` added only the revised video and documentation.
-- Demo videos: revised, science first, 29.30 s with narration:
+- Demo videos: **V3 (final cut, silent, captions match the narration script)**:
+  https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v3.mp4 (verified 22:35 MST); cue sheet in
+  `docs/DEMO_V3_CUES.md`. V2, science first, 29.30 s with synthetic narration:
   https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v2.mp4 (verified 22:00 MST);
   earlier fallback, 29.4 s silent: https://crollila.github.io/terrapulse-next/media/terrapulse-next-demo-30s.mp4
 - Original project untouched: `crollila/terrapulse` last push 2026-11-15T20:59:38Z, before this

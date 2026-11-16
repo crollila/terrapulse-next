@@ -33,6 +33,7 @@ URL) counts.
 | 2026-11-15 21:05 | `de15eb5` | 14 browser tests against the live URL (includes the drought what-if) | 14 passed |
 | 2026-11-15 21:57 | `44220c1` | 18 browser tests against the live URL (opens on Earth-System Trends; Amazon and Alaska investigations; guided tour to Houston) | 18 passed |
 | 2026-11-15 22:00 | `d8f34f0` | Revised video URL: HTTP 200, `video/mp4`, 4,273,133 bytes, 29.300 s, SHA-256 identical to the local render; plays in a browser without sign-in (readyState 4, audio decoded). Earlier video still 200 | OK |
+| 2026-11-15 22:35 | `dcd525d` | V3 video URL: HTTP 200, `video/mp4`, 17,799,243 bytes, 29.300 s, 879 frames, 1920×1080, video only; SHA-256 identical to the local render; plays in a browser without sign-in. V2 files unchanged (same SHA-256) | OK |
 
 What the live browser tests cover: page and assets load; globe renders; layers toggle; a hazard
 opens its details; the Houston scenario runs with play, pause, rewind and scrub; parameters change
