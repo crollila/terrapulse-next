@@ -3,7 +3,7 @@ import type { HazardFeed } from "../data/hazards";
 import type { InfrastructureMeta, Port, Refinery } from "../data/types";
 import { SCENARIO_001, type HurricaneParams } from "../sim/hurricane";
 
-export type Tab = "trends" | "world" | "sim";
+export type Tab = "trends" | "world" | "sim" | "about";
 export type CaseKey = "amazon" | "alaska";
 const CASE_TARGET: Record<CaseKey, { regionId: string; variableId: string }> = {
   amazon: { regionId: "rondonia", variableId: "PRECTOTCORR" },
@@ -142,7 +142,8 @@ export const sameSel = (a: Selection | null, b: Selection | null) => !!a && !!b 
 let seq = 0;
 
 export const useStore = create<State>((set, get) => ({
-  tab: "trends",
+  // .../#about opens the showcase directly
+  tab: typeof location !== "undefined" && location.hash === "#about" ? "about" : "trends",
   layers: { ...DEFAULT_LAYERS },
   selection: null,
   pinned: [],

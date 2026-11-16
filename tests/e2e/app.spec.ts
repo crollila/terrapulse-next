@@ -24,6 +24,106 @@ async function open(page: Page, tab: "trends" | "world" = "world") {
   if (tab === "world") await page.getByTestId("tab-world").click();
 }
 
+test.describe("Showcase (About)", () => {
+  test("the shareable address opens the showcase with real figures, team credits and working actions", async ({ page }) => {
+    await page.goto("./#about");
+    await page.waitForFunction(() => window.__tpStore?.getState().mapReady === true, undefined, { timeout: 60_000 });
+    await page.waitForFunction(() => window.__tpStore.getState().refineries.length > 0);
+    await expect(page.getByTestId("tab-about")).toHaveAttribute("aria-selected", "true");
+    const sc = page.getByTestId("showcase");
+    await expect(sc.locator("h1")).toHaveText("TerraPulse");
+    await expect(sc).toContainText("Earth Intelligence. Economic Foresight.");
+    await expect(sc).toContainText("See the change. Trace the impact.");
+    await expect(sc).toContainText("not endorsed by NASA");
+    // one h1, a heading per section
+    expect(await sc.locator("h1").count()).toBe(1);
+    expect(await sc.locator("section h2").count()).toBe(8);
+    // the four questions with numbers computed in the browser
+    await expect(page.getByTestId("sc-four")).toContainText("What is changing?");
+    await expect(page.getByTestId("sc-four")).toContainText("Is it statistically significant?");
+    await expect(page.getByTestId("sc-four")).toContainText("−0.541 mm/day");
+    await expect(page.getByTestId("sc-four")).toContainText("Yes, in both corrected tests");
+    // Amazon: two records, the 2005 figures, limits
+    await expect(page.getByTestId("sc-numbers-rondonia")).toContainText("−0.541");
+    await expect(page.getByTestId("sc-numbers-rondonia")).toContainText("−0.282");
+    await expect(page.getByTestId("sc-2005")).toContainText("−1.07 mm/day");
+    await expect(page.getByTestId("sc-amazon-verdict")).toContainText("size is not independently confirmed");
+    await expect(sc.locator("#sc-amazon")).toContainText("not the Amazon as a whole");
+    await expect(sc.locator("#sc-amazon").getByTestId("case-charts").locator("svg")).toHaveCount(2);
+    // Alaska: supported
+    await expect(page.getByTestId("sc-numbers-north-slope")).toContainText("+0.51");
+    await expect(page.getByTestId("sc-numbers-north-slope")).toContainText("+0.41");
+    await expect(page.getByTestId("sc-alaska-verdict")).toContainText("Supported by a second dataset");
+    // simulator: live engine figures and the honest labels
+    await expect(page.getByTestId("sc-houston")).toContainText("4.40 million b/d");
+    await expect(page.getByTestId("sc-sim-warning")).toContainText("Exposure is not a prediction of losses");
+    await expect(sc.locator("#sc-simulation")).toContainText("failed to reproduce Hurricane Harvey");
+    // team: four documented contributors with profile and evidence links; nobody unverified
+    const cards = page.getByTestId("sc-team-cards").locator("article");
+    await expect(cards).toHaveCount(4);
+    for (const who of ["Case Ollila", "Kawtar Ag", "Muhammad Rehan Farooq", "Derek"]) await expect(page.getByTestId("sc-team-cards")).toContainText(who);
+    await expect(page.getByTestId("sc-team-cards").locator('a[href="https://github.com/DerekKered044"]')).toHaveCount(1);
+    await expect(page.getByTestId("sc-team-cards").locator('a[href$="/pull/12"]')).toHaveCount(1);
+    await expect(sc).not.toContainText("Zahid");
+    // transparency and calls to action
+    await expect(sc.locator("#sc-transparency")).toContainText("Anthropic Claude");
+    expect(await page.getByTestId("sc-sources").locator("tr").count()).toBeGreaterThan(8);
+    const cta = page.getByTestId("sc-cta-links");
+    await expect(cta.locator('a[href="https://github.com/crollila/terrapulse-next"]')).toHaveCount(1);
+    await expect(cta.locator('a[href$="docs/METHODOLOGY.md"]')).toHaveCount(1);
+    // images exist
+    for (const img of await sc.locator("figure img").all()) {
+      await img.scrollIntoViewIfNeeded();
+      await expect.poll(async () => img.evaluate((el: HTMLImageElement) => el.complete && el.naturalWidth > 0)).toBe(true);
+    }
+    // the demonstration: the final narrated video, served from this site
+    await page.getByTestId("sc-watch").click();
+    const src = await page.getByTestId("sc-video").getAttribute("src");
+    expect(src).toMatch(/media\/terrapulse-demo-final\.mp4$/);
+    const head = await page.request.head(new URL(src!, page.url()).href);
+    expect(head.status()).toBe(200);
+    expect(head.headers()["content-type"]).toContain("video/mp4");
+    await page.keyboard.press("Escape");
+    await expect(page.getByTestId("sc-video-modal")).toBeHidden();
+    expect(errors.get(page)).toEqual([]);
+  });
+
+  test("showcase actions lead into the working application and back", async ({ page }) => {
+    await open(page, "trends");
+    await page.getByTestId("tab-about").click();
+    await expect(page).toHaveURL(/#about$/);
+    await page.getByTestId("sc-open-amazon").click();
+    await expect(page.getByTestId("case-title")).toHaveText("The Amazon Rainfall Mystery");
+    await expect(page).not.toHaveURL(/#about$/);
+    await page.getByTestId("tab-about").click();
+    await page.getByTestId("sc-open-houston").click();
+    await expect(page.getByTestId("sim-panel")).toContainText("Houston Energy Shock");
+    expect(await capacity(page)).toBeGreaterThan(1);
+    await page.getByTestId("tab-about").click();
+    await page.getByTestId("sc-explore").click();
+    await expect(page.getByTestId("four-answers")).toBeVisible();
+    await expect(page.getByTestId("answer-howmuch")).toContainText("mm/day");
+  });
+
+  for (const vp of [
+    { name: "desktop", width: 1440, height: 900 },
+    { name: "mobile", width: 390, height: 844 },
+  ]) {
+    test(`showcase layout has no horizontal overflow at ${vp.name} size`, async ({ page }) => {
+      await page.setViewportSize({ width: vp.width, height: vp.height });
+      await page.goto("./#about");
+      await page.waitForFunction(() => window.__tpStore?.getState().mapReady === true, undefined, { timeout: 60_000 });
+      await expect(page.getByTestId("showcase").locator("h1")).toBeVisible();
+      await expect(page.getByTestId("sc-team-cards")).toContainText("Case Ollila");
+      const overflow = await page.evaluate(() => {
+        const sc = document.querySelector('[data-testid="showcase"]') as HTMLElement;
+        return Math.max(document.documentElement.scrollWidth - document.documentElement.clientWidth, sc.scrollWidth - sc.clientWidth);
+      });
+      expect(overflow).toBeLessThanOrEqual(1);
+    });
+  }
+});
+
 test.describe("NASA challenge: Earth-System Trends", () => {
   test("opens on the trends view and answers the four questions; variable, region and window can be changed", async ({ page }) => {
     await open(page, "trends");

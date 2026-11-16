@@ -9,6 +9,7 @@ import { SimWorkspace } from "./components/SimWorkspace";
 import { DroughtLab } from "./components/DroughtLab";
 import { TrendDetective } from "./components/TrendDetective";
 import { CaseStudy } from "./components/CaseStudy";
+import { Showcase } from "./components/Showcase";
 import { Methods } from "./components/Methods";
 import { Icon } from "./components/ui";
 import { useStore } from "./state/store";
@@ -88,11 +89,20 @@ export function App() {
   const [methods, setMethods] = useState(false);
   const [mobilePane, setMobilePane] = useState<"controls" | "analysis">("controls");
 
+  // The showcase has a shareable address: .../#about
+  useEffect(() => {
+    if (tab === "about" && location.hash !== "#about" && location.hash !== "#methods") history.replaceState(null, "", location.pathname + location.search + "#about");
+    if (tab !== "about" && location.hash === "#about") history.replaceState(null, "", location.pathname + location.search);
+  }, [tab]);
+
   useEffect(() => {
     const st = useStore.getState();
     for (const id of FEED_IDS) loadFeed(id).then(st.setFeed, (e: Error) => useStore.setState((s) => ({ feedErrors: [...s.feedErrors, `${id}: ${e.message}`] })));
     loadInfrastructure().then(st.setInfra, (e: Error) => st.setInfraError(e.message));
-    const onHash = () => location.hash === "#methods" && setMethods(true);
+    const onHash = () => {
+      if (location.hash === "#methods") setMethods(true);
+      if (location.hash === "#about") useStore.getState().setTab("about");
+    };
     window.addEventListener("hashchange", onHash);
     onHash();
     return () => window.removeEventListener("hashchange", onHash);
@@ -125,6 +135,9 @@ export function App() {
           </button>
           <button className="tab" role="tab" aria-selected={tab === "sim"} onClick={() => setTab("sim")} data-testid="tab-sim">
             Disaster Simulator
+          </button>
+          <button className="tab" role="tab" aria-selected={tab === "about"} onClick={() => setTab("about")} data-testid="tab-about">
+            About
           </button>
         </div>
         <CommandBar />
@@ -160,7 +173,9 @@ export function App() {
           <Globe />
         )}
 
-        {tab === "trends" ? (
+        {tab === "about" ? (
+          <Showcase />
+        ) : tab === "trends" ? (
           <>
             <TrendDetective />
             {caseId ? <CaseStudy id={caseId} /> : <TrendExplorer />}
