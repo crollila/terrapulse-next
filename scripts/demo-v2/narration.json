@@ -1,0 +1,12 @@
+{
+  "voice": "Microsoft Zira Desktop",
+  "rate": 2,
+  "note": "Narration for the revised NASA demo. Spoken by the Windows built-in text-to-speech voice (synthetic voice, disclosed). Every statement matches a figure shown in the app.",
+  "lines": [
+    { "id": "n1", "scene": "four-answers", "text": "Four questions of NASA Earth data: what is changing, where, how much, and is it significant?", "caption": "What is changing? Where? How much? Is it significant?" },
+    { "id": "n2", "scene": "amazon", "text": "In one Amazon study box, MERRA-2 shows rainfall falling fast. A second record agrees on direction, at about half the rate.", "caption": "MERRA-2: −0.541 mm/day per decade · GPCP: −0.282 · same direction, about half the rate" },
+    { "id": "n3", "scene": "break-2005", "text": "The gap opens in 2005, when the rain-gauge input changed.", "caption": "The records part in 2005: a documented change in the rain-gauge input" },
+    { "id": "n4", "scene": "alaska", "text": "In northern Alaska, two records agree.", "caption": "Northern Alaska warming: supported by two independent records" },
+    { "id": "n5", "scene": "houston", "text": "Then a what-if hurricane over real Houston refineries: exposure, not a forecast.", "caption": "Hypothetical hurricane · real refineries (EIA) · exposure, not a forecast" }
+  ]
+}

@@ -4,6 +4,51 @@ Prepared 15 November 2026 (MST). **Nothing has been submitted by this repository
 assistant.** The Team Owner submits. The window closes **Sunday 15 November 2026 at 23:59 in the
 Team Owner's local time (MST)**; only the last saved version is judged.
 
+## 0. Revised demo video (science first), 15 November 2026, 22:05 MST
+
+**https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v2.mp4**
+
+- Runtime **29.30 s** (879 frames at 30 fps), 1280×720, H.264 video, AAC audio. Under the 30-second limit.
+- Real footage: a screen recording of the deployed application (https://crollila.github.io/terrapulse-next/)
+  made by `scripts/demo-v2/record.mjs`, then a title card, captions and narration added by
+  `scripts/demo-v2/render.mjs`. Nothing is mocked and no video is AI-generated.
+- **The narration voice is synthetic**: the Windows built-in text-to-speech voice ("Microsoft Zira").
+  The narration text was written by the AI assistant because no narration text was supplied. If the
+  submission form asks about SI-generated audio, say so. A silent version is one ffmpeg flag away
+  (`-an`) if you prefer captions only.
+- The earlier video (`terrapulse-next-demo-30s.mp4`, 29.4 s, no audio) is unchanged and remains
+  available as a fallback at its original URL.
+
+Scenes: title card (TerraPulse, "Earth intelligence. Economic foresight.") → the four answers for
+Amazon rainfall → The Amazon Rainfall Mystery (MERRA-2 against GPCP) → the 2005 break and its
+figures → Northern Alaska warming → the Houston hurricane scenario and its economic network.
+
+Narration transcript and captions:
+
+| Time | Narration | Caption |
+|---|---|---|
+| 0.3–6.1 s | Four questions of NASA Earth data: what is changing, where, how much, and is it significant? | What is changing? Where? How much? Is it significant? |
+| 6.4–14.0 s | In one Amazon study box, MERRA-2 shows rainfall falling fast. A second record agrees on direction, at about half the rate. | MERRA-2: −0.541 mm/day per decade · GPCP: −0.282 · same direction, about half the rate |
+| 14.3–18.4 s | The gap opens in 2005, when the rain-gauge input changed. | The records part in 2005: a documented change in the rain-gauge input |
+| 18.6–21.3 s | In northern Alaska, two records agree. | Northern Alaska warming: supported by two independent records |
+| 21.6–26.4 s | Then a what-if hurricane over real Houston refineries: exposure, not a forecast. | Hypothetical hurricane · real refineries (EIA) · exposure, not a forecast |
+
+Accuracy check of every statement against the app: −0.541 and −0.282 mm/day per decade are the
+published MERRA-2 and GPCP trends for the south-western Amazon study box (ratio 1.9); the 2005
+break is the team's level-shift result (gap −0.13 before, −0.99 from 2005) and the documented
+change in the gauge input is Reichle et al. (2017); Northern Alaska is "supported by a second
+dataset" (+0.51 MERRA-2, +0.41 GISTEMP); the hurricane is labelled hypothetical and the 4.40
+million b/d is exposure, not a forecast.
+
+Re-create it:
+
+```bash
+powershell -ExecutionPolicy Bypass -File scripts/demo-v2/tts.ps1     # narration clips (Windows)
+node scripts/demo-v2/plan.mjs                                        # timeline from clip lengths
+node scripts/demo-v2/record.mjs https://crollila.github.io/terrapulse-next/
+node scripts/demo-v2/render.mjs
+```
+
 ## 1. What is being submitted
 
 The team's entry is the original **TerraPulse** (challenge: *Be an Earth System Trend Detective!*):
@@ -21,7 +66,9 @@ decision; see section 6.
 1. **Demo link.** A video of 30 seconds or less, or at most 7 slides including the title, at a
    public link that opens without a login. Over either limit makes the project ineligible for
    Global Judging. Options, fastest first:
-   - Use the ready 29.4-second capture of this app (section 4). Public link once deployed:
+   - Use the revised 29.3-second video (section 0), which leads with the science:
+     https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v2.mp4
+     Fallback, earlier 29.4-second silent capture (section 4):
      https://crollila.github.io/terrapulse-next/media/terrapulse-next-demo-30s.mp4
      (uploading the same file to YouTube as "unlisted" also works and is the more usual format).
    - Or the 7-slide outline in section 5, with the real screenshots in `docs/screenshots/`.

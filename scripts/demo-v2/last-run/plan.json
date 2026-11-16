@@ -1,0 +1,83 @@
+{
+  "total": 29.3,
+  "title": 2.2,
+  "xfade": 0.4,
+  "footageStart": 1.8000000000000003,
+  "footageDuration": 27.5,
+  "lines": [
+    {
+      "id": "n1",
+      "scene": "four-answers",
+      "text": "Four questions of NASA Earth data: what is changing, where, how much, and is it significant?",
+      "caption": "What is changing? Where? How much? Is it significant?",
+      "start": 0.3,
+      "duration": 5.809,
+      "end": 6.109
+    },
+    {
+      "id": "n2",
+      "scene": "amazon",
+      "text": "In one Amazon study box, MERRA-2 shows rainfall falling fast. A second record agrees on direction, at about half the rate.",
+      "caption": "MERRA-2: −0.541 mm/day per decade · GPCP: −0.282 · same direction, about half the rate",
+      "start": 6.389,
+      "duration": 7.598,
+      "end": 13.987
+    },
+    {
+      "id": "n3",
+      "scene": "break-2005",
+      "text": "The gap opens in 2005, when the rain-gauge input changed.",
+      "caption": "The records part in 2005: a documented change in the rain-gauge input",
+      "start": 14.267,
+      "duration": 4.089,
+      "end": 18.355
+    },
+    {
+      "id": "n4",
+      "scene": "alaska",
+      "text": "In northern Alaska, two records agree.",
+      "caption": "Northern Alaska warming: supported by two independent records",
+      "start": 18.635,
+      "duration": 2.639,
+      "end": 21.274
+    },
+    {
+      "id": "n5",
+      "scene": "houston",
+      "text": "Then a what-if hurricane over real Houston refineries: exposure, not a forecast.",
+      "caption": "Hypothetical hurricane · real refineries (EIA) · exposure, not a forecast",
+      "start": 21.554,
+      "duration": 4.844,
+      "end": 26.398
+    }
+  ],
+  "scenes": {
+    "fourAnswers": [
+      1.8000000000000003,
+      6.239
+    ],
+    "amazon": [
+      6.239,
+      14.167
+    ],
+    "break2005": [
+      14.167,
+      18.435000000000002
+    ],
+    "alaska": [
+      18.435000000000002,
+      21.024
+    ],
+    "houston": [
+      21.024,
+      29.3
+    ]
+  },
+  "sceneSeconds": {
+    "fourAnswers": 4.439,
+    "amazon": 7.928,
+    "break2005": 4.268,
+    "alaska": 2.589,
+    "houston": 8.276
+  }
+}
