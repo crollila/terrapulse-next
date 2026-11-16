@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T21:10:00-07:00",
+  "updated": "2026-11-16T00:45:00-07:00",
   "note": "Ordered by priority. Status values: done, todo, blocked. Verify against the code before acting.",
   "tasks": [
     {
@@ -53,8 +53,9 @@
       "id": "T08",
       "phase": 4,
       "title": "Wildfire model: user-drawn hypothetical burn footprint and overlap with infrastructure; observed perimeters only from a keyless source",
-      "status": "todo",
-      "owner": "disaster-modeling"
+      "status": "done",
+      "owner": "disaster-modeling",
+      "result": "Branch research/hazard-sim: observed record of three fires (perimeters, VIIRS detections, conditions, infrastructure) and a proximity screen. No spread model: research/WILDFIRE.md explains why. A user-drawn hypothetical footprint was not built."
     },
     {
       "id": "T09",
@@ -161,21 +162,74 @@
       "id": "T23",
       "phase": 7,
       "title": "Add rainfall or flood exposure to the hurricane screen (the Harvey hindcast shows wind alone misses flood-driven shutdowns); needs a sourced rainfall footprint method",
-      "status": "todo",
-      "owner": "disaster-modeling"
+      "status": "done",
+      "owner": "disaster-modeling",
+      "result": "Branch research/hazard-sim: observed rainfall and flood evidence for Harvey; rainfall screen EXPERIMENTAL; R-CLIPER fails and is context only; no flood depth. research/RAINFALL_FLOOD.md."
     },
     {
       "id": "T24",
       "phase": 7,
       "title": "Wind asymmetry and observed wind radii option (the Ike hindcast shows the symmetric profile misses Lake Charles); transcribe the DOE refinery tables for Harvey and Ike to score membership",
       "status": "todo",
-      "owner": "disaster-modeling"
+      "owner": "disaster-modeling",
+      "note": "For Harvey the DOE reports contain no refinery table (corrected in research/RAINFALL_FLOOD.md section 4). DOE Situation Report #3 for Ike (15 Sep 2008) does: transcribed in a research pass, not yet re-checked or used. refcap08.xls is downloaded."
     },
     {
       "id": "T25",
       "phase": 4,
       "title": "Drought: link agricultural production exposure from a verified public dataset (USDA NASS, FAO or ABARES) with sources; compare the index with an operational drought monitor",
       "status": "todo",
+      "owner": "economics"
+    },
+    {
+      "id": "T26",
+      "phase": 7,
+      "title": "Publish the hazard branch: Team Owner review of docs/HAZARD_SIM_BRANCH.md, merge research/hazard-sim into main, deploy, verify live",
+      "status": "blocked",
+      "blockedBy": "needs Team Owner approval",
+      "owner": "lead"
+    },
+    {
+      "id": "T27",
+      "phase": 7,
+      "title": "Ike (2008) by refinery: re-check the DOE Situation Report #3 table, build the 2008 fleet (build_historical_fleet.py 2008), score the wind screens",
+      "status": "todo",
+      "owner": "disaster-modeling"
+    },
+    {
+      "id": "T28",
+      "phase": 7,
+      "title": "Named refinery status and causes for Harvey after 30 August 2017 from primary sources (company statements, TCEQ emission events), to resolve DOE Updates #10 to #22",
+      "status": "todo",
+      "owner": "economics"
+    },
+    {
+      "id": "T29",
+      "phase": 4,
+      "title": "Rainfall record for more storms (Imelda 2019, Laura 2020, Ida 2021, Beryl 2024) and 6-hourly Stage IV; check where the keyless archive begins",
+      "status": "todo",
+      "owner": "earth-science-data"
+    },
+    {
+      "id": "T30",
+      "phase": 4,
+      "title": "Observed inundation for Harvey (USGS SIR 2018-5070 maps) and facility footprints instead of points",
+      "status": "todo",
+      "owner": "earth-science-data"
+    },
+    {
+      "id": "T31",
+      "phase": 4,
+      "title": "Wildfire: sub-daily timeline from NOAA HMS (GOES); more fires with GeoMAC dated perimeters; Camp Fire cause from saved primary sources",
+      "status": "todo",
+      "owner": "disaster-modeling"
+    },
+    {
+      "id": "T32",
+      "phase": 5,
+      "title": "Human-verified listing table for electric and gas utilities, then wildfire company and portfolio exposure",
+      "status": "blocked",
+      "blockedBy": "needs a person to verify the mapping",
       "owner": "economics"
     }
   ]

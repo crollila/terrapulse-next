@@ -4,9 +4,11 @@ import { useScenario } from "../state/derived";
 import { PARAM_BOUNDS, SAFFIR_SIMPSON, SCENARIO_001, saffirSimpsonCategory, validateParams, type HurricaneParams } from "../sim/hurricane";
 import { vmaxForCategory, PLACES } from "../sim/command";
 import { fmtBpd } from "../sim/graph";
+import { kraftMaxRainfallInches } from "../sim/rcliper";
 import { buildScenarioReport } from "../sim/report";
 import { niceName } from "../data/companies";
 import { Badge, Icon, Slider } from "./ui";
+import { HazardSelect } from "./HazardSelect";
 
 const PRESETS = ["Galveston", "Corpus Christi", "Port Arthur", "New Orleans", "Tampa", "Miami"];
 const isScenario001 = (p: HurricaneParams) => (Object.keys(SCENARIO_001) as (keyof HurricaneParams)[]).every((k) => p[k] === SCENARIO_001[k]);
@@ -125,15 +127,7 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
 
         <div className="section stack">
           <h4>Hazard</h4>
-          <div className="field">
-            <label htmlFor="haz">Disaster type</label>
-            <select id="haz" value="hurricane" onChange={(e) => st.setHazard(e.target.value as "hurricane" | "drought")} data-testid="hazard-type">
-              <option value="hurricane">Hurricane · wind-exposure model v0.1</option>
-              <option value="drought">Drought · regional index v0.1</option>
-              <option disabled>Wildfire · not built yet</option>
-              <option disabled>Earthquake, flood, other · not built yet</option>
-            </select>
-          </div>
+          <HazardSelect id="haz" />
           <div className="seg" role="group" aria-label="Intensity category">
             {[0, 1, 2, 3, 4, 5].map((c) => (
               <button key={c} aria-pressed={cat === c} onClick={() => setSim({ vmaxKt: c === 0 ? 50 : vmaxForCategory(c) })} data-testid={`cat-${c}`} title={c === 0 ? "Tropical storm, 34–63 kt" : `Category ${c}: ${SAFFIR_SIMPSON[c - 1].minKt}${Number.isFinite(SAFFIR_SIMPSON[c - 1].maxKt) ? `–${SAFFIR_SIMPSON[c - 1].maxKt}` : "+"} kt`}>
@@ -181,7 +175,7 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
             </select>
           </div>
           <Slider label="Heading (direction of travel)" unit="°" value={sim.headingDeg} {...PARAM_BOUNDS.headingDeg} onChange={(v) => setSim({ headingDeg: v })} hint="0° north, 90° east, 270° west." />
-          <Slider label="Forward speed" unit="km/h" value={sim.forwardSpeedKmh} {...PARAM_BOUNDS.forwardSpeedKmh} onChange={(v) => setSim({ forwardSpeedKmh: v })} hint="Sets how long each site stays inside the wind field." />
+          <Slider label="Forward speed" unit="km/h" value={sim.forwardSpeedKmh} {...PARAM_BOUNDS.forwardSpeedKmh} onChange={(v) => setSim({ forwardSpeedKmh: v })} hint={`Sets how long each site stays inside the wind field. Slow storms rain more: a forecasters' rule of thumb (Kraft) puts the largest storm rainfall near 100 ÷ speed in knots, here about ${(kraftMaxRainfallInches(sim.forwardSpeedKmh) ?? 0).toFixed(0)} in. Not a model result.`} />
           <div className="field">
             <div className="row">
               <span className="small" style={{ fontWeight: 600, color: "var(--navy)", flex: 1 }}>Weaken after landfall</span>
@@ -225,6 +219,9 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
           </div>
           {io && <div className="tiny muted" role="status">{io}</div>}
           <p className="tiny muted">Deterministic: the same inputs always give the same outputs. Experimental model: in a hindcast it failed to reproduce Hurricane Harvey's refinery shutdowns (a rainfall event) and was inconclusive for Ike. See the model card.</p>
+          <button className="btn sm" style={{ alignSelf: "flex-start" }} onClick={() => st.setHazard("rainfall")} data-testid="open-rain-record">
+            Open Harvey's observed rainfall record
+          </button>
         </div>
       </div>
     </aside>

@@ -83,3 +83,24 @@ Still imperfect:
 - Performance on low-end GPUs (only software WebGL in headless browsers, a slow case, where every
   test ran in under 10 seconds).
 - Long sessions, tab suspension, very slow networks.
+
+## Hazard extensions (branch `research/hazard-sim`, 16 November 2026, after merging `main`)
+
+| Suite | Tool | Result |
+|---|---|---|
+| Rainfall screen arithmetic (`rainfall.test.ts`) | Vitest | 22 passed |
+| Rainfall data, time handling, DOE reconstruction, hindcast regression values (`rainfall.data.test.ts`) | Vitest | 29 passed |
+| R-CLIPER equations and its Harvey hindcast (`rcliper.test.ts`) | Vitest | 18 passed |
+| Economic network: wind fingerprints unchanged, rainfall exposure set (`rainGraph.test.ts`) | Vitest | 8 passed |
+| Wildfire geometry, record integrity, agreement, proximity screen, network (`wildfire.test.ts`) | Vitest | 16 passed |
+| **Unit and integration total on the branch** | Vitest | **450 passed, 0 failed** |
+| Rainfall view, hindcast, network, R-CLIPER context, phone layout (`tests/e2e/hazards.spec.ts`) | Playwright, Chromium | 8 passed |
+| Wildfire view, three fires, timeline, proximity screen, network, phone layout (`tests/e2e/wildfire.spec.ts`) | Playwright, Chromium | 6 passed |
+| Existing suite including the showcase tests (`tests/e2e/app.spec.ts`) | Playwright, Chromium | 22 passed |
+| **Browser total on the branch** | Playwright | **36 passed, 0 failed** |
+| Type-check | `tsc --noEmit` | clean |
+
+One real defect was found by these tests and fixed: the new timeline's clock label overflowed a
+390 px screen by 35 px.
+
+Not run on the branch: Firefox and WebKit for the two new spec files; real phones; the live site.

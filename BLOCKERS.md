@@ -31,3 +31,26 @@ Updated 2026-11-15 21:00 MST.
 - Work continues only while this computer is on, a Claude Code session is open and included usage
   is available. Nothing runs in the cloud on a schedule.
 - No paid service, credit card or usage credit has been enabled, and none is needed.
+
+## Hazard simulation branch (16 November 2026)
+
+Needs the Team Owner:
+
+4. **Approval to publish.** Branch `research/hazard-sim` is built, tested and merged with `main`
+   locally. It has not been pushed or deployed. Review `docs/HAZARD_SIM_BRANCH.md`, then merge to
+   `main` to publish, or leave it isolated.
+5. **Utilities in the ticker table.** Wildfire company and portfolio exposure is withheld because
+   utilities have no verified listing mapping. A person should supply or confirm one.
+6. **Two pages that refuse automated requests** (CAL FIRE's Camp Fire incident page; the Butte County
+   District Attorney's report). Save them by hand into `research/raw/wildfire/facts/` and the build
+   will check and add the cause and fatality quotes.
+
+Technical, not yet resolved:
+
+| Item | Why it is open | Effect |
+|---|---|---|
+| Which refineries DOE counted after 30 August 2017 | DOE prints no names and no regional counts from Update #10 | Hindcast stops at Update #9 |
+| Flood depth at a site | No keyless hydraulic model or inundation surface at refinery scale | Rainfall rarity and high-water marks are shown instead; depth is "Not estimated" |
+| Rainfall for hypothetical storms | R-CLIPER fails on Harvey; no verifiable alternative found | Context line only; no rainfall exposure for a what-if storm |
+| Wildfire spread | Unverified inputs, model outside its stated domain, no validation | Not offered |
+| Transmission lines | Only an archived copy with unverified redistribution terms | Lengths stored, lines not drawn |

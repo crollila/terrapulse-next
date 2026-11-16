@@ -5,6 +5,7 @@ import { ageLabel, freshnessStatus, utc } from "../data/freshness";
 import { listingFor, niceName } from "../data/companies";
 import { useCatalog, useOverview } from "../data/trends";
 import { fmtBpd } from "../sim/graph";
+import { scenarioRainfallMm } from "../sim/rcliper";
 import { Badge, FactRow, Icon, Src } from "./ui";
 import { useLayerStatus } from "./LayerPanel";
 import type { LayerDef } from "../data/layers";
@@ -34,6 +35,8 @@ export function selectionTitle(sel: Selection, ctx: { hazards: ReturnType<typeof
     }
     case "layer":
       return LAYER_BY_ID.get(sel.id as any)?.label ?? "Layer";
+    case "plant":
+      return "Power plant";
   }
 }
 
@@ -158,6 +161,7 @@ function Detail({ sel }: { sel: Selection }) {
           <>
             <FactRow label="Scenario: modelled peak wind" value={`${ex.peakWindKt.toFixed(0)} kt (${ex.exposureClass.replace(/-/g, " ")})`} evidence="MODELED" note={`Centre passes within ${ex.closestApproachKm.toFixed(0)} km. Open-water wind, no decay over land.`} />
             <FactRow label={`Scenario: reaches ${result.params.exposureThresholdKt} kt`} value={fmtH(ex.tOnsetThresholdH)} evidence="MODELED" note={ex.inFootprint ? "Inside the exposure footprint. Exposure is not damage or shutdown." : "Outside the exposure footprint."} />
+            <FactRow label="Scenario: storm rainfall, R-CLIPER climatology (experimental)" value={<span data-testid="rcliper-rain">{`${scenarioRainfallMm(result.params, r.lat, r.lon).toFixed(0)} mm (${(scenarioRainfallMm(result.params, r.lat, r.lon) / 25.4).toFixed(1)} in)`}</span>} evidence="MODELED" note="Context only: not used in any count. The published operational baseline (Tuleya et al. 2007) is symmetric and has no rainbands or terrain. Run on Hurricane Harvey it gave about one sixth of the observed rainfall where more than 750 mm fell. No flood depth is implied." />
           </>
         )}
         <div className="row wrap">
@@ -177,6 +181,7 @@ function Detail({ sel }: { sel: Selection }) {
         <FactRow label="Cargo handled" value={p.totalTons != null ? `${(p.totalTons / 1e6).toFixed(1)} million short tons` : "Insufficient validated data"} evidence="OBSERVED" source={USACE} note={`Calendar year ${p.year ?? "n/a"}${p.rank ? `; rank ${p.rank} of the principal ports` : ""}.`} />
         <FactRow label="Location" value={`${p.lat.toFixed(3)}°, ${p.lon.toFixed(3)}°`} note="Centroid of the port polygon." />
         {tab === "sim" && ex && <FactRow label="Scenario: modelled peak wind" value={`${ex.peakWindKt.toFixed(0)} kt`} evidence="MODELED" note={ex.inFootprint ? `Reaches ${result.params.exposureThresholdKt} kt ${fmtH(ex.tOnsetThresholdH)}.` : "Outside the exposure footprint."} />}
+        {tab === "sim" && ex && <FactRow label="Scenario: storm rainfall, R-CLIPER climatology (experimental)" value={`${scenarioRainfallMm(result.params, p.lat, p.lon).toFixed(0)} mm (${(scenarioRainfallMm(result.params, p.lat, p.lon) / 25.4).toFixed(1)} in)`} evidence="MODELED" note="Context only: not used in any count. The published operational baseline (Tuleya et al. 2007) is symmetric and has no rainbands or terrain. Run on Hurricane Harvey it gave about one sixth of the observed rainfall where more than 750 mm fell. No flood depth is implied." />}
         <button className="btn sm" onClick={() => st.flyTo({ lat: p.lat, lon: p.lon, zoom: 9 })}>
           Fly to
         </button>

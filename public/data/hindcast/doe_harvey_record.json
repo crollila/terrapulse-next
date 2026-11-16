@@ -1,0 +1,1539 @@
+{
+ "meta": {
+  "provider": "U.S. Department of Energy (DOE), Office of Cybersecurity, Energy Security, and Emergency Response",
+  "dataset": "Hurricane Harvey event reports, Updates #1 to #22 (26 August to 7 September 2017), PETROLEUM REFINERIES sections",
+  "landingPage": "https://www.energy.gov/ceser/articles/hurricanes-maria-irma-and-harvey-situation-reports-archived-august-26-2017-september",
+  "retrievedAt": "2026-11-16T06:35:14Z",
+  "license": "U.S. Government work, public domain",
+  "builtBy": "research/scripts/build_doe_harvey_record.py",
+  "evidence": "Counts and capacities: HISTORICAL (as printed). Refinery membership: RECONSTRUCTED by arithmetic, not stated by DOE.",
+  "method": [
+   "DOE printed, for each report, how many refineries were shut (or shutting down) and their combined capacity, 'according to public reports'. It did not name them.",
+   "For each report, every set of that many PADD 3 refineries in the EIA Refinery Capacity Report as of 1 January 2017 (55 refineries with a crude distillation capacity) was tested; a set fits when its capacities add up exactly to DOE's figure.",
+   "That arithmetic alone does not identify the refineries: for most reports hundreds of different sets fit (setsFittingTheTotalAlone).",
+   "Updates #1 to #9 also print the number of refineries in each of three named areas. Each Texas refinery is assigned to the area of its nearest reference city (Corpus Christi; Houston or Galveston; Beaumont or Port Arthur) if within 125 km; the same assignment results for any radius from 108 to 166 km. A report is 'resolved' only when exactly one set fits both the total and the regional counts.",
+   "Updates #10 to #22 print no regional counts. Their membership is left unknown."
+  ],
+  "areas": {
+   "referenceCities": {
+    "Corpus Christi": [
+     [
+      27.8,
+      -97.4
+     ]
+    ],
+    "Houston/Galveston": [
+     [
+      29.76,
+      -95.37
+     ],
+     [
+      29.3,
+      -94.8
+     ]
+    ],
+    "Beaumont/Port Arthur": [
+     [
+      30.08,
+      -94.1
+     ],
+     [
+      29.9,
+      -93.93
+     ]
+    ]
+   },
+   "radiusKm": 125.0,
+   "radiiTestedKm": [
+    108.0,
+    125.0,
+    150.0,
+    166.0
+   ],
+   "members": {
+    "Corpus Christi": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas"
+    ],
+    "Houston/Galveston": [
+     "DEER PARK REFINING LTD PARTNERSHIP | DEER PARK | Texas",
+     "EXXONMOBIL REFINING & SUPPLY CO | BAYTOWN | Texas",
+     "HOUSTON REFINING LP | HOUSTON | Texas",
+     "KINDER MORGAN CRUDE & CONDENSATE | GALENA PARK | Texas",
+     "MARATHON PETROLEUM CO LP | GALVESTON BAY | Texas",
+     "MARATHON PETROLEUM CO LP | TEXAS CITY | Texas",
+     "PASADENA REFINING SYSTEMS INC | PASADENA | Texas",
+     "PETROMAX REFINING CO LLC | HOUSTON | Texas",
+     "PHILLIPS 66 COMPANY | SWEENY | Texas",
+     "VALERO REFINING CO TEXAS LP | HOUSTON | Texas",
+     "VALERO REFINING CO TEXAS LP | TEXAS CITY | Texas"
+    ],
+    "Beaumont/Port Arthur": [
+     "EXXONMOBIL REFINING & SUPPLY CO | BEAUMONT | Texas",
+     "Motiva Enterprises LLC | PORT ARTHUR | Texas",
+     "PREMCOR REFINING GROUP INC | PORT ARTHUR | Texas",
+     "TOTAL PETROCHEMICALS & REFINING USA | PORT ARTHUR | Texas"
+    ]
+   },
+   "positionBorrowedForAreaAssignment": [
+    {
+     "key": "MARATHON PETROLEUM CO LP | TEXAS CITY | Texas",
+     "from": "VALERO REFINING CO TEXAS LP | TEXAS CITY | Texas"
+    }
+   ]
+  },
+  "assumptions": [
+   "DOE's combined capacities were built from the EIA capacities as of 1 January 2017 (barrels per calendar day). The exact agreement of the resolved reports with that table supports this; DOE does not state it.",
+   "DOE's area names mean what the nearest-city rule says they mean. DOE does not define them. The rule puts exactly six refineries in the Corpus Christi area, matching DOE's 'all six', and their capacities add up to DOE's 924,720 b/d."
+  ],
+  "caveats": [
+   "'Shut down or in the process of shutting down, according to public reports' covers precautionary shutdowns, flooding, power loss, port closures and crude supply problems. DOE does not attribute causes to named refineries.",
+   "Capacities are nameplate crude distillation capacity, not lost output.",
+   "Reports the method cannot resolve say nothing here about which refineries were shut at that time."
+  ],
+  "figuresCheckedAgainstPdfText": {
+   "checked": 50,
+   "note": "every transcribed capacity figure was found in the text of its PDF"
+  },
+  "universeSize": 55,
+  "resolvedReports": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "unresolvedReports": [
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22
+  ]
+ },
+ "reports": [
+  {
+   "report": 1,
+   "title": "Hurricane Harvey Event Report (Update #1)",
+   "asOfPrinted": "8:00 AM EDT | Saturday, August 26, 2017",
+   "sectionAsOf": "08:00 AM EDT, August 26",
+   "asOfUtc": "2017-08-26T12:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%231.pdf",
+   "summaryQuote": "As of 08:00 AM EDT, August 26, all six refineries in the Corpus Christi area have been or were in the process of shutting down, according to public reports. These refineries have a combined refining capacity of 924,720 b/d, equal to 18.4% of total Gulf Coast refining capacity. In addition, one refinery in the Houston/Galveston region area was operating at reduced rates.",
+   "shut": {
+    "count": 6,
+    "capacityBpd": 924720,
+    "countBasis": "sum of regional counts printed in the sentence",
+    "regionCountsAsPrinted": {
+     "Corpus Christi": 6
+    },
+    "setsFittingTheTotalAlone": 141,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": 1,
+    "resolved": true,
+    "members": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas"
+    ],
+    "sameResultForEveryTestedRadius": true
+   },
+   "restarting": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": null,
+    "regionCountsAsPrinted": null
+   },
+   "reducedRates": {
+    "count": 1,
+    "capacityBpd": null,
+    "countBasis": "sum of regional counts printed in the sentence (read manually)",
+    "regionCountsAsPrinted": null
+   }
+  },
+  {
+   "report": 2,
+   "title": "Hurricane Harvey Event Report (Update #2)",
+   "asOfPrinted": "4:00 PM EDT | Saturday, August 26, 2017",
+   "sectionAsOf": "03:00 PM EDT, August 26",
+   "asOfUtc": "2017-08-26T19:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%232.pdf",
+   "summaryQuote": "As of 03:00 PM EDT, August 26, all six refineries in the Corpus Christi area have been or were in the process of shutting down, according to public reports. These refineries have a combined refining capacity of 924,720 b/d, equal to 18.4% of total Gulf Coast refining capacity. In addition, three refineries in the Houston/Galveston region area were operating at reduced rates.",
+   "shut": {
+    "count": 6,
+    "capacityBpd": 924720,
+    "countBasis": "sum of regional counts printed in the sentence",
+    "regionCountsAsPrinted": {
+     "Corpus Christi": 6
+    },
+    "setsFittingTheTotalAlone": 141,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": 1,
+    "resolved": true,
+    "members": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas"
+    ],
+    "sameResultForEveryTestedRadius": true
+   },
+   "restarting": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": null,
+    "regionCountsAsPrinted": null
+   },
+   "reducedRates": {
+    "count": 3,
+    "capacityBpd": null,
+    "countBasis": "sum of regional counts printed in the sentence (read manually)",
+    "regionCountsAsPrinted": null
+   }
+  },
+  {
+   "report": 3,
+   "title": "Hurricane Harvey Event Report (Update #3)",
+   "asOfPrinted": "8:30 AM EDT | Sunday, August 27, 2017",
+   "sectionAsOf": "08:00 AM EDT, August 27",
+   "asOfUtc": "2017-08-27T12:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%233.pdf",
+   "summaryQuote": "As of 08:00 AM EDT, August 27, all six refineries in the Corpus Christi area have been or were in the process of shutting down, according to public reports. These refineries have a combined refining capacity of 924,720 b/d, equal to 18.4% of total Gulf Coast refining capacity. In addition, four refineries in the Houston/Galveston region area were operating at reduced rates.",
+   "shut": {
+    "count": 6,
+    "capacityBpd": 924720,
+    "countBasis": "sum of regional counts printed in the sentence",
+    "regionCountsAsPrinted": {
+     "Corpus Christi": 6
+    },
+    "setsFittingTheTotalAlone": 141,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": 1,
+    "resolved": true,
+    "members": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas"
+    ],
+    "sameResultForEveryTestedRadius": true
+   },
+   "restarting": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": null,
+    "regionCountsAsPrinted": null
+   },
+   "reducedRates": {
+    "count": 4,
+    "capacityBpd": null,
+    "countBasis": "sum of regional counts printed in the sentence (read manually)",
+    "regionCountsAsPrinted": null
+   }
+  },
+  {
+   "report": 4,
+   "title": "Hurricane Harvey Event Report (Update #4)",
+   "asOfPrinted": "4:30 PM EDT | Sunday, August 27, 2017",
+   "sectionAsOf": "03:00 PM EDT, August 27",
+   "asOfUtc": "2017-08-27T19:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%234.pdf",
+   "summaryQuote": "As of 03:00 PM EDT, August 27, all six refineries in the Corpus Christi area are shut down and two refineries in the Houston/Galveston area have begun the process of shutting down, according to public reports. These refineries have a combined refining capacity of 1,810,920 b/d, equal to 36.0% of total Texas Gulf Coast refining capacity. In addition, one refinery in the H",
+   "shut": {
+    "count": 8,
+    "capacityBpd": 1810920,
+    "countBasis": "sum of regional counts printed in the sentence",
+    "regionCountsAsPrinted": {
+     "Corpus Christi": 6,
+     "Houston/Galveston": 2
+    },
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": 1,
+    "resolved": true,
+    "members": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "DEER PARK REFINING LTD PARTNERSHIP | DEER PARK | Texas",
+     "EXXONMOBIL REFINING & SUPPLY CO | BAYTOWN | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas"
+    ],
+    "sameResultForEveryTestedRadius": true
+   },
+   "restarting": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": null,
+    "regionCountsAsPrinted": null
+   },
+   "reducedRates": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": "sentence truncated in the PDF ('In addition, one refinery in the H')",
+    "regionCountsAsPrinted": null
+   }
+  },
+  {
+   "report": 5,
+   "title": "Hurricane Harvey Event Report (Update #5)",
+   "asOfPrinted": "8:30 AM EDT | Monday, August 28, 2017",
+   "sectionAsOf": "08:00 AM EDT, August 28",
+   "asOfUtc": "2017-08-28T12:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%235.pdf",
+   "summaryQuote": "As of 08:00 AM EDT, August 28, all six refineries in the Corpus Christi area were shut down, although one refinery had begun startup operations, and four refineries in the Houston/Galveston area have begun the process of shutting down, according to public reports. These refineries have a combined refining capacity of 2,170,149 b/d, equal to 43.2% of total Texas Gulf Coast refining capacity and 11.8% of total U.S. refining capacity. In addition, two refineries in the Houston/Galveston region area and one refinery in the Beaumont/Port Arthur area were operating at reduced rates.",
+   "shut": {
+    "count": 10,
+    "capacityBpd": 2170149,
+    "countBasis": "sum of regional counts printed in the sentence",
+    "regionCountsAsPrinted": {
+     "Corpus Christi": 6,
+     "Houston/Galveston": 4
+    },
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": 1,
+    "resolved": true,
+    "members": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "DEER PARK REFINING LTD PARTNERSHIP | DEER PARK | Texas",
+     "EXXONMOBIL REFINING & SUPPLY CO | BAYTOWN | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "PASADENA REFINING SYSTEMS INC | PASADENA | Texas",
+     "PHILLIPS 66 COMPANY | SWEENY | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas"
+    ],
+    "sameResultForEveryTestedRadius": true
+   },
+   "restarting": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": null,
+    "regionCountsAsPrinted": null
+   },
+   "reducedRates": {
+    "count": 3,
+    "capacityBpd": null,
+    "countBasis": "sum of regional counts printed in the sentence (read manually)",
+    "regionCountsAsPrinted": null
+   }
+  },
+  {
+   "report": 6,
+   "title": "Tropical Storm Harvey Event Report (Update #6)",
+   "asOfPrinted": "4:00 PM EDT | Monday, August 28, 2017",
+   "sectionAsOf": "03:00 PM EDT, August 28",
+   "asOfUtc": "2017-08-28T19:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%236.pdf",
+   "summaryQuote": "As of 03:00 PM EDT, August 28, all six refineries in the Corpus Christi area and four refineries in the Houston/Galveston area were shut down, according to public reports. These refineries have a combined refining capacity of 2,170,149 b/d, equal to 43.2% of total Texas Gulf Coast refining capacity and 11.8% of total U.S. refining capacity. In addition, three refineries in the Houston/Galveston region area and one refinery in the Beaumont/Port Arthur area were operating at reduced rates. Two more refineries in the Beaumont/Port Arthur area were operating at near full capacity but were considering shutting down.",
+   "shut": {
+    "count": 10,
+    "capacityBpd": 2170149,
+    "countBasis": "sum of regional counts printed in the sentence",
+    "regionCountsAsPrinted": {
+     "Corpus Christi": 6,
+     "Houston/Galveston": 4
+    },
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": 1,
+    "resolved": true,
+    "members": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "DEER PARK REFINING LTD PARTNERSHIP | DEER PARK | Texas",
+     "EXXONMOBIL REFINING & SUPPLY CO | BAYTOWN | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "PASADENA REFINING SYSTEMS INC | PASADENA | Texas",
+     "PHILLIPS 66 COMPANY | SWEENY | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas"
+    ],
+    "sameResultForEveryTestedRadius": true
+   },
+   "restarting": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": null,
+    "regionCountsAsPrinted": null
+   },
+   "reducedRates": {
+    "count": 4,
+    "capacityBpd": null,
+    "countBasis": "sum of regional counts printed in the sentence (read manually)",
+    "regionCountsAsPrinted": null
+   }
+  },
+  {
+   "report": 7,
+   "title": "Tropical Storm Harvey Event Report (Update #7)",
+   "asOfPrinted": "8:30 AM EDT | Tuesday, August 29, 2017",
+   "sectionAsOf": "08:00 AM EDT, August 29",
+   "asOfUtc": "2017-08-29T12:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%237.pdf",
+   "summaryQuote": "As of 08:00 AM EDT, August 29, all six refineries in the Corpus Christi area and five refineries in the Houston/Galveston area were shut down, according to public reports. These refineries have a combined refining capacity of 2,361,149 b/d, equal to 24.4% of total Gulf Coast (PADD 3) refining capacity and 12.8% of total U.S. refining capacity. In addition, four refineries in the Houston/Galveston region area, one refinery in the Beaumont/Port Arthur area, and two refineries in the Lake Charles area were operating at reduced rates.",
+   "shut": {
+    "count": 11,
+    "capacityBpd": 2361149,
+    "countBasis": "sum of regional counts printed in the sentence",
+    "regionCountsAsPrinted": {
+     "Corpus Christi": 6,
+     "Houston/Galveston": 5
+    },
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": 1,
+    "resolved": true,
+    "members": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "DEER PARK REFINING LTD PARTNERSHIP | DEER PARK | Texas",
+     "EXXONMOBIL REFINING & SUPPLY CO | BAYTOWN | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "PASADENA REFINING SYSTEMS INC | PASADENA | Texas",
+     "PHILLIPS 66 COMPANY | SWEENY | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas",
+     "VALERO REFINING CO TEXAS LP | HOUSTON | Texas"
+    ],
+    "sameResultForEveryTestedRadius": true
+   },
+   "restarting": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": null,
+    "regionCountsAsPrinted": null
+   },
+   "reducedRates": {
+    "count": 7,
+    "capacityBpd": null,
+    "countBasis": "sum of regional counts printed in the sentence (read manually)",
+    "regionCountsAsPrinted": null
+   }
+  },
+  {
+   "report": 8,
+   "title": "Tropical Storm Harvey Event Report (Update #8)",
+   "asOfPrinted": "4:00 PM EDT | Tuesday, August 29, 2017",
+   "sectionAsOf": "03:00 PM EDT, August 29",
+   "asOfUtc": "2017-08-29T19:00:00Z",
+   "url": "https://www.energy.gov/documents/hurricane-harvey-event-summary-august-29-2017-afternoonpdf-0",
+   "summaryQuote": "As of 03:00 PM EDT, August 29, all six refineries in the Corpus Christi area, seven refineries in the Houston/Galveston area, and one refinery in the Beaumont/Port Arthur area were shut down or in the process of shutting down, according to public reports. These refineries have a combined refining capacity of 3,268,449 b/d, equal to 33.7% of total Gulf Coast (PADD 3) refining capacity and 17.6% of total U.S. refining capacity. In addition, one refinery in the Houston/Galveston region area, two refineries in the Beaumont/Port Arthur area, and two refineries in the Lake Charles area were operating at reduced rates. The refineries operating at reduced rates have a total capacity of 1,777,276 b/d, equal to 18.3% of total Gulf Coast (PADD 3) refining capacity and 9.6% of total U.S. refining capacity.",
+   "shut": {
+    "count": 14,
+    "capacityBpd": 3268449,
+    "countBasis": "sum of regional counts printed in the sentence",
+    "regionCountsAsPrinted": {
+     "Corpus Christi": 6,
+     "Houston/Galveston": 7,
+     "Beaumont/Port Arthur": 1
+    },
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": 1,
+    "resolved": true,
+    "members": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "DEER PARK REFINING LTD PARTNERSHIP | DEER PARK | Texas",
+     "EXXONMOBIL REFINING & SUPPLY CO | BAYTOWN | Texas",
+     "EXXONMOBIL REFINING & SUPPLY CO | BEAUMONT | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "MARATHON PETROLEUM CO LP | GALVESTON BAY | Texas",
+     "MARATHON PETROLEUM CO LP | TEXAS CITY | Texas",
+     "PASADENA REFINING SYSTEMS INC | PASADENA | Texas",
+     "PHILLIPS 66 COMPANY | SWEENY | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas",
+     "VALERO REFINING CO TEXAS LP | HOUSTON | Texas"
+    ],
+    "sameResultForEveryTestedRadius": true
+   },
+   "restarting": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": null,
+    "regionCountsAsPrinted": null
+   },
+   "reducedRates": {
+    "count": 5,
+    "capacityBpd": 1777276,
+    "countBasis": "sum of regional counts printed in the sentence (read manually)",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 11,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 9,
+   "title": "Tropical Storm Harvey Event Report (Update #9)",
+   "asOfPrinted": "8:30 AM EDT | Wednesday, August 30, 2017",
+   "sectionAsOf": "08:00 AM EDT, August 30",
+   "asOfUtc": "2017-08-30T12:00:00Z",
+   "url": "https://www.energy.gov/documents/hurricane-harvey-event-summary-august-30-2017-morningpdf-0",
+   "summaryQuote": "As of 08:00 AM EDT, August 30, all six refineries in the Corpus Christi area, seven refineries in the Houston/Galveston area, and two refineries in the Beaumont/Port Arthur area were shut down or in the process of shutting down, according to public reports. These refineries have a combined refining capacity of 3,871,449 b/d, equal to 39.9% of total Gulf Coast (PADD 3) refining capacity and 20.9% of total U.S. refining capacity. In addition, five refineries in the Gulf Coast region were operating at reduced rates. The refineries operating at reduced rates have a total capacity of 1,509,276 b/d, equal to 15.6% of total Gulf Coast (PADD 3) refining capacity and 8.2% of total U.S. refining capacity.",
+   "shut": {
+    "count": 15,
+    "capacityBpd": 3871449,
+    "countBasis": "sum of regional counts printed in the sentence",
+    "regionCountsAsPrinted": {
+     "Corpus Christi": 6,
+     "Houston/Galveston": 7,
+     "Beaumont/Port Arthur": 2
+    },
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": 1,
+    "resolved": true,
+    "members": [
+     "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+     "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+     "DEER PARK REFINING LTD PARTNERSHIP | DEER PARK | Texas",
+     "EXXONMOBIL REFINING & SUPPLY CO | BAYTOWN | Texas",
+     "EXXONMOBIL REFINING & SUPPLY CO | BEAUMONT | Texas",
+     "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+     "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+     "MARATHON PETROLEUM CO LP | GALVESTON BAY | Texas",
+     "MARATHON PETROLEUM CO LP | TEXAS CITY | Texas",
+     "Motiva Enterprises LLC | PORT ARTHUR | Texas",
+     "PASADENA REFINING SYSTEMS INC | PASADENA | Texas",
+     "PHILLIPS 66 COMPANY | SWEENY | Texas",
+     "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+     "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas",
+     "VALERO REFINING CO TEXAS LP | HOUSTON | Texas"
+    ],
+    "sameResultForEveryTestedRadius": true
+   },
+   "restarting": {
+    "count": null,
+    "capacityBpd": null,
+    "countBasis": null,
+    "regionCountsAsPrinted": null
+   },
+   "reducedRates": {
+    "count": 5,
+    "capacityBpd": 1509276,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 28,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 10,
+   "title": "Tropical Storm Harvey Event Report (Update #10)",
+   "asOfPrinted": "4:00 PM EDT | Wednesday, August 30, 2017",
+   "sectionAsOf": "03:00 PM EDT, August 30",
+   "asOfUtc": "2017-08-30T19:00:00Z",
+   "url": "https://www.energy.gov/documents/hurricane-harvey-event-summary-august-30-2017-afternoonpdf-0",
+   "summaryQuote": "As of 03:00 PM EDT, August 30, 10 refineries in the Gulf Coast region were shut down, according to public reports. These refineries have a combined refining capacity of 3,075,229 b/d, equal to 31.7% of total Gulf Coast (PADD 3) refining capacity and 16.6% of total U.S. refining capacity.",
+   "shut": {
+    "count": 10,
+    "capacityBpd": 3075229,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 6,
+    "capacityBpd": 1269720,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 118,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 2,
+    "capacityBpd": 688776,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 1,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 11,
+   "title": "Tropical Storm Harvey Event Report (Update #11)",
+   "asOfPrinted": "11:00 AM EDT | Thursday, August 31, 2017",
+   "sectionAsOf": "07:00 AM EDT, August 31",
+   "asOfUtc": "2017-08-31T11:00:00Z",
+   "url": "https://www.energy.gov/documents/hurricane-harvey-event-summary-august-31-2017-morningpdf-0",
+   "summaryQuote": "As of 07:00 AM EDT, August 31, 10 refineries in the Gulf Coast region were shut down, according to public reports. These refineries have a combined refining capacity of 3,075,229 b/d, equal to 31.7% of total Gulf Coast (PADD 3) refining capacity and 16.6% of total U.S. refining capacity.",
+   "shut": {
+    "count": 10,
+    "capacityBpd": 3075229,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 6,
+    "capacityBpd": 1269720,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 118,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 2,
+    "capacityBpd": 688776,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 1,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 12,
+   "title": "Tropical Storm Harvey Event Report (Update #12)",
+   "asOfPrinted": "4:00 PM EDT | Thursday, August 31, 2017",
+   "sectionAsOf": "03:00 PM EDT, August 31",
+   "asOfUtc": "2017-08-31T19:00:00Z",
+   "url": "https://www.energy.gov/documents/hurricane-harvey-event-summary-august-31-2017-afternoonpdf-0",
+   "summaryQuote": "As of 03:00 PM EDT, August 31, 10 refineries in the Gulf Coast region remain shut down, according to public reports. These refineries have a combined refining capacity of 3,075,229 b/d, equal to 31.7% of total Gulf Coast (PADD 3) refining capacity and 16.6% of total U.S. refining capacity.",
+   "shut": {
+    "count": 10,
+    "capacityBpd": 3075229,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 6,
+    "capacityBpd": 1269720,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 118,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 2,
+    "capacityBpd": 688776,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 1,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 13,
+   "title": "Tropical Depression Harvey Event Report (Update #13)",
+   "asOfPrinted": "10:00 AM EDT | Friday, September 1, 2017",
+   "sectionAsOf": "08:00 AM EDT, September 1",
+   "asOfUtc": "2017-09-01T12:00:00Z",
+   "url": "https://www.energy.gov/documents/hurricane-harvey-event-summary-september-1-2017-morningpdf-0",
+   "summaryQuote": "As of 08:00 AM EDT, September 1, 10 refineries in the Gulf Coast region were shut down, according to public reports. These refineries have a combined refining capacity of 3,075,229 b/d, equal to 31.7% of total Gulf Coast (PADD 3) refining capacity and 16.6% of total U.S. refining capacity.",
+   "shut": {
+    "count": 10,
+    "capacityBpd": 3075229,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 6,
+    "capacityBpd": 1269720,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 118,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 4,
+    "capacityBpd": 1104776,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 5,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 14,
+   "title": "Tropical Depression Harvey Event Report (Update #14)",
+   "asOfPrinted": "5:00 PM EDT | Friday, September 1, 2017",
+   "sectionAsOf": "03:00 PM EDT, September 1",
+   "asOfUtc": "2017-09-01T19:00:00Z",
+   "url": "https://www.energy.gov/documents/hurricane-harvey-event-summary-september-1-2017-afternoonpdf-0",
+   "summaryQuote": "As of 03:00 PM EDT, September 1, 10 refineries in the Gulf Coast region were shut down, according to public reports. One refinery came back online since this morning\u2019s update. These refineries have a combined refining capacity of 2,917,729 b/d, equal to 30.1% of total Gulf Coast (PADD 3) refining capacity and 15.8% of total U.S. refining capacity.",
+   "shut": {
+    "count": 10,
+    "capacityBpd": 2917729,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 6,
+    "capacityBpd": 968220,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 100,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 5,
+    "capacityBpd": 1563776,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 17,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 15,
+   "title": "Post-Tropical Cyclone Harvey Event Report (Update #15)",
+   "asOfPrinted": "10:00 AM EDT | Saturday, September 2, 2017",
+   "sectionAsOf": "08:00 AM EDT, September 2",
+   "asOfUtc": "2017-09-02T12:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%2315.pdf",
+   "summaryQuote": "As of 08:00 AM EDT, September 2, 10 refineries in the Gulf Coast region were shut down, according to public reports. No refineries have changed their status since yesterday afternoon\u2019s report. These refineries have a combined refining capacity of 2,917,729 b/d, equal to 30.1% of total Gulf Coast (PADD 3) refining capacity and 15.8% of total U.S. refining capacity.",
+   "shut": {
+    "count": 10,
+    "capacityBpd": 2917729,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 6,
+    "capacityBpd": 968220,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 100,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 5,
+    "capacityBpd": 1563776,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 17,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 16,
+   "title": "Post-Tropical Cyclone Harvey Event Report (Update #16)",
+   "asOfPrinted": "4:00 PM EDT | Saturday, September 2, 2017",
+   "sectionAsOf": "03:00 PM EDT, September 2",
+   "asOfUtc": "2017-09-02T19:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%2316.pdf",
+   "summaryQuote": "As of 03:00 PM EDT, September 2, nine refineries in the Gulf Coast region were shut down, according to public reports. One refinery was identified as having begun restart operations since the last report. These refineries have a combined refining capacity of 2,357,229 b/d, equal to 24.3% of total Gulf Coast (PADD 3) refining capacity and 12.7% of total U.S. refining capacity.",
+   "shut": {
+    "count": 9,
+    "capacityBpd": 2357229,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 7,
+    "capacityBpd": 1528720,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 4,
+    "capacityBpd": 1338776,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 4,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 17,
+   "title": "Post-Tropical Cyclone Harvey Event Report (Update #17)",
+   "asOfPrinted": "11:00 AM EDT | Sunday, September 3, 2017",
+   "sectionAsOf": "07:30 AM EDT, September 3",
+   "asOfUtc": "2017-09-03T11:30:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%2317.pdf",
+   "summaryQuote": "As of 07:30 AM EDT, September 3, nine refineries in the Gulf Coast region were shut down, according to public reports. No shut refineries have changed their status since the last report. These refineries have a combined refining capacity of 2,357,229 b/d, equal to 24.3% of total Gulf Coast (PADD 3) refining capacity and 12.7% of total U.S. refining capacity.",
+   "shut": {
+    "count": 9,
+    "capacityBpd": 2357229,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 7,
+    "capacityBpd": 1528720,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 4,
+    "capacityBpd": 1338776,
+    "countBasis": "printed ('At least')",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 4,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 18,
+   "title": "Post-Tropical Cyclone Harvey Event Report (Update #18)",
+   "asOfPrinted": "4:00 PM EDT | Sunday, September 3, 2017",
+   "sectionAsOf": "02:30 PM EDT, September 3",
+   "asOfUtc": "2017-09-03T18:30:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%2318.pdf",
+   "summaryQuote": "As of 02:30 PM EDT, September 3, nine refineries in the Gulf Coast region were shut down, according to public reports. No shut refineries have changed their status since the last report. These refineries have a combined refining capacity of 2,357,229 b/d, equal to 24.3% of total Gulf Coast (PADD 3) refining capacity and 12.7% of total U.S. refining capacity.",
+   "shut": {
+    "count": 9,
+    "capacityBpd": 2357229,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 7,
+    "capacityBpd": 1528720,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 4,
+    "capacityBpd": 1338776,
+    "countBasis": "printed ('At least')",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 4,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 19,
+   "title": "Post-Tropical Cyclone Harvey Event Report (Update #19)",
+   "asOfPrinted": "4:00 PM EDT | Monday, September 4, 2017",
+   "sectionAsOf": "02:00 PM EDT, September 4",
+   "asOfUtc": "2017-09-04T18:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%2319.pdf",
+   "summaryQuote": "As of 02:00 PM EDT, September 4, eight refineries in the Gulf Coast region were shut down, according to public reports. These refineries have a combined refining capacity of 2,110,229 b/d, equal to 21.8% of total Gulf Coast (PADD 3) refining capacity and 11.4% of total U.S. refining capacity.",
+   "shut": {
+    "count": 8,
+    "capacityBpd": 2110229,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 8,
+    "capacityBpd": 1775720,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 4,
+    "capacityBpd": 1338776,
+    "countBasis": "printed ('At least')",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 4,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 20,
+   "title": "Hurricane Harvey Recovery & Hurricane Irma Event Report (Update #20)",
+   "asOfPrinted": "4:00PM EDT | Tuesday, September 5, 2017",
+   "sectionAsOf": "02:30 PM EDT, September 5",
+   "asOfUtc": "2017-09-05T18:30:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%2320.pdf",
+   "summaryQuote": "As of 02:30 PM EDT, September 5, six refineries in the Gulf Coast region were shut down, according to public reports No shut refineries have changed their status since the last report. These refineries have a combined refining capacity of 1,663,000 b/d, equal to 17.2% of total Gulf Coast (PADD 3) refining capacity and 9.0% of total U.S. refining capacity.",
+   "shut": {
+    "count": 6,
+    "capacityBpd": 1663000,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 5,
+    "capacityBpd": 1551199,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 3,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 7,
+    "capacityBpd": 1671276,
+    "countBasis": "printed ('At least')",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 21,
+   "title": "Hurricane Irma & Hurricane Harvey Event Report (Update #21)",
+   "asOfPrinted": "4:00 PM EDT | Wednesday, September 6, 2017",
+   "sectionAsOf": "02:00 PM EDT, September 6",
+   "asOfUtc": "2017-09-06T18:00:00Z",
+   "url": "https://www.energy.gov/sites/default/files/2017/10/f37/Hurricane%20Harvey%20Event%20Summary%20%2321.pdf",
+   "summaryQuote": "As of 02:00 PM EDT, September 6, five refineries in the Gulf Coast region were shut down, according to public reports. One refinery began restarting operations since the last report. These refineries have a combined refining capacity of 1,060,000 b/d, equal to 10.9% of total Gulf Coast (PADD 3) refining capacity and 5.7% of total U.S. refining capacity.",
+   "shut": {
+    "count": 5,
+    "capacityBpd": 1060000,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 6,
+    "capacityBpd": 2154199,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 3,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 7,
+    "capacityBpd": 1671276,
+    "countBasis": "printed ('At least')",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  },
+  {
+   "report": 22,
+   "title": "Hurricane Irma & Hurricane Harvey Event Report (Update #22)",
+   "asOfPrinted": "4:00 PM EDT | Thursday, September 7, 2017",
+   "sectionAsOf": "02:00 PM EDT, September 7",
+   "asOfUtc": "2017-09-07T18:00:00Z",
+   "url": "https://www.energy.gov/sites/prod/files/2017/09/f36/Hurricane%20Harvey%20Event%20Summary%2022.pdf",
+   "summaryQuote": "As of 02:00 PM EDT, September 7, six refineries in the Gulf Coast region were shut down, according to public reports. One refinery that previously began restarting has shut down due to electrical issues since the last report. These refineries have a combined refining capacity of 1,395,000 b/d, equal to 14.4% of total Gulf Coast (PADD 3) refining capacity and 7.5% of total U.S. refining capacity.",
+   "shut": {
+    "count": 6,
+    "capacityBpd": 1395000,
+    "countBasis": "printed",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "restarting": {
+    "count": 5,
+    "capacityBpd": 1819199,
+    "countBasis": null,
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 2,
+    "setsFittingTheTotalAloneCapped": false,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   },
+   "reducedRates": {
+    "count": 6,
+    "capacityBpd": 1513776,
+    "countBasis": "printed ('At least')",
+    "regionCountsAsPrinted": null,
+    "setsFittingTheTotalAlone": 200,
+    "setsFittingTheTotalAloneCapped": true,
+    "setsFittingTotalAndRegionalCounts": null,
+    "resolved": false,
+    "members": null
+   }
+  }
+ ],
+ "refineries": [
+  {
+   "key": "Flint Hills Resources LP | CORPUS CHRISTI | Texas",
+   "doeName": "Flint Hills Resources Lp (Corpus Christi)",
+   "company": "Flint Hills Resources LP",
+   "site": "CORPUS CHRISTI",
+   "state": "Texas",
+   "area": "Corpus Christi",
+   "capacityBpd2017": 296470,
+   "eiaId": "eia-204-texas-corpus-christi",
+   "shutInReports": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "shut",
+    "2": "shut",
+    "3": "shut",
+    "4": "shut",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "VALERO REFINING CO TEXAS LP | CORPUS CHRISTI | Texas",
+   "doeName": "Valero Refining Co Texas Lp (Corpus Christi)",
+   "company": "VALERO REFINING CO TEXAS LP",
+   "site": "CORPUS CHRISTI",
+   "state": "Texas",
+   "area": "Corpus Christi",
+   "capacityBpd2017": 293000,
+   "eiaId": "eia-351-texas-corpus-christi",
+   "shutInReports": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "shut",
+    "2": "shut",
+    "3": "shut",
+    "4": "shut",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "CITGO REFINING & CHEMICAL INC | CORPUS CHRISTI | Texas",
+   "doeName": "Citgo Refining & Chemical Inc (Corpus Christi)",
+   "company": "CITGO REFINING & CHEMICAL INC",
+   "site": "CORPUS CHRISTI",
+   "state": "Texas",
+   "area": "Corpus Christi",
+   "capacityBpd2017": 157500,
+   "eiaId": "eia-478-texas-corpus-christi",
+   "shutInReports": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "shut",
+    "2": "shut",
+    "3": "shut",
+    "4": "shut",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "VALERO ENERGY CORPORATION | THREE RIVERS | Texas",
+   "doeName": "Valero Energy Corporation (Three Rivers)",
+   "company": "VALERO ENERGY CORPORATION",
+   "site": "THREE RIVERS",
+   "state": "Texas",
+   "area": "Corpus Christi",
+   "capacityBpd2017": 89000,
+   "eiaId": "eia-387-texas-three-rivers",
+   "shutInReports": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "shut",
+    "2": "shut",
+    "3": "shut",
+    "4": "shut",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "BUCKEYE TEXAS PROCESSING LLC | CORPUS CHRISTI | Texas",
+   "doeName": "Buckeye Texas Processing Llc (Corpus Christi)",
+   "company": "BUCKEYE TEXAS PROCESSING LLC",
+   "site": "CORPUS CHRISTI",
+   "state": "Texas",
+   "area": "Corpus Christi",
+   "capacityBpd2017": 46250,
+   "eiaId": "eia-5048-texas-corpus-christi",
+   "shutInReports": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "shut",
+    "2": "shut",
+    "3": "shut",
+    "4": "shut",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "MAGELLAN TERMINAL HOLDINGS LP | CORPUS CHRISTI | Texas",
+   "doeName": "Magellan Terminal Holdings Lp (Corpus Christi)",
+   "company": "MAGELLAN TERMINAL HOLDINGS LP",
+   "site": "CORPUS CHRISTI",
+   "state": "Texas",
+   "area": "Corpus Christi",
+   "capacityBpd2017": 42500,
+   "eiaId": "eia-5082-texas-corpus-christi",
+   "shutInReports": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "shut",
+    "2": "shut",
+    "3": "shut",
+    "4": "shut",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "EXXONMOBIL REFINING & SUPPLY CO | BAYTOWN | Texas",
+   "doeName": "Exxonmobil Refining & Supply Co (Baytown)",
+   "company": "EXXONMOBIL REFINING & SUPPLY CO",
+   "site": "BAYTOWN",
+   "state": "Texas",
+   "area": "Houston/Galveston",
+   "capacityBpd2017": 560500,
+   "eiaId": "eia-163-texas-baytown",
+   "shutInReports": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "not in the shut set",
+    "2": "not in the shut set",
+    "3": "not in the shut set",
+    "4": "shut",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "DEER PARK REFINING LTD PARTNERSHIP | DEER PARK | Texas",
+   "doeName": "Deer Park Refining Ltd Partnership (Deer Park)",
+   "company": "DEER PARK REFINING LTD PARTNERSHIP",
+   "site": "DEER PARK",
+   "state": "Texas",
+   "area": "Houston/Galveston",
+   "capacityBpd2017": 325700,
+   "eiaId": "eia-385-texas-deer-park",
+   "shutInReports": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "not in the shut set",
+    "2": "not in the shut set",
+    "3": "not in the shut set",
+    "4": "shut",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "PHILLIPS 66 COMPANY | SWEENY | Texas",
+   "doeName": "Phillips 66 Company (Sweeny)",
+   "company": "PHILLIPS 66 COMPANY",
+   "site": "SWEENY",
+   "state": "Texas",
+   "area": "Houston/Galveston",
+   "capacityBpd2017": 247000,
+   "eiaId": "eia-256-texas-sweeny",
+   "shutInReports": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "not in the shut set",
+    "2": "not in the shut set",
+    "3": "not in the shut set",
+    "4": "not in the shut set",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "PASADENA REFINING SYSTEMS INC | PASADENA | Texas",
+   "doeName": "Pasadena Refining Systems Inc (Pasadena)",
+   "company": "PASADENA REFINING SYSTEMS INC",
+   "site": "PASADENA",
+   "state": "Texas",
+   "area": "Houston/Galveston",
+   "capacityBpd2017": 112229,
+   "eiaId": "eia-148-texas-pasadena",
+   "shutInReports": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "not in the shut set",
+    "2": "not in the shut set",
+    "3": "not in the shut set",
+    "4": "not in the shut set",
+    "5": "shut",
+    "6": "shut",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "VALERO REFINING CO TEXAS LP | HOUSTON | Texas",
+   "doeName": "Valero Refining Co Texas Lp (Houston)",
+   "company": "VALERO REFINING CO TEXAS LP",
+   "site": "HOUSTON",
+   "state": "Texas",
+   "area": "Houston/Galveston",
+   "capacityBpd2017": 191000,
+   "eiaId": "eia-502-texas-houston",
+   "shutInReports": [
+    7,
+    8,
+    9
+   ],
+   "status": {
+    "1": "not in the shut set",
+    "2": "not in the shut set",
+    "3": "not in the shut set",
+    "4": "not in the shut set",
+    "5": "not in the shut set",
+    "6": "not in the shut set",
+    "7": "shut",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "MARATHON PETROLEUM CO LP | GALVESTON BAY | Texas",
+   "doeName": "Marathon Petroleum Co Lp (Galveston Bay)",
+   "company": "MARATHON PETROLEUM CO LP",
+   "site": "GALVESTON BAY",
+   "state": "Texas",
+   "area": "Houston/Galveston",
+   "capacityBpd2017": 459000,
+   "eiaId": "eia-301-texas-galveston-bay",
+   "shutInReports": [
+    8,
+    9
+   ],
+   "status": {
+    "1": "not in the shut set",
+    "2": "not in the shut set",
+    "3": "not in the shut set",
+    "4": "not in the shut set",
+    "5": "not in the shut set",
+    "6": "not in the shut set",
+    "7": "not in the shut set",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "EXXONMOBIL REFINING & SUPPLY CO | BEAUMONT | Texas",
+   "doeName": "Exxonmobil Refining & Supply Co (Beaumont)",
+   "company": "EXXONMOBIL REFINING & SUPPLY CO",
+   "site": "BEAUMONT",
+   "state": "Texas",
+   "area": "Beaumont/Port Arthur",
+   "capacityBpd2017": 362300,
+   "eiaId": "eia-225-texas-beaumont",
+   "shutInReports": [
+    8,
+    9
+   ],
+   "status": {
+    "1": "not in the shut set",
+    "2": "not in the shut set",
+    "3": "not in the shut set",
+    "4": "not in the shut set",
+    "5": "not in the shut set",
+    "6": "not in the shut set",
+    "7": "not in the shut set",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "MARATHON PETROLEUM CO LP | TEXAS CITY | Texas",
+   "doeName": "Marathon Petroleum Co Lp (Texas City)",
+   "company": "MARATHON PETROLEUM CO LP",
+   "site": "TEXAS CITY",
+   "state": "Texas",
+   "area": "Houston/Galveston",
+   "capacityBpd2017": 86000,
+   "eiaId": null,
+   "shutInReports": [
+    8,
+    9
+   ],
+   "status": {
+    "1": "not in the shut set",
+    "2": "not in the shut set",
+    "3": "not in the shut set",
+    "4": "not in the shut set",
+    "5": "not in the shut set",
+    "6": "not in the shut set",
+    "7": "not in the shut set",
+    "8": "shut",
+    "9": "shut"
+   }
+  },
+  {
+   "key": "Motiva Enterprises LLC | PORT ARTHUR | Texas",
+   "doeName": "Motiva Enterprises Llc (Port Arthur)",
+   "company": "Motiva Enterprises LLC",
+   "site": "PORT ARTHUR",
+   "state": "Texas",
+   "area": "Beaumont/Port Arthur",
+   "capacityBpd2017": 603000,
+   "eiaId": "eia-507-texas-port-arthur",
+   "shutInReports": [
+    9
+   ],
+   "status": {
+    "1": "not in the shut set",
+    "2": "not in the shut set",
+    "3": "not in the shut set",
+    "4": "not in the shut set",
+    "5": "not in the shut set",
+    "6": "not in the shut set",
+    "7": "not in the shut set",
+    "8": "not in the shut set",
+    "9": "shut"
+   }
+  }
+ ]
+}

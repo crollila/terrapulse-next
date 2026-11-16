@@ -43,6 +43,13 @@ node scripts/capture.mjs http://localhost:4173/   # screenshots and demo recordi
 - `src/components/`: UI. `Globe.tsx` owns the MapLibre map.
 - `public/data/`: bundled datasets with provenance in each file's `meta`.
 - `research/`: how the infrastructure and Harvey data were built, with quoted sources.
+- `src/sim/rainfall.ts`, `rainRecord.ts`, `harveyHindcast.ts`, `rainGraph.ts`: observed-rainfall
+  screen for Hurricane Harvey, its timeline, hindcast and network. `rcliper.ts`: context only.
+- `src/sim/wildfire.ts`: observed wildfire record and proximity screen. No spread model, on purpose.
+- `src/sim/graph.ts` `buildExposureGraph`: one economic network for every hazard (`ExposureSet`).
+- `src/components/RainfallLab.tsx`, `WildfireLab.tsx`, `ExposureNetwork.tsx`, `globe/*Layers.ts`.
+- `research/RAINFALL_FLOOD.md`, `research/WILDFIRE.md`, `docs/HAZARD_SIM_BRANCH.md`: the science
+  record and branch status. Rebuild data with the `research/scripts/build_*.py` scripts.
 
 ## Gotchas
 
@@ -55,3 +62,8 @@ node scripts/capture.mjs http://localhost:4173/   # screenshots and demo recordi
 - The Bash tool mangles heredocs that contain backticks or mixed quotes; write files with the
   Write tool.
 - React StrictMode is intentionally off (see DECISIONS.md).
+- gridMET point subsets return packed integers without scale factors; read them from the `.das`.
+- Run browser tests for a worktree against its own preview port
+  (`npx vite preview --port 4183` and `TP_BASE_URL=http://localhost:4183/`), or Playwright may reuse
+  another checkout's server on 4173.
+- Pin test values from program output, never from a number read off a chart.
