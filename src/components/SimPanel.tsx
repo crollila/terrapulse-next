@@ -4,6 +4,7 @@ import { useScenario } from "../state/derived";
 import { PARAM_BOUNDS, SAFFIR_SIMPSON, SCENARIO_001, saffirSimpsonCategory, validateParams, type HurricaneParams } from "../sim/hurricane";
 import { vmaxForCategory, PLACES } from "../sim/command";
 import { fmtBpd } from "../sim/graph";
+import { buildScenarioReport } from "../sim/report";
 import { niceName } from "../data/companies";
 import { Badge, Icon, Slider } from "./ui";
 
@@ -16,7 +17,7 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
   const picking = useStore((s) => s.pickingLandfall);
   const infraError = useStore((s) => s.infraError);
   const refCount = useStore((s) => s.refineries.length);
-  const { result } = useScenario();
+  const { result, graph, companies } = useScenario();
   const [io, setIo] = useState<string | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const st = useStore.getState();
@@ -35,6 +36,16 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
     } catch {
       setIo("Scenario exported.");
     }
+  };
+  const exportReport = () => {
+    const st2 = useStore.getState();
+    const text = buildScenarioReport({ result, graph, companies, refineryMeta: st2.refineryMeta, portMeta: st2.portMeta, generatedAt: new Date().toISOString() });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([text], { type: "text/markdown" }));
+    a.download = `terrapulse-scenario-report-${cat ? `cat${cat}` : "ts"}.md`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    setIo("Evidence report exported (Markdown).");
   };
   const importJson = async (file: File) => {
     try {
@@ -205,6 +216,9 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
               Import JSON
             </button>
             <input ref={fileRef} type="file" accept="application/json,.json" hidden onChange={(e) => e.target.files?.[0] && importJson(e.target.files[0])} />
+            <button className="btn sm" onClick={exportReport} data-testid="export-report" title="Every computed figure with its evidence class and source, as Markdown">
+              Evidence report
+            </button>
             <button className="btn ghost sm" onClick={onMethods}>
               Model card
             </button>

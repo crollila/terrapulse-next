@@ -11,6 +11,7 @@ playwright-report
 public/vendor
 research/.venv
 research/__pycache__
+research/notes
 research/raw
 research/venv
 status/

@@ -22,7 +22,8 @@
     "check:live": "node scripts/status.mjs --quick --e2e",
     "dashboard": "node scripts/dashboard.mjs",
     "resume": "node scripts/resume.mjs",
-    "capture": "node scripts/capture.mjs"
+    "capture": "node scripts/capture.mjs",
+    "research": "node scripts/research-note.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^6.18.0",

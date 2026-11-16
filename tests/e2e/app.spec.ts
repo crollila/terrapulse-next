@@ -254,6 +254,32 @@ test("command bar, methods dialog and workspace reset", async ({ page }) => {
   await expect(page.getByTestId("methods-modal")).toBeHidden();
 });
 
+test("scenario parameters and the evidence report export as files with the computed figures", async ({ page }) => {
+  await open(page);
+  await page.getByTestId("tab-sim").click();
+  await expect(page.getByTestId("sim-summary")).toBeVisible();
+  const cap = await capacity(page);
+  const read = async (testId: string) => {
+    const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId(testId).click()]);
+    const stream = await dl.createReadStream();
+    const chunks: Buffer[] = [];
+    for await (const c of stream) chunks.push(c as Buffer);
+    return { name: dl.suggestedFilename(), text: Buffer.concat(chunks).toString("utf8") };
+  };
+  const scenario = await read("export-scenario");
+  expect(scenario.name).toMatch(/terrapulse-scenario-cat5\.json/);
+  const j = JSON.parse(scenario.text);
+  expect(j.params.vmaxKt).toBe(140);
+  expect(j.note).toMatch(/Not a forecast/);
+  const report = await read("export-report");
+  expect(report.name).toMatch(/\.md$/);
+  expect(report.text).toContain("# TerraPulse scenario report");
+  expect(report.text).toContain("HYPOTHETICAL scenario. Not a forecast");
+  const stated = Number(report.text.match(/\*\*([\d,]+) b\/d\*\*/)![1].replace(/,/g, "")) / 1e6;
+  expect(stated).toBeCloseTo(cap, 2);
+  expect(report.text).toContain("cannot be estimated");
+});
+
 test("falls back to labelled snapshots when the live feeds are unreachable", async ({ page }) => {
   await page.route(/earthquake\.usgs\.gov|eonet\.gsfc\.nasa\.gov/, (r) => r.abort());
   await open(page);
