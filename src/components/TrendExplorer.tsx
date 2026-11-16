@@ -93,6 +93,88 @@ function Chart({ main, compare, start, end, units, breakYear }: { main: SeriesVi
   );
 }
 
+/** Every start/end-year window of 15+ years, from the published pipeline output. Click a cell to analyse that window. */
+function WindowMap({ a, start, end, onPick }: { a: Analysis; start: number; end: number; onPick: (s: number, e: number) => void }) {
+  const ws = a.windows ?? [];
+  if (!ws.length) return null;
+  const y0 = Math.min(...ws.map((w) => w.start));
+  const y1 = Math.max(...ws.map((w) => w.end));
+  const minLen = Math.min(...ws.map((w) => w.end - w.start));
+  const nx = y1 - minLen - y0 + 1;
+  const W = 520;
+  const m = { l: 40, r: 8, t: 6, b: 22 };
+  const cell = (W - m.l - m.r) / nx;
+  const H = m.t + m.b + cell * nx;
+  const maxAbs = Math.max(...ws.map((w) => Math.abs(w.slope_per_decade))) || 1;
+  const x = (s: number) => m.l + (s - y0) * cell;
+  const y = (e: number) => m.t + (y1 - e) * cell;
+  const sum = a.windows_summary;
+  const ticks = [y0, y0 + 10, y0 + 20, y0 + 30].filter((t) => t <= y1 - minLen);
+  return (
+    <div data-testid="window-map">
+      <svg className="chart" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Trend for every start and end year">
+        {ws.map((w) => {
+          const up = w.slope_per_decade >= 0;
+          const k = Math.min(1, Math.abs(w.slope_per_decade) / maxAbs);
+          const sel = w.start === start && w.end === end;
+          return (
+            <rect
+              key={`${w.start}-${w.end}`}
+              x={x(w.start)}
+              y={y(w.end)}
+              width={cell + 0.3}
+              height={cell + 0.3}
+              fill={up ? "#1d6bff" : "#f76808"}
+              opacity={(w.significant ? 0.35 : 0.08) + (w.significant ? 0.65 : 0.22) * k}
+              stroke={sel ? "#0b1f3f" : "none"}
+              strokeWidth={sel ? 1.6 : 0}
+              style={{ cursor: "pointer" }}
+              onClick={() => onPick(w.start, w.end)}
+            >
+              <title>{`${w.start}–${w.end}: ${w.slope_per_decade >= 0 ? "+" : "−"}${Math.abs(w.slope_per_decade).toFixed(3)} per decade, ${w.significant ? "significant" : "not significant"} (adjusted t-test)`}</title>
+            </rect>
+          );
+        })}
+        {ticks.map((t) => (
+          <text key={t} x={x(t) + cell / 2} y={H - 8} textAnchor="middle">
+            {t}
+          </text>
+        ))}
+        <text x={m.l + (W - m.l - m.r) / 2} y={H - 0.5} textAnchor="middle" style={{ fontSize: 9 }}>
+          start year
+        </text>
+        {[y1, y1 - 10, y1 - 20, y1 - 30].filter((t) => t >= y0 + minLen).map((t) => (
+          <text key={t} x={m.l - 5} y={y(t) + cell / 2 + 3} textAnchor="end">
+            {t}
+          </text>
+        ))}
+        <text x={9} y={m.t + (H - m.t - m.b) / 2} textAnchor="middle" transform={`rotate(-90 9 ${m.t + (H - m.t - m.b) / 2})`} style={{ fontSize: 9 }}>
+          end year
+        </text>
+      </svg>
+      <div className="legend" style={{ marginTop: 4 }}>
+        <span>
+          <i style={{ borderColor: "#1d6bff" }} />
+          rising
+        </span>
+        <span>
+          <i style={{ borderColor: "#f76808" }} />
+          falling
+        </span>
+        <span>Strong colour: significant. Faint: not significant. Click a cell to analyse that window.</span>
+      </div>
+      {sum && (
+        <p className="small" style={{ marginTop: 6 }}>
+          Of {sum.n_windows} windows of {sum.min_years}+ years, <strong>{(100 * sum.share_same_direction).toFixed(0)}%</strong> point the same way as the full record and{" "}
+          <strong>{(100 * sum.share_significant_same_direction).toFixed(0)}%</strong> are significant in that direction; {(100 * sum.share_significant_opposite_direction).toFixed(0)}% are significant in the opposite direction.
+          {sum.share_significant_opposite_direction > 0 ? " The answer depends on the dates chosen." : ""}
+        </p>
+      )}
+      <p className="tiny muted">Published output of the team's Python pipeline. Windows overlap heavily and are not independent tests; cells are marked with the adjusted t-test alone.</p>
+    </div>
+  );
+}
+
 function Verdict({ r, units, dec }: { r: TrendResult; units: string; dec: number }) {
   const sig = r.significant;
   const partial = !sig && (r.olsSignificant || r.mkSignificant);
@@ -278,6 +360,13 @@ export function TrendExplorer() {
                 <p className="tiny muted" style={{ marginTop: 6 }}>
                   Null hypothesis: {TREND_METHOD.nullHypothesis} Statistical significance is not physical importance, and neither identifies a cause.
                 </p>
+              </div>
+            )}
+
+            {a.windows && a.windows.length > 0 && (
+              <div className="section">
+                <h4>Did you just pick good dates?</h4>
+                <WindowMap a={a} start={start} end={end} onPick={(s, e) => setTrend({ startYear: s, endYear: e })} />
               </div>
             )}
 

@@ -85,6 +85,9 @@ export interface Analysis {
   series: { t: number[]; year: number[]; month: number[]; value: (number | null)[]; anomaly: (number | null)[]; climatology: number[]; annual_year: number[]; annual_mean: (number | null)[] };
   trend: PublishedTrend;
   verdict: { code: string; title: string; text: string; direction: string };
+  /** Trend for every start/end-year window of at least 15 years (published pipeline output). */
+  windows?: { start: number; end: number; slope_per_decade: number; ci_low: number; ci_high: number; p_value: number; significant: boolean }[];
+  windows_summary?: { n_windows: number; min_years: number; share_same_direction: number; share_significant_same_direction: number; share_significant_opposite_direction: number; slope_min: number; slope_max: number };
   crosscheck?: {
     code: string;
     label: string;

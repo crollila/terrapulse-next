@@ -228,6 +228,11 @@ test("trend explorer: Amazon rainfall, significance, window change and the 2005 
   await page.getByTestId("trend-end").fill("2004");
   await expect(page.getByTestId("trend-verdict")).toContainText("1981–2004");
   await expect(page.getByTestId("trend-verdict")).toContainText("No significant trend detected");
+  // every-window map: 496 published windows; clicking a cell selects that window
+  await expect(page.getByTestId("window-map")).toContainText("496 windows");
+  expect(await page.getByTestId("window-map").locator("rect").count()).toBe(496);
+  await page.getByTestId("window-map").locator("rect").first().dispatchEvent("click");
+  await expect(page.getByTestId("trend-verdict")).toContainText("1981–1995");
   // another variable and region
   await page.getByTestId("trend-variable").selectOption("T2M");
   await page.getByTestId("trend-region").selectOption("north-slope");
