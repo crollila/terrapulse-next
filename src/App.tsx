@@ -7,6 +7,8 @@ import { SimPanel } from "./components/SimPanel";
 import { Timeline } from "./components/Timeline";
 import { SimWorkspace } from "./components/SimWorkspace";
 import { DroughtLab } from "./components/DroughtLab";
+import { TrendDetective } from "./components/TrendDetective";
+import { CaseStudy } from "./components/CaseStudy";
 import { Methods } from "./components/Methods";
 import { Icon } from "./components/ui";
 import { useStore } from "./state/store";
@@ -82,6 +84,7 @@ export function App() {
   const pinned = useStore((s) => s.pinned);
   const trendOpen = useStore((s) => s.trendOpen);
   const hazard = useStore((s) => s.hazard);
+  const caseId = useStore((s) => s.caseId);
   const [methods, setMethods] = useState(false);
   const [mobilePane, setMobilePane] = useState<"controls" | "analysis">("controls");
 
@@ -114,6 +117,9 @@ export function App() {
           </div>
         </div>
         <div className="tabs" role="tablist" aria-label="Views">
+          <button className="tab" role="tab" aria-selected={tab === "trends"} onClick={() => setTab("trends")} data-testid="tab-trends">
+            Earth-System Trends
+          </button>
           <button className="tab" role="tab" aria-selected={tab === "world"} onClick={() => setTab("world")} data-testid="tab-world">
             Live World
           </button>
@@ -154,7 +160,12 @@ export function App() {
           <Globe />
         )}
 
-        {tab === "world" ? (
+        {tab === "trends" ? (
+          <>
+            <TrendDetective />
+            {caseId ? <CaseStudy id={caseId} /> : <TrendExplorer />}
+          </>
+        ) : tab === "world" ? (
           <>
             <LayerPanel />
             {trendOpen ? <TrendExplorer /> : (selection || pinned.length > 0) && <Inspector />}

@@ -231,70 +231,13 @@ export function TrendExplorer() {
   return (
     <aside className="panel panel-right wide" aria-label="Trend explorer" data-testid="trend-explorer">
       <div className="panel-head">
-        <h2>Trend explorer</h2>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <h4>Evidence</h4>
+          <h2>{a ? `${a.variable.name}, ${a.region.short_name}` : "Trend evidence"}</h2>
+        </div>
         <Badge kind="HISTORICAL" />
-        <button className="btn ghost sm icon-btn" aria-label="Close trend explorer" onClick={() => useStore.getState().setTrendOpen(false)}>
-          {Icon.close}
-        </button>
       </div>
       <div className="panel-body">
-        <div className="section">
-          <div className="grid2">
-            <div className="field">
-              <label htmlFor="tv">Earth-system variable</label>
-              <select id="tv" value={trend.variableId} onChange={(e) => setTrend({ variableId: e.target.value, startYear: 1900, endYear: 2100 })} data-testid="trend-variable">
-                {cat?.variables.map((x) => (
-                  <option key={x.id} value={x.id}>
-                    {x.name} ({x.units})
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="field">
-              <label htmlFor="tr">Region</label>
-              <select id="tr" value={trend.regionId} onChange={(e) => { setTrend({ regionId: e.target.value }); useStore.getState().select({ type: "region", id: e.target.value }); }} data-testid="trend-region">
-                {cat?.regions.map((x) => (
-                  <option key={x.id} value={x.id}>
-                    {x.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-            {rec && (
-              <>
-                <div className="field">
-                  <div className="field-head">
-                    <label htmlFor="ts">Start year</label>
-                    <span className="field-val">{start}</span>
-                  </div>
-                  <input id="ts" type="range" min={rec[0]} max={rec[1] - MIN_WINDOW_YEARS + 1} step={1} value={start} style={{ ["--fill" as any]: `${((start - rec[0]) / Math.max(1, rec[1] - MIN_WINDOW_YEARS + 1 - rec[0])) * 100}%` }} onChange={(e) => setTrend({ startYear: Number(e.target.value), endYear: Math.max(end, Number(e.target.value) + MIN_WINDOW_YEARS - 1) })} data-testid="trend-start" />
-                </div>
-                <div className="field">
-                  <div className="field-head">
-                    <label htmlFor="te">End year</label>
-                    <span className="field-val">{end}</span>
-                  </div>
-                  <input id="te" type="range" min={rec[0] + MIN_WINDOW_YEARS - 1} max={rec[1]} step={1} value={end} style={{ ["--fill" as any]: `${((end - rec[0] - MIN_WINDOW_YEARS + 1) / Math.max(1, rec[1] - rec[0] - MIN_WINDOW_YEARS + 1)) * 100}%` }} onChange={(e) => setTrend({ endYear: Number(e.target.value), startYear: Math.min(start, Number(e.target.value) - MIN_WINDOW_YEARS + 1) })} data-testid="trend-end" />
-                </div>
-              </>
-            )}
-          </div>
-          <div className="field" style={{ marginTop: 10 }}>
-            <label htmlFor="tc">Compare with another region</label>
-            <select id="tc" value={trend.compareRegionId ?? ""} onChange={(e) => setTrend({ compareRegionId: e.target.value || null })}>
-              <option value="">No comparison</option>
-              {cat?.regions.filter((x) => x.id !== trend.regionId).map((x) => (
-                <option key={x.id} value={x.id}>
-                  {x.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <p className="tiny muted" style={{ marginTop: 6 }}>
-            Windows shorter than {MIN_WINDOW_YEARS} years are not analysed. {v?.definition}
-          </p>
-        </div>
-
         {error && <div className="callout danger">Insufficient validated data: {error}</div>}
         {!a && !error && <p className="muted">Loading series…</p>}
 
@@ -377,7 +320,7 @@ export function TrendExplorer() {
                   <strong>{a.crosscheck.label}.</strong> {a.crosscheck.text}
                 </div>
                 <p className="tiny muted" style={{ marginTop: 6 }}>
-                  Computed by the team's pipeline for the full record {a.crosscheck.period[0]}–{a.crosscheck.period[1]}{isFull ? "" : "; it does not change with the window chosen above"}. {a.crosscheck.dataset.caveat}{" "}
+                  <strong>Full record {a.crosscheck.period[0]}–{a.crosscheck.period[1]} only.</strong> Computed by the team's pipeline{isFull ? "" : `; it was not recomputed for ${start}–${end} and does not apply to that window`}. {a.crosscheck.dataset.caveat}{" "}
                   <a href={a.crosscheck.dataset.url} target="_blank" rel="noopener noreferrer">
                     Dataset
                   </a>

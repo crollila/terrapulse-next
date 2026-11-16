@@ -3,7 +3,12 @@ import type { HazardFeed } from "../data/hazards";
 import type { InfrastructureMeta, Port, Refinery } from "../data/types";
 import { SCENARIO_001, type HurricaneParams } from "../sim/hurricane";
 
-export type Tab = "world" | "sim";
+export type Tab = "trends" | "world" | "sim";
+export type CaseKey = "amazon" | "alaska";
+const CASE_TARGET: Record<CaseKey, { regionId: string; variableId: string }> = {
+  amazon: { regionId: "rondonia", variableId: "PRECTOTCORR" },
+  alaska: { regionId: "north-slope", variableId: "T2M" },
+};
 export type HazardType = "hurricane" | "drought";
 export interface DroughtInputs {
   regionId: string;
@@ -85,6 +90,11 @@ interface State {
   setPickingLandfall: (p: boolean) => void;
   hazard: HazardType;
   setHazard: (h: HazardType) => void;
+  /** Featured investigation open in the Earth-System Trends view, if any. */
+  caseId: CaseKey | null;
+  setCase: (c: CaseKey | null) => void;
+  tourStep: number | null;
+  setTourStep: (i: number | null) => void;
   drought: DroughtInputs;
   setDrought: (d: Partial<DroughtInputs>) => void;
   setTab: (t: Tab) => void;
@@ -132,7 +142,7 @@ export const sameSel = (a: Selection | null, b: Selection | null) => !!a && !!b 
 let seq = 0;
 
 export const useStore = create<State>((set, get) => ({
-  tab: "world",
+  tab: "trends",
   layers: { ...DEFAULT_LAYERS },
   selection: null,
   pinned: [],
@@ -155,6 +165,11 @@ export const useStore = create<State>((set, get) => ({
   mapError: null,
   pickingLandfall: false,
   setPickingLandfall: (pickingLandfall) => set({ pickingLandfall }),
+  caseId: null,
+  setCase: (caseId) =>
+    set((s) => (caseId ? { caseId, tab: "trends", selection: null, trend: { ...s.trend, ...CASE_TARGET[caseId], startYear: 1900, endYear: 2100, compareRegionId: null } } : { caseId: null })),
+  tourStep: null,
+  setTourStep: (tourStep) => set({ tourStep }),
   hazard: "hurricane",
   setHazard: (hazard) => set({ hazard, selection: null, simPlaying: false }),
   drought: { ...DEFAULT_DROUGHT },
@@ -177,7 +192,8 @@ export const useStore = create<State>((set, get) => ({
   setInfra: (r) => set({ ...r, infraError: null }),
   setInfraError: (infraError) => set({ infraError }),
   setTrend: (t) => set((s) => ({ trend: { ...s.trend, ...t } })),
-  setTrendOpen: (trendOpen) => set({ trendOpen }),
+  // The trend explorer now lives in the Earth-System Trends view: "opening" it goes there.
+  setTrendOpen: (open) => set(open ? { tab: "trends", caseId: null, trendOpen: false, selection: null } : { trendOpen: false }),
   setSim: (p) => set((s) => ({ sim: { ...s.sim, ...p } })),
   setSimPos: (x) => set({ simPos: Math.min(1, Math.max(0, x)) }),
   setSimPlaying: (simPlaying) => set({ simPlaying }),

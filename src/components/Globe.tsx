@@ -271,6 +271,7 @@ export function Globe() {
   const picking = useStore((s) => s.pickingLandfall);
   const hazard = useStore((s) => s.hazard);
   const droughtRegion = useStore((s) => s.drought.regionId);
+  const caseId = useStore((s) => s.caseId);
 
   const setData = (id: string, data: FC) => (mapRef.current?.getSource(id) as GeoJSONSource | undefined)?.setData(data);
 
@@ -294,7 +295,8 @@ export function Globe() {
   // ---- hazards ----
   useEffect(() => {
     if (!mapReady) return;
-    const evs = [...(feeds.usgs?.events ?? []), ...(feeds.eonet?.events ?? [])].filter((e) => layers[hazardLayer(e.kind)]);
+    // The trends view shows only the study regions, so the science is not competing with live events.
+    const evs = tab === "trends" ? [] : [...(feeds.usgs?.events ?? []), ...(feeds.eonet?.events ?? [])].filter((e) => layers[hazardLayer(e.kind)]);
     setData(
       "hazards",
       fc(
@@ -305,7 +307,7 @@ export function Globe() {
         })),
       ),
     );
-  }, [mapReady, feeds, layers]);
+  }, [mapReady, feeds, layers, tab]);
 
   // ---- trend regions ----
   useEffect(() => {
@@ -325,7 +327,8 @@ export function Globe() {
       );
       return;
     }
-    if (!cat || !layers.trendRegions || tab !== "world") {
+    const trendsView = tab === "trends";
+    if (!cat || !(trendsView || (layers.trendRegions && tab === "world"))) {
       setData("regions", fc());
       return;
     }
@@ -340,7 +343,7 @@ export function Globe() {
             const o = ov.regions.find((x) => x.region === r.id);
             return {
               type: "Feature",
-              properties: { id: r.id, label: r.short_name, color: verdictColor(o), selected: selection?.type === "region" && selection.id === r.id },
+              properties: { id: r.id, label: r.short_name, color: verdictColor(o), selected: trendsView ? r.id === trend.regionId : selection?.type === "region" && selection.id === r.id },
               geometry: { type: "Polygon", coordinates: [[[w, s], [e, s], [e, n], [w, n], [w, s]]] },
             };
           }),
@@ -350,7 +353,7 @@ export function Globe() {
     return () => {
       live = false;
     };
-  }, [mapReady, layers.trendRegions, trend.variableId, selection, tab, feeds, hazard, droughtRegion]);
+  }, [mapReady, layers.trendRegions, trend.variableId, trend.regionId, selection, tab, feeds, hazard, droughtRegion]);
 
   // ---- infrastructure + simulation ----
   useEffect(() => {
@@ -372,7 +375,7 @@ export function Globe() {
     setData(
       "refineries",
       fc(
-        (layers.refineries ? refineries : [])
+        (layers.refineries && tab !== "trends" ? refineries : [])
           .filter((r) => !layers.listedOnly || listingFor(r.corporation)?.ticker)
           .map((r) => {
             const l = listingFor(r.corporation);
@@ -392,7 +395,7 @@ export function Globe() {
     setData(
       "ports",
       fc(
-        (layers.ports ? ports : []).map((p) => ({
+        (layers.ports && tab !== "trends" ? ports : []).map((p) => ({
           type: "Feature",
           properties: { id: p.id, r: 2.5 + Math.sqrt((p.totalTons ?? 0) / 310e6) * 8, color: stateColor(expP.get(p.id), "#0091a7") },
           geometry: { type: "Point", coordinates: [p.lon, p.lat] },
@@ -475,12 +478,40 @@ export function Globe() {
     if (!map || !mapReady) return;
     const wide = window.innerWidth >= 1000;
     const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (tab === "trends") return; // handled by the trends camera effect below
     const padding = tab === "sim" && wide ? { left: 340, right: 470, top: 20, bottom: 110 } : wide ? { left: 300, right: 0, top: 0, bottom: 0 } : { left: 0, right: 0, top: 0, bottom: 0 };
     if (tab === "sim" && hazard === "drought") map.easeTo({ padding, duration: 0 });
     else if (tab === "sim") map.flyTo({ center: [sim.landfallLon + 0.4, sim.landfallLat + 0.6], zoom: wide ? 5.4 : 4.6, pitch: 0, bearing: 0, padding, duration: reduce ? 0 : 2600, essential: true });
     else map.flyTo({ center: [-52, 24], zoom: wide ? 1.75 : 0.9, pitch: 0, bearing: 0, padding, duration: reduce ? 0 : 2200, essential: true });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mapReady, tab, hazard]);
+
+  // ---- trends view: glide to the selected study region; closer for a featured investigation ----
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !mapReady || tab !== "trends") return;
+    let live = true;
+    loadCatalog().then((cat) => {
+      if (!live) return;
+      const r = cat.regions.find((x) => x.id === trend.regionId);
+      if (!r) return;
+      const wide = window.innerWidth >= 1000;
+      const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+      const [w, s, e, n] = r.bbox;
+      map.flyTo({
+        center: [(w + e) / 2, Math.max(-60, Math.min(60, (s + n) / 2))],
+        zoom: (caseId ? 3.3 : 2.35) - (wide ? 0 : 0.9),
+        pitch: 0,
+        bearing: 0,
+        padding: wide ? { left: 372, right: 580, top: 10, bottom: 10 } : { left: 0, right: 0, top: 0, bottom: 0 },
+        duration: reduce ? 0 : 2400,
+        essential: true,
+      });
+    }, () => undefined);
+    return () => {
+      live = false;
+    };
+  }, [mapReady, tab, trend.regionId, caseId]);
 
   useEffect(() => {
     const map = mapRef.current;

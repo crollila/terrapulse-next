@@ -168,6 +168,29 @@ p { margin: 0; }
 .switch[aria-checked="true"] { background: var(--blue); }
 .switch[aria-checked="true"]::after { transform: translateX(14px); }
 
+/* ---------- trend detective ---------- */
+.trends .panel-left { width: 356px; }
+.cases { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+.case-card { text-align: left; border: 1px solid var(--line-strong); border-radius: 13px; padding: 10px 11px; background: linear-gradient(180deg, #fff, #f3f7ff); display: flex; flex-direction: column; gap: 3px; transition: transform 0.15s var(--ease), box-shadow 0.2s, border-color 0.2s; }
+.case-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+.case-card.amazon { border-left: 3px solid var(--amber); }
+.case-card.alaska { border-left: 3px solid var(--blue); }
+.case-card[aria-pressed="true"] { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(29, 107, 255, 0.16); }
+.case-kicker { font-size: 9.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.case-title { font-size: 13px; font-weight: 650; color: var(--navy); line-height: 1.25; }
+.answers { display: flex; flex-direction: column; gap: 6px; }
+.grid2.tight { gap: 8px; }
+.detective .section { padding: 9px 0; }
+.detective .section > h4 { margin-bottom: 6px; }
+.detective select { padding: 5px 7px; font-size: 12.5px; }
+.detective .case-card { padding: 8px 10px; }
+.answer { border: 1px solid var(--line); border-radius: 12px; padding: 6px 10px 7px; background: rgba(255, 255, 255, 0.75); }
+.answer-q { font-size: 9.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--blue-deep); margin-bottom: 2px; }
+.answer-a { font-size: 13.5px; color: var(--navy); }
+.tag-full { display: inline-block; padding: 0 6px; border-radius: 999px; background: var(--amber-soft); color: var(--amber); font-weight: 700; font-size: 10px; letter-spacing: 0.03em; white-space: nowrap; }
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+
 /* ---------- facts ---------- */
 .kv { display: grid; grid-template-columns: 1fr; gap: 10px; }
 .fact { display: flex; flex-direction: column; gap: 2px; }
@@ -315,6 +338,7 @@ pre.formula { font-family: var(--mono); font-size: 11.5px; background: #f2f5fa; 
   .mobile-switch { order: -3; }
   .panel-right { order: -2; }
   .sim .panel-left { order: -2; }
+  .trends .panel-left { order: -3; }
   .panel-left { order: -1; }
   .hint { position: relative; left: auto !important; bottom: auto; transform: none; margin: 10px; white-space: normal; border-radius: 16px; }
   .mobile-switch { display: flex; margin: 10px 10px 0; }

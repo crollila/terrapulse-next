@@ -15,12 +15,128 @@ test.beforeEach(async ({ page }) => {
   page.on("pageerror", (e) => list.push(e.message));
 });
 
-async function open(page: Page) {
+/** The app opens on Earth-System Trends. Most older tests start from Live World, so that is the default here. */
+async function open(page: Page, tab: "trends" | "world" = "world") {
   await page.goto("./");
   await expect(page.getByTestId("globe")).toBeVisible();
   await page.waitForFunction(() => window.__tpStore?.getState().mapReady === true, undefined, { timeout: 60_000 });
   await page.waitForFunction(() => window.__tpStore.getState().refineries.length > 0 && !!window.__tpStore.getState().feeds.usgs && !!window.__tpStore.getState().feeds.eonet);
+  if (tab === "world") await page.getByTestId("tab-world").click();
 }
+
+test.describe("NASA challenge: Earth-System Trends", () => {
+  test("opens on the trends view and answers the four questions; variable, region and window can be changed", async ({ page }) => {
+    await open(page, "trends");
+    await expect(page.getByTestId("tab-trends")).toHaveAttribute("aria-selected", "true");
+    await expect(page.getByTestId("trends-entry")).toHaveText("Explore Earth's Changing Systems");
+    await expect(page.getByTestId("case-amazon")).toContainText("The Amazon Rainfall Mystery");
+    // default selection: rainfall in the south-western Amazon box
+    await expect(page.getByTestId("answer-what")).toContainText("Precipitation");
+    await expect(page.getByTestId("answer-where")).toContainText("Southwestern Amazon");
+    await expect(page.getByTestId("answer-where")).toContainText("13°S to 8°S, 66°W to 60°W");
+    await expect(page.getByTestId("answer-howmuch")).toContainText("−0.541 mm/day");
+    await expect(page.getByTestId("answer-howmuch")).toContainText("95% range −0.641 to −0.441");
+    await expect(page.getByTestId("answer-significant")).toContainText("Yes, in both corrected tests");
+    await expect(page.getByTestId("answer-significant")).toContainText("date windows");
+    await expect(page.getByTestId("full-record-tag")).toHaveText("Full record 1981–2025 only");
+    // only study regions are drawn: eight boxes, no global surface, no live events
+    await idle(page);
+    expect(await page.evaluate(() => new Set(window.__tpMap.querySourceFeatures("regions").map((f: any) => f.properties.id)).size)).toBeGreaterThan(0);
+    expect(await page.evaluate(() => window.__tpMap.querySourceFeatures("hazards").length)).toBe(0);
+    // choose another variable and region
+    await page.getByTestId("trend-variable").selectOption("T2M");
+    await page.getByTestId("trend-region").selectOption("north-slope");
+    await expect(page.getByTestId("answer-what")).toContainText("Air temperature");
+    await expect(page.getByTestId("answer-where")).toContainText("Northern Alaska");
+    await expect(page.getByTestId("answer-howmuch")).toContainText("+0.51 °C");
+    await expect(page.getByTestId("answer-significant")).toContainText("Supported by a second dataset".toLowerCase());
+    // a different window: the browser recomputes the trend, and the independent check is flagged as not applying
+    await page.getByTestId("trend-end").fill("2010");
+    await expect(page.getByTestId("answer-howmuch")).toContainText("1981–2010");
+    await expect(page.getByTestId("second-opinion-line")).toContainText("does not apply to that window");
+    await expect(page.getByTestId("trend-explorer")).toContainText("Full record 1981–2025 only");
+    expect(errors.get(page)).toEqual([]);
+  });
+
+  test("The Amazon Rainfall Mystery is one click away: two records, the 2005 break, the warning", async ({ page }) => {
+    await open(page, "trends");
+    await page.getByTestId("case-amazon").click();
+    await expect(page.getByTestId("case-title")).toHaveText("The Amazon Rainfall Mystery");
+    await expect(page.getByTestId("case-numbers")).toContainText("−0.541");
+    await expect(page.getByTestId("case-numbers")).toContainText("−0.282");
+    await expect(page.getByTestId("case-numbers")).toContainText("GPCP v2.3");
+    await expect(page.getByTestId("case-verdict")).toContainText("direction is supported");
+    await expect(page.getByTestId("case-verdict")).toContainText("size is not independently confirmed");
+    await expect(page.getByTestId("case-charts").locator("svg")).toHaveCount(2);
+    await expect(page.getByTestId("breakpoint-2005")).toHaveCount(1);
+    await expect(page.getByTestId("breakpoint-2005")).toContainText("2005");
+    // synchronized charts: hovering one reads the same year in both
+    const box = (await page.getByTestId("case-charts").locator("svg").first().boundingBox())!;
+    await page.mouse.move(box.x + box.width * 0.6, box.y + box.height * 0.5);
+    await expect(page.getByTestId("case-readout")).toContainText(/\d{4}: MERRA-2 .* GPCP v2\.3 .* difference/);
+    // inspect the 2005 issue: sources and the fitted step
+    await page.getByTestId("inspect-2005").click();
+    await expect(page.getByTestId("issue-details")).toContainText("Reichle");
+    await expect(page.getByTestId("issue-details")).toContainText("−1.07 mm/day");
+    await expect(page.getByTestId("issue-details")).toContainText("−0.13 mm/day");
+    await expect(page.getByTestId("issue-details")).toContainText("−0.99 mm/day");
+    await expect(page.getByTestId("case-warning")).toContainText("Detected is not validated");
+    await expect(page.getByTestId("case-warning")).toContainText("does not describe rainfall across the Amazon");
+    await expect(page.getByTestId("case-warning")).toContainText("does not explain every change");
+    // the globe glides to the study box (66°W to 60°W, 13°S to 8°S)
+    await expect.poll(async () => page.evaluate(() => Math.round(window.__tpMap.getCenter().lng)), { timeout: 15_000 }).toBe(-63);
+    await expect.poll(async () => page.evaluate(() => window.__tpMap.getZoom()), { timeout: 15_000 }).toBeGreaterThan(3);
+    expect(errors.get(page)).toEqual([]);
+  });
+
+  test("switching to Northern Alaska shows a supported trend and the side-by-side comparison", async ({ page }) => {
+    await open(page, "trends");
+    await page.getByTestId("case-amazon").click();
+    await expect(page.getByTestId("case-compare")).toContainText("Northern Alaska warming");
+    await page.getByTestId("switch-case").click();
+    await expect(page.getByTestId("case-title")).toHaveText("Northern Alaska warming");
+    await expect(page.getByTestId("case-numbers")).toContainText("+0.51");
+    await expect(page.getByTestId("case-numbers")).toContainText("+0.41");
+    await expect(page.getByTestId("case-numbers")).toContainText("NASA GISTEMP v4");
+    await expect(page.getByTestId("case-verdict")).toContainText("Supported by a second dataset");
+    await expect(page.getByTestId("breakpoint-2005")).toHaveCount(0);
+    await expect(page.getByTestId("issue-2005")).toHaveCount(0);
+    await expect(page.getByTestId("compare-amazon")).toContainText("Documented data issue in 2005");
+    await expect(page.getByTestId("compare-alaska")).toContainText("No documented data issue found");
+    await expect(page.getByTestId("answer-where")).toContainText("Northern Alaska");
+    await expect.poll(async () => page.evaluate(() => Math.round(window.__tpMap.getCenter().lng)), { timeout: 15_000 }).toBe(-155);
+    // back to free exploration keeps the selection
+    await page.getByTestId("case-to-detective").click();
+    await expect(page.getByTestId("trend-explorer")).toBeVisible();
+    await expect(page.getByTestId("answer-howmuch")).toContainText("+0.51 °C");
+  });
+
+  test("guided tour ends in the Houston simulator, which still works, and the way back is intact", async ({ page }) => {
+    await open(page, "trends");
+    await page.getByTestId("tour-start").click();
+    await expect(page.getByTestId("tour")).toContainText("Step 1 of 5");
+    await page.getByTestId("tour-next").click();
+    await page.getByTestId("tour-next").click();
+    await expect(page.getByTestId("case-title")).toHaveText("The Amazon Rainfall Mystery");
+    await page.getByTestId("tour-next").click();
+    await expect(page.getByTestId("case-title")).toHaveText("Northern Alaska warming");
+    await page.getByTestId("tour-next").click();
+    await expect(page.getByTestId("tour")).toContainText("Step 5 of 5");
+    await expect(page.getByTestId("evidence-bridge")).toContainText("did not cause the simulated storm");
+    await expect(page.getByTestId("evidence-bridge")).toContainText("no financial forecast is derived");
+    await page.getByTestId("tour-finish").click();
+    await expect(page.getByTestId("sim-panel")).toContainText("Houston Energy Shock");
+    expect(await capacity(page)).toBeGreaterThan(1);
+    await page.getByTestId("simulate-btn").click();
+    await expect.poll(async () => (await state(page)).simPos, { timeout: 15_000 }).toBeGreaterThan(0.01);
+    await expect(page.getByTestId("impact-graph")).toBeVisible();
+    await page.getByTestId("tab-trends").click();
+    await expect(page.getByTestId("four-answers")).toBeVisible();
+    await page.getByTestId("tab-world").click();
+    await expect(page.getByTestId("layer-earthquakes")).toBeVisible();
+    expect(errors.get(page)).toEqual([]);
+  });
+});
 
 const state = (page: Page) => page.evaluate(() => {
   const s = window.__tpStore.getState();
