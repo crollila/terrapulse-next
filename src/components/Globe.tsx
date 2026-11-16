@@ -465,7 +465,7 @@ export function Globe() {
       } else if (selection.type === "hazard") {
         const h = [...(feeds.usgs?.events ?? []), ...(feeds.eonet?.events ?? [])].find((e) => e.id === selection.id);
         if (h) ring(h.lon, h.lat, 16, "#e5484d");
-      } else if (selection.type === "node" && refineries.length) {
+      } else if (selection.type === "node" && refineries.length && hazard === "hurricane") {
         const node = getScenario(sim, refineries, ports).graph.nodes.find((n) => n.id === selection.id);
         for (const id of [node?.assetId, ...(node?.assetIds ?? [])]) {
           const a = id ? findAsset(id) : undefined;
@@ -474,7 +474,7 @@ export function Globe() {
       }
     }
     setData("highlight", fc(pts));
-  }, [mapReady, selection, refineries, ports, feeds, sim]);
+  }, [mapReady, selection, refineries, ports, feeds, sim, hazard]);
 
   // ---- camera ----
   useEffect(() => {

@@ -49,7 +49,7 @@ export function RainTimeline({ rec, markers }: { rec: RainRecord | null; markers
 
   return (
     <section className="timeline" aria-label="Record timeline" data-testid="rain-timeline">
-      <div className="tl-top">
+      <div className="tl-top rain-top">
         <button
           className="btn primary sm icon-btn"
           aria-label={playing ? "Pause" : hours >= RAIN_WINDOW_H ? "Replay" : "Play"}

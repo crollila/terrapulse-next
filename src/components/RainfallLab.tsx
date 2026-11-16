@@ -554,7 +554,7 @@ export function RainfallLab({ onMethods, pane }: { onMethods: () => void; pane: 
         <div className="panel-body">
           {!rec && !error && <p className="muted">Loading the record…</p>}
           {rec && tab === "evidence" && (siteSel ? <div className="section"><SiteEvidence rec={rec} id={siteSel} doe={doe} fleet={fleet} /></div> : <Overview rec={rec} doe={doe} fleet={fleet} />)}
-          {rec && tab === "network" && <ExposureNetwork rec={rec} />}
+          {rec && tab === "network" && <ExposureNetwork rec={rec} doe={doe} />}
           {rec && tab === "limits" && <Limits rec={rec} doe={doe} />}
         </div>
       </aside>

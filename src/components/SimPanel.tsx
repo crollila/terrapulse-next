@@ -4,6 +4,7 @@ import { useScenario } from "../state/derived";
 import { PARAM_BOUNDS, SAFFIR_SIMPSON, SCENARIO_001, saffirSimpsonCategory, validateParams, type HurricaneParams } from "../sim/hurricane";
 import { vmaxForCategory, PLACES } from "../sim/command";
 import { fmtBpd } from "../sim/graph";
+import { kraftMaxRainfallInches } from "../sim/rcliper";
 import { buildScenarioReport } from "../sim/report";
 import { niceName } from "../data/companies";
 import { Badge, Icon, Slider } from "./ui";
@@ -174,7 +175,7 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
             </select>
           </div>
           <Slider label="Heading (direction of travel)" unit="°" value={sim.headingDeg} {...PARAM_BOUNDS.headingDeg} onChange={(v) => setSim({ headingDeg: v })} hint="0° north, 90° east, 270° west." />
-          <Slider label="Forward speed" unit="km/h" value={sim.forwardSpeedKmh} {...PARAM_BOUNDS.forwardSpeedKmh} onChange={(v) => setSim({ forwardSpeedKmh: v })} hint="Sets how long each site stays inside the wind field." />
+          <Slider label="Forward speed" unit="km/h" value={sim.forwardSpeedKmh} {...PARAM_BOUNDS.forwardSpeedKmh} onChange={(v) => setSim({ forwardSpeedKmh: v })} hint={`Sets how long each site stays inside the wind field. Slow storms rain more: a forecasters' rule of thumb (Kraft) puts the largest storm rainfall near 100 ÷ speed in knots, here about ${(kraftMaxRainfallInches(sim.forwardSpeedKmh) ?? 0).toFixed(0)} in. Not a model result.`} />
           <div className="field">
             <div className="row">
               <span className="small" style={{ fontWeight: 600, color: "var(--navy)", flex: 1 }}>Weaken after landfall</span>
@@ -218,6 +219,9 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
           </div>
           {io && <div className="tiny muted" role="status">{io}</div>}
           <p className="tiny muted">Deterministic: the same inputs always give the same outputs. Experimental model: in a hindcast it failed to reproduce Hurricane Harvey's refinery shutdowns (a rainfall event) and was inconclusive for Ike. See the model card.</p>
+          <button className="btn sm" style={{ alignSelf: "flex-start" }} onClick={() => st.setHazard("rainfall")} data-testid="open-rain-record">
+            Open Harvey's observed rainfall record
+          </button>
         </div>
       </div>
     </aside>

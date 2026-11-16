@@ -1,7 +1,7 @@
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useStore } from "../state/store";
 import { useScenario, useTimeline } from "../state/derived";
-import { TIERS, TIER_LABEL, chainOf, nodeVisible, type GNode, type NodeType } from "../sim/graph";
+import { TIERS, TIER_LABEL, chainOf, nodeVisible, type GNode, type ImpactGraph as Graph, type NodeType } from "../sim/graph";
 
 interface PathD {
   id: string;
@@ -9,8 +9,13 @@ interface PathD {
   hyp: boolean;
 }
 
-export function ImpactGraph() {
-  const { graph } = useScenario();
+/**
+ * The economic network. Without props it shows the wind scenario and reveals nodes along its
+ * timeline. Given a graph (another hazard's exposure set) it shows that graph whole.
+ */
+export function ImpactGraph({ graph: given }: { graph?: Graph } = {}) {
+  const scenario = useScenario();
+  const graph = given ?? scenario.graph;
   const tl = useTimeline();
   const selection = useStore((s) => s.selection);
   const simStarted = useStore((s) => s.simStarted);
@@ -22,7 +27,7 @@ export function ImpactGraph() {
   const [paths, setPaths] = useState<PathD[]>([]);
   const st = useStore.getState();
 
-  const preview = !simStarted && simPos === 0;
+  const preview = !!given || (!simStarted && simPos === 0);
   const visible = useMemo(() => {
     const ids = new Set<string>();
     for (const n of graph.nodes) {
@@ -164,7 +169,7 @@ export function ImpactGraph() {
         </span>
         <span>Click a node to follow its chain; click a line to see its evidence.</span>
       </div>
-      {preview && <p className="tiny muted" style={{ marginTop: 4 }}>Full network for the current inputs. Press Simulate to watch it build stage by stage.</p>}
+      {preview && !given && <p className="tiny muted" style={{ marginTop: 4 }}>Full network for the current inputs. Press Simulate to watch it build stage by stage.</p>}
     </div>
   );
 }

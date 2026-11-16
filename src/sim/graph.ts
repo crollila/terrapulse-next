@@ -1,11 +1,14 @@
 /**
- * Economic impact graph for a scenario. Every edge carries its meaning, its basis and a source.
+ * Economic impact graph for a hazard's exposure set. Every edge carries its meaning, its basis and a
+ * source. The same builder serves every hazard (wind scenario, observed rainfall, wildfire): each
+ * describes who is exposed as an ExposureSet and the network downstream of the sites is shared.
  * Basis: SOURCED (documented relationship), MODELED (computed by the scenario engine),
  * RESEARCH HYPOTHESIS (plausible dependency, direction only, never a number).
  */
 import type { EvidenceClass } from "../data/types";
 import { FUNDS, listingFor, niceName } from "../data/companies";
 import type { ScenarioResult } from "./hurricane";
+import type { Port, Refinery } from "../data/types";
 
 export type NodeType = "hazard" | "asset" | "activity" | "commodity" | "industry" | "company" | "fund";
 export type EdgeBasis = "SOURCED" | "MODELED" | "RESEARCH HYPOTHESIS";
@@ -88,14 +91,15 @@ export interface CompanyExposure {
   refineryIds: string[];
 }
 
-export function companyExposures(s: ScenarioResult): CompanyExposure[] {
+/** Exposure by corporate owner: capacity of the exposed refineries against the owner's U.S. total (EIA). */
+export function companyExposuresFrom(all: Refinery[], exposed: Refinery[]): CompanyExposure[] {
   const total = new Map<string, number>();
-  for (const r of s.refineries) {
+  for (const r of all) {
     const k = r.corporation ?? r.company;
     total.set(k, (total.get(k) ?? 0) + (r.capacityBpd ?? 0));
   }
   const exp = new Map<string, { bpd: number; ids: string[] }>();
-  for (const r of s.refineriesInFootprint) {
+  for (const r of exposed) {
     const k = r.corporation ?? r.company;
     const e = exp.get(k) ?? { bpd: 0, ids: [] };
     e.bpd += r.capacityBpd ?? 0;
@@ -120,37 +124,74 @@ export function companyExposures(s: ScenarioResult): CompanyExposure[] {
     .sort((a, b) => b.exposedBpd - a.exposedBpd || a.corporation.localeCompare(b.corporation));
 }
 
+export function companyExposures(s: ScenarioResult): CompanyExposure[] {
+  return companyExposuresFrom(s.refineries, s.refineriesInFootprint);
+}
+
 export const MAX_ASSET_NODES = 6;
 export const MAX_COMPANY_NODES = 8;
 
-export function buildGraph(s: ScenarioResult): ImpactGraph {
+/** A site inside a hazard's exposure set, with the facts and wording that are specific to the hazard. */
+export interface ExposedSite<T> {
+  site: T;
+  /** Hazard-specific facts shown after the site's own facts (capacity, operator, location or cargo). */
+  facts: Fact[];
+  /** What the hazard-to-site link means for this site. */
+  linkMeaning: string;
+  /** Hour at which the site becomes exposed in a modelled window; undefined when there is no such clock. */
+  onsetH?: number | null;
+}
+
+/**
+ * Everything the economic network needs to know about a hazard. The network downstream of the
+ * exposed sites (activity, operators, commodities, industries, funds) is the same for every hazard;
+ * only this description of who is exposed, and on what evidence, differs.
+ */
+export interface ExposureSet {
+  hazard: { label: string; sub: string; evidence: EvidenceClass; facts: Fact[] };
+  /** Source cited on the hazard-to-site links and on the exposure totals. */
+  model: { label: string; url: string };
+  /** Evidence class of the hazard-to-site links. */
+  linkBasis: EdgeBasis;
+  /** Word for the exposed area in labels: "footprint" (wind) or "screen" (rainfall, fire). */
+  area: string;
+  /** Exposed refineries, largest capacity first, and exposed ports, largest tonnage first. */
+  refineries: ExposedSite<Refinery>[];
+  ports: ExposedSite<Port>[];
+  /** Every refinery in the dataset (for owners' totals). */
+  allRefineries: Refinery[];
+  datasetCapacityBpd: number;
+  datasetTons: number;
+  /** Meaning of the link to the "N more refineries" node. */
+  restLinkMeaning: string;
+  /** Note under the exposed-capacity total: how it was counted and what it is not. */
+  capacityNote: string;
+  /** Why no outage is estimated for this hazard. */
+  outageNote: string;
+}
+
+export function buildExposureGraph(x: ExposureSet): ImpactGraph {
   const nodes: GNode[] = [];
   const edges: GEdge[] = [];
   const tier = (t: NodeType) => TIERS.indexOf(t);
   const add = (n: Omit<GNode, "tier">) => nodes.push({ ...n, tier: tier(n.type) });
   const link = (from: string, to: string, kind: string, basis: EdgeBasis, meaning: string, source?: { label: string; url: string }) =>
     edges.push({ id: `${from}>${to}`, from, to, kind, basis, meaning, source });
+  const MODEL = x.model;
 
-  const p = s.params;
-  add({
-    id: "hazard",
-    type: "hazard",
-    label: s.category > 0 ? `Category ${s.category} hurricane` : "Tropical storm",
-    sub: "Hypothetical scenario",
-    evidence: "HYPOTHETICAL",
-    facts: [
-      { label: "Maximum sustained wind", value: `${p.vmaxKt} kt`, evidence: "HYPOTHETICAL", note: "Chosen input, not a forecast." },
-      { label: "Radius of maximum wind", value: `${p.rmaxKm} km`, evidence: "HYPOTHETICAL" },
-      { label: "Hurricane-force (64 kt) radius", value: s.radiiKm.r64 ? `${s.radiiKm.r64.toFixed(0)} km` : "not reached", evidence: "MODELED", source: MODEL },
-      { label: "Track", value: `heading ${p.headingDeg}° at ${p.forwardSpeedKmh} km/h`, evidence: "HYPOTHETICAL" },
-    ],
-  });
+  add({ id: "hazard", type: "hazard", label: x.hazard.label, sub: x.hazard.sub, evidence: x.hazard.evidence, facts: x.hazard.facts });
 
-  const refs = s.refineriesInFootprint;
-  const ports = s.portsInFootprint;
+  const refs = x.refineries.map((e) => e.site);
+  const ports = x.ports.map((e) => e.site);
+  const sum = (xs: (number | null)[]) => xs.reduce<number>((a, v) => a + (v ?? 0), 0);
+  const capacityInArea = sum(refs.map((r) => r.capacityBpd));
+  const capacityShare = x.datasetCapacityBpd > 0 ? capacityInArea / x.datasetCapacityBpd : null;
+  const tonsInArea = sum(ports.map((pt) => pt.totalTons));
   const maxCap = Math.max(1, ...refs.map((r) => r.capacityBpd ?? 0));
-  const shownRefs = refs.slice(0, MAX_ASSET_NODES);
-  for (const r of shownRefs) {
+  const shown = x.refineries.slice(0, MAX_ASSET_NODES);
+  const shownRefs = shown.map((e) => e.site);
+  for (const e of shown) {
+    const r = e.site;
     const id = `asset:${r.id}`;
     add({
       id,
@@ -159,17 +200,16 @@ export function buildGraph(s: ScenarioResult): ImpactGraph {
       sub: niceName(r.company),
       evidence: "OBSERVED",
       assetId: r.id,
-      onsetH: r.tOnsetThresholdH,
+      onsetH: e.onsetH,
       weight: (r.capacityBpd ?? 0) / maxCap,
       facts: [
         { label: "Crude distillation capacity", value: r.capacityBpd != null ? fmtBpd(r.capacityBpd) : "Insufficient validated data", evidence: "OBSERVED", source: EIA_REFCAP, note: "Atmospheric crude distillation, barrels per calendar day." },
         { label: "Operator", value: niceName(r.company), evidence: "OBSERVED", source: EIA_REFCAP },
         { label: "Location", value: `${r.city ? niceName(r.city) + ", " : ""}${r.state ?? ""} (${r.lat.toFixed(3)}, ${r.lon.toFixed(3)})`, evidence: "OBSERVED", source: EIA_REFCAP },
-        { label: "Modelled peak wind", value: `${r.peakWindKt.toFixed(0)} kt`, evidence: "MODELED", source: MODEL, note: "Open-water wind with no decay over land; an upper-bound screen." },
-        { label: "Closest approach of the centre", value: `${r.closestApproachKm.toFixed(0)} km`, evidence: "MODELED", source: MODEL },
+        ...e.facts,
       ],
     });
-    link("hazard", id, "physical exposure", "MODELED", `Modelled peak wind at the site (${r.peakWindKt.toFixed(0)} kt) reaches the ${p.exposureThresholdKt}-kt exposure threshold. Exposure is not damage.`, MODEL);
+    link("hazard", id, "physical exposure", x.linkBasis, e.linkMeaning, MODEL);
     link(id, "act:refining", "has refining capacity", "SOURCED", "The facility's atmospheric crude distillation capacity as reported to EIA.", EIA_REFCAP);
   }
   if (refs.length > shownRefs.length) {
@@ -185,10 +225,11 @@ export function buildGraph(s: ScenarioResult): ImpactGraph {
       facts: [{ label: "Combined capacity", value: fmtBpd(cap), evidence: "OBSERVED", source: EIA_REFCAP }],
       weight: cap / maxCap / 2,
     });
-    link("hazard", "asset:other-refineries", "physical exposure", "MODELED", "Smaller refineries whose modelled peak wind also reaches the threshold.", MODEL);
+    link("hazard", "asset:other-refineries", "physical exposure", x.linkBasis, x.restLinkMeaning, MODEL);
     link("asset:other-refineries", "act:refining", "has refining capacity", "SOURCED", "Capacity as reported to EIA.", EIA_REFCAP);
   }
-  for (const pt of ports.slice(0, 3)) {
+  for (const e of x.ports.slice(0, 3)) {
+    const pt = e.site;
     const id = `asset:${pt.id}`;
     add({
       id,
@@ -197,14 +238,11 @@ export function buildGraph(s: ScenarioResult): ImpactGraph {
       sub: "Port",
       evidence: "OBSERVED",
       assetId: pt.id,
-      onsetH: pt.tOnsetThresholdH,
+      onsetH: e.onsetH,
       weight: 0.3,
-      facts: [
-        { label: "Cargo handled", value: pt.totalTons != null ? fmtTons(pt.totalTons) : "Insufficient validated data", evidence: "OBSERVED", source: USACE_PORTS, note: `Calendar year ${pt.year ?? "n/a"}.` },
-        { label: "Modelled peak wind", value: `${pt.peakWindKt.toFixed(0)} kt`, evidence: "MODELED", source: MODEL },
-      ],
+      facts: [{ label: "Cargo handled", value: pt.totalTons != null ? fmtTons(pt.totalTons) : "Insufficient validated data", evidence: "OBSERVED", source: USACE_PORTS, note: `Calendar year ${pt.year ?? "n/a"}.` }, ...e.facts],
     });
-    link("hazard", id, "physical exposure", "MODELED", `Modelled peak wind at the port (${pt.peakWindKt.toFixed(0)} kt) reaches the exposure threshold.`, MODEL);
+    link("hazard", id, "physical exposure", x.linkBasis, e.linkMeaning, MODEL);
     link(id, "act:ports", "handles cargo", "SOURCED", "Annual tonnage reported by the U.S. Army Corps of Engineers.", USACE_PORTS);
   }
 
@@ -213,25 +251,19 @@ export function buildGraph(s: ScenarioResult): ImpactGraph {
       id: "act:refining",
       type: "activity",
       label: "Crude oil refining",
-      sub: `${fmtBpd(s.capacityInFootprintBpd)} in footprint`,
+      sub: `${fmtBpd(capacityInArea)} in ${x.area}`,
       evidence: "MODELED",
       assetIds: refs.map((r) => r.id),
       facts: [
-        {
-          label: "Refining capacity inside the footprint",
-          value: fmtBpd(s.capacityInFootprintBpd),
-          evidence: "MODELED",
-          source: MODEL,
-          note: `Sum of EIA capacity over ${refs.length} refineries whose modelled peak wind is at least ${p.exposureThresholdKt} kt. Capacity at risk of exposure, NOT lost production.`,
-        },
+        { label: `Refining capacity inside the ${x.area}`, value: fmtBpd(capacityInArea), evidence: "MODELED", source: MODEL, note: x.capacityNote },
         {
           label: "Share of U.S. operable capacity in the dataset",
-          value: s.capacityShare != null ? pct(s.capacityShare) : "Insufficient validated data",
+          value: capacityShare != null ? pct(capacityShare) : "Insufficient validated data",
           evidence: "MODELED",
           source: EIA_REFCAP,
-          note: `${fmtBpd(s.capacityInFootprintBpd)} of ${fmtBpd(s.datasetCapacityBpd)}.`,
+          note: `${fmtBpd(capacityInArea)} of ${fmtBpd(x.datasetCapacityBpd)}.`,
         },
-        { label: "Expected outage size and duration", value: "Not estimated", evidence: "RESEARCH HYPOTHESIS", note: "No validated vulnerability relationship links wind speed to refinery shutdowns in this model." },
+        { label: "Expected outage size and duration", value: "Not estimated", evidence: "RESEARCH HYPOTHESIS", note: x.outageNote },
       ],
     });
     add({ id: "com:crude", type: "commodity", label: "Crude oil", sub: "Refinery input", evidence: "OBSERVED", facts: [{ label: "Price effect", value: "Cannot be estimated", evidence: "RESEARCH HYPOTHESIS", note: "Reduced refinery runs lower local crude demand while port closures can limit supply; the net direction is not determined by this model." }] });
@@ -248,7 +280,7 @@ export function buildGraph(s: ScenarioResult): ImpactGraph {
     link("com:distillate", "ind:freight", "consumed by", "SOURCED", "Diesel fuels most freight trucks, trains and vessels.", EIA_DIESEL);
     link("com:jet", "ind:airlines", "consumed by", "SOURCED", "Jet fuel is the main fuel of commercial aviation.", EIA_OIL_USE);
 
-    add({ id: "ind:refining", type: "industry", label: "Refining industry", evidence: "OBSERVED", facts: [{ label: "Margin effect", value: "Cannot be estimated", evidence: "RESEARCH HYPOTHESIS", note: "Refiners outside the footprint can benefit from higher product prices while those inside lose output; the net effect per company is not modelled." }] });
+    add({ id: "ind:refining", type: "industry", label: "Refining industry", evidence: "OBSERVED", facts: [{ label: "Margin effect", value: "Cannot be estimated", evidence: "RESEARCH HYPOTHESIS", note: `Refiners outside the ${x.area} can benefit from higher product prices while those inside lose output; the net effect per company is not modelled.` }] });
     link("act:refining", "ind:refining", "is the activity of", "SOURCED", "Refining capacity belongs to the refining industry.", EIA_REFCAP);
   }
   if (ports.length) {
@@ -256,12 +288,12 @@ export function buildGraph(s: ScenarioResult): ImpactGraph {
       id: "act:ports",
       type: "activity",
       label: "Port cargo handling",
-      sub: `${fmtTons(s.tonsInFootprint)}`,
+      sub: `${fmtTons(tonsInArea)}`,
       evidence: "MODELED",
-      assetIds: ports.map((x) => x.id),
+      assetIds: ports.map((pt) => pt.id),
       facts: [
-        { label: "Annual tonnage of ports inside the footprint", value: fmtTons(s.tonsInFootprint), evidence: "MODELED", source: USACE_PORTS, note: `${ports.length} principal ports. Annual totals, not tonnage delayed by the storm.` },
-        { label: "Share of principal-port tonnage", value: s.datasetTons > 0 ? pct(s.tonsInFootprint / s.datasetTons) : "n/a", evidence: "MODELED", source: USACE_PORTS },
+        { label: `Annual tonnage of ports inside the ${x.area}`, value: fmtTons(tonsInArea), evidence: "MODELED", source: USACE_PORTS, note: `${ports.length} principal ports. Annual totals, not tonnage delayed by the storm.` },
+        { label: "Share of principal-port tonnage", value: x.datasetTons > 0 ? pct(tonsInArea / x.datasetTons) : "n/a", evidence: "MODELED", source: USACE_PORTS },
       ],
     });
     add({ id: "ind:shipping", type: "industry", label: "Marine shipping and trade", evidence: "OBSERVED", facts: [{ label: "Dependency", value: "Uses the exposed ports", evidence: "OBSERVED", source: USACE_PORTS }] });
@@ -269,7 +301,7 @@ export function buildGraph(s: ScenarioResult): ImpactGraph {
     if (refs.length) link("act:ports", "com:crude", "moves", "RESEARCH HYPOTHESIS", "Gulf Coast ports handle crude oil and product cargoes; the share is not quantified in this dataset.");
   }
 
-  const comps = companyExposures(s);
+  const comps = companyExposuresFrom(x.allRefineries, refs);
   const shownTickers = new Set<string>();
   for (const c of comps.slice(0, MAX_COMPANY_NODES)) {
     const id = `co:${c.corporation}`;
@@ -283,7 +315,7 @@ export function buildGraph(s: ScenarioResult): ImpactGraph {
       assetIds: c.refineryIds,
       weight: c.share ?? 0,
       facts: [
-        { label: "Refining capacity inside the footprint", value: fmtBpd(c.exposedBpd), evidence: "MODELED", source: MODEL, note: `${c.refineryIds.length} refiner${c.refineryIds.length === 1 ? "y" : "ies"} owned per EIA.` },
+        { label: `Refining capacity inside the ${x.area}`, value: fmtBpd(c.exposedBpd), evidence: "MODELED", source: MODEL, note: `${c.refineryIds.length} refiner${c.refineryIds.length === 1 ? "y" : "ies"} owned per EIA.` },
         { label: "Share of the company's U.S. refining capacity", value: c.share != null ? pct(c.share) : "Insufficient validated data", evidence: "MODELED", source: EIA_REFCAP, note: `${fmtBpd(c.exposedBpd)} of ${fmtBpd(c.totalUsBpd)} U.S. capacity. Refining outside the U.S. and other business lines are not counted.` },
         { label: "Listing", value: c.ticker ? `${c.ticker} (${c.listingStatus})` : c.listingStatus, evidence: "OBSERVED" },
         { label: "Share-price effect", value: "Cannot be estimated", evidence: "RESEARCH HYPOTHESIS", note: "Physical exposure is not a return forecast. No validated price model or redistributable price history is included." },
@@ -314,6 +346,52 @@ export function buildGraph(s: ScenarioResult): ImpactGraph {
     link(industryNode, `fund:${f.ticker}`, "tracked by", "SOURCED", `${f.ticker} tracks the ${f.tracks}.`, { label: f.sourceLabel, url: f.sourceUrl });
   }
   return { nodes, edges };
+}
+
+/** The wind scenario described as an exposure set. */
+export function windExposureSet(s: ScenarioResult): ExposureSet {
+  const p = s.params;
+  return {
+    hazard: {
+      label: s.category > 0 ? `Category ${s.category} hurricane` : "Tropical storm",
+      sub: "Hypothetical scenario",
+      evidence: "HYPOTHETICAL",
+      facts: [
+        { label: "Maximum sustained wind", value: `${p.vmaxKt} kt`, evidence: "HYPOTHETICAL", note: "Chosen input, not a forecast." },
+        { label: "Radius of maximum wind", value: `${p.rmaxKm} km`, evidence: "HYPOTHETICAL" },
+        { label: "Hurricane-force (64 kt) radius", value: s.radiiKm.r64 ? `${s.radiiKm.r64.toFixed(0)} km` : "not reached", evidence: "MODELED", source: MODEL },
+        { label: "Track", value: `heading ${p.headingDeg}° at ${p.forwardSpeedKmh} km/h`, evidence: "HYPOTHETICAL" },
+      ],
+    },
+    model: MODEL,
+    linkBasis: "MODELED",
+    area: "footprint",
+    refineries: s.refineriesInFootprint.map((r) => ({
+      site: r,
+      onsetH: r.tOnsetThresholdH,
+      linkMeaning: `Modelled peak wind at the site (${r.peakWindKt.toFixed(0)} kt) reaches the ${p.exposureThresholdKt}-kt exposure threshold. Exposure is not damage.`,
+      facts: [
+        { label: "Modelled peak wind", value: `${r.peakWindKt.toFixed(0)} kt`, evidence: "MODELED", source: MODEL, note: "Open-water wind with no decay over land; an upper-bound screen." },
+        { label: "Closest approach of the centre", value: `${r.closestApproachKm.toFixed(0)} km`, evidence: "MODELED", source: MODEL },
+      ],
+    })),
+    ports: s.portsInFootprint.map((pt) => ({
+      site: pt,
+      onsetH: pt.tOnsetThresholdH,
+      linkMeaning: `Modelled peak wind at the port (${pt.peakWindKt.toFixed(0)} kt) reaches the exposure threshold.`,
+      facts: [{ label: "Modelled peak wind", value: `${pt.peakWindKt.toFixed(0)} kt`, evidence: "MODELED", source: MODEL }],
+    })),
+    allRefineries: s.refineries,
+    datasetCapacityBpd: s.datasetCapacityBpd,
+    datasetTons: s.datasetTons,
+    restLinkMeaning: "Smaller refineries whose modelled peak wind also reaches the threshold.",
+    capacityNote: `Sum of EIA capacity over ${s.refineriesInFootprint.length} refineries whose modelled peak wind is at least ${p.exposureThresholdKt} kt. Capacity at risk of exposure, NOT lost production.`,
+    outageNote: "No validated vulnerability relationship links wind speed to refinery shutdowns in this model.",
+  };
+}
+
+export function buildGraph(s: ScenarioResult): ImpactGraph {
+  return buildExposureGraph(windExposureSet(s));
 }
 
 /** All nodes reachable upstream and downstream of a node (the impact chain through it). */

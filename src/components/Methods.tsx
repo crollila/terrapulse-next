@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { MODEL_CARD } from "../sim/hurricane";
 import { DROUGHT_CARD } from "../sim/drought";
+import { RAINFALL_CARD } from "../sim/rainfall";
+import { RCLIPER_CARD } from "../sim/rcliper";
 import { TREND_METHOD } from "../science/stats";
 import { Badge, Icon } from "./ui";
 
@@ -15,6 +17,14 @@ const SOURCES: { name: string; use: string; terms: string; url: string }[] = [
   { name: "USACE Waterborne Commerce / BTS NTAD Principal Ports (CY 2023)", use: "Port locations and annual tonnage", terms: "U.S. Government, public domain", url: "https://www.arcgis.com/home/item.html?id=e3b6065cce144be8a13a59e03c4195fe" },
   { name: "U.S. EIA petroleum history series and Today in Energy", use: "Prices, refinery inputs and utilization around Hurricane Harvey (2017)", terms: "U.S. Government, public domain", url: "https://www.eia.gov/petroleum/" },
   { name: "U.S. DOE Harvey event reports; NHC tropical cyclone reports", use: "Refinery shutdown figures; landfall facts; Saffir-Simpson scale", terms: "U.S. Government, public domain", url: "https://www.nhc.noaa.gov/data/tcr/" },
+  { name: "NOAA NWS/NCEP Stage IV precipitation analysis", use: "Observed daily rainfall for Hurricane Harvey (radar and rain gauges, about 4 km)", terms: "U.S. Government, public domain", url: "https://water.noaa.gov/precip" },
+  { name: "NOAA Atlas 14 (HDSC Precipitation Frequency Data Server)", use: "Rainfall depths by duration and recurrence interval at each site, with 90% bounds", terms: "U.S. Government, public domain", url: "https://hdsc.nws.noaa.gov/pfds/" },
+  { name: "NASA GPM IMERG and MERRA-2 daily rainfall via NASA POWER", use: "Second and third rainfall estimates at each site during Harvey", terms: "NASA open data; cite", url: "https://power.larc.nasa.gov/" },
+  { name: "USGS Flood Event Data (Short-Term Network)", use: "2,364 surveyed high-water marks from Hurricane Harvey", terms: "U.S. Government, public domain", url: "https://apps.usgs.gov/stnweb" },
+  { name: "USGS 3DEP Elevation Point Query Service", use: "Ground elevation at each refinery and port point", terms: "U.S. Government, public domain", url: "https://apps.nationalmap.gov/epqs/" },
+  { name: "FEMA National Flood Hazard Layer", use: "Regulatory flood zone at each refinery and port point", terms: "U.S. Government, public domain", url: "https://www.fema.gov/flood-maps/national-flood-hazard-layer" },
+  { name: "NOAA NCEI GHCN-Daily", use: "Rain-gauge totals used to check the Stage IV analysis", terms: "U.S. Government, public domain", url: "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily" },
+  { name: "U.S. EIA Refinery Capacity Report, 1 January 2017", use: "The refinery fleet and capacities at the time of Harvey, for the hindcast", terms: "U.S. Government, public domain", url: "https://www.eia.gov/petroleum/refinerycapacity/archive/2017/refcap2017.php" },
   { name: "OpenFreeMap / OpenStreetMap contributors", use: "Vector base map: coastlines, borders, roads, place names", terms: "ODbL; attribution shown on the map", url: "https://openfreemap.org/" },
   { name: "Natural Earth (world-atlas)", use: "Offline fallback land outlines", terms: "Public domain", url: "https://www.naturalearthdata.com/" },
 ];
@@ -65,6 +75,26 @@ export function Methods({ onClose }: { onClose: () => void }) {
           <p><strong>Economic network:</strong> each link is labelled as documented, modelled or a research hypothesis and carries its source. The one geographic arc (Houston to New York Harbor) stands for the Colonial Pipeline, which EIA describes as carrying up to 2.5 million b/d from Houston as far north as New York Harbor; the arc is a schematic great circle, not the pipeline route, and implies no modelled flow.</p>
           <p><strong>Portfolio screen:</strong> exposure share = a company's refining capacity inside the footprint ÷ its total U.S. refining capacity (EIA). Portfolio index = Σ weight × exposure share. It measures physical exposure only.</p>
           <ul>{MODEL_CARD.references.map((x) => <li key={x}>{x}</li>)}</ul>
+
+          <h3>{RAINFALL_CARD.name}</h3>
+          <p><strong>Status:</strong> {RAINFALL_CARD.status}</p>
+          <p style={{ marginTop: 6 }}><strong>Inputs</strong></p>
+          <ul>{RAINFALL_CARD.inputs.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p><strong>What is computed</strong></p>
+          <pre className="formula">{RAINFALL_CARD.formula.join("\n")}</pre>
+          <p><strong>Limitations</strong></p>
+          <ul>{RAINFALL_CARD.limitations.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p><strong>How it does on Hurricane Harvey (hindcast)</strong></p>
+          <ul data-testid="rain-hindcast-card">{RAINFALL_CARD.hindcast.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p><strong>Uncertainty:</strong> {RAINFALL_CARD.uncertainty}</p>
+          <p className="small">Method, tables and data gaps: <a href="https://github.com/crollila/terrapulse-next/blob/main/research/RAINFALL_FLOOD.md" target="_blank" rel="noopener noreferrer">research/RAINFALL_FLOOD.md</a>.</p>
+          <ul>{RAINFALL_CARD.references.map((x) => <li key={x}>{x}</li>)}</ul>
+
+          <h3>{RCLIPER_CARD.name}</h3>
+          <p><strong>Status:</strong> {RCLIPER_CARD.status}</p>
+          <pre className="formula">{RCLIPER_CARD.formula.join("\n")}</pre>
+          <ul>{RCLIPER_CARD.limitations.map((x) => <li key={x}>{x}</li>)}</ul>
+          <ul>{RCLIPER_CARD.references.map((x) => <li key={x}>{x}</li>)}</ul>
 
           <h3>{DROUGHT_CARD.name}</h3>
           <p><strong>Status:</strong> {DROUGHT_CARD.status}.</p>
