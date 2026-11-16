@@ -1,0 +1,23 @@
+{
+  "note": "Last reported state of the agents used in the build session of 15 Nov 2026. Not live telemetry: there is no live link to agent sessions.",
+  "agents": [
+    {
+      "role": "Lead orchestrator (Claude Fable 5.2)",
+      "task": "Architecture, globe, simulator, network, UI, tests, deployment, records",
+      "state": "last active",
+      "reportedAt": "2026-11-16T03:40:00Z"
+    },
+    {
+      "role": "Earth science and data agent",
+      "task": "Ported trend statistics to TypeScript; 211 tests reproduce the published results",
+      "state": "finished",
+      "reportedAt": "2026-11-16T03:02:00Z"
+    },
+    {
+      "role": "Economics and data research agent",
+      "task": "EIA refineries, USACE ports, EIA Harvey series, quoted Harvey and Ike facts",
+      "state": "finished",
+      "reportedAt": "2026-11-16T02:54:00Z"
+    }
+  ]
+}

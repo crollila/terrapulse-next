@@ -17,7 +17,12 @@
     "prebuild": "node scripts/copy-map-worker.mjs",
     "postinstall": "node scripts/copy-map-worker.mjs",
     "test:e2e": "playwright test",
-    "test:all": "npm run typecheck && npm test && npm run build && npm run test:e2e"
+    "test:all": "npm run typecheck && npm test && npm run build && npm run test:e2e",
+    "status:quick": "node scripts/status.mjs --quick",
+    "check:live": "node scripts/status.mjs --quick --e2e",
+    "dashboard": "node scripts/dashboard.mjs",
+    "resume": "node scripts/resume.mjs",
+    "capture": "node scripts/capture.mjs"
   },
   "dependencies": {
     "maplibre-gl": "^6.18.0",
