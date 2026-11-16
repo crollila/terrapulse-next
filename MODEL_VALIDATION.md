@@ -134,5 +134,49 @@ drought chronology in this build.
 
 ## 6. Not modelled
 
-Wildfire, earthquake, flood and other hazards have no model yet. The simulator lists them as not
-built. Drought has an index and what-if but no economic exposure.
+Earthquake, flood depth and other hazards have no model. Wildfire spread is not modelled and the
+simulator says it is not offered (section 9). Drought has an index and what-if but no economic
+exposure.
+
+## 7. Observed-rainfall exposure screen (`src/sim/rainfall.ts`): EXPERIMENTAL (branch `research/hazard-sim`)
+
+Data are validated; the screen is not validated as a predictor. Full record: `research/RAINFALL_FLOOD.md`.
+
+- Inputs: NOAA Stage IV daily rainfall for Hurricane Harvey at 69 sites, NOAA Atlas 14 depths with
+  90% bounds, NASA IMERG and MERRA-2 as second estimates. Stage IV against 1,129 GHCN-Daily gauges:
+  r = 0.984, mean absolute difference 23.7 mm (74.5 mm for the 45 gauges above 750 mm). Not a fully
+  independent test: Stage IV is itself gauge-adjusted.
+- Method: largest 1, 2, 3, 4 and 7-day totals against the Atlas 14 depth for a chosen recurrence
+  interval; never extrapolated past 1,000 years; no flood depth, damage or shutdown.
+- Target: DOE's count of refineries shut. DOE names none; Updates #1 to #9 are reconstructed (one
+  fitting set each from DOE's regional counts and the EIA capacities of 1 January 2017); #10 to #22
+  are unresolved.
+- Hindcast at DOE Update #9 (12:00 UTC 30 August 2017), 39 refineries of the 2017 fleet, 14 counted:
+  64-kt wind radii 0 found; 50-kt 5 found, 1 not counted; 34-kt 14 found, 11 not counted; 100-year
+  rainfall 8 found, 6 missed, 6 not counted; 50-kt wind or rainfall 13 found, 1 missed, 7 not counted.
+- Uncertainty: 11 to 17 sites across the Atlas 14 bounds; 11 to 15 for rainfall 20% low or high.
+- Why it stays experimental: one storm; a mixed-cause, reconstructed target; a false-alarm ratio of
+  35 to 43%; the 34-kt wind extent does as well on hits.
+- Tests: `rainfall.test.ts` (22), `rainfall.data.test.ts` (29), `rainGraph.test.ts` (8).
+
+## 8. R-CLIPER rainfall climatology (`src/sim/rcliper.ts`): FAILS ON HARVEY, context only
+
+Tuleya, DeMaria and Kuligowski (2007), Eqs. 3 to 5 and Table 2 (NHC rows), implemented as printed.
+Run along the best track of Harvey against Stage IV: 33% of observed rainfall over all 69 sites,
+16% where more than 750 mm fell (correlation -0.21 there), and too much at Corpus Christi. Shown in
+the wind scenario as a labelled context line; no exposure is counted with it. Tests: `rcliper.test.ts` (18).
+
+## 9. Wildfire observed record and proximity screen (`src/sim/wildfire.ts`): record validated, screen EXPERIMENTAL
+
+Full record: `research/WILDFIRE.md`.
+
+- Three fires (Camp 2018, Marshall 2021, Smokehouse Creek 2024): NIFC perimeters, NASA FIRMS VIIRS
+  detections, gridMET and NASA POWER conditions, EIA power plants and pipelines.
+- Consistency of the record: 99.6%, 98.4% and 88.4% of detections lie within one pixel of the
+  separately mapped final perimeters (the rest at Smokehouse Creek are other fires). For the Camp
+  Fire, 87.1% to 95.9% of the detections so far lie inside each of 27 dated perimeters.
+- The screen lists infrastructure inside or within a chosen distance of the final perimeter.
+  Distance is not damage.
+- **No fire spread is simulated.** Rothermel's model needs inputs that could not be verified and its
+  own documentation excludes crown fire and firebrands; no validation was done.
+- Tests: `wildfire.test.ts` (16).

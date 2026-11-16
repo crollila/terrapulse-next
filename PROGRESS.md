@@ -97,3 +97,19 @@ None at the last run.
 ## Next executable task
 
 `npm run resume` prints it.
+
+## Hazard simulation research branch (16 November 2026): built and tested, NOT deployed
+
+Branch `research/hazard-sim` (worktree `../terrapulse-sim`). `main` is merged in; nothing was pushed
+and the live site is unchanged. Full record: `docs/HAZARD_SIM_BRANCH.md`.
+
+| Feature | Evidence |
+|---|---|
+| Observed rainfall and flood evidence for Hurricane Harvey (NOAA Stage IV, NASA IMERG, NOAA Atlas 14, USGS high-water marks and elevation, FEMA zones) | 51 unit tests; 6 browser tests; `research/RAINFALL_FLOOD.md` |
+| Hindcast on the 2017 refinery fleet against the reconstructed DOE count | 64-kt wind 0 of 14; 100-year rainfall 8 of 14 with 6 not counted; 50-kt wind or rainfall 13 of 14 with 7 not counted. Pinned by tests |
+| R-CLIPER modelled rainfall: fails on Harvey, shown as context only | 18 unit tests; 16% of observed rainfall where more than 750 mm fell |
+| Wildfire observed record: Camp (2018), Marshall (2021), Smokehouse Creek (2024) | 16 unit tests; 6 browser tests; `research/WILDFIRE.md` |
+| One economic network builder for every hazard; wind network unchanged | 8 unit tests with SHA-256 fingerprints |
+
+Test counts on the branch: 450 unit tests and 36 browser tests passed, 0 failed.
+Still not built: flood depth, wildfire spread, any price or loss estimate. See the branch record.

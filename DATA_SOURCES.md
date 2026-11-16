@@ -65,8 +65,37 @@ committed.
 
 - Equity prices: no free source with clear redistribution terms was verified. The app shows
   "Insufficient validated data".
-- NASA FIRMS active fires: needs a MAP_KEY for the API; not used. EONET wildfire events are used.
+- NASA FIRMS active fires: the API needs a MAP_KEY and is not used. The keyless yearly country archive is used for the wildfire record (branch `research/hazard-sim`); EONET wildfire events are used for the live layer.
 - NHC `CurrentStorms.json`: CORS not verified; EONET severe storms are used.
 - EIA API v2: needs a key; the no-key history workbooks are used instead.
 - Space Apps participant offers (Microsoft, Google, Meteomatics, GoDaddy, Miro): not evaluated and
   not activated. None is needed.
+
+## Hazard extensions (branch `research/hazard-sim`)
+
+All keyless. Provenance (provider, URL, retrieval time, hashes) is in the `meta` block of each file
+under `public/data/rainfall/`, `public/data/hindcast/` and `public/data/wildfire/`.
+
+| Dataset | Provider | Used for | Terms |
+|---|---|---|---|
+| Stage IV daily multisensor precipitation analysis | NOAA NWS / NCEP | Harvey rainfall field and site rainfall | U.S. Government, public domain |
+| Atlas 14 precipitation frequency estimates (HDSC) | NOAA NWS | Rainfall rarity at each site | U.S. Government, public domain |
+| GPM IMERG and MERRA-2 daily rainfall via NASA POWER | NASA | Second and third rainfall estimates | NASA open data |
+| GHCN-Daily | NOAA NCEI | Gauge check of Stage IV | U.S. Government, public domain |
+| Flood Event Data, high-water marks, event "2017 Harvey" | USGS | Observed flooding | U.S. Government, public domain |
+| 3DEP Elevation Point Query Service | USGS | Ground elevation at site points | U.S. Government, public domain |
+| National Flood Hazard Layer | FEMA | Regulatory flood zone at site points | U.S. Government, public domain |
+| Refinery Capacity Report as of 1 January 2017 | U.S. EIA | Fleet at the time of Harvey | U.S. Government, public domain |
+| Hurricane Harvey event reports, Updates #1 to #22 | U.S. DOE | Counts and capacities of refineries shut | U.S. Government, public domain |
+| Fire perimeters (WFIGS, perimeter history, GeoMAC archive) | NIFC | Observed wildfire perimeters | U.S. Government interagency data, no warranty; no explicit licence sentence found |
+| VIIRS 375 m active fire archive (FIRMS) | NASA | Satellite fire detections | NASA open data; cite FIRMS |
+| gridMET | Climatology Lab (Abatzoglou 2013) | Fire-danger indices and weather at each fire's origin | Copyright waived by the author |
+| U.S. Drought Monitor county statistics | NDMC, USDA, NOAA, NASA | County drought class | Use with attribution |
+| Power plants; natural gas pipelines (map layers) | U.S. EIA | Energy infrastructure near fires | U.S. Government, public domain |
+| Electric power transmission lines (archived copy) | HIFLD | Line length inside perimeters; **derived figures only, lines not stored** | Redistribution terms of the archived copy not verified |
+| Incident API; Damage Inspection (DINS) record counts | CAL FIRE | Camp Fire dates, size, structures destroyed (count only) | State of California; no explicit open licence found |
+| TIGERweb decennial counts | U.S. Census Bureau | Population of Paradise, 2010 and 2020 | U.S. Government, public domain |
+
+Considered and not used: NASA Earthdata downloads (need a login); NOAA HMS GOES detections (keyless,
+not yet integrated); USA Structures footprints (present-day, too large); Census Data API (now needs
+a key); any fire-spread model (see `research/WILDFIRE.md`).
