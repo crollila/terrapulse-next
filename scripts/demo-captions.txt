@@ -1,0 +1,8 @@
+fps=30,
+drawbox=x=0:y=ih-64:w=iw:h=64:color=white@0.86:t=fill,
+drawtext=fontfile='C\:/Windows/Fonts/segoeuib.ttf':fontsize=25:fontcolor=0x0b1f3f:x=(w-text_w)/2:y=h-45:text='TerraPulse · live hazards on one globe (NASA EONET, USGS)':enable='between(t,0,3.4)',
+drawtext=fontfile='C\:/Windows/Fonts/segoeuib.ttf':fontsize=25:fontcolor=0x0b1f3f:x=(w-text_w)/2:y=h-45:text='NASA MERRA-2 trend test · a 2005 rainfall break traced to the data, not the weather':enable='between(t,3.4,9.8)',
+drawtext=fontfile='C\:/Windows/Fonts/segoeuib.ttf':fontsize=25:fontcolor=0x0b1f3f:x=(w-text_w)/2:y=h-45:text='Scenario 001 · a hypothetical Category 5 hurricane on the Texas coast':enable='between(t,9.8,13.2)',
+drawtext=fontfile='C\:/Windows/Fonts/segoeuib.ttf':fontsize=25:fontcolor=0x0b1f3f:x=(w-text_w)/2:y=h-45:text='A modelled wind field reaches real refineries (EIA) and ports (USACE)':enable='between(t,13.2,20.4)',
+drawtext=fontfile='C\:/Windows/Fonts/segoeuib.ttf':fontsize=25:fontcolor=0x0b1f3f:x=(w-text_w)/2:y=h-45:text='Exposure traced through a sourced economic network':enable='between(t,20.4,26.2)',
+drawtext=fontfile='C\:/Windows/Fonts/segoeuib.ttf':fontsize=25:fontcolor=0x0b1f3f:x=(w-text_w)/2:y=h-45:text='Evidence first · capacity exposed, never an invented price forecast':enable='between(t,26.2,30)'

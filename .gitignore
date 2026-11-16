@@ -12,3 +12,5 @@ __pycache__
 *.pyc
 test-results
 playwright-report
+docs/media/*raw*
+docs/media/_rec

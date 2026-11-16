@@ -68,10 +68,11 @@ export function ImpactGraph() {
     compute();
     const ro = new ResizeObserver(compute);
     if (wrap.current) ro.observe(wrap.current);
-    const t = setTimeout(compute, 450);
+    // nodes animate in and the panel can still be settling: re-measure a few times
+    const timers = [60, 250, 450, 900, 1600].map((ms) => setTimeout(compute, ms));
     return () => {
       ro.disconnect();
-      clearTimeout(t);
+      timers.forEach(clearTimeout);
     };
   }, [graph, key]); // eslint-disable-line react-hooks/exhaustive-deps
 
