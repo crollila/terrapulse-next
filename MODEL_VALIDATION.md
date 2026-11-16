@@ -37,7 +37,7 @@ Known limits:
 
 ## 2. Hurricane wind-exposure screen (`src/sim/hurricane.ts`): EXPERIMENTAL
 
-Numerically tested; **not validated against any historical storm.**
+Numerically tested and hindcast against two storms; **the hindcast does not validate it.**
 
 What is tested (`src/sim/hurricane.test.ts`, `src/sim/engine.test.ts`, 85 tests):
 - Holland (1980) profile: equals Vmax at Rmax; a hand calculation at r = 2 Rmax; monotone decrease.
@@ -51,16 +51,39 @@ What is tested (`src/sim/hurricane.test.ts`, `src/sim/engine.test.ts`, 85 tests)
 - Sanity on real data: Scenario 001 exposes only Texas and Louisiana refineries; aimed at Miami
   it exposes no Gulf Coast refining capacity.
 
+Hindcast (16 November 2026, `research/HINDCAST.md`, `src/sim/hindcast.ts`, 25 tests in
+`src/sim/hindcast.test.ts`). Wind footprints along the NHC HURDAT2 best tracks of Hurricane Harvey
+(AL092017) and Hurricane Ike (AL092008), counted on the EIA refinery file as of 1 January 2026
+(not the 2017 or 2008 fleet), for the best-track wind radii and for the app's Holland profile with
+the observed maximum wind (B = 1.5, Rmax 20, 35 and 50 km, nothing fitted):
+- **Harvey: the screen fails, as expected.** DOE reported 15 refineries and 3,871,449 b/d shut or
+  shutting down on 30 August 2017. Observed 64-kt radii: 0 refineries. Holland 64 kt: 6 to 9
+  refineries, 0.94 to 1.32 million b/d (24% to 34% of the DOE figure), the Corpus Christi cluster
+  only and no Houston Ship Channel, Galveston Bay, Beaumont or Port Arthur site. At 34 kt it
+  overshoots: 29 sites, 6.34 million b/d (164%). No threshold reproduces the outcome. Harvey's
+  Houston and Beaumont/Port Arthur shutdowns came with a stalled 35 to 45 kt tropical storm and more
+  than 60 inches of rain, which a wind-only screen cannot represent. The Holland profile is also
+  too broad at Corpus Christi (73 to 79 kt where the best track has less than 64 kt).
+- **Ike: inconclusive.** NHC, citing DOE: 14 refineries closed. Observed 64-kt radii: 19 sites of
+  the 2026 fleet (16 with crude distillation capacity), 4.99 million b/d. Holland 64 kt: 10, 13 or
+  16 sites, 2.23 to 4.40 million b/d, depending on the assumed Rmax; the symmetric profile misses
+  the Lake Charles area. Same order of magnitude, but no list of the 14 refineries was retrieved,
+  so membership cannot be scored.
+- These are exposure counts on a later fleet, not shutdowns. Best-track radii are maximum extents
+  per quadrant and overstate area. Two storms would not validate a model even if both matched.
+
 What is **not** established:
-- **No hindcast.** Hurricane Harvey (2017) and Ike (2008) have not been reconstructed and compared
-  with the DOE-reported shutdowns. This is the next validation task. A wind-only model is expected
-  to do poorly on Harvey, whose refinery outages came with days of extreme rainfall; that expected
-  failure should be recorded, not hidden.
+- **Skill at predicting shutdowns.** See the hindcast above: not demonstrated for Harvey, not
+  testable for Ike with the sources retrieved. Next steps would be the DOE refinery tables for both
+  storms (names and dates) and a refinery list for the storm year.
 - **Inland decay constants.** The equation and R = 0.9 are verified from Kaplan, Dunion, Carrasco
   and DeMaria (2007), NHC-hosted Joint Hurricane Testbed report. The default decay rate
   (0.095 per hour) and background wind (26.7 kt) are the values commonly quoted for Kaplan and
   DeMaria (1995); the paper itself was not retrieved (AOML pages were unreachable on
-  15 November 2026). They are shown in the app as assumptions and the rate is user-adjustable.
+  15 November 2026; on 16 November AMS journal pages returned HTTP 403 and AOML timed out, and
+  neither the paper's abstract, the 2007 JHT report nor the 2005 SHIPS paper states the two
+  values). They are shown in the app as assumptions and the rate is user-adjustable. The hindcast
+  does not use the decay model.
 - The tropical-storm threshold (34 kt) follows the NHC glossary definition; the glossary page was
   confirmed reachable but its text was not machine-checked.
 - No land mask: decay starts at the user's landfall point wherever it is.

@@ -28,13 +28,14 @@ URL) counts.
 | 2026-11-15 20:17 | `2b60e9e` | HTTP 200 on the live URL after the first Actions run | OK |
 | 2026-11-15 20:35 | `713bcc4` | 12 browser tests against the live URL (Chromium) | 12 passed |
 | 2026-11-15 20:38 | `3dff26e` | Demo video URL returns 200, `video/mp4`, 2,579,983 bytes | OK |
+| 2026-11-15 20:50 | `ce70ac8` | 13 browser tests against the live URL (Chromium) | 13 passed |
 
 What the live browser tests cover: page and assets load; globe renders; layers toggle; a hazard
 opens its details; the Houston scenario runs with play, pause, rewind and scrub; parameters change
 results; network and globe selection sync; markets and portfolio panes; trend explorer; command
 bar; methods dialog; cached fallback when feeds are blocked; laptop, tablet and mobile layouts.
 
-Not verified on the live site: Firefox, Safari, real phones, and behaviour under a slow network.
+Firefox and WebKit were run against the local production build (13 passed each), not against the live URL. Not verified: real Safari, real phones, slow networks.
 
 ## Secrets
 

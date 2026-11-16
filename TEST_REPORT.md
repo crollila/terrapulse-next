@@ -8,11 +8,15 @@ Run on 15 November 2026 (MST), Windows 11, Node 26.4. Re-run with `npm run test:
 | Suite | Tool | Result |
 |---|---|---|
 | Trend statistics | Vitest | 211 passed |
-| Hurricane model, geometry, timeline | Vitest | 43 passed |
-| Datasets, scenario on real data, network, portfolio, parser, freshness, adapters, layers | Vitest | 42 passed |
-| **Unit and integration total** | Vitest | **296 passed, 0 failed, 0 skipped** locally (41 statistics tests that read the original repository's CSVs skip in CI, where that folder is absent) |
-| Browser, production build | Playwright, Chromium headless, software WebGL | **12 passed** |
-| Browser, live site | same, `TP_BASE_URL` set | **12 passed** (20:35 MST, commit `713bcc4`) |
+| Hurricane model, geometry, decay, timeline | Vitest | 43 passed |
+| Datasets, scenario on real data, network, portfolio, parser, freshness, adapters, layers, hindcast statements | Vitest | 45 passed |
+| Hindcast (best-track parsing, quadrant logic, regression values) | Vitest | 25 passed |
+| Evidence report | Vitest | 6 passed |
+| **Unit and integration total** | Vitest | **330 passed, 0 failed, 0 skipped** locally (41 statistics tests that read the original repository's CSVs skip in CI, where that folder is absent) |
+| Browser, production build, Chromium | Playwright, headless, software WebGL | **13 passed** |
+| Browser, production build, Firefox | Playwright | **13 passed** |
+| Browser, production build, WebKit | Playwright | **13 passed** |
+| Browser, live site, Chromium | `TP_BASE_URL` set | **13 passed** (see DEPLOYMENT.md for the commit and time) |
 | Type-check | `tsc --noEmit` (TypeScript 7, strict) | clean |
 | Build | Vite 8 | succeeds; one bundle 1.55 MB (450 kB gzip) |
 
@@ -31,18 +35,27 @@ Run on 15 November 2026 (MST), Windows 11, Node 26.4. Re-run with `npm run test:
    category filter and reset; markets pane withholds a forecast and shows the Harvey record;
    portfolio numbers respond to input.
 7. Trend explorer: Amazon rainfall −0.541 mm/day per decade, significant; 1981–2004 not
-   significant; 2005 data-quality panel; northern Alaska temperature +0.51 °C per decade.
+   significant; 2005 data-quality panel; 496-window map and click-to-select; northern Alaska
+   temperature +0.51 °C per decade.
 8. Command bar builds a custom scenario; methods dialog opens and closes.
-9. With USGS and EONET blocked, layers show CACHED with the snapshot age and never "LIVE FEED".
-10–12. Laptop (1280×720), tablet (768×1024) and mobile (390×844): no horizontal overflow; panels,
+9. Scenario JSON and the Markdown evidence report download with the computed figures.
+10. With USGS and EONET blocked, layers show CACHED with the snapshot age and never "LIVE FEED".
+11–13. Laptop (1280×720), tablet (768×1024) and mobile (390×844): no horizontal overflow; panels,
    timeline and results visible.
+
+## Model validation tests
+
+The hindcast (`research/HINDCAST.md`) is a test the hurricane model **did not pass**: it fails on
+Hurricane Harvey and is inconclusive on Hurricane Ike. The 25 hindcast tests check the method and
+pin the published figures; they do not assert that the model is right. See MODEL_VALIDATION.md.
 
 ## Visual review
 
 Screenshots at 1440, 1280, 768 and 390 px are in `docs/screenshots/` and were inspected by eye for
 overflow, overlap and legibility. Fixed during review: map container collapsing to zero height;
 glow ring larger than the globe; network too tall for its panel; clock label overlapping the stage
-badge; network lines measured before layout settled.
+badge; network lines measured before layout settled; on phones the details panel sat below the
+layer list; panels too transparent over busy map areas.
 
 Still imperfect:
 - On screens around 1024–1280 px wide the timeline is narrow and stage names are abbreviated.
@@ -54,14 +67,15 @@ Still imperfect:
 | Found by | Defect | Fix |
 |---|---|---|
 | Integration test on real data | Without weakening over land, hurricane-force winds reached Oklahoma and inflated exposed capacity (4.63 → 4.40 million b/d after the fix) | Added inland decay; decay-off kept as an explicit upper bound |
+| Hindcast | The wind-only screen misses flood-driven shutdowns (Harvey) and the symmetric profile misses one side of a large storm (Ike) | Not fixed. Stated in the model card, the simulator panel and the markets view; tasks T23 and T24 |
 | Unit test | A hand-computed expected value was wrong in the third decimal | Recomputed by hand; the code was right |
 | Browser run | Map style expression rejected by validation | Wrapped the property in a boolean assertion |
 | Browser run | A stale production build was tested after a type error stopped the build | Build now runs before the browser suite in `test:all` |
 
 ## Not tested
 
-- Firefox, WebKit, real mobile devices, screen readers, colour-contrast audit.
-- Scenario and portfolio file import and export (manual check only).
-- Performance on low-end GPUs (only software WebGL in headless Chromium, which is a slow case and
-  ran every test in under 7 seconds).
+- Real Safari, real mobile devices, screen readers, colour-contrast audit.
+- Scenario and portfolio file **import** (manual check only; exports are tested).
+- Performance on low-end GPUs (only software WebGL in headless browsers, a slow case, where every
+  test ran in under 10 seconds).
 - Long sessions, tab suspension, very slow networks.

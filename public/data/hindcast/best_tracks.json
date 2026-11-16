@@ -1,0 +1,3838 @@
+{
+ "meta": {
+  "provider": "NOAA National Hurricane Center (NHC)",
+  "dataset": "Atlantic hurricane database (HURDAT2) 1851-2025, best-track records for AL092017 (Harvey) and AL092008 (Ike) only",
+  "sourceUrl": "https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2025-092326.txt",
+  "landingPage": "https://www.nhc.noaa.gov/data/#hurdat",
+  "formatDoc": "https://www.nhc.noaa.gov/data/hurdat/hurdat2-format-atl-1851-2021.pdf",
+  "retrievedAt": "2026-11-16T03:42:59Z",
+  "sourceSha256": "75202780ce56c8458f16fbef5fb8a026b99b00878dbb95c458211b3e6ef125b4",
+  "license": "U.S. Government work, public domain",
+  "units": "lat/lon in decimal degrees (north and east positive); vmaxKt = maximum 1-minute sustained wind in knots; pressureMb in millibars; r34/r50/r64 and rmwNm in nautical miles",
+  "notes": "Extracted unchanged by research/scripts/build_best_tracks.py. r34/r50/r64 are the HURDAT2 'wind radii maximum extent' in the NE, SE, SW and NW quadrants. A radius of 0 means that wind speed is not reached in that quadrant; null means missing in the source (-999; -99 for wind). rmwNm (radius of maximum wind) is routinely best tracked only from 2021, so it is null for almost every fix here. recordId 'L' marks a landfall fix; other fixes have ''. Fixes are 6-hourly plus asynoptic landfall records. The file covers each system's whole life, including the wave, low and extratropical stages (see 'status')."
+ },
+ "storms": [
+  {
+   "id": "AL092017",
+   "name": "HARVEY",
+   "year": 2017,
+   "fixes": [
+    {
+     "time": "2017-08-16T06:00:00Z",
+     "recordId": "",
+     "status": "LO",
+     "lat": 13.7,
+     "lon": -45.8,
+     "vmaxKt": 25,
+     "pressureMb": 1013,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-16T12:00:00Z",
+     "recordId": "",
+     "status": "LO",
+     "lat": 13.7,
+     "lon": -47.4,
+     "vmaxKt": 25,
+     "pressureMb": 1010,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-16T18:00:00Z",
+     "recordId": "",
+     "status": "LO",
+     "lat": 13.6,
+     "lon": -49.0,
+     "vmaxKt": 25,
+     "pressureMb": 1009,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-17T00:00:00Z",
+     "recordId": "",
+     "status": "LO",
+     "lat": 13.6,
+     "lon": -50.6,
+     "vmaxKt": 25,
+     "pressureMb": 1010,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-17T06:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 13.4,
+     "lon": -52.0,
+     "vmaxKt": 25,
+     "pressureMb": 1008,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-17T12:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 13.1,
+     "lon": -53.4,
+     "vmaxKt": 30,
+     "pressureMb": 1008,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-17T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 13.0,
+     "lon": -55.0,
+     "vmaxKt": 35,
+     "pressureMb": 1004,
+     "r34": {
+      "ne": 30,
+      "se": 0,
+      "sw": 0,
+      "nw": 30
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-18T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 13.0,
+     "lon": -56.6,
+     "vmaxKt": 40,
+     "pressureMb": 1003,
+     "r34": {
+      "ne": 50,
+      "se": 0,
+      "sw": 0,
+      "nw": 50
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-18T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 13.0,
+     "lon": -58.4,
+     "vmaxKt": 40,
+     "pressureMb": 1004,
+     "r34": {
+      "ne": 50,
+      "se": 0,
+      "sw": 0,
+      "nw": 50
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-18T10:00:00Z",
+     "recordId": "L",
+     "status": "TS",
+     "lat": 13.1,
+     "lon": -59.6,
+     "vmaxKt": 40,
+     "pressureMb": 1004,
+     "r34": {
+      "ne": 50,
+      "se": 0,
+      "sw": 0,
+      "nw": 50
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-18T12:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 13.1,
+     "lon": -60.3,
+     "vmaxKt": 40,
+     "pressureMb": 1004,
+     "r34": {
+      "ne": 60,
+      "se": 0,
+      "sw": 0,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-18T15:00:00Z",
+     "recordId": "L",
+     "status": "TS",
+     "lat": 13.2,
+     "lon": -61.2,
+     "vmaxKt": 40,
+     "pressureMb": 1004,
+     "r34": {
+      "ne": 60,
+      "se": 0,
+      "sw": 0,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-18T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 13.2,
+     "lon": -62.2,
+     "vmaxKt": 35,
+     "pressureMb": 1005,
+     "r34": {
+      "ne": 60,
+      "se": 0,
+      "sw": 0,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-19T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 13.4,
+     "lon": -64.0,
+     "vmaxKt": 35,
+     "pressureMb": 1005,
+     "r34": {
+      "ne": 60,
+      "se": 0,
+      "sw": 0,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-19T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 13.5,
+     "lon": -65.7,
+     "vmaxKt": 35,
+     "pressureMb": 1005,
+     "r34": {
+      "ne": 60,
+      "se": 0,
+      "sw": 0,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-19T12:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 13.7,
+     "lon": -67.5,
+     "vmaxKt": 30,
+     "pressureMb": 1006,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-19T18:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 13.8,
+     "lon": -69.2,
+     "vmaxKt": 30,
+     "pressureMb": 1007,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-20T00:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 14.0,
+     "lon": -71.0,
+     "vmaxKt": 30,
+     "pressureMb": 1007,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-20T06:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 14.2,
+     "lon": -72.9,
+     "vmaxKt": 30,
+     "pressureMb": 1007,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-20T12:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 14.4,
+     "lon": -75.0,
+     "vmaxKt": 30,
+     "pressureMb": 1006,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-20T18:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 14.7,
+     "lon": -76.8,
+     "vmaxKt": 30,
+     "pressureMb": 1007,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-21T00:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 15.1,
+     "lon": -78.6,
+     "vmaxKt": 25,
+     "pressureMb": 1007,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-21T06:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 15.7,
+     "lon": -80.5,
+     "vmaxKt": 25,
+     "pressureMb": 1008,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-21T12:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 16.4,
+     "lon": -82.5,
+     "vmaxKt": 25,
+     "pressureMb": 1008,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-21T18:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 17.3,
+     "lon": -84.6,
+     "vmaxKt": 25,
+     "pressureMb": 1008,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-22T00:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 18.0,
+     "lon": -86.4,
+     "vmaxKt": 25,
+     "pressureMb": 1008,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-22T06:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 18.6,
+     "lon": -87.8,
+     "vmaxKt": 25,
+     "pressureMb": 1009,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-22T12:00:00Z",
+     "recordId": "",
+     "status": "WV",
+     "lat": 19.4,
+     "lon": -88.8,
+     "vmaxKt": 25,
+     "pressureMb": 1010,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-22T18:00:00Z",
+     "recordId": "",
+     "status": "LO",
+     "lat": 20.0,
+     "lon": -89.7,
+     "vmaxKt": 25,
+     "pressureMb": 1010,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-23T00:00:00Z",
+     "recordId": "",
+     "status": "LO",
+     "lat": 20.5,
+     "lon": -90.7,
+     "vmaxKt": 25,
+     "pressureMb": 1009,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-23T06:00:00Z",
+     "recordId": "",
+     "status": "LO",
+     "lat": 20.9,
+     "lon": -91.6,
+     "vmaxKt": 25,
+     "pressureMb": 1008,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-23T12:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 21.4,
+     "lon": -92.3,
+     "vmaxKt": 30,
+     "pressureMb": 1006,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-23T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 21.6,
+     "lon": -92.4,
+     "vmaxKt": 35,
+     "pressureMb": 1005,
+     "r34": {
+      "ne": 60,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-24T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 22.0,
+     "lon": -92.5,
+     "vmaxKt": 40,
+     "pressureMb": 1003,
+     "r34": {
+      "ne": 70,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-24T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 22.8,
+     "lon": -92.6,
+     "vmaxKt": 50,
+     "pressureMb": 997,
+     "r34": {
+      "ne": 80,
+      "se": 0,
+      "sw": 0,
+      "nw": 50
+     },
+     "r50": {
+      "ne": 30,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-24T12:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 23.7,
+     "lon": -93.1,
+     "vmaxKt": 60,
+     "pressureMb": 986,
+     "r34": {
+      "ne": 80,
+      "se": 30,
+      "sw": 20,
+      "nw": 50
+     },
+     "r50": {
+      "ne": 30,
+      "se": 10,
+      "sw": 0,
+      "nw": 20
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-24T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 24.4,
+     "lon": -93.6,
+     "vmaxKt": 70,
+     "pressureMb": 978,
+     "r34": {
+      "ne": 80,
+      "se": 40,
+      "sw": 30,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 30,
+      "se": 20,
+      "sw": 20,
+      "nw": 30
+     },
+     "r64": {
+      "ne": 20,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-25T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 25.0,
+     "lon": -94.4,
+     "vmaxKt": 80,
+     "pressureMb": 973,
+     "r34": {
+      "ne": 90,
+      "se": 50,
+      "sw": 40,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 30,
+      "se": 20,
+      "sw": 20,
+      "nw": 30
+     },
+     "r64": {
+      "ne": 20,
+      "se": 10,
+      "sw": 10,
+      "nw": 10
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-25T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 25.6,
+     "lon": -95.1,
+     "vmaxKt": 90,
+     "pressureMb": 966,
+     "r34": {
+      "ne": 120,
+      "se": 50,
+      "sw": 40,
+      "nw": 90
+     },
+     "r50": {
+      "ne": 30,
+      "se": 30,
+      "sw": 20,
+      "nw": 30
+     },
+     "r64": {
+      "ne": 20,
+      "se": 20,
+      "sw": 10,
+      "nw": 20
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-25T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 26.3,
+     "lon": -95.8,
+     "vmaxKt": 95,
+     "pressureMb": 949,
+     "r34": {
+      "ne": 120,
+      "se": 90,
+      "sw": 80,
+      "nw": 100
+     },
+     "r50": {
+      "ne": 50,
+      "se": 40,
+      "sw": 40,
+      "nw": 30
+     },
+     "r64": {
+      "ne": 30,
+      "se": 20,
+      "sw": 10,
+      "nw": 20
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-25T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 27.1,
+     "lon": -96.3,
+     "vmaxKt": 105,
+     "pressureMb": 943,
+     "r34": {
+      "ne": 120,
+      "se": 90,
+      "sw": 80,
+      "nw": 100
+     },
+     "r50": {
+      "ne": 50,
+      "se": 40,
+      "sw": 40,
+      "nw": 40
+     },
+     "r64": {
+      "ne": 30,
+      "se": 25,
+      "sw": 20,
+      "nw": 25
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-26T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 27.8,
+     "lon": -96.8,
+     "vmaxKt": 115,
+     "pressureMb": 941,
+     "r34": {
+      "ne": 120,
+      "se": 90,
+      "sw": 80,
+      "nw": 70
+     },
+     "r50": {
+      "ne": 60,
+      "se": 40,
+      "sw": 40,
+      "nw": 40
+     },
+     "r64": {
+      "ne": 35,
+      "se": 25,
+      "sw": 20,
+      "nw": 25
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-26T03:00:00Z",
+     "recordId": "L",
+     "status": "HU",
+     "lat": 28.0,
+     "lon": -96.9,
+     "vmaxKt": 115,
+     "pressureMb": 937,
+     "r34": {
+      "ne": 120,
+      "se": 90,
+      "sw": 80,
+      "nw": 70
+     },
+     "r50": {
+      "ne": 60,
+      "se": 40,
+      "sw": 40,
+      "nw": 40
+     },
+     "r64": {
+      "ne": 35,
+      "se": 25,
+      "sw": 20,
+      "nw": 25
+     },
+     "rmwNm": 10
+    },
+    {
+     "time": "2017-08-26T06:00:00Z",
+     "recordId": "L",
+     "status": "HU",
+     "lat": 28.2,
+     "lon": -97.1,
+     "vmaxKt": 105,
+     "pressureMb": 948,
+     "r34": {
+      "ne": 120,
+      "se": 100,
+      "sw": 70,
+      "nw": 70
+     },
+     "r50": {
+      "ne": 50,
+      "se": 50,
+      "sw": 30,
+      "nw": 40
+     },
+     "r64": {
+      "ne": 30,
+      "se": 25,
+      "sw": 20,
+      "nw": 25
+     },
+     "rmwNm": 10
+    },
+    {
+     "time": "2017-08-26T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 28.7,
+     "lon": -97.3,
+     "vmaxKt": 65,
+     "pressureMb": 978,
+     "r34": {
+      "ne": 120,
+      "se": 100,
+      "sw": 70,
+      "nw": 70
+     },
+     "r50": {
+      "ne": 50,
+      "se": 50,
+      "sw": 30,
+      "nw": 40
+     },
+     "r64": {
+      "ne": 25,
+      "se": 20,
+      "sw": 15,
+      "nw": 20
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-26T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 29.0,
+     "lon": -97.5,
+     "vmaxKt": 50,
+     "pressureMb": 991,
+     "r34": {
+      "ne": 75,
+      "se": 100,
+      "sw": 30,
+      "nw": 50
+     },
+     "r50": {
+      "ne": 40,
+      "se": 40,
+      "sw": 20,
+      "nw": 30
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-27T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 29.2,
+     "lon": -97.4,
+     "vmaxKt": 45,
+     "pressureMb": 995,
+     "r34": {
+      "ne": 50,
+      "se": 100,
+      "sw": 30,
+      "nw": 50
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-27T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 29.3,
+     "lon": -97.6,
+     "vmaxKt": 40,
+     "pressureMb": 998,
+     "r34": {
+      "ne": 50,
+      "se": 100,
+      "sw": 30,
+      "nw": 50
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-27T12:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 29.1,
+     "lon": -97.5,
+     "vmaxKt": 35,
+     "pressureMb": 998,
+     "r34": {
+      "ne": 150,
+      "se": 60,
+      "sw": 0,
+      "nw": 30
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-27T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 29.0,
+     "lon": -97.2,
+     "vmaxKt": 35,
+     "pressureMb": 998,
+     "r34": {
+      "ne": 120,
+      "se": 60,
+      "sw": 30,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-28T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 28.8,
+     "lon": -96.8,
+     "vmaxKt": 35,
+     "pressureMb": 997,
+     "r34": {
+      "ne": 120,
+      "se": 60,
+      "sw": 30,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-28T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 28.6,
+     "lon": -96.5,
+     "vmaxKt": 40,
+     "pressureMb": 997,
+     "r34": {
+      "ne": 150,
+      "se": 150,
+      "sw": 30,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-28T12:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 28.5,
+     "lon": -96.2,
+     "vmaxKt": 40,
+     "pressureMb": 997,
+     "r34": {
+      "ne": 150,
+      "se": 150,
+      "sw": 30,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-28T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 28.4,
+     "lon": -95.9,
+     "vmaxKt": 40,
+     "pressureMb": 997,
+     "r34": {
+      "ne": 150,
+      "se": 150,
+      "sw": 60,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-29T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 28.2,
+     "lon": -95.4,
+     "vmaxKt": 40,
+     "pressureMb": 996,
+     "r34": {
+      "ne": 150,
+      "se": 150,
+      "sw": 60,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-29T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 28.1,
+     "lon": -95.0,
+     "vmaxKt": 40,
+     "pressureMb": 996,
+     "r34": {
+      "ne": 150,
+      "se": 150,
+      "sw": 60,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-29T12:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 28.2,
+     "lon": -94.6,
+     "vmaxKt": 40,
+     "pressureMb": 995,
+     "r34": {
+      "ne": 140,
+      "se": 140,
+      "sw": 60,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-29T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 28.5,
+     "lon": -94.2,
+     "vmaxKt": 45,
+     "pressureMb": 993,
+     "r34": {
+      "ne": 100,
+      "se": 140,
+      "sw": 60,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-30T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 28.9,
+     "lon": -93.8,
+     "vmaxKt": 45,
+     "pressureMb": 994,
+     "r34": {
+      "ne": 100,
+      "se": 140,
+      "sw": 60,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-30T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 29.4,
+     "lon": -93.6,
+     "vmaxKt": 40,
+     "pressureMb": 990,
+     "r34": {
+      "ne": 70,
+      "se": 70,
+      "sw": 70,
+      "nw": 70
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-30T08:00:00Z",
+     "recordId": "L",
+     "status": "TS",
+     "lat": 29.8,
+     "lon": -93.5,
+     "vmaxKt": 40,
+     "pressureMb": 991,
+     "r34": {
+      "ne": 60,
+      "se": 60,
+      "sw": 70,
+      "nw": 70
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-30T12:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 30.1,
+     "lon": -93.4,
+     "vmaxKt": 40,
+     "pressureMb": 992,
+     "r34": {
+      "ne": 40,
+      "se": 60,
+      "sw": 70,
+      "nw": 40
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-30T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 30.6,
+     "lon": -93.1,
+     "vmaxKt": 35,
+     "pressureMb": 996,
+     "r34": {
+      "ne": 0,
+      "se": 60,
+      "sw": 70,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-31T00:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 31.3,
+     "lon": -92.6,
+     "vmaxKt": 30,
+     "pressureMb": 998,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-31T06:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 31.9,
+     "lon": -92.2,
+     "vmaxKt": 25,
+     "pressureMb": 999,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-31T12:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 32.5,
+     "lon": -91.7,
+     "vmaxKt": 20,
+     "pressureMb": 1001,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-08-31T18:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 33.4,
+     "lon": -90.9,
+     "vmaxKt": 25,
+     "pressureMb": 1001,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-09-01T00:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 34.1,
+     "lon": -89.6,
+     "vmaxKt": 30,
+     "pressureMb": 1000,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-09-01T06:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 34.9,
+     "lon": -88.2,
+     "vmaxKt": 30,
+     "pressureMb": 1002,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-09-01T12:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 36.0,
+     "lon": -87.1,
+     "vmaxKt": 25,
+     "pressureMb": 1002,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-09-01T18:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 36.5,
+     "lon": -86.4,
+     "vmaxKt": 20,
+     "pressureMb": 1004,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-09-02T00:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 37.2,
+     "lon": -85.6,
+     "vmaxKt": 20,
+     "pressureMb": 1007,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-09-02T06:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 37.9,
+     "lon": -84.9,
+     "vmaxKt": 20,
+     "pressureMb": 1009,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2017-09-02T12:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 38.2,
+     "lon": -84.7,
+     "vmaxKt": 15,
+     "pressureMb": 1013,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    }
+   ]
+  },
+  {
+   "id": "AL092008",
+   "name": "IKE",
+   "year": 2008,
+   "fixes": [
+    {
+     "time": "2008-09-01T06:00:00Z",
+     "recordId": "",
+     "status": "TD",
+     "lat": 17.2,
+     "lon": -37.0,
+     "vmaxKt": 30,
+     "pressureMb": 1006,
+     "r34": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-01T12:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 17.3,
+     "lon": -38.4,
+     "vmaxKt": 35,
+     "pressureMb": 1005,
+     "r34": {
+      "ne": 120,
+      "se": 75,
+      "sw": 0,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-01T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 17.5,
+     "lon": -39.9,
+     "vmaxKt": 45,
+     "pressureMb": 1003,
+     "r34": {
+      "ne": 130,
+      "se": 110,
+      "sw": 0,
+      "nw": 75
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-02T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 17.8,
+     "lon": -41.3,
+     "vmaxKt": 45,
+     "pressureMb": 1002,
+     "r34": {
+      "ne": 140,
+      "se": 120,
+      "sw": 0,
+      "nw": 90
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-02T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 18.2,
+     "lon": -42.8,
+     "vmaxKt": 45,
+     "pressureMb": 1000,
+     "r34": {
+      "ne": 145,
+      "se": 120,
+      "sw": 0,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-02T12:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 18.7,
+     "lon": -44.3,
+     "vmaxKt": 50,
+     "pressureMb": 999,
+     "r34": {
+      "ne": 150,
+      "se": 120,
+      "sw": 0,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 90,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-02T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 19.3,
+     "lon": -45.8,
+     "vmaxKt": 55,
+     "pressureMb": 996,
+     "r34": {
+      "ne": 150,
+      "se": 120,
+      "sw": 45,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 90,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-03T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 19.8,
+     "lon": -47.3,
+     "vmaxKt": 55,
+     "pressureMb": 994,
+     "r34": {
+      "ne": 150,
+      "se": 115,
+      "sw": 45,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 75,
+      "se": 0,
+      "sw": 0,
+      "nw": 30
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-03T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 20.2,
+     "lon": -48.8,
+     "vmaxKt": 55,
+     "pressureMb": 992,
+     "r34": {
+      "ne": 145,
+      "se": 110,
+      "sw": 45,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 75,
+      "se": 0,
+      "sw": 0,
+      "nw": 30
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-03T12:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 20.6,
+     "lon": -50.3,
+     "vmaxKt": 60,
+     "pressureMb": 989,
+     "r34": {
+      "ne": 135,
+      "se": 105,
+      "sw": 50,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 75,
+      "se": 0,
+      "sw": 0,
+      "nw": 40
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-03T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.1,
+     "lon": -51.9,
+     "vmaxKt": 75,
+     "pressureMb": 979,
+     "r34": {
+      "ne": 130,
+      "se": 100,
+      "sw": 60,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 75,
+      "se": 50,
+      "sw": 30,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 30,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-04T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.8,
+     "lon": -53.5,
+     "vmaxKt": 105,
+     "pressureMb": 956,
+     "r34": {
+      "ne": 120,
+      "se": 100,
+      "sw": 75,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 75,
+      "se": 50,
+      "sw": 40,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 30,
+      "se": 25,
+      "sw": 20,
+      "nw": 25
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-04T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 22.4,
+     "lon": -55.0,
+     "vmaxKt": 125,
+     "pressureMb": 935,
+     "r34": {
+      "ne": 115,
+      "se": 100,
+      "sw": 90,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 75,
+      "se": 50,
+      "sw": 40,
+      "nw": 60
+     },
+     "r64": {
+      "ne": 30,
+      "se": 25,
+      "sw": 20,
+      "nw": 25
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-04T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 23.0,
+     "lon": -56.4,
+     "vmaxKt": 120,
+     "pressureMb": 937,
+     "r34": {
+      "ne": 110,
+      "se": 95,
+      "sw": 90,
+      "nw": 90
+     },
+     "r50": {
+      "ne": 60,
+      "se": 55,
+      "sw": 40,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 40,
+      "se": 30,
+      "sw": 25,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-04T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 23.4,
+     "lon": -57.7,
+     "vmaxKt": 115,
+     "pressureMb": 940,
+     "r34": {
+      "ne": 105,
+      "se": 95,
+      "sw": 90,
+      "nw": 85
+     },
+     "r50": {
+      "ne": 60,
+      "se": 55,
+      "sw": 40,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 40,
+      "se": 30,
+      "sw": 25,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-05T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 23.6,
+     "lon": -59.0,
+     "vmaxKt": 115,
+     "pressureMb": 944,
+     "r34": {
+      "ne": 105,
+      "se": 95,
+      "sw": 90,
+      "nw": 80
+     },
+     "r50": {
+      "ne": 50,
+      "se": 50,
+      "sw": 40,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 40,
+      "se": 30,
+      "sw": 25,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-05T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 23.6,
+     "lon": -60.4,
+     "vmaxKt": 115,
+     "pressureMb": 949,
+     "r34": {
+      "ne": 105,
+      "se": 90,
+      "sw": 90,
+      "nw": 85
+     },
+     "r50": {
+      "ne": 50,
+      "se": 50,
+      "sw": 45,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 40,
+      "se": 30,
+      "sw": 30,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-05T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 23.5,
+     "lon": -61.9,
+     "vmaxKt": 105,
+     "pressureMb": 954,
+     "r34": {
+      "ne": 105,
+      "se": 90,
+      "sw": 90,
+      "nw": 90
+     },
+     "r50": {
+      "ne": 50,
+      "se": 50,
+      "sw": 45,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 40,
+      "se": 30,
+      "sw": 30,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-05T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 23.2,
+     "lon": -63.4,
+     "vmaxKt": 100,
+     "pressureMb": 959,
+     "r34": {
+      "ne": 105,
+      "se": 90,
+      "sw": 90,
+      "nw": 105
+     },
+     "r50": {
+      "ne": 50,
+      "se": 50,
+      "sw": 45,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 40,
+      "se": 35,
+      "sw": 30,
+      "nw": 35
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-06T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 22.8,
+     "lon": -64.9,
+     "vmaxKt": 100,
+     "pressureMb": 962,
+     "r34": {
+      "ne": 105,
+      "se": 90,
+      "sw": 90,
+      "nw": 110
+     },
+     "r50": {
+      "ne": 50,
+      "se": 50,
+      "sw": 45,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 40,
+      "se": 35,
+      "sw": 30,
+      "nw": 35
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-06T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 22.4,
+     "lon": -66.3,
+     "vmaxKt": 100,
+     "pressureMb": 964,
+     "r34": {
+      "ne": 105,
+      "se": 90,
+      "sw": 90,
+      "nw": 115
+     },
+     "r50": {
+      "ne": 60,
+      "se": 50,
+      "sw": 45,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 40,
+      "se": 35,
+      "sw": 30,
+      "nw": 35
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-06T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.9,
+     "lon": -67.7,
+     "vmaxKt": 95,
+     "pressureMb": 965,
+     "r34": {
+      "ne": 110,
+      "se": 90,
+      "sw": 90,
+      "nw": 120
+     },
+     "r50": {
+      "ne": 60,
+      "se": 60,
+      "sw": 45,
+      "nw": 50
+     },
+     "r64": {
+      "ne": 40,
+      "se": 35,
+      "sw": 30,
+      "nw": 35
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-06T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.5,
+     "lon": -69.0,
+     "vmaxKt": 115,
+     "pressureMb": 950,
+     "r34": {
+      "ne": 115,
+      "se": 95,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 60,
+      "se": 70,
+      "sw": 45,
+      "nw": 60
+     },
+     "r64": {
+      "ne": 40,
+      "se": 35,
+      "sw": 30,
+      "nw": 35
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-07T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.2,
+     "lon": -70.3,
+     "vmaxKt": 115,
+     "pressureMb": 947,
+     "r34": {
+      "ne": 120,
+      "se": 100,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 75,
+      "se": 75,
+      "sw": 50,
+      "nw": 60
+     },
+     "r64": {
+      "ne": 40,
+      "se": 40,
+      "sw": 30,
+      "nw": 35
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-07T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.1,
+     "lon": -71.6,
+     "vmaxKt": 115,
+     "pressureMb": 947,
+     "r34": {
+      "ne": 130,
+      "se": 110,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 75,
+      "se": 75,
+      "sw": 50,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 40,
+      "se": 40,
+      "sw": 30,
+      "nw": 40
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-07T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.0,
+     "lon": -72.8,
+     "vmaxKt": 110,
+     "pressureMb": 947,
+     "r34": {
+      "ne": 140,
+      "se": 120,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 90,
+      "se": 75,
+      "sw": 50,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 50,
+      "se": 40,
+      "sw": 30,
+      "nw": 50
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-07T13:00:00Z",
+     "recordId": "L",
+     "status": "HU",
+     "lat": 21.0,
+     "lon": -73.2,
+     "vmaxKt": 110,
+     "pressureMb": 947,
+     "r34": {
+      "ne": 140,
+      "se": 120,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 90,
+      "se": 75,
+      "sw": 50,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 50,
+      "se": 40,
+      "sw": 30,
+      "nw": 50
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-07T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.0,
+     "lon": -74.0,
+     "vmaxKt": 105,
+     "pressureMb": 946,
+     "r34": {
+      "ne": 145,
+      "se": 125,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 90,
+      "se": 90,
+      "sw": 50,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 50,
+      "se": 40,
+      "sw": 30,
+      "nw": 50
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-08T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.1,
+     "lon": -75.2,
+     "vmaxKt": 115,
+     "pressureMb": 945,
+     "r34": {
+      "ne": 150,
+      "se": 140,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 90,
+      "se": 105,
+      "sw": 50,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 50,
+      "se": 40,
+      "sw": 30,
+      "nw": 50
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-08T02:00:00Z",
+     "recordId": "L",
+     "status": "HU",
+     "lat": 21.1,
+     "lon": -75.7,
+     "vmaxKt": 115,
+     "pressureMb": 945,
+     "r34": {
+      "ne": 150,
+      "se": 140,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 90,
+      "se": 105,
+      "sw": 50,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 50,
+      "se": 40,
+      "sw": 30,
+      "nw": 50
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-08T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.1,
+     "lon": -76.5,
+     "vmaxKt": 100,
+     "pressureMb": 950,
+     "r34": {
+      "ne": 155,
+      "se": 175,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 90,
+      "se": 120,
+      "sw": 50,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 50,
+      "se": 40,
+      "sw": 30,
+      "nw": 50
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-08T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.1,
+     "lon": -77.8,
+     "vmaxKt": 85,
+     "pressureMb": 960,
+     "r34": {
+      "ne": 155,
+      "se": 180,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 90,
+      "se": 120,
+      "sw": 50,
+      "nw": 60
+     },
+     "r64": {
+      "ne": 40,
+      "se": 40,
+      "sw": 30,
+      "nw": 45
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-08T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.2,
+     "lon": -79.1,
+     "vmaxKt": 75,
+     "pressureMb": 964,
+     "r34": {
+      "ne": 155,
+      "se": 180,
+      "sw": 100,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 90,
+      "se": 120,
+      "sw": 30,
+      "nw": 45
+     },
+     "r64": {
+      "ne": 30,
+      "se": 30,
+      "sw": 0,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-09T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 21.5,
+     "lon": -80.3,
+     "vmaxKt": 70,
+     "pressureMb": 965,
+     "r34": {
+      "ne": 155,
+      "se": 180,
+      "sw": 100,
+      "nw": 150
+     },
+     "r50": {
+      "ne": 90,
+      "se": 90,
+      "sw": 30,
+      "nw": 60
+     },
+     "r64": {
+      "ne": 30,
+      "se": 30,
+      "sw": 0,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-09T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 22.0,
+     "lon": -81.4,
+     "vmaxKt": 70,
+     "pressureMb": 965,
+     "r34": {
+      "ne": 155,
+      "se": 160,
+      "sw": 100,
+      "nw": 170
+     },
+     "r50": {
+      "ne": 90,
+      "se": 75,
+      "sw": 30,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 30,
+      "se": 30,
+      "sw": 0,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-09T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 22.4,
+     "lon": -82.4,
+     "vmaxKt": 70,
+     "pressureMb": 965,
+     "r34": {
+      "ne": 155,
+      "se": 155,
+      "sw": 100,
+      "nw": 170
+     },
+     "r50": {
+      "ne": 90,
+      "se": 75,
+      "sw": 30,
+      "nw": 90
+     },
+     "r64": {
+      "ne": 30,
+      "se": 0,
+      "sw": 0,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-09T14:00:00Z",
+     "recordId": "L",
+     "status": "HU",
+     "lat": 22.6,
+     "lon": -82.9,
+     "vmaxKt": 70,
+     "pressureMb": 965,
+     "r34": {
+      "ne": 155,
+      "se": 155,
+      "sw": 100,
+      "nw": 170
+     },
+     "r50": {
+      "ne": 90,
+      "se": 75,
+      "sw": 30,
+      "nw": 90
+     },
+     "r64": {
+      "ne": 30,
+      "se": 0,
+      "sw": 0,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-09T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 22.7,
+     "lon": -83.3,
+     "vmaxKt": 65,
+     "pressureMb": 966,
+     "r34": {
+      "ne": 155,
+      "se": 150,
+      "sw": 105,
+      "nw": 170
+     },
+     "r50": {
+      "ne": 100,
+      "se": 75,
+      "sw": 30,
+      "nw": 90
+     },
+     "r64": {
+      "ne": 20,
+      "se": 0,
+      "sw": 0,
+      "nw": 30
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-10T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 23.1,
+     "lon": -84.0,
+     "vmaxKt": 65,
+     "pressureMb": 968,
+     "r34": {
+      "ne": 160,
+      "se": 150,
+      "sw": 110,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 100,
+      "se": 75,
+      "sw": 30,
+      "nw": 90
+     },
+     "r64": {
+      "ne": 30,
+      "se": 0,
+      "sw": 0,
+      "nw": 20
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-10T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 23.4,
+     "lon": -84.6,
+     "vmaxKt": 70,
+     "pressureMb": 964,
+     "r34": {
+      "ne": 170,
+      "se": 150,
+      "sw": 115,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 110,
+      "se": 75,
+      "sw": 45,
+      "nw": 90
+     },
+     "r64": {
+      "ne": 45,
+      "se": 0,
+      "sw": 0,
+      "nw": 20
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-10T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 23.8,
+     "lon": -85.2,
+     "vmaxKt": 80,
+     "pressureMb": 959,
+     "r34": {
+      "ne": 180,
+      "se": 155,
+      "sw": 120,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 120,
+      "se": 80,
+      "sw": 60,
+      "nw": 100
+     },
+     "r64": {
+      "ne": 75,
+      "se": 20,
+      "sw": 15,
+      "nw": 45
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-10T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 24.2,
+     "lon": -85.8,
+     "vmaxKt": 85,
+     "pressureMb": 958,
+     "r34": {
+      "ne": 195,
+      "se": 160,
+      "sw": 120,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 130,
+      "se": 90,
+      "sw": 75,
+      "nw": 110
+     },
+     "r64": {
+      "ne": 90,
+      "se": 40,
+      "sw": 30,
+      "nw": 60
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-11T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 24.7,
+     "lon": -86.4,
+     "vmaxKt": 85,
+     "pressureMb": 944,
+     "r34": {
+      "ne": 210,
+      "se": 170,
+      "sw": 120,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 140,
+      "se": 105,
+      "sw": 90,
+      "nw": 125
+     },
+     "r64": {
+      "ne": 100,
+      "se": 60,
+      "sw": 30,
+      "nw": 75
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-11T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 25.1,
+     "lon": -87.1,
+     "vmaxKt": 85,
+     "pressureMb": 945,
+     "r34": {
+      "ne": 220,
+      "se": 190,
+      "sw": 130,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 150,
+      "se": 120,
+      "sw": 90,
+      "nw": 140
+     },
+     "r64": {
+      "ne": 100,
+      "se": 75,
+      "sw": 30,
+      "nw": 75
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-11T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 25.5,
+     "lon": -88.0,
+     "vmaxKt": 85,
+     "pressureMb": 946,
+     "r34": {
+      "ne": 230,
+      "se": 240,
+      "sw": 150,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 150,
+      "se": 135,
+      "sw": 90,
+      "nw": 140
+     },
+     "r64": {
+      "ne": 100,
+      "se": 75,
+      "sw": 30,
+      "nw": 60
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-11T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 25.8,
+     "lon": -88.9,
+     "vmaxKt": 85,
+     "pressureMb": 952,
+     "r34": {
+      "ne": 240,
+      "se": 240,
+      "sw": 150,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 150,
+      "se": 150,
+      "sw": 90,
+      "nw": 140
+     },
+     "r64": {
+      "ne": 100,
+      "se": 75,
+      "sw": 30,
+      "nw": 60
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-12T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 26.1,
+     "lon": -90.0,
+     "vmaxKt": 85,
+     "pressureMb": 954,
+     "r34": {
+      "ne": 240,
+      "se": 230,
+      "sw": 150,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 150,
+      "se": 150,
+      "sw": 100,
+      "nw": 140
+     },
+     "r64": {
+      "ne": 100,
+      "se": 75,
+      "sw": 60,
+      "nw": 60
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-12T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 26.4,
+     "lon": -91.1,
+     "vmaxKt": 90,
+     "pressureMb": 954,
+     "r34": {
+      "ne": 240,
+      "se": 215,
+      "sw": 150,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 150,
+      "se": 150,
+      "sw": 100,
+      "nw": 140
+     },
+     "r64": {
+      "ne": 105,
+      "se": 75,
+      "sw": 60,
+      "nw": 60
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-12T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 26.9,
+     "lon": -92.2,
+     "vmaxKt": 95,
+     "pressureMb": 954,
+     "r34": {
+      "ne": 240,
+      "se": 210,
+      "sw": 150,
+      "nw": 180
+     },
+     "r50": {
+      "ne": 150,
+      "se": 150,
+      "sw": 100,
+      "nw": 140
+     },
+     "r64": {
+      "ne": 105,
+      "se": 75,
+      "sw": 60,
+      "nw": 60
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-12T18:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 27.5,
+     "lon": -93.2,
+     "vmaxKt": 95,
+     "pressureMb": 954,
+     "r34": {
+      "ne": 240,
+      "se": 205,
+      "sw": 150,
+      "nw": 175
+     },
+     "r50": {
+      "ne": 150,
+      "se": 150,
+      "sw": 90,
+      "nw": 105
+     },
+     "r64": {
+      "ne": 105,
+      "se": 90,
+      "sw": 60,
+      "nw": 75
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-13T00:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 28.3,
+     "lon": -94.0,
+     "vmaxKt": 95,
+     "pressureMb": 952,
+     "r34": {
+      "ne": 240,
+      "se": 200,
+      "sw": 150,
+      "nw": 170
+     },
+     "r50": {
+      "ne": 150,
+      "se": 160,
+      "sw": 80,
+      "nw": 90
+     },
+     "r64": {
+      "ne": 110,
+      "se": 90,
+      "sw": 60,
+      "nw": 75
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-13T06:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 29.1,
+     "lon": -94.6,
+     "vmaxKt": 95,
+     "pressureMb": 951,
+     "r34": {
+      "ne": 225,
+      "se": 200,
+      "sw": 125,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 150,
+      "se": 160,
+      "sw": 80,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 110,
+      "se": 90,
+      "sw": 55,
+      "nw": 45
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-13T07:00:00Z",
+     "recordId": "L",
+     "status": "HU",
+     "lat": 29.3,
+     "lon": -94.7,
+     "vmaxKt": 95,
+     "pressureMb": 950,
+     "r34": {
+      "ne": 225,
+      "se": 200,
+      "sw": 125,
+      "nw": 125
+     },
+     "r50": {
+      "ne": 150,
+      "se": 160,
+      "sw": 80,
+      "nw": 75
+     },
+     "r64": {
+      "ne": 110,
+      "se": 90,
+      "sw": 55,
+      "nw": 45
+     },
+     "rmwNm": 30
+    },
+    {
+     "time": "2008-09-13T12:00:00Z",
+     "recordId": "",
+     "status": "HU",
+     "lat": 30.3,
+     "lon": -95.2,
+     "vmaxKt": 85,
+     "pressureMb": 959,
+     "r34": {
+      "ne": 125,
+      "se": 180,
+      "sw": 125,
+      "nw": 60
+     },
+     "r50": {
+      "ne": 75,
+      "se": 90,
+      "sw": 60,
+      "nw": 45
+     },
+     "r64": {
+      "ne": 50,
+      "se": 45,
+      "sw": 30,
+      "nw": 20
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-13T18:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 31.7,
+     "lon": -95.3,
+     "vmaxKt": 50,
+     "pressureMb": 974,
+     "r34": {
+      "ne": 75,
+      "se": 150,
+      "sw": 60,
+      "nw": 40
+     },
+     "r50": {
+      "ne": 40,
+      "se": 45,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-14T00:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 33.5,
+     "lon": -94.9,
+     "vmaxKt": 35,
+     "pressureMb": 980,
+     "r34": {
+      "ne": 60,
+      "se": 90,
+      "sw": 0,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-14T06:00:00Z",
+     "recordId": "",
+     "status": "TS",
+     "lat": 35.5,
+     "lon": -93.7,
+     "vmaxKt": 35,
+     "pressureMb": 985,
+     "r34": {
+      "ne": 45,
+      "se": 90,
+      "sw": 20,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-14T12:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 37.6,
+     "lon": -91.0,
+     "vmaxKt": 40,
+     "pressureMb": 987,
+     "r34": {
+      "ne": 0,
+      "se": 90,
+      "sw": 40,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-14T18:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 40.3,
+     "lon": -87.2,
+     "vmaxKt": 50,
+     "pressureMb": 988,
+     "r34": {
+      "ne": 0,
+      "se": 180,
+      "sw": 150,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 160,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-15T00:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 43.3,
+     "lon": -81.5,
+     "vmaxKt": 50,
+     "pressureMb": 988,
+     "r34": {
+      "ne": 0,
+      "se": 180,
+      "sw": 150,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 160,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-15T06:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 45.8,
+     "lon": -75.3,
+     "vmaxKt": 40,
+     "pressureMb": 986,
+     "r34": {
+      "ne": 0,
+      "se": 180,
+      "sw": 150,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    },
+    {
+     "time": "2008-09-15T12:00:00Z",
+     "recordId": "",
+     "status": "EX",
+     "lat": 47.2,
+     "lon": -71.1,
+     "vmaxKt": 35,
+     "pressureMb": 986,
+     "r34": {
+      "ne": 0,
+      "se": 180,
+      "sw": 150,
+      "nw": 0
+     },
+     "r50": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "r64": {
+      "ne": 0,
+      "se": 0,
+      "sw": 0,
+      "nw": 0
+     },
+     "rmwNm": null
+    }
+   ]
+  }
+ ]
+}

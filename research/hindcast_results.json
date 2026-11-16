@@ -1,0 +1,4576 @@
+{
+ "meta": {
+  "generatedBy": "research/scripts/run_hindcast.mjs",
+  "generatedAt": "2026-11-16T03:46:10.521Z",
+  "bestTracks": {
+   "sourceUrl": "https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2025-092326.txt",
+   "retrievedAt": "2026-11-16T03:42:59Z"
+  },
+  "refineries": {
+   "sourceUrl": "https://www.eia.gov/petroleum/refinerycapacity/refcap26.xlsx",
+   "dataAsOf": "2026-01-01",
+   "count": 124,
+   "datasetCapacityBpd": 18081793
+  },
+  "settings": {
+   "stepHours": 1,
+   "hollandB": 1.5,
+   "rmaxKm": [
+    20,
+    35,
+    50
+   ]
+  },
+  "note": "Exposure counts, not shutdowns. Refinery fleet and capacities are as of the EIA file date, not the storm year."
+ },
+ "storms": [
+  {
+   "id": "AL092017",
+   "name": "HARVEY",
+   "year": 2017,
+   "fixes": 74,
+   "interpolatedPoints": 415,
+   "observedRadii": {
+    "r64": {
+     "count": 0,
+     "capacityBpd": 0,
+     "capacityUnknown": 0,
+     "shareOfDatasetCapacity": 0,
+     "byState": {},
+     "refineries": []
+    },
+    "r50": {
+     "count": 7,
+     "capacityBpd": 956500,
+     "capacityUnknown": 0,
+     "shareOfDatasetCapacity": 0.052898515097479545,
+     "byState": {
+      "Texas": {
+       "count": 7,
+       "capacityBpd": 956500
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-204-texas-corpus-christi-west",
+       "site": "CORPUS CHRISTI WEST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-26T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-351-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-26T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 56.6,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-478-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "CITGO REFINING & CHEMICAL INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 165000,
+       "firstExposedAt": "2017-08-25T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 52.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-205-texas-corpus-christi-east",
+       "site": "CORPUS CHRISTI EAST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 87500,
+       "firstExposedAt": "2017-08-25T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5048-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "BUCKEYE TEXAS PROCESSING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 60000,
+       "firstExposedAt": "2017-08-26T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5082-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "MAGELLAN PROCESSING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 50000,
+       "firstExposedAt": "2017-08-25T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-525-texas-nixon",
+       "site": "NIXON",
+       "company": "LAZARUS ENERGY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 14000,
+       "firstExposedAt": "2017-08-26T14:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18.7,
+       "peakWindKt": null
+      }
+     ]
+    },
+    "r34": {
+     "count": 29,
+     "capacityBpd": 6336050,
+     "capacityUnknown": 3,
+     "shareOfDatasetCapacity": 0.35041049303019894,
+     "byState": {
+      "Louisiana": {
+       "count": 4,
+       "capacityBpd": 870400
+      },
+      "Texas": {
+       "count": 25,
+       "capacityBpd": 5465650
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2017-08-28T09:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 45.4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2017-08-27T12:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 117.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2017-08-28T09:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 61.5,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2017-08-27T12:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 139,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-465-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CITGO PETROLEUM CORP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 471200,
+       "firstExposedAt": "2017-08-29T09:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 1.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2017-08-28T08:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 45.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2017-08-27T11:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 151.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-204-texas-corpus-christi-west",
+       "site": "CORPUS CHRISTI WEST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-351-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 56.6,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2017-08-25T19:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 75.8,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-392-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 263700,
+       "firstExposedAt": "2017-08-29T22:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2017-08-28T12:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 41,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2017-08-27T12:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 115.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2017-08-27T11:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 159.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-478-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "CITGO REFINING & CHEMICAL INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 165000,
+       "firstExposedAt": "2017-08-25T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 52.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-510-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CALCASIEU REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 135500,
+       "firstExposedAt": "2017-08-29T07:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 6.4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2017-08-27T11:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 158.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2017-08-27T11:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 160.3,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-387-texas-three-rivers",
+       "site": "THREE RIVERS",
+       "company": "DIAMOND SHAMROCK REFINING CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 89000,
+       "firstExposedAt": "2017-08-26T04:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 88.3,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-205-texas-corpus-christi-east",
+       "site": "CORPUS CHRISTI EAST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 87500,
+       "firstExposedAt": "2017-08-25T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5048-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "BUCKEYE TEXAS PROCESSING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 60000,
+       "firstExposedAt": "2017-08-25T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5082-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "MAGELLAN PROCESSING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 50000,
+       "firstExposedAt": "2017-08-25T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2017-08-27T11:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 150.6,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2017-08-27T11:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 152.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-153-texas-san-antonio",
+       "site": "SAN ANTONIO",
+       "company": "THE SAN ANTONIO REFINERY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 20000,
+       "firstExposedAt": "2017-08-27T04:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 83.5,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-525-texas-nixon",
+       "site": "NIXON",
+       "company": "LAZARUS ENERGY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 14000,
+       "firstExposedAt": "2017-08-26T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-3109-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "EXCEL PARALUBES",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2017-08-29T09:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 1.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2017-08-27T11:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 153,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-512-texas-silsbee",
+       "site": "SILSBEE",
+       "company": "TRECORA HYDROCARBONS LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2017-08-28T17:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 86.2,
+       "peakWindKt": null
+      }
+     ]
+    }
+   },
+   "holland": {
+    "v64_rmax20": {
+     "count": 6,
+     "capacityBpd": 942500,
+     "capacityUnknown": 0,
+     "shareOfDatasetCapacity": 0.052124255597882356,
+     "byState": {
+      "Texas": {
+       "count": 6,
+       "capacityBpd": 942500
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-204-texas-corpus-christi-west",
+       "site": "CORPUS CHRISTI WEST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-26T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.4,
+       "peakWindKt": 72.8
+      },
+      {
+       "id": "eia-351-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-26T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 56.6,
+       "peakWindKt": 74.9
+      },
+      {
+       "id": "eia-478-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "CITGO REFINING & CHEMICAL INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 165000,
+       "firstExposedAt": "2017-08-25T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 52.9,
+       "peakWindKt": 78.7
+      },
+      {
+       "id": "eia-205-texas-corpus-christi-east",
+       "site": "CORPUS CHRISTI EAST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 87500,
+       "firstExposedAt": "2017-08-25T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.1,
+       "peakWindKt": 78.7
+      },
+      {
+       "id": "eia-5048-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "BUCKEYE TEXAS PROCESSING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 60000,
+       "firstExposedAt": "2017-08-26T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.1,
+       "peakWindKt": 73.6
+      },
+      {
+       "id": "eia-5082-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "MAGELLAN PROCESSING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 50000,
+       "firstExposedAt": "2017-08-25T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.9,
+       "peakWindKt": 77.8
+      }
+     ]
+    },
+    "v64_rmax35": {
+     "count": 7,
+     "capacityBpd": 1031500,
+     "capacityUnknown": 0,
+     "shareOfDatasetCapacity": 0.057046333845321644,
+     "byState": {
+      "Texas": {
+       "count": 7,
+       "capacityBpd": 1031500
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-204-texas-corpus-christi-west",
+       "site": "CORPUS CHRISTI WEST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.4,
+       "peakWindKt": 98.3
+      },
+      {
+       "id": "eia-351-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 56.6,
+       "peakWindKt": 100.6
+      },
+      {
+       "id": "eia-478-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "CITGO REFINING & CHEMICAL INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 165000,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 52.9,
+       "peakWindKt": 104
+      },
+      {
+       "id": "eia-387-texas-three-rivers",
+       "site": "THREE RIVERS",
+       "company": "DIAMOND SHAMROCK REFINING CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 89000,
+       "firstExposedAt": "2017-08-26T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 88.3,
+       "peakWindKt": 66.9
+      },
+      {
+       "id": "eia-205-texas-corpus-christi-east",
+       "site": "CORPUS CHRISTI EAST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 87500,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.1,
+       "peakWindKt": 104.1
+      },
+      {
+       "id": "eia-5048-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "BUCKEYE TEXAS PROCESSING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 60000,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.1,
+       "peakWindKt": 99.3
+      },
+      {
+       "id": "eia-5082-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "MAGELLAN PROCESSING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 50000,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.9,
+       "peakWindKt": 103.3
+      }
+     ]
+    },
+    "v64_rmax50": {
+     "count": 9,
+     "capacityBpd": 1322500,
+     "capacityUnknown": 0,
+     "shareOfDatasetCapacity": 0.07313987058694899,
+     "byState": {
+      "Texas": {
+       "count": 9,
+       "capacityBpd": 1322500
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-204-texas-corpus-christi-west",
+       "site": "CORPUS CHRISTI WEST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.4,
+       "peakWindKt": 111.5
+      },
+      {
+       "id": "eia-351-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 56.6,
+       "peakWindKt": 112.7
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2017-08-25T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 75.8,
+       "peakWindKt": 71.4
+      },
+      {
+       "id": "eia-478-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "CITGO REFINING & CHEMICAL INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 165000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 52.9,
+       "peakWindKt": 114.2
+      },
+      {
+       "id": "eia-387-texas-three-rivers",
+       "site": "THREE RIVERS",
+       "company": "DIAMOND SHAMROCK REFINING CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 89000,
+       "firstExposedAt": "2017-08-25T22:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 88.3,
+       "peakWindKt": 82.1
+      },
+      {
+       "id": "eia-205-texas-corpus-christi-east",
+       "site": "CORPUS CHRISTI EAST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 87500,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.1,
+       "peakWindKt": 114.2
+      },
+      {
+       "id": "eia-5048-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "BUCKEYE TEXAS PROCESSING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 60000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.1,
+       "peakWindKt": 112
+      },
+      {
+       "id": "eia-5082-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "MAGELLAN PROCESSING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 50000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.9,
+       "peakWindKt": 113.9
+      },
+      {
+       "id": "eia-525-texas-nixon",
+       "site": "NIXON",
+       "company": "LAZARUS ENERGY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 14000,
+       "firstExposedAt": "2017-08-26T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18.7,
+       "peakWindKt": 73.2
+      }
+     ]
+    },
+    "v34_rmax20": {
+     "count": 13,
+     "capacityBpd": 2192900,
+     "capacityUnknown": 1,
+     "shareOfDatasetCapacity": 0.1212766897619058,
+     "byState": {
+      "Louisiana": {
+       "count": 4,
+       "capacityBpd": 870400
+      },
+      "Texas": {
+       "count": 9,
+       "capacityBpd": 1322500
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-465-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CITGO PETROLEUM CORP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 471200,
+       "firstExposedAt": "2017-08-30T09:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 1.7,
+       "peakWindKt": 40
+      },
+      {
+       "id": "eia-204-texas-corpus-christi-west",
+       "site": "CORPUS CHRISTI WEST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.4,
+       "peakWindKt": 72.8
+      },
+      {
+       "id": "eia-351-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 56.6,
+       "peakWindKt": 74.9
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2017-08-25T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 75.8,
+       "peakWindKt": 38.2
+      },
+      {
+       "id": "eia-392-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 263700,
+       "firstExposedAt": "2017-08-30T10:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 4,
+       "peakWindKt": 40
+      },
+      {
+       "id": "eia-478-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "CITGO REFINING & CHEMICAL INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 165000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 52.9,
+       "peakWindKt": 78.7
+      },
+      {
+       "id": "eia-510-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CALCASIEU REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 135500,
+       "firstExposedAt": "2017-08-30T09:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 6.4,
+       "peakWindKt": 39.4
+      },
+      {
+       "id": "eia-387-texas-three-rivers",
+       "site": "THREE RIVERS",
+       "company": "DIAMOND SHAMROCK REFINING CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 89000,
+       "firstExposedAt": "2017-08-25T22:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 88.3,
+       "peakWindKt": 46.3
+      },
+      {
+       "id": "eia-205-texas-corpus-christi-east",
+       "site": "CORPUS CHRISTI EAST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 87500,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.1,
+       "peakWindKt": 78.7
+      },
+      {
+       "id": "eia-5048-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "BUCKEYE TEXAS PROCESSING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 60000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.1,
+       "peakWindKt": 73.6
+      },
+      {
+       "id": "eia-5082-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "MAGELLAN PROCESSING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 50000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.9,
+       "peakWindKt": 77.8
+      },
+      {
+       "id": "eia-525-texas-nixon",
+       "site": "NIXON",
+       "company": "LAZARUS ENERGY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 14000,
+       "firstExposedAt": "2017-08-26T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18.7,
+       "peakWindKt": 40.9
+      },
+      {
+       "id": "eia-3109-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "EXCEL PARALUBES",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2017-08-30T10:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 1.2,
+       "peakWindKt": 40
+      }
+     ]
+    },
+    "v34_rmax35": {
+     "count": 28,
+     "capacityBpd": 6336050,
+     "capacityUnknown": 2,
+     "shareOfDatasetCapacity": 0.35041049303019894,
+     "byState": {
+      "Louisiana": {
+       "count": 4,
+       "capacityBpd": 870400
+      },
+      "Texas": {
+       "count": 24,
+       "capacityBpd": 5465650
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2017-08-30T06:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 45.4,
+       "peakWindKt": 38.7
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2017-08-25T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 117.7,
+       "peakWindKt": 42.8
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2017-08-30T08:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 61.5,
+       "peakWindKt": 34.9
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 139,
+       "peakWindKt": 39.9
+      },
+      {
+       "id": "eia-465-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CITGO PETROLEUM CORP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 471200,
+       "firstExposedAt": "2017-08-30T08:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 1.7,
+       "peakWindKt": 40
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2017-08-30T05:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 45.1,
+       "peakWindKt": 38.7
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 151.7,
+       "peakWindKt": 41.3
+      },
+      {
+       "id": "eia-204-texas-corpus-christi-west",
+       "site": "CORPUS CHRISTI WEST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T12:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.4,
+       "peakWindKt": 98.3
+      },
+      {
+       "id": "eia-351-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T11:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 56.6,
+       "peakWindKt": 100.6
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2017-08-25T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 75.8,
+       "peakWindKt": 56.6
+      },
+      {
+       "id": "eia-392-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 263700,
+       "firstExposedAt": "2017-08-30T08:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 4,
+       "peakWindKt": 40
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2017-08-30T07:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 41,
+       "peakWindKt": 39.5
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2017-08-25T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 115.2,
+       "peakWindKt": 42.5
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2017-08-25T19:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.9,
+       "peakWindKt": 42.3
+      },
+      {
+       "id": "eia-478-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "CITGO REFINING & CHEMICAL INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 165000,
+       "firstExposedAt": "2017-08-25T11:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 52.9,
+       "peakWindKt": 104
+      },
+      {
+       "id": "eia-510-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CALCASIEU REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 135500,
+       "firstExposedAt": "2017-08-30T07:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 6.4,
+       "peakWindKt": 39.8
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2017-08-25T19:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 158.7,
+       "peakWindKt": 42
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2017-08-25T19:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 160.3,
+       "peakWindKt": 41.9
+      },
+      {
+       "id": "eia-387-texas-three-rivers",
+       "site": "THREE RIVERS",
+       "company": "DIAMOND SHAMROCK REFINING CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 89000,
+       "firstExposedAt": "2017-08-25T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 88.3,
+       "peakWindKt": 66.9
+      },
+      {
+       "id": "eia-205-texas-corpus-christi-east",
+       "site": "CORPUS CHRISTI EAST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 87500,
+       "firstExposedAt": "2017-08-25T11:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.1,
+       "peakWindKt": 104.1
+      },
+      {
+       "id": "eia-5048-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "BUCKEYE TEXAS PROCESSING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 60000,
+       "firstExposedAt": "2017-08-25T11:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.1,
+       "peakWindKt": 99.3
+      },
+      {
+       "id": "eia-5082-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "MAGELLAN PROCESSING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 50000,
+       "firstExposedAt": "2017-08-25T11:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.9,
+       "peakWindKt": 103.3
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 150.6,
+       "peakWindKt": 40.8
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 152.1,
+       "peakWindKt": 41
+      },
+      {
+       "id": "eia-153-texas-san-antonio",
+       "site": "SAN ANTONIO",
+       "company": "THE SAN ANTONIO REFINERY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 20000,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 83.5,
+       "peakWindKt": 47.8
+      },
+      {
+       "id": "eia-525-texas-nixon",
+       "site": "NIXON",
+       "company": "LAZARUS ENERGY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 14000,
+       "firstExposedAt": "2017-08-25T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18.7,
+       "peakWindKt": 58.7
+      },
+      {
+       "id": "eia-3109-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "EXCEL PARALUBES",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2017-08-30T08:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 1.2,
+       "peakWindKt": 39.9
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 153,
+       "peakWindKt": 40.3
+      }
+     ]
+    },
+    "v34_rmax50": {
+     "count": 29,
+     "capacityBpd": 6336050,
+     "capacityUnknown": 3,
+     "shareOfDatasetCapacity": 0.35041049303019894,
+     "byState": {
+      "Louisiana": {
+       "count": 4,
+       "capacityBpd": 870400
+      },
+      "Texas": {
+       "count": 25,
+       "capacityBpd": 5465650
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2017-08-25T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 45.4,
+       "peakWindKt": 42.5
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2017-08-25T11:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 117.7,
+       "peakWindKt": 54.9
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 61.5,
+       "peakWindKt": 42.2
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2017-08-25T14:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 139,
+       "peakWindKt": 51.3
+      },
+      {
+       "id": "eia-465-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CITGO PETROLEUM CORP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 471200,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 1.7,
+       "peakWindKt": 39.8
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2017-08-25T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 45.1,
+       "peakWindKt": 42.7
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2017-08-25T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 151.7,
+       "peakWindKt": 53
+      },
+      {
+       "id": "eia-204-texas-corpus-christi-west",
+       "site": "CORPUS CHRISTI WEST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.4,
+       "peakWindKt": 111.5
+      },
+      {
+       "id": "eia-351-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2017-08-25T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 56.6,
+       "peakWindKt": 112.7
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2017-08-25T09:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 75.8,
+       "peakWindKt": 71.4
+      },
+      {
+       "id": "eia-392-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 263700,
+       "firstExposedAt": "2017-08-25T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 4,
+       "peakWindKt": 39.9
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2017-08-25T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 41,
+       "peakWindKt": 41.6
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2017-08-25T11:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 115.2,
+       "peakWindKt": 54.5
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2017-08-25T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.9,
+       "peakWindKt": 54.3
+      },
+      {
+       "id": "eia-478-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "CITGO REFINING & CHEMICAL INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 165000,
+       "firstExposedAt": "2017-08-25T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 52.9,
+       "peakWindKt": 114.2
+      },
+      {
+       "id": "eia-510-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CALCASIEU REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 135500,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 6.4,
+       "peakWindKt": 39
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2017-08-25T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 158.7,
+       "peakWindKt": 53.8
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2017-08-25T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 160.3,
+       "peakWindKt": 53.8
+      },
+      {
+       "id": "eia-387-texas-three-rivers",
+       "site": "THREE RIVERS",
+       "company": "DIAMOND SHAMROCK REFINING CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 89000,
+       "firstExposedAt": "2017-08-25T11:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 88.3,
+       "peakWindKt": 82.1
+      },
+      {
+       "id": "eia-205-texas-corpus-christi-east",
+       "site": "CORPUS CHRISTI EAST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 87500,
+       "firstExposedAt": "2017-08-25T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.1,
+       "peakWindKt": 114.2
+      },
+      {
+       "id": "eia-5048-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "BUCKEYE TEXAS PROCESSING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 60000,
+       "firstExposedAt": "2017-08-25T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 58.1,
+       "peakWindKt": 112
+      },
+      {
+       "id": "eia-5082-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "MAGELLAN PROCESSING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 50000,
+       "firstExposedAt": "2017-08-25T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 53.9,
+       "peakWindKt": 113.9
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2017-08-25T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 150.6,
+       "peakWindKt": 52.4
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2017-08-25T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 152.1,
+       "peakWindKt": 52.7
+      },
+      {
+       "id": "eia-153-texas-san-antonio",
+       "site": "SAN ANTONIO",
+       "company": "THE SAN ANTONIO REFINERY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 20000,
+       "firstExposedAt": "2017-08-25T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 83.5,
+       "peakWindKt": 60.7
+      },
+      {
+       "id": "eia-525-texas-nixon",
+       "site": "NIXON",
+       "company": "LAZARUS ENERGY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 14000,
+       "firstExposedAt": "2017-08-25T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18.7,
+       "peakWindKt": 73.2
+      },
+      {
+       "id": "eia-3109-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "EXCEL PARALUBES",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2017-08-25T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 1.2,
+       "peakWindKt": 39.8
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2017-08-25T14:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 153,
+       "peakWindKt": 51.8
+      },
+      {
+       "id": "eia-512-texas-silsbee",
+       "site": "SILSBEE",
+       "company": "TRECORA HYDROCARBONS LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2017-08-25T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 86.2,
+       "peakWindKt": 41.1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "AL092008",
+   "name": "IKE",
+   "year": 2008,
+   "fixes": 62,
+   "interpolatedPoints": 343,
+   "observedRadii": {
+    "r64": {
+     "count": 19,
+     "capacityBpd": 4993550,
+     "capacityUnknown": 3,
+     "shareOfDatasetCapacity": 0.2761645374438254,
+     "byState": {
+      "Louisiana": {
+       "count": 4,
+       "capacityBpd": 870400
+      },
+      "Texas": {
+       "count": 15,
+       "capacityBpd": 4123150
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2008-09-13T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 91.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2008-09-13T02:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 19,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2008-09-13T01:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 89.3,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 10.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-465-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CITGO PETROLEUM CORP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 471200,
+       "firstExposedAt": "2008-09-13T02:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 160.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2008-09-13T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 22.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-392-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 263700,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 168,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2008-09-13T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 101.8,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2008-09-13T02:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 16.4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 31.6,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-510-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CALCASIEU REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 135500,
+       "firstExposedAt": "2008-09-13T01:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 20.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-3109-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "EXCEL PARALUBES",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T02:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 13.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-512-texas-silsbee",
+       "site": "SILSBEE",
+       "company": "TRECORA HYDROCARBONS LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": null
+      }
+     ]
+    },
+    "r50": {
+     "count": 31,
+     "capacityBpd": 6487150,
+     "capacityUnknown": 3,
+     "shareOfDatasetCapacity": 0.3587669652008515,
+     "byState": {
+      "Illinois": {
+       "count": 1,
+       "capacityBpd": 253000
+      },
+      "Indiana": {
+       "count": 1,
+       "capacityBpd": 36700
+      },
+      "Louisiana": {
+       "count": 4,
+       "capacityBpd": 870400
+      },
+      "Michigan": {
+       "count": 1,
+       "capacityBpd": 146000
+      },
+      "Ohio": {
+       "count": 4,
+       "capacityBpd": 606600
+      },
+      "Pennsylvania": {
+       "count": 2,
+       "capacityBpd": 78000
+      },
+      "Texas": {
+       "count": 17,
+       "capacityBpd": 4474150
+      },
+      "West Virginia": {
+       "count": 1,
+       "capacityBpd": 22300
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2008-09-13T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 91.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2008-09-12T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 19,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2008-09-13T01:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 89.3,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2008-09-13T02:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 10.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-465-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CITGO PETROLEUM CORP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 471200,
+       "firstExposedAt": "2008-09-12T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 160.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2008-09-13T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 22.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 103.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-392-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 263700,
+       "firstExposedAt": "2008-09-12T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 168,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-531-illinois-robinson",
+       "site": "ROBINSON",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Illinois",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 253000,
+       "firstExposedAt": "2008-09-14T16:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 78.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2008-09-13T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 101.8,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2008-09-12T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 16.4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 31.6,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-288-ohio-lima",
+       "site": "LIMA",
+       "company": "LIMA REFINING COMPANY",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 183000,
+       "firstExposedAt": "2008-09-14T19:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 118.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-308-ohio-toledo",
+       "site": "TOLEDO",
+       "company": "TOLEDO REFINING CO LLC",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 172800,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 72.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-287-ohio-toledo",
+       "site": "TOLEDO",
+       "company": "OHIO REFINING COMPANY LLC",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 150800,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 69.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-528-michigan-detroit",
+       "site": "DETROIT",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Michigan",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 146000,
+       "firstExposedAt": "2008-09-14T22:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 19.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-510-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CALCASIEU REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 135500,
+       "firstExposedAt": "2008-09-12T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-89-ohio-canton",
+       "site": "CANTON",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 100000,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 237,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-147-texas-tyler",
+       "site": "TYLER",
+       "company": "DELEK REFINING LTD",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 74000,
+       "firstExposedAt": "2008-09-13T18:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 12.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-523-pennsylvania-warren",
+       "site": "WARREN",
+       "company": "UNITED REFINING CO",
+       "state": "Pennsylvania",
+       "refiningDistrict": "Appalachian No. 1",
+       "capacityBpd": 67000,
+       "firstExposedAt": "2008-09-14T23:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 236.3,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-381-indiana-mount-vernon",
+       "site": "MOUNT VERNON",
+       "company": "COUNTRYMARK REFINING & LOGISTICS LLC",
+       "state": "Indiana",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 36700,
+       "firstExposedAt": "2008-09-14T16:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 154.5,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 20.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-266-west-virginia-newell",
+       "site": "NEWELL",
+       "company": "ERGON WEST VIRGINIA INC",
+       "state": "West Virginia",
+       "refiningDistrict": "Appalachian No. 1",
+       "capacityBpd": 22300,
+       "firstExposedAt": "2008-09-14T23:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 286.5,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-353-pennsylvania-bradford",
+       "site": "BRADFORD",
+       "company": "AMERICAN REFINING GROUP INC",
+       "state": "Pennsylvania",
+       "refiningDistrict": "Appalachian No. 1",
+       "capacityBpd": 11000,
+       "firstExposedAt": "2008-09-15T00:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 245.6,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-3109-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "EXCEL PARALUBES",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 13.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-512-texas-silsbee",
+       "site": "SILSBEE",
+       "company": "TRECORA HYDROCARBONS LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": null
+      }
+     ]
+    },
+    "r34": {
+     "count": 44,
+     "capacityBpd": 9402123,
+     "capacityUnknown": 3,
+     "shareOfDatasetCapacity": 0.5199773606522318,
+     "byState": {
+      "Illinois": {
+       "count": 2,
+       "capacityBpd": 598000
+      },
+      "Indiana": {
+       "count": 2,
+       "capacityBpd": 471700
+      },
+      "Louisiana": {
+       "count": 15,
+       "capacityBpd": 3005373
+      },
+      "Michigan": {
+       "count": 1,
+       "capacityBpd": 146000
+      },
+      "Ohio": {
+       "count": 4,
+       "capacityBpd": 606600
+      },
+      "Pennsylvania": {
+       "count": 2,
+       "capacityBpd": 78000
+      },
+      "Texas": {
+       "count": 17,
+       "capacityBpd": 4474150
+      },
+      "West Virginia": {
+       "count": 1,
+       "capacityBpd": 22300
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 91.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 19,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-530-louisiana-garyville",
+       "site": "GARYVILLE",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 617000,
+       "firstExposedAt": "2008-09-12T04:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 378.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2008-09-12T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 89.3,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2008-09-12T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 10.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-161-louisiana-baton-rouge",
+       "site": "BATON ROUGE",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 523500,
+       "firstExposedAt": "2008-09-12T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 362,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-465-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CITGO PETROLEUM CORP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 471200,
+       "firstExposedAt": "2008-09-12T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 160.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-297-indiana-whiting",
+       "site": "WHITING",
+       "company": "BP PRODUCTS NORTH AMERICA INC",
+       "state": "Indiana",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 435000,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 141.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-275-illinois-wood-river",
+       "site": "WOOD RIVER",
+       "company": "WRB REFINING LP",
+       "state": "Illinois",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 345000,
+       "firstExposedAt": "2008-09-14T15:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 48.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2008-09-12T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 22.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2008-09-12T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 103.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-392-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 263700,
+       "firstExposedAt": "2008-09-12T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 168,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-531-illinois-robinson",
+       "site": "ROBINSON",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Illinois",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 253000,
+       "firstExposedAt": "2008-09-14T16:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 78.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 101.8,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-276-louisiana-norco",
+       "site": "NORCO",
+       "company": "SHELL OIL PRODUCTS US",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 231153,
+       "firstExposedAt": "2008-09-12T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 383.8,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 16.4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-517-louisiana-norco",
+       "site": "NORCO",
+       "company": "VALERO REFINING NEW ORLEANS LLC",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 215000,
+       "firstExposedAt": "2008-09-12T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 382.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2008-09-12T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 31.6,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-228-louisiana-chalmette",
+       "site": "CHALMETTE",
+       "company": "CHALMETTE REFINING LLC",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 190000,
+       "firstExposedAt": "2008-09-12T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 399.8,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-288-ohio-lima",
+       "site": "LIMA",
+       "company": "LIMA REFINING COMPANY",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 183000,
+       "firstExposedAt": "2008-09-14T19:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 118.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-308-ohio-toledo",
+       "site": "TOLEDO",
+       "company": "TOLEDO REFINING CO LLC",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 172800,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 72.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-287-ohio-toledo",
+       "site": "TOLEDO",
+       "company": "OHIO REFINING COMPANY LLC",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 150800,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 69.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-528-michigan-detroit",
+       "site": "DETROIT",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Michigan",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 146000,
+       "firstExposedAt": "2008-09-14T22:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 19.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-510-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CALCASIEU REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 135500,
+       "firstExposedAt": "2008-09-12T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-237-louisiana-meraux",
+       "site": "MERAUX",
+       "company": "VALERO REFINING - MERAUX LLC",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 125000,
+       "firstExposedAt": "2008-09-12T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 401.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2008-09-12T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2008-09-12T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-89-ohio-canton",
+       "site": "CANTON",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 100000,
+       "firstExposedAt": "2008-09-14T20:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 237,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-501-louisiana-krotz-springs",
+       "site": "KROTZ SPRINGS",
+       "company": "ALON REFINING KROTZ SPRINGS INC",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 80000,
+       "firstExposedAt": "2008-09-12T10:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 315.2,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-262-louisiana-port-allen",
+       "site": "PORT ALLEN",
+       "company": "PLACID REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 75000,
+       "firstExposedAt": "2008-09-12T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 358.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-147-texas-tyler",
+       "site": "TYLER",
+       "company": "DELEK REFINING LTD",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 74000,
+       "firstExposedAt": "2008-09-13T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 12.7,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-523-pennsylvania-warren",
+       "site": "WARREN",
+       "company": "UNITED REFINING CO",
+       "state": "Pennsylvania",
+       "refiningDistrict": "Appalachian No. 1",
+       "capacityBpd": 67000,
+       "firstExposedAt": "2008-09-14T23:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 236.3,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-244-louisiana-shreveport",
+       "site": "SHREVEPORT",
+       "company": "CALUMET SHREVEPORT REFINING LLC",
+       "state": "Louisiana",
+       "refiningDistrict": "North Louisiana-Arkansas",
+       "capacityBpd": 57000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 123.4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2008-09-12T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-381-indiana-mount-vernon",
+       "site": "MOUNT VERNON",
+       "company": "COUNTRYMARK REFINING & LOGISTICS LLC",
+       "state": "Indiana",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 36700,
+       "firstExposedAt": "2008-09-14T14:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 154.5,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2008-09-12T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 20.1,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-266-west-virginia-newell",
+       "site": "NEWELL",
+       "company": "ERGON WEST VIRGINIA INC",
+       "state": "West Virginia",
+       "refiningDistrict": "Appalachian No. 1",
+       "capacityBpd": 22300,
+       "firstExposedAt": "2008-09-14T22:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 286.5,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-111-louisiana-cotton-valley",
+       "site": "COTTON VALLEY",
+       "company": "CALUMET COTTON VALLEY REFINING LLC",
+       "state": "Louisiana",
+       "refiningDistrict": "North Louisiana-Arkansas",
+       "capacityBpd": 13020,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 151.8,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-353-pennsylvania-bradford",
+       "site": "BRADFORD",
+       "company": "AMERICAN REFINING GROUP INC",
+       "state": "Pennsylvania",
+       "refiningDistrict": "Appalachian No. 1",
+       "capacityBpd": 11000,
+       "firstExposedAt": "2008-09-14T23:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 245.6,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-110-louisiana-princeton",
+       "site": "PRINCETON",
+       "company": "CALUMET PRINCETON REFINING LLC",
+       "state": "Louisiana",
+       "refiningDistrict": "North Louisiana-Arkansas",
+       "capacityBpd": 8300,
+       "firstExposedAt": "2008-09-13T05:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 146.4,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-3109-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "EXCEL PARALUBES",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T18:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 13.9,
+       "peakWindKt": null
+      },
+      {
+       "id": "eia-512-texas-silsbee",
+       "site": "SILSBEE",
+       "company": "TRECORA HYDROCARBONS LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T19:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": null
+      }
+     ]
+    }
+   },
+   "holland": {
+    "v64_rmax20": {
+     "count": 10,
+     "capacityBpd": 2231750,
+     "capacityUnknown": 1,
+     "shareOfDatasetCapacity": 0.123425259873288,
+     "byState": {
+      "Texas": {
+       "count": 10,
+       "capacityBpd": 2231750
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 19,
+       "peakWindKt": 93.3
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2008-09-13T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 10.1,
+       "peakWindKt": 85.5
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2008-09-13T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 22.2,
+       "peakWindKt": 90.5
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 16.4,
+       "peakWindKt": 94.9
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2008-09-13T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 31.6,
+       "peakWindKt": 81
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2008-09-13T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.1,
+       "peakWindKt": 84.6
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2008-09-13T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.2,
+       "peakWindKt": 84.1
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2008-09-13T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18,
+       "peakWindKt": 90.9
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2008-09-13T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 20.1,
+       "peakWindKt": 90.4
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 13.9,
+       "peakWindKt": 88.9
+      }
+     ]
+    },
+    "v64_rmax35": {
+     "count": 13,
+     "capacityBpd": 3885150,
+     "capacityUnknown": 1,
+     "shareOfDatasetCapacity": 0.21486530677571633,
+     "byState": {
+      "Texas": {
+       "count": 13,
+       "capacityBpd": 3885150
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 91.7,
+       "peakWindKt": 66.2
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 19,
+       "peakWindKt": 92.3
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2008-09-13T08:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 89.3,
+       "peakWindKt": 65.7
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2008-09-13T05:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 10.1,
+       "peakWindKt": 92.9
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": 66.8
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 22.2,
+       "peakWindKt": 91.9
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 16.4,
+       "peakWindKt": 93.3
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 31.6,
+       "peakWindKt": 91
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.1,
+       "peakWindKt": 89.5
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.2,
+       "peakWindKt": 90.2
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18,
+       "peakWindKt": 91.6
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 20.1,
+       "peakWindKt": 91.4
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 13.9,
+       "peakWindKt": 89.1
+      }
+     ]
+    },
+    "v64_rmax50": {
+     "count": 16,
+     "capacityBpd": 4400150,
+     "capacityUnknown": 2,
+     "shareOfDatasetCapacity": 0.24334699551089872,
+     "byState": {
+      "Texas": {
+       "count": 16,
+       "capacityBpd": 4400150
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 91.7,
+       "peakWindKt": 79.6
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2008-09-13T01:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 19,
+       "peakWindKt": 94.2
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2008-09-13T04:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 89.3,
+       "peakWindKt": 78.8
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 10.1,
+       "peakWindKt": 93.9
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": 80.2
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 22.2,
+       "peakWindKt": 92.4
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2008-09-13T04:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 103.2,
+       "peakWindKt": 76.3
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2008-09-13T04:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 101.8,
+       "peakWindKt": 75.7
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2008-09-13T01:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 16.4,
+       "peakWindKt": 93.5
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2008-09-13T04:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 31.6,
+       "peakWindKt": 93
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.1,
+       "peakWindKt": 92.7
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2008-09-13T04:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.2,
+       "peakWindKt": 92.9
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18,
+       "peakWindKt": 91.9
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 20.1,
+       "peakWindKt": 91.8
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T04:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 13.9,
+       "peakWindKt": 92.8
+      },
+      {
+       "id": "eia-512-texas-silsbee",
+       "site": "SILSBEE",
+       "company": "TRECORA HYDROCARBONS LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": 75.8
+      }
+     ]
+    },
+    "v34_rmax20": {
+     "count": 18,
+     "capacityBpd": 4620150,
+     "capacityUnknown": 2,
+     "shareOfDatasetCapacity": 0.2555139305045689,
+     "byState": {
+      "Michigan": {
+       "count": 1,
+       "capacityBpd": 146000
+      },
+      "Texas": {
+       "count": 17,
+       "capacityBpd": 4474150
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 91.7,
+       "peakWindKt": 46.5
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2008-09-13T01:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 19,
+       "peakWindKt": 93.3
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2008-09-13T04:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 89.3,
+       "peakWindKt": 46.3
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 10.1,
+       "peakWindKt": 85.5
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2008-09-13T02:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": 47
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 22.2,
+       "peakWindKt": 90.5
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 103.2,
+       "peakWindKt": 43.4
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 101.8,
+       "peakWindKt": 43.3
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2008-09-13T00:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 16.4,
+       "peakWindKt": 94.9
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 31.6,
+       "peakWindKt": 81
+      },
+      {
+       "id": "eia-528-michigan-detroit",
+       "site": "DETROIT",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Michigan",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 146000,
+       "firstExposedAt": "2008-09-14T22:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 19.9,
+       "peakWindKt": 50
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.1,
+       "peakWindKt": 84.6
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.2,
+       "peakWindKt": 84.1
+      },
+      {
+       "id": "eia-147-texas-tyler",
+       "site": "TYLER",
+       "company": "DELEK REFINING LTD",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 74000,
+       "firstExposedAt": "2008-09-13T19:00:00Z",
+       "statusAtFirstExposure": "TS",
+       "closestApproachKm": 12.7,
+       "peakWindKt": 38.9
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18,
+       "peakWindKt": 90.9
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 20.1,
+       "peakWindKt": 90.4
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T03:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 13.9,
+       "peakWindKt": 88.9
+      },
+      {
+       "id": "eia-512-texas-silsbee",
+       "site": "SILSBEE",
+       "company": "TRECORA HYDROCARBONS LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": 44.2
+      }
+     ]
+    },
+    "v34_rmax35": {
+     "count": 26,
+     "capacityBpd": 6412150,
+     "capacityUnknown": 3,
+     "shareOfDatasetCapacity": 0.3546191464530094,
+     "byState": {
+      "Illinois": {
+       "count": 2,
+       "capacityBpd": 598000
+      },
+      "Louisiana": {
+       "count": 4,
+       "capacityBpd": 870400
+      },
+      "Michigan": {
+       "count": 1,
+       "capacityBpd": 146000
+      },
+      "Ohio": {
+       "count": 2,
+       "capacityBpd": 323600
+      },
+      "Texas": {
+       "count": 17,
+       "capacityBpd": 4474150
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2008-09-12T19:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 91.7,
+       "peakWindKt": 66.2
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2008-09-12T19:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 19,
+       "peakWindKt": 92.3
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 89.3,
+       "peakWindKt": 65.7
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 10.1,
+       "peakWindKt": 92.9
+      },
+      {
+       "id": "eia-465-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CITGO PETROLEUM CORP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 471200,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 160.2,
+       "peakWindKt": 46.7
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2008-09-12T19:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": 66.8
+      },
+      {
+       "id": "eia-275-illinois-wood-river",
+       "site": "WOOD RIVER",
+       "company": "WRB REFINING LP",
+       "state": "Illinois",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 345000,
+       "firstExposedAt": "2008-09-14T14:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 48.2,
+       "peakWindKt": 41.3
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 22.2,
+       "peakWindKt": 91.9
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 103.2,
+       "peakWindKt": 62.5
+      },
+      {
+       "id": "eia-392-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 263700,
+       "firstExposedAt": "2008-09-12T22:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 168,
+       "peakWindKt": 45.1
+      },
+      {
+       "id": "eia-531-illinois-robinson",
+       "site": "ROBINSON",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Illinois",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 253000,
+       "firstExposedAt": "2008-09-14T16:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 78.7,
+       "peakWindKt": 36.1
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2008-09-12T20:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 101.8,
+       "peakWindKt": 62.2
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2008-09-12T19:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 16.4,
+       "peakWindKt": 93.3
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 31.6,
+       "peakWindKt": 91
+      },
+      {
+       "id": "eia-308-ohio-toledo",
+       "site": "TOLEDO",
+       "company": "TOLEDO REFINING CO LLC",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 172800,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 72.7,
+       "peakWindKt": 40.3
+      },
+      {
+       "id": "eia-287-ohio-toledo",
+       "site": "TOLEDO",
+       "company": "OHIO REFINING COMPANY LLC",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 150800,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 69.1,
+       "peakWindKt": 41.3
+      },
+      {
+       "id": "eia-528-michigan-detroit",
+       "site": "DETROIT",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Michigan",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 146000,
+       "firstExposedAt": "2008-09-14T22:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 19.9,
+       "peakWindKt": 39.3
+      },
+      {
+       "id": "eia-510-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CALCASIEU REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 135500,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.2,
+       "peakWindKt": 47.2
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.1,
+       "peakWindKt": 89.5
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.2,
+       "peakWindKt": 90.2
+      },
+      {
+       "id": "eia-147-texas-tyler",
+       "site": "TYLER",
+       "company": "DELEK REFINING LTD",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 74000,
+       "firstExposedAt": "2008-09-13T14:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 12.7,
+       "peakWindKt": 47
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18,
+       "peakWindKt": 91.6
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 20.1,
+       "peakWindKt": 91.4
+      },
+      {
+       "id": "eia-3109-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "EXCEL PARALUBES",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.9,
+       "peakWindKt": 46.7
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T22:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 13.9,
+       "peakWindKt": 89.1
+      },
+      {
+       "id": "eia-512-texas-silsbee",
+       "site": "SILSBEE",
+       "company": "TRECORA HYDROCARBONS LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": 63
+      }
+     ]
+    },
+    "v34_rmax50": {
+     "count": 42,
+     "capacityBpd": 8839450,
+     "capacityUnknown": 3,
+     "shareOfDatasetCapacity": 0.488859152408171,
+     "byState": {
+      "Illinois": {
+       "count": 2,
+       "capacityBpd": 598000
+      },
+      "Indiana": {
+       "count": 1,
+       "capacityBpd": 435000
+      },
+      "Louisiana": {
+       "count": 9,
+       "capacityBpd": 1614200
+      },
+      "Michigan": {
+       "count": 1,
+       "capacityBpd": 146000
+      },
+      "Ohio": {
+       "count": 3,
+       "capacityBpd": 506600
+      },
+      "Texas": {
+       "count": 26,
+       "capacityBpd": 5539650
+      }
+     },
+     "refineries": [
+      {
+       "id": "eia-507-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "MOTIVA ENTERPRISES LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 656400,
+       "firstExposedAt": "2008-09-12T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 91.7,
+       "peakWindKt": 79.6
+      },
+      {
+       "id": "eia-301-texas-galveston-bay",
+       "site": "GALVESTON BAY",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 631000,
+       "firstExposedAt": "2008-09-12T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 19,
+       "peakWindKt": 94.2
+      },
+      {
+       "id": "eia-225-texas-beaumont",
+       "site": "BEAUMONT",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 612000,
+       "firstExposedAt": "2008-09-12T14:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 89.3,
+       "peakWindKt": 78.8
+      },
+      {
+       "id": "eia-163-texas-baytown",
+       "site": "BAYTOWN",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 564500,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 10.1,
+       "peakWindKt": 93.9
+      },
+      {
+       "id": "eia-161-louisiana-baton-rouge",
+       "site": "BATON ROUGE",
+       "company": "EXXONMOBIL REFINING & SUPPLY CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 523500,
+       "firstExposedAt": "2008-09-12T22:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 362,
+       "peakWindKt": 34.6
+      },
+      {
+       "id": "eia-465-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CITGO PETROLEUM CORP",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 471200,
+       "firstExposedAt": "2008-09-12T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 160.2,
+       "peakWindKt": 59
+      },
+      {
+       "id": "eia-297-indiana-whiting",
+       "site": "WHITING",
+       "company": "BP PRODUCTS NORTH AMERICA INC",
+       "state": "Indiana",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 435000,
+       "firstExposedAt": "2008-09-14T19:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 141.1,
+       "peakWindKt": 34.1
+      },
+      {
+       "id": "eia-434-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "PREMCOR REFINING GROUP INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 385000,
+       "firstExposedAt": "2008-09-12T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": 80.2
+      },
+      {
+       "id": "eia-275-illinois-wood-river",
+       "site": "WOOD RIVER",
+       "company": "WRB REFINING LP",
+       "state": "Illinois",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 345000,
+       "firstExposedAt": "2008-09-14T13:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 48.2,
+       "peakWindKt": 43.3
+      },
+      {
+       "id": "eia-385-texas-deer-park",
+       "site": "DEER PARK",
+       "company": "DEER PARK REFINING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 312500,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 22.2,
+       "peakWindKt": 92.4
+      },
+      {
+       "id": "eia-204-texas-corpus-christi-west",
+       "site": "CORPUS CHRISTI WEST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2008-09-12T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 318.8,
+       "peakWindKt": 37.8
+      },
+      {
+       "id": "eia-351-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 290000,
+       "firstExposedAt": "2008-09-12T22:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 316,
+       "peakWindKt": 38.1
+      },
+      {
+       "id": "eia-256-texas-sweeny",
+       "site": "SWEENY",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 277000,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 103.2,
+       "peakWindKt": 76.3
+      },
+      {
+       "id": "eia-392-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "PHILLIPS 66 COMPANY",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 263700,
+       "firstExposedAt": "2008-09-12T14:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 168,
+       "peakWindKt": 57.1
+      },
+      {
+       "id": "eia-531-illinois-robinson",
+       "site": "ROBINSON",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Illinois",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 253000,
+       "firstExposedAt": "2008-09-14T16:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 78.7,
+       "peakWindKt": 42.5
+      },
+      {
+       "id": "eia-83-texas-port-arthur",
+       "site": "PORT ARTHUR",
+       "company": "TOTALENERGIES PETROCHEM & REFG USA",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 238000,
+       "firstExposedAt": "2008-09-12T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 101.8,
+       "peakWindKt": 75.7
+      },
+      {
+       "id": "eia-503-texas-texas-city",
+       "site": "TEXAS CITY",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 225000,
+       "firstExposedAt": "2008-09-12T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 16.4,
+       "peakWindKt": 93.5
+      },
+      {
+       "id": "eia-502-texas-houston",
+       "site": "HOUSTON",
+       "company": "VALERO REFINING CO TEXAS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 205000,
+       "firstExposedAt": "2008-09-12T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 31.6,
+       "peakWindKt": 93
+      },
+      {
+       "id": "eia-288-ohio-lima",
+       "site": "LIMA",
+       "company": "LIMA REFINING COMPANY",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 183000,
+       "firstExposedAt": "2008-09-14T20:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 118.1,
+       "peakWindKt": 37.7
+      },
+      {
+       "id": "eia-308-ohio-toledo",
+       "site": "TOLEDO",
+       "company": "TOLEDO REFINING CO LLC",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 172800,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 72.7,
+       "peakWindKt": 46.8
+      },
+      {
+       "id": "eia-478-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "CITGO REFINING & CHEMICAL INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 165000,
+       "firstExposedAt": "2008-09-12T22:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 311.5,
+       "peakWindKt": 38.5
+      },
+      {
+       "id": "eia-287-ohio-toledo",
+       "site": "TOLEDO",
+       "company": "OHIO REFINING COMPANY LLC",
+       "state": "Ohio",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 150800,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 69.1,
+       "peakWindKt": 47.5
+      },
+      {
+       "id": "eia-528-michigan-detroit",
+       "site": "DETROIT",
+       "company": "MARATHON PETROLEUM CO LP",
+       "state": "Michigan",
+       "refiningDistrict": "Indiana-Illinois-Kentucky",
+       "capacityBpd": 146000,
+       "firstExposedAt": "2008-09-14T21:00:00Z",
+       "statusAtFirstExposure": "EX",
+       "closestApproachKm": 19.9,
+       "peakWindKt": 44.9
+      },
+      {
+       "id": "eia-510-louisiana-lake-charles",
+       "site": "LAKE CHARLES",
+       "company": "CALCASIEU REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 135500,
+       "firstExposedAt": "2008-09-12T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.2,
+       "peakWindKt": 59.5
+      },
+      {
+       "id": "eia-148-texas-pasadena",
+       "site": "PASADENA",
+       "company": "PASADENA REFINING SYSTEMS INC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 118750,
+       "firstExposedAt": "2008-09-12T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.1,
+       "peakWindKt": 92.7
+      },
+      {
+       "id": "eia-4998-texas-galena-park",
+       "site": "GALENA PARK",
+       "company": "KINDER MORGAN CRUDE & CONDENSATE",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 105000,
+       "firstExposedAt": "2008-09-12T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 28.2,
+       "peakWindKt": 92.9
+      },
+      {
+       "id": "eia-387-texas-three-rivers",
+       "site": "THREE RIVERS",
+       "company": "DIAMOND SHAMROCK REFINING CO LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 89000,
+       "firstExposedAt": "2008-09-13T05:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 348,
+       "peakWindKt": 35.3
+      },
+      {
+       "id": "eia-205-texas-corpus-christi-east",
+       "site": "CORPUS CHRISTI EAST",
+       "company": "FLINT HILLS RESOURCES LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 87500,
+       "firstExposedAt": "2008-09-12T22:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 311.5,
+       "peakWindKt": 38.5
+      },
+      {
+       "id": "eia-501-louisiana-krotz-springs",
+       "site": "KROTZ SPRINGS",
+       "company": "ALON REFINING KROTZ SPRINGS INC",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 80000,
+       "firstExposedAt": "2008-09-12T17:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 315.2,
+       "peakWindKt": 38.1
+      },
+      {
+       "id": "eia-262-louisiana-port-allen",
+       "site": "PORT ALLEN",
+       "company": "PLACID REFINING CO",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": 75000,
+       "firstExposedAt": "2008-09-12T21:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 358.1,
+       "peakWindKt": 34.9
+      },
+      {
+       "id": "eia-147-texas-tyler",
+       "site": "TYLER",
+       "company": "DELEK REFINING LTD",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 74000,
+       "firstExposedAt": "2008-09-13T06:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 12.7,
+       "peakWindKt": 46.7
+      },
+      {
+       "id": "eia-5048-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "BUCKEYE TEXAS PROCESSING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 60000,
+       "firstExposedAt": "2008-09-12T23:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 317.8,
+       "peakWindKt": 37.9
+      },
+      {
+       "id": "eia-244-louisiana-shreveport",
+       "site": "SHREVEPORT",
+       "company": "CALUMET SHREVEPORT REFINING LLC",
+       "state": "Louisiana",
+       "refiningDistrict": "North Louisiana-Arkansas",
+       "capacityBpd": 57000,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 123.4,
+       "peakWindKt": 37.5
+      },
+      {
+       "id": "eia-5082-texas-corpus-christi",
+       "site": "CORPUS CHRISTI",
+       "company": "MAGELLAN PROCESSING LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 50000,
+       "firstExposedAt": "2008-09-12T22:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 312.6,
+       "peakWindKt": 38.4
+      },
+      {
+       "id": "eia-5199-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "HARTREE REFINING LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 45000,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 18,
+       "peakWindKt": 91.9
+      },
+      {
+       "id": "eia-5037-texas-houston",
+       "site": "HOUSTON",
+       "company": "PETROMAX REFINING CO LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": 25000,
+       "firstExposedAt": "2008-09-12T15:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 20.1,
+       "peakWindKt": 91.8
+      },
+      {
+       "id": "eia-153-texas-san-antonio",
+       "site": "SAN ANTONIO",
+       "company": "THE SAN ANTONIO REFINERY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 20000,
+       "firstExposedAt": "2008-09-13T07:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 331.8,
+       "peakWindKt": 34.4
+      },
+      {
+       "id": "eia-525-texas-nixon",
+       "site": "NIXON",
+       "company": "LAZARUS ENERGY LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Inland",
+       "capacityBpd": 14000,
+       "firstExposedAt": "2008-09-13T01:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 275.1,
+       "peakWindKt": 39.5
+      },
+      {
+       "id": "eia-110-louisiana-princeton",
+       "site": "PRINCETON",
+       "company": "CALUMET PRINCETON REFINING LLC",
+       "state": "Louisiana",
+       "refiningDistrict": "North Louisiana-Arkansas",
+       "capacityBpd": 8300,
+       "firstExposedAt": "2008-09-13T09:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 146.4,
+       "peakWindKt": 35.3
+      },
+      {
+       "id": "eia-3109-louisiana-westlake",
+       "site": "WESTLAKE",
+       "company": "EXCEL PARALUBES",
+       "state": "Louisiana",
+       "refiningDistrict": "Louisiana Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T13:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 159.9,
+       "peakWindKt": 59
+      },
+      {
+       "id": "eia-3215-texas-channelview",
+       "site": "CHANNELVIEW",
+       "company": "EQUISTAR CHEMICALS LP",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 13.9,
+       "peakWindKt": 92.8
+      },
+      {
+       "id": "eia-512-texas-silsbee",
+       "site": "SILSBEE",
+       "company": "TRECORA HYDROCARBONS LLC",
+       "state": "Texas",
+       "refiningDistrict": "Texas Gulf Coast",
+       "capacityBpd": null,
+       "firstExposedAt": "2008-09-12T16:00:00Z",
+       "statusAtFirstExposure": "HU",
+       "closestApproachKm": 90.1,
+       "peakWindKt": 75.8
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

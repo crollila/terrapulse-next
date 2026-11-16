@@ -1,6 +1,6 @@
 # Blockers and open risks
 
-Updated 2026-11-15 20:40 MST.
+Updated 2026-11-15 21:00 MST.
 
 ## Needs the Team Owner
 
@@ -17,11 +17,11 @@ Updated 2026-11-15 20:40 MST.
 
 | Item | Why it is open | Effect |
 |---|---|---|
-| Inland decay constants (0.095 per hour, 26.7 kt) | Kaplan and DeMaria (1995) not retrieved; AOML pages unreachable | Shown as assumptions; rate is adjustable |
-| Hurricane model not hindcast | Needs HURDAT2 tracks for Harvey and Ike | Model is labelled EXPERIMENTAL |
+| Inland decay constants (0.095 per hour, 26.7 kt) | Two attempts failed: AMS returned 403, AOML timed out; the abstract, the 2007 JHT report and the 2005 SHIPS paper do not state them | Shown as assumptions; rate is adjustable |
+| Hurricane model failed its Harvey hindcast and is inconclusive on Ike | Wind-only, symmetric profile; flood-driven shutdowns are outside the model (`research/HINDCAST.md`) | Model stays EXPERIMENTAL; the app says so in the model card, the simulator panel and the markets view |
 | Equity price history | No verified redistributable source | "Insufficient validated data" shown |
 | Second opinions fixed to the full record | GPCP and GISTEMP series not shipped | Stated in the explorer |
-| Only Chromium tested | Firefox and WebKit not run | Unknown behaviour there |
+| Tested in Playwright's Chromium, Firefox and WebKit builds only | No real Safari, no real phones, no screen reader | Unknown behaviour there |
 | OpenFreeMap is a third-party free service | No SLA | Falls back to bundled outlines without labels |
 | Infrastructure is U.S. only | No verified global dataset yet | Regions outside the U.S. show "Insufficient validated data" |
 | Six EIA refineries lack coordinates | Not in the 2021 map layer | Excluded and listed in the data file |

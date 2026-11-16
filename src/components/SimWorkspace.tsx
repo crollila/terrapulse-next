@@ -125,6 +125,7 @@ function Markets() {
         <h4>Why this is not a forecast</h4>
         <ul className="prose" style={{ margin: 0, paddingLeft: 18 }}>
           <li>Harvey made landfall as a Category 4 on the middle Texas coast near Rockport, then stalled and dropped more than 60 inches of rain on southeastern Texas (NHC). The scenario here is a wind-only screen of a different storm on a different part of the coast.</li>
+          <li>Run backwards on Harvey itself, the wind-only screen finds only the Corpus Christi refineries: about a quarter to a third of the capacity DOE reported shut. It misses Houston and Beaumont–Port Arthur, where the cause was flooding (see Methods, hindcast).</li>
           <li>Refining capacity, inventories, exports and crude prices in 2017 differ from today.</li>
           <li>Share prices: Insufficient validated data. No redistributable equity price history has been verified, so none is shown.</li>
         </ul>

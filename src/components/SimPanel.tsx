@@ -224,7 +224,7 @@ export function SimPanel({ hiddenOnMobile, onMethods }: { hiddenOnMobile: boolea
             </button>
           </div>
           {io && <div className="tiny muted" role="status">{io}</div>}
-          <p className="tiny muted">Deterministic: the same inputs always give the same outputs. Experimental model, unit-tested but not yet validated against historical storms.</p>
+          <p className="tiny muted">Deterministic: the same inputs always give the same outputs. Experimental model: in a hindcast it failed to reproduce Hurricane Harvey's refinery shutdowns (a rainfall event) and was inconclusive for Ike. See the model card.</p>
         </div>
       </div>
     </aside>

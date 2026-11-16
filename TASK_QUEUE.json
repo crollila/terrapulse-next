@@ -1,28 +1,174 @@
 {
-  "updated": "2026-11-15T20:40:00-07:00",
+  "updated": "2026-11-15T21:00:00-07:00",
   "note": "Ordered by priority. Status values: done, todo, blocked. Verify against the code before acting.",
   "tasks": [
-    { "id": "T01", "phase": 0, "title": "Audit environment and original project read-only", "status": "done" },
-    { "id": "T02", "phase": 1, "title": "App shell, design system, globe, layers, trend explorer", "status": "done" },
-    { "id": "T03", "phase": 2, "title": "Houston flagship: wind model, exposure, timeline, network", "status": "done" },
-    { "id": "T04", "phase": 3, "title": "Deploy, verify live URL, demo video, submission kit", "status": "done" },
-    { "id": "T05", "phase": 7, "title": "Hindcast hurricane model against Harvey (2017) and Ike (2008) using NHC HURDAT2 best tracks; compare exposed capacity with DOE-reported shutdowns; record errors honestly", "status": "todo", "owner": "disaster-modeling" },
-    { "id": "T06", "phase": 7, "title": "Retrieve Kaplan and DeMaria (1995) and verify decay rate 0.095 per hour and background wind 26.7 kt; update DECAY_DEFAULTS and the model card", "status": "blocked", "blockedBy": "AOML pages unreachable on 2026-11-15; paper not retrieved" },
-    { "id": "T07", "phase": 4, "title": "Drought model: standardized precipitation anomaly and NDVI anomaly from the existing regional series; link to documented agricultural exposure (USDA NASS or FAO) with sources", "status": "todo", "owner": "disaster-modeling" },
-    { "id": "T08", "phase": 4, "title": "Wildfire model: user-drawn hypothetical burn footprint and overlap with infrastructure; observed perimeters only from a keyless source", "status": "todo", "owner": "disaster-modeling" },
-    { "id": "T09", "phase": 4, "title": "Add U.S. energy infrastructure layers with verified public data: LNG terminals, power plants, pipelines (EIA map layers)", "status": "todo", "owner": "earth-science-data" },
-    { "id": "T10", "phase": 4, "title": "Global infrastructure: find a verified, redistributable refinery and port dataset outside the U.S.", "status": "todo", "owner": "economics" },
-    { "id": "T11", "phase": 4, "title": "Ship GPCP and GISTEMP regional series so second opinions and the 2005 level shift recompute in the browser for any window", "status": "todo", "owner": "earth-science-data" },
-    { "id": "T12", "phase": 4, "title": "Window heat map (every start and end year) in the trend explorer, as in the original tool", "status": "todo", "owner": "frontend" },
-    { "id": "T13", "phase": 5, "title": "Longer EIA price and refinery series (full history) and an Ike (2008) historical panel", "status": "todo", "owner": "economics" },
-    { "id": "T14", "phase": 5, "title": "Equity price history: find a source with clear redistribution terms or keep withheld", "status": "blocked", "blockedBy": "no verified redistributable source" },
-    { "id": "T15", "phase": 5, "title": "PADD-to-PADD product movements from EIA to support more than one geographic arc", "status": "todo", "owner": "economics" },
-    { "id": "T16", "phase": 6, "title": "Developer-only Claude research workflow: export scenario report JSON, local command to draft a research note, import it as a labelled note", "status": "todo", "owner": "lead" },
-    { "id": "T17", "phase": 7, "title": "Firefox and WebKit browser runs; axe accessibility audit; keyboard path through the network", "status": "todo", "owner": "qa" },
-    { "id": "T18", "phase": 7, "title": "Browser tests for scenario JSON export and import and portfolio import", "status": "todo", "owner": "qa" },
-    { "id": "T19", "phase": 7, "title": "Code-split MapLibre to cut the initial bundle (1.5 MB, 450 kB gzip)", "status": "todo", "owner": "frontend" },
-    { "id": "T20", "phase": 4, "title": "Exposure for observed EONET storms: use their reported track points where available, labelled OBSERVED track with MODELED wind", "status": "todo", "owner": "disaster-modeling" },
-    { "id": "T21", "phase": 4, "title": "Larger place gazetteer (Natural Earth populated places) for search", "status": "todo", "owner": "frontend" },
-    { "id": "T22", "phase": 7, "title": "Local engineering dashboard", "status": "todo", "owner": "deployment" }
+    {
+      "id": "T01",
+      "phase": 0,
+      "title": "Audit environment and original project read-only",
+      "status": "done"
+    },
+    {
+      "id": "T02",
+      "phase": 1,
+      "title": "App shell, design system, globe, layers, trend explorer",
+      "status": "done"
+    },
+    {
+      "id": "T03",
+      "phase": 2,
+      "title": "Houston flagship: wind model, exposure, timeline, network",
+      "status": "done"
+    },
+    {
+      "id": "T04",
+      "phase": 3,
+      "title": "Deploy, verify live URL, demo video, submission kit",
+      "status": "done"
+    },
+    {
+      "id": "T05",
+      "phase": 7,
+      "title": "Hindcast hurricane model against Harvey (2017) and Ike (2008) using NHC HURDAT2 best tracks; compare exposed capacity with DOE-reported shutdowns; record errors honestly",
+      "status": "done",
+      "owner": "disaster-modeling",
+      "result": "research/HINDCAST.md: not validated. Harvey fails as expected for a wind-only model; Ike inconclusive (no list of closed refineries)."
+    },
+    {
+      "id": "T06",
+      "phase": 7,
+      "title": "Retrieve Kaplan and DeMaria (1995) and verify decay rate 0.095 per hour and background wind 26.7 kt; update DECAY_DEFAULTS and the model card",
+      "status": "blocked",
+      "blockedBy": "AOML pages unreachable on 2026-11-15; paper not retrieved. Second attempt 2026-11-16 UTC: AMS journal pages return HTTP 403, AOML timed out; the abstract (OpenAlex), the Kaplan et al. 2007 JHT report and the 2005 SHIPS paper do not state the two constants"
+    },
+    {
+      "id": "T07",
+      "phase": 4,
+      "title": "Drought model: standardized precipitation anomaly and NDVI anomaly from the existing regional series; link to documented agricultural exposure (USDA NASS or FAO) with sources",
+      "status": "todo",
+      "owner": "disaster-modeling"
+    },
+    {
+      "id": "T08",
+      "phase": 4,
+      "title": "Wildfire model: user-drawn hypothetical burn footprint and overlap with infrastructure; observed perimeters only from a keyless source",
+      "status": "todo",
+      "owner": "disaster-modeling"
+    },
+    {
+      "id": "T09",
+      "phase": 4,
+      "title": "Add U.S. energy infrastructure layers with verified public data: LNG terminals, power plants, pipelines (EIA map layers)",
+      "status": "todo",
+      "owner": "earth-science-data"
+    },
+    {
+      "id": "T10",
+      "phase": 4,
+      "title": "Global infrastructure: find a verified, redistributable refinery and port dataset outside the U.S.",
+      "status": "todo",
+      "owner": "economics"
+    },
+    {
+      "id": "T11",
+      "phase": 4,
+      "title": "Ship GPCP and GISTEMP regional series so second opinions and the 2005 level shift recompute in the browser for any window",
+      "status": "todo",
+      "owner": "earth-science-data"
+    },
+    {
+      "id": "T12",
+      "phase": 4,
+      "title": "Window heat map (every start and end year) in the trend explorer, as in the original tool",
+      "status": "done",
+      "owner": "frontend",
+      "note": "Rendered from the published windows[] output; click selects the window"
+    },
+    {
+      "id": "T13",
+      "phase": 5,
+      "title": "Longer EIA price and refinery series (full history) and an Ike (2008) historical panel",
+      "status": "todo",
+      "owner": "economics"
+    },
+    {
+      "id": "T14",
+      "phase": 5,
+      "title": "Equity price history: find a source with clear redistribution terms or keep withheld",
+      "status": "blocked",
+      "blockedBy": "no verified redistributable source"
+    },
+    {
+      "id": "T15",
+      "phase": 5,
+      "title": "PADD-to-PADD product movements from EIA to support more than one geographic arc",
+      "status": "todo",
+      "owner": "economics"
+    },
+    {
+      "id": "T16",
+      "phase": 6,
+      "title": "Local Claude workflow, remaining part: import a research note into the app as a labelled panel (evidence report export and npm run research exist)",
+      "status": "todo",
+      "owner": "lead"
+    },
+    {
+      "id": "T17",
+      "phase": 7,
+      "title": "axe accessibility audit; keyboard path through the network; real phones (Firefox and WebKit runs are done: 13 tests each)",
+      "status": "todo",
+      "owner": "qa"
+    },
+    {
+      "id": "T18",
+      "phase": 7,
+      "title": "Browser tests for scenario JSON export and import and portfolio import",
+      "status": "done",
+      "owner": "qa",
+      "note": "Browser test covers scenario JSON and evidence report export; portfolio and scenario import are still manual"
+    },
+    {
+      "id": "T19",
+      "phase": 7,
+      "title": "Code-split MapLibre to cut the initial bundle (1.5 MB, 450 kB gzip)",
+      "status": "todo",
+      "owner": "frontend"
+    },
+    {
+      "id": "T20",
+      "phase": 4,
+      "title": "Exposure for observed EONET storms: use their reported track points where available, labelled OBSERVED track with MODELED wind",
+      "status": "todo",
+      "owner": "disaster-modeling"
+    },
+    {
+      "id": "T21",
+      "phase": 4,
+      "title": "Larger place gazetteer (Natural Earth populated places) for search",
+      "status": "todo",
+      "owner": "frontend"
+    },
+    {
+      "id": "T22",
+      "phase": 7,
+      "title": "Local engineering dashboard",
+      "status": "done",
+      "owner": "deployment",
+      "note": "npm run dashboard (local only)"
+    },
+    {
+      "id": "T23",
+      "phase": 7,
+      "title": "Add rainfall or flood exposure to the hurricane screen (the Harvey hindcast shows wind alone misses flood-driven shutdowns); needs a sourced rainfall footprint method",
+      "status": "todo",
+      "owner": "disaster-modeling"
+    },
+    {
+      "id": "T24",
+      "phase": 7,
+      "title": "Wind asymmetry and observed wind radii option (the Ike hindcast shows the symmetric profile misses Lake Charles); transcribe the DOE refinery tables for Harvey and Ike to score membership",
+      "status": "todo",
+      "owner": "disaster-modeling"
+    }
   ]
 }

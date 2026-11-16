@@ -383,7 +383,13 @@ export function swathPolygon(p: HurricaneParams, thresholdKt: number, tFrom: num
 
 export const MODEL_CARD = {
   name: "Hurricane wind-exposure screen v0.1",
-  status: "EXPERIMENTAL: unit-tested numerically; not yet validated against historical storms",
+  status: "EXPERIMENTAL: unit-tested numerically; a hindcast on two real storms did not validate it (fails on Harvey 2017, inconclusive on Ike 2008)",
+  /** Hindcast along NHC HURDAT2 best tracks with observed winds. Full method and tables: research/HINDCAST.md. Figures are pinned by tests. */
+  hindcast: [
+    "Hurricane Harvey (2017): FAILS. At 64 kt the wind footprint holds 0.94 to 1.32 million b/d (24% to 34% of the 3,871,449 b/d that DOE reported shut or shutting down on 30 August 2017). It finds the Corpus Christi cluster and no refinery in the Houston, Galveston Bay, Beaumont or Port Arthur areas. Those shutdowns came with days of extreme rainfall while Harvey was a 35 to 45 kt tropical storm; a wind-only screen cannot represent them. Lowering the threshold to 34 kt overshoots instead (up to 164% of the DOE figure).",
+    "Hurricane Ike (2008): INCONCLUSIVE. The 64-kt footprint holds 10, 13 or 16 refineries for an assumed storm size of 20, 35 or 50 km, against 14 reported closed (NHC, citing DOE). The list of closed refineries was not retrieved, so the match cannot be scored, and the symmetric wind profile misses the Lake Charles area that the observed wind radii include.",
+    "Both comparisons use the refinery fleet as of 1 January 2026, not the 2017 or 2008 fleet. Two storms could not validate a model even if both matched.",
+  ],
   inputs: [
     "Landfall point (lat, lon), heading (deg), forward speed (km/h): user-chosen, hypothetical",
     "Vmax: maximum 1-minute sustained wind (kt), user-chosen",

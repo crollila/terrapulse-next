@@ -4,7 +4,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { SCENARIO_001, runScenario, timelineState, posForHour } from "./hurricane";
+import { MODEL_CARD, SCENARIO_001, runScenario, timelineState, posForHour } from "./hurricane";
 import { TIERS, buildGraph, chainOf, companyExposures, nodeVisible } from "./graph";
 import { parseHoldings, stressPortfolio } from "./portfolio";
 import { parseCommand, vmaxForCategory } from "./command";
@@ -266,6 +266,34 @@ describe("feed adapters on the committed snapshots", () => {
     expect(parseUsgs(bad)).toMatchObject({ events: [], rejected: 2 });
     expect(() => parseUsgs({})).toThrow();
     expect(() => parseEonet({ nope: 1 })).toThrow();
+  });
+});
+
+describe("hindcast statements in the model card match the hindcast results", () => {
+  const res = JSON.parse(readFileSync(new URL("../../research/hindcast_results.json", import.meta.url), "utf8"));
+  const storm = (name: string) => res.storms.find((s: { name: string }) => s.name === name);
+  const DOE_HARVEY_BPD = 3_871_449;
+  it("Harvey: 0.94 to 1.32 million b/d at 64 kt, 24% to 34% of the DOE figure, Texas only", () => {
+    const h = storm("HARVEY").holland;
+    expect(h.v64_rmax20.capacityBpd).toBe(942_500);
+    expect(h.v64_rmax50.capacityBpd).toBe(1_322_500);
+    expect(Math.round((100 * h.v64_rmax20.capacityBpd) / DOE_HARVEY_BPD)).toBe(24);
+    expect(Math.round((100 * h.v64_rmax50.capacityBpd) / DOE_HARVEY_BPD)).toBe(34);
+    expect(Object.keys(h.v64_rmax50.byState)).toEqual(["Texas"]);
+    expect(Math.round((100 * storm("HARVEY").observedRadii.r34.capacityBpd) / DOE_HARVEY_BPD)).toBe(164);
+    const names: string[] = h.v64_rmax50.refineries.map((r: { name: string }) => r.name);
+    for (const n of ["BAYTOWN", "DEER PARK", "GALVESTON BAY", "BEAUMONT", "PORT ARTHUR"]) expect(names).not.toContain(n);
+  });
+  it("Ike: 10, 13 and 16 refineries at 64 kt for Rmax 20, 35 and 50 km", () => {
+    const h = storm("IKE").holland;
+    expect([h.v64_rmax20.count, h.v64_rmax35.count, h.v64_rmax50.count]).toEqual([10, 13, 16]);
+  });
+  it("the model card says so in words", () => {
+    const text = MODEL_CARD.hindcast.join(" ");
+    expect(text).toContain("0.94 to 1.32 million b/d");
+    expect(text).toContain("24% to 34%");
+    expect(text).toContain("10, 13 or 16 refineries");
+    expect(MODEL_CARD.status).toMatch(/did not validate/);
   });
 });
 

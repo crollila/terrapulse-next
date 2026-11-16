@@ -56,6 +56,9 @@ export function Methods({ onClose }: { onClose: () => void }) {
           <ul>{MODEL_CARD.assumptions.map((x) => <li key={x}>{x}</li>)}</ul>
           <p><strong>Limitations</strong></p>
           <ul>{MODEL_CARD.limitations.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p><strong>How it does on real storms (hindcast)</strong></p>
+          <ul data-testid="hindcast">{MODEL_CARD.hindcast.map((x) => <li key={x}>{x}</li>)}</ul>
+          <p className="small">Method and full tables: <a href="https://github.com/crollila/terrapulse-next/blob/main/research/HINDCAST.md" target="_blank" rel="noopener noreferrer">research/HINDCAST.md</a>. Best tracks: NOAA NHC HURDAT2.</p>
           <p><strong>Uncertainty:</strong> {MODEL_CARD.uncertainty}</p>
           <p><strong>Timeline:</strong> the storm window (48 hours before to 30 hours after landfall) is computed from the track and wind field. The later stages are an illustrative sequence without forecast timing.</p>
           <p><strong>Economic network:</strong> each link is labelled as documented, modelled or a research hypothesis and carries its source. The one geographic arc (Houston to New York Harbor) stands for the Colonial Pipeline, which EIA describes as carrying up to 2.5 million b/d from Houston as far north as New York Harbor; the arc is a schematic great circle, not the pipeline route, and implies no modelled flow.</p>
