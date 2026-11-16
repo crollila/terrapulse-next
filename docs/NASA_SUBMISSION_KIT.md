@@ -4,6 +4,25 @@ Prepared 15 November 2026 (MST). **Nothing has been submitted by this repository
 assistant.** The Team Owner submits. The window closes **Sunday 15 November 2026 at 23:59 in the
 Team Owner's local time (MST)**; only the last saved version is judged.
 
+## V3 demo video (final cut), 15 November 2026, 22:35 MST
+
+**https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v3.mp4**
+
+- **29.30 s**, 879 frames at 30 fps, 1920×1080, H.264. **Silent on purpose**: no audio track, so
+  there is no synthetic voice to disclose. Captions are burned in and match the narration script
+  word for word.
+- Recorded from the deployed application with the computer's graphics card
+  (`scripts/demo-v3/record.mjs`), then zooms, captions, context labels and the closing overlay
+  were added (`scripts/demo-v3/render.mjs`). Nothing is mocked; no video or image is AI-generated.
+- Additions that are not part of the app: blue highlight outlines around existing elements (drawn
+  by the recorder for emphasis), camera zooms, the caption band, the one-line context labels and the
+  closing "TerraPulse / See the change. Trace the impact." overlay. No value on screen is altered.
+- Narration cue times, the shot list and how to add your own recording:
+  [DEMO_V3_CUES.md](DEMO_V3_CUES.md). Subtitles: `…/media/terrapulse-demo-v3.srt`.
+- To add your narration: `node scripts/demo-v3/add-voice.mjs path/to/voice.wav` writes
+  `terrapulse-demo-v3-voice.mp4` with the picture untouched.
+- V2 (narrated and silent) and the first video are unchanged at their URLs.
+
 ## 0. Revised demo video (science first), 15 November 2026, 22:05 MST
 
 **https://crollila.github.io/terrapulse-next/media/terrapulse-demo-v2.mp4**

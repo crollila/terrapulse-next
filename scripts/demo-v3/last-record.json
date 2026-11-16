@@ -1,0 +1,51 @@
+{
+  "base": "https://crollila.github.io/terrapulse-next/",
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 2080 Ti (0x00001E07) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "dsf": 1.6,
+  "view": {
+    "width": 1800,
+    "height": 900
+  },
+  "recordedAt": "2026-11-16T05:28:57.986Z",
+  "frames": 1191,
+  "firstFrameAt": 0.036183834075927734,
+  "lastFrameAt": 29.784993886947632,
+  "marks": [
+    {
+      "id": "hook",
+      "t": 0
+    },
+    {
+      "id": "four",
+      "t": 2.95
+    },
+    {
+      "id": "amazon",
+      "t": 7.202
+    },
+    {
+      "id": "break",
+      "t": 12.305
+    },
+    {
+      "id": "alaska",
+      "t": 15.201
+    },
+    {
+      "id": "houston",
+      "t": 16.703
+    },
+    {
+      "id": "network",
+      "t": 22.003
+    },
+    {
+      "id": "close",
+      "t": 27.603
+    },
+    {
+      "id": "end",
+      "t": 29.802
+    }
+  ]
+}

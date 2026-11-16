@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:03,350
+Earth is changing. But what can NASA data actually prove?
+
+2
+00:00:03,550 --> 00:00:06,300
+TerraPulse measures trends across six variables and eight regions,
+
+3
+00:00:06,300 --> 00:00:08,700
+testing significance and independent evidence.
+
+4
+00:00:08,900 --> 00:00:13,200
+In the Amazon, two rainfall records agree on a decline—not its size.
+
+5
+00:00:13,400 --> 00:00:16,600
+A documented 2005 data shift helps explain the gap.
+
+6
+00:00:16,900 --> 00:00:19,500
+Then we simulate a hypothetical Houston hurricane,
+
+7
+00:00:19,500 --> 00:00:22,400
+tracing refinery exposure through energy supply chains
+
+8
+00:00:22,400 --> 00:00:24,300
+and financial risk—not predicted losses.
+
+9
+00:00:26,500 --> 00:00:29,300
+TerraPulse. See the change. Trace the impact.
